@@ -1,0 +1,35 @@
+{
+  "name": "chronograph-china",
+  "version": "1.0.0",
+  "private": true,
+  "description": "华夏史网 ChronoGraph China —— 二十四史全量人物关系图谱与数字人文史料引擎",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "seed:build": "node scripts/build-seed.mjs",
+    "seed:validate": "node scripts/validate-seed.mjs"
+  },
+  "dependencies": {
+    "d3-hierarchy": "^3.1.2",
+    "framer-motion": "^11.11.17",
+    "lucide-react": "^0.462.0",
+    "minisearch": "^7.1.1",
+    "next": "^15.0.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/d3-hierarchy": "^3.1.7",
+    "@types/node": "^22.9.3",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "esbuild": "^0.24.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3"
+  }
+}

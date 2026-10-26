@@ -1,0 +1,63 @@
+name: Deploy static site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同一时刻只跑一次部署；排队中的旧任务不取消，避免 main 上连续两次提交时
+# 后一次被取消、页面停在中间状态。
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type check
+        run: npm run typecheck
+
+      - name: Build static export
+        # 项目站部署在 /<repo>/ 下，basePath 必须与之相同，否则 _next 资源全 404。
+        # next.config.mjs 会读这个变量设置 basePath + assetPrefix。
+        env:
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+          NODE_OPTIONS: ''
+        run: npm run build
+
+      - name: Disable Jekyll
+        # GitHub Pages 默认走 Jekyll，会吃掉以 _ 开头的目录（_next），
+        # 导致样式与脚本 404。放 .nojekyll 是官方推荐做法。
+        run: touch out/.nojekyll
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

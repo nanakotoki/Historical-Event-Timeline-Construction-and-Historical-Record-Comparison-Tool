@@ -1,0 +1,6965 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-10-26T10:47:11.160Z",
+  "site": {
+    "title": "华夏史网",
+    "subtitle": "ChronoGraph China · 二十四史人物关系图谱与史料对勘引擎",
+    "edition": "首发种子库 · 楚汉 / 三国 / 隋唐三簇"
+  },
+  "stats": {
+    "personCount": 824,
+    "edgeCount": 1334,
+    "anecdoteCount": 146,
+    "citationCount": 605,
+    "dynastyCount": 16,
+    "shardCount": 7
+  },
+  "dynasties": [
+    {
+      "id": "pre_qin",
+      "name": "先秦",
+      "startYear": -1046,
+      "endYear": -222,
+      "primaryColor": "#7A6A45",
+      "canonicalBooks": [
+        "《史记》"
+      ],
+      "shardFile": "shard_01_pre_qin_qin.json"
+    },
+    {
+      "id": "qin",
+      "name": "秦",
+      "startYear": -221,
+      "endYear": -207,
+      "primaryColor": "#2F3540",
+      "canonicalBooks": [
+        "《史记》"
+      ],
+      "shardFile": "shard_02_chu_han.json"
+    },
+    {
+      "id": "chu_han",
+      "name": "楚汉之际",
+      "startYear": -206,
+      "endYear": -202,
+      "primaryColor": "#8C4A3F",
+      "canonicalBooks": [
+        "《史记》",
+        "《汉书》"
+      ],
+      "shardFile": "shard_02_chu_han.json"
+    },
+    {
+      "id": "western_han",
+      "name": "西汉",
+      "startYear": -202,
+      "endYear": 8,
+      "primaryColor": "#B0763F",
+      "canonicalBooks": [
+        "《史记》",
+        "《汉书》"
+      ],
+      "shardFile": "shard_02_chu_han.json"
+    },
+    {
+      "id": "xin",
+      "name": "新莽",
+      "startYear": 9,
+      "endYear": 25,
+      "primaryColor": "#7D6337",
+      "canonicalBooks": [
+        "《汉书》",
+        "《后汉书》"
+      ],
+      "shardFile": ""
+    },
+    {
+      "id": "eastern_han",
+      "name": "东汉",
+      "startYear": 25,
+      "endYear": 220,
+      "primaryColor": "#A24A3B",
+      "canonicalBooks": [
+        "《后汉书》",
+        "《三国志》"
+      ],
+      "shardFile": "shard_03_three_kingdoms.json"
+    },
+    {
+      "id": "three_kingdoms",
+      "name": "三国",
+      "startYear": 220,
+      "endYear": 280,
+      "primaryColor": "#4C6A8A",
+      "canonicalBooks": [
+        "《三国志》",
+        "《后汉书》",
+        "《晋书》"
+      ],
+      "shardFile": "shard_03_three_kingdoms.json"
+    },
+    {
+      "id": "jin",
+      "name": "两晋",
+      "startYear": 266,
+      "endYear": 420,
+      "primaryColor": "#5D7F6E",
+      "canonicalBooks": [
+        "《晋书》"
+      ],
+      "shardFile": "shard_04_jin_nanbeichao.json"
+    },
+    {
+      "id": "southern_northern",
+      "name": "南北朝",
+      "startYear": 420,
+      "endYear": 589,
+      "primaryColor": "#6E6180",
+      "canonicalBooks": [
+        "《宋书》",
+        "《南齐书》",
+        "《梁书》",
+        "《陈书》",
+        "《魏书》",
+        "《北齐书》",
+        "《周书》",
+        "《南史》",
+        "《北史》"
+      ],
+      "shardFile": "shard_04_jin_nanbeichao.json"
+    },
+    {
+      "id": "sui",
+      "name": "隋",
+      "startYear": 581,
+      "endYear": 618,
+      "primaryColor": "#7A4B5C",
+      "canonicalBooks": [
+        "《隋书》"
+      ],
+      "shardFile": "shard_05_sui_tang.json"
+    },
+    {
+      "id": "tang",
+      "name": "唐",
+      "startYear": 618,
+      "endYear": 907,
+      "primaryColor": "#C0762F",
+      "canonicalBooks": [
+        "《旧唐书》",
+        "《新唐书》"
+      ],
+      "shardFile": "shard_05_sui_tang.json"
+    },
+    {
+      "id": "five_dynasties",
+      "name": "五代十国",
+      "startYear": 907,
+      "endYear": 979,
+      "primaryColor": "#7A6A5A",
+      "canonicalBooks": [
+        "《旧五代史》",
+        "《新五代史》"
+      ],
+      "shardFile": "shard_07_five_dynasties.json"
+    },
+    {
+      "id": "song",
+      "name": "宋",
+      "startYear": 960,
+      "endYear": 1279,
+      "primaryColor": "#4E7A7A",
+      "canonicalBooks": [
+        "《宋史》"
+      ],
+      "shardFile": "shard_06_song_ming_qing.json"
+    },
+    {
+      "id": "liao_jin_xia",
+      "name": "辽金西夏",
+      "startYear": 907,
+      "endYear": 1234,
+      "primaryColor": "#8A7440",
+      "canonicalBooks": [
+        "《辽史》",
+        "《金史》",
+        "《宋史》"
+      ],
+      "shardFile": "shard_06_song_ming_qing.json"
+    },
+    {
+      "id": "yuan",
+      "name": "元",
+      "startYear": 1271,
+      "endYear": 1368,
+      "primaryColor": "#566A86",
+      "canonicalBooks": [
+        "《元史》"
+      ],
+      "shardFile": "shard_06_song_ming_qing.json"
+    },
+    {
+      "id": "ming",
+      "name": "明",
+      "startYear": 1368,
+      "endYear": 1644,
+      "primaryColor": "#B03A2E",
+      "canonicalBooks": [
+        "《明史》"
+      ],
+      "shardFile": "shard_06_song_ming_qing.json"
+    },
+    {
+      "id": "qing",
+      "name": "清",
+      "startYear": 1636,
+      "endYear": 1912,
+      "primaryColor": "#3F5A6B",
+      "canonicalBooks": [
+        "《清史稿》"
+      ],
+      "shardFile": "shard_06_song_ming_qing.json"
+    }
+  ],
+  "shards": [
+    {
+      "shardId": "shard_01_pre_qin_qin",
+      "file": "shard_01_pre_qin_qin.json",
+      "title": "先秦：西周至战国",
+      "subtitle": "《史记》三代世系、春秋五霸与战国七雄 · 自武王克商至秦并天下",
+      "dynasties": [
+        "pre_qin"
+      ],
+      "yearRange": [
+        -1100,
+        -221
+      ],
+      "personCount": 102,
+      "edgeCount": 133,
+      "byteSize": 352964
+    },
+    {
+      "shardId": "shard_02_chu_han",
+      "file": "shard_02_chu_han.json",
+      "title": "楚汉争霸与大汉开国",
+      "subtitle": "《史记》《汉书》核心簇 · 自秦并天下至汉武之世",
+      "dynasties": [
+        "qin",
+        "chu_han",
+        "western_han"
+      ],
+      "yearRange": [
+        -259,
+        -60
+      ],
+      "personCount": 143,
+      "edgeCount": 280,
+      "byteSize": 747009
+    },
+    {
+      "shardId": "shard_03_three_kingdoms",
+      "file": "shard_03_three_kingdoms.json",
+      "title": "汉末三国与门阀雏形",
+      "subtitle": "《三国志》及裴注高密度核心簇 · 自董卓入洛至三家归晋",
+      "dynasties": [
+        "eastern_han",
+        "three_kingdoms",
+        "jin"
+      ],
+      "yearRange": [
+        139,
+        265
+      ],
+      "personCount": 156,
+      "edgeCount": 237,
+      "byteSize": 727940
+    },
+    {
+      "shardId": "shard_04_jin_nanbeichao",
+      "file": "shard_04_jin_nanbeichao.json",
+      "title": "两晋南北朝：门阀、十六国与南北对峙",
+      "subtitle": "《晋书》《宋书》《南齐书》《梁书》《魏书》《北齐书》《周书》 · 自司马炎代魏至隋灭陈",
+      "dynasties": [
+        "jin",
+        "southern_northern"
+      ],
+      "yearRange": [
+        265,
+        589
+      ],
+      "personCount": 95,
+      "edgeCount": 154,
+      "byteSize": 329038
+    },
+    {
+      "shardId": "shard_05_sui_tang",
+      "file": "shard_05_sui_tang.json",
+      "title": "隋唐帝国与关陇集团",
+      "subtitle": "《隋书》两《唐书》《资治通鉴》高密度核心簇 · 自开皇受禅至唐亡（含开皇、贞观、武周、开元天宝、元和、会昌诸段）",
+      "dynasties": [
+        "sui",
+        "tang"
+      ],
+      "yearRange": [
+        541,
+        912
+      ],
+      "personCount": 146,
+      "edgeCount": 264,
+      "byteSize": 722433
+    },
+    {
+      "shardId": "shard_06_song_ming_qing",
+      "file": "shard_06_song_ming_qing.json",
+      "title": "宋元明清：赵宋至清季",
+      "subtitle": "《宋史》《元史》《明史》《清史稿》 · 自陈桥兵变至辛亥革命",
+      "dynasties": [
+        "song",
+        "liao_jin_xia",
+        "yuan",
+        "ming",
+        "qing"
+      ],
+      "yearRange": [
+        860,
+        1912
+      ],
+      "personCount": 143,
+      "edgeCount": 203,
+      "byteSize": 455392
+    },
+    {
+      "shardId": "shard_07_five_dynasties",
+      "file": "shard_07_five_dynasties.json",
+      "title": "五代十国：梁唐晋汉周",
+      "subtitle": "《旧五代史》《新五代史》 · 自朱温篡唐至北汉纳土",
+      "dynasties": [
+        "five_dynasties"
+      ],
+      "yearRange": [
+        830,
+        990
+      ],
+      "personCount": 39,
+      "edgeCount": 63,
+      "byteSize": 129148
+    }
+  ],
+  "searchIndex": [
+    {
+      "id": "person_cao_cao",
+      "name": "曹操",
+      "aliasText": "孟德 阿瞒 吉利 武皇帝 太祖 费亭侯 魏公 魏王 政治家 军事家 文学家 魏王",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 100
+    },
+    {
+      "id": "person_li_shimin",
+      "name": "李世民",
+      "aliasText": "文 太宗 贞观 秦王 天策上将 皇帝 军事统帅 政治家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 100
+    },
+    {
+      "id": "person_liu_bang",
+      "name": "刘邦",
+      "aliasText": "季 沛公 高皇帝 太祖 沛公 汉王 汉王 开国皇帝 政治家",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 98
+    },
+    {
+      "id": "person_qin_shi_huang",
+      "name": "秦始皇",
+      "aliasText": "祖龙 秦王 始皇帝 皇帝 开国皇帝 政治家 军事统帅",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 96
+    },
+    {
+      "id": "person_xiang_yu",
+      "name": "项羽",
+      "aliasText": "羽 西楚霸王 鲁公 西楚霸王 军事统帅 西楚霸王",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 94
+    },
+    {
+      "id": "person_zhuge_liang",
+      "name": "诸葛亮",
+      "aliasText": "孔明 卧龙 忠武 武乡侯 武乡侯 丞相 政治家 军事家",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 94
+    },
+    {
+      "id": "person_wu_zetian",
+      "name": "武则天",
+      "aliasText": "则天 天授 如意 长寿 延载 证圣 万岁通天 神功 圣历 久视 长安 神龙 才人 昭仪 皇后 天后 圣母神皇 圣神皇帝 皇后 皇帝 政治家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 94
+    },
+    {
+      "id": "person_liu_bei",
+      "name": "刘备",
+      "aliasText": "玄德 昭烈皇帝 烈祖 章武 宜城亭侯 汉中王 开国皇帝 政治家",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 92
+    },
+    {
+      "id": "person_li_longji",
+      "name": "李隆基",
+      "aliasText": "至道大圣大明孝 玄宗 先天 开元 天宝 临淄王 平王 皇太子 皇帝 音乐家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 92
+    },
+    {
+      "id": "person_kong_zi",
+      "name": "孔丘",
+      "aliasText": "仲尼 思想家 教育家 儒家创始人",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 90
+    },
+    {
+      "id": "person_yang_jian",
+      "name": "杨坚",
+      "aliasText": "那罗延 文 高祖 开皇 仁寿 随国公 隋王 开国皇帝 政治家",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 90
+    },
+    {
+      "id": "person_han_xin",
+      "name": "韩信",
+      "aliasText": "齐王 楚王 淮阴侯 军事统帅 兵家",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 88
+    },
+    {
+      "id": "person_li_jing",
+      "name": "李靖",
+      "aliasText": "药师 景武 永康县公 代国公 卫国公 军事统帅 兵法家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 88
+    },
+    {
+      "id": "person_guo_ziyi",
+      "name": "郭子仪",
+      "aliasText": "忠武 尚父 汾阳郡王 军事统帅 政治家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 86
+    },
+    {
+      "id": "person_si_ma_qian",
+      "name": "司马迁",
+      "aliasText": "子长 史学家 文学家 太史令",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 85
+    },
+    {
+      "id": "person_liu_che",
+      "name": "刘彻",
+      "aliasText": "通 皇帝",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 85
+    },
+    {
+      "id": "person_si_ma_yi",
+      "name": "司马懿",
+      "aliasText": "仲达 宣皇帝 高祖 河津亭侯 舞阳侯 政治家 军事统帅 权臣",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 85
+    },
+    {
+      "id": "person_guan_yu",
+      "name": "关羽",
+      "aliasText": "云长 美髯公 壮缪 汉寿亭侯 名将 万人敌",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 85
+    },
+    {
+      "id": "person_sun_quan",
+      "name": "孙权",
+      "aliasText": "仲谋 大皇帝 太祖 黄武 黄龙 嘉禾 赤乌 太元 神凤 吴王 皇帝 开国皇帝 政治家",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 85
+    },
+    {
+      "id": "person_yang_guang",
+      "name": "杨广",
+      "aliasText": "阿摐 炀 世祖 大业 晋王 隋王 皇帝 军事统帅",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 85
+    },
+    {
+      "id": "person_wei_zheng",
+      "name": "魏征",
+      "aliasText": "玄成 文贞 巨鹿县男 郑国公 谏臣 宰相",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 85
+    },
+    {
+      "id": "person_du_fu",
+      "name": "杜甫",
+      "aliasText": "子美 少陵野老 杜工部 诗人",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 83
+    },
+    {
+      "id": "person_zhang_liang",
+      "name": "张良",
+      "aliasText": "子房 文成 留侯 谋士 政治家",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 81
+    },
+    {
+      "id": "person_fang_xuanling",
+      "name": "房玄龄",
+      "aliasText": "文昭 临淄侯 梁国公 宰相 政治家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 81
+    },
+    {
+      "id": "person_di_renjie",
+      "name": "狄仁杰",
+      "aliasText": "怀英 文惠 临淄县男 汝阳县子 梁国公 宰相 司法官",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 81
+    },
+    {
+      "id": "person_li_bai",
+      "name": "李白",
+      "aliasText": "太白 青莲居士 谪仙人 诗人",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 81
+    },
+    {
+      "id": "person_zhou_wenwang",
+      "name": "姬昌",
+      "aliasText": "诸侯 周族首领",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 77
+    },
+    {
+      "id": "person_lao_zi",
+      "name": "李耳",
+      "aliasText": "聃 思想家 道家始祖",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 77
+    },
+    {
+      "id": "person_lv_zhi",
+      "name": "吕雉",
+      "aliasText": "娥姁 高皇后 皇后 皇太后 皇后 临朝称制 政治家",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 77
+    },
+    {
+      "id": "person_zhou_yu",
+      "name": "周瑜",
+      "aliasText": "公瑾 偏将军 南郡太守 军事统帅 音乐家",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 77
+    },
+    {
+      "id": "person_li_yuan",
+      "name": "李渊",
+      "aliasText": "叔德 太武 高祖 武德 唐国公 大丞相 唐王 开国皇帝 政治家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 77
+    },
+    {
+      "id": "person_li_ji",
+      "name": "李勣",
+      "aliasText": "懋功 贞武 莱国公 曹国公 英国公 军事统帅 宰相",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 77
+    },
+    {
+      "id": "person_zhangsun_huanghou",
+      "name": "长孙氏",
+      "aliasText": "文德 皇后 贤内助",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 77
+    },
+    {
+      "id": "person_yang_yuhuan",
+      "name": "杨玉环",
+      "aliasText": "无（贵妃不立谥） 贵妃 舞蹈家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 77
+    },
+    {
+      "id": "person_zhao_kuangyin",
+      "name": "赵匡胤",
+      "aliasText": "皇帝",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 77
+    },
+    {
+      "id": "person_zhu_yuanzhang",
+      "name": "朱元璋",
+      "aliasText": "皇帝",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 77
+    },
+    {
+      "id": "person_xuan_ye",
+      "name": "玄烨",
+      "aliasText": "皇帝",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 77
+    },
+    {
+      "id": "person_zhou_wuwang",
+      "name": "姬发",
+      "aliasText": "周王",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 76
+    },
+    {
+      "id": "person_zhou_gong_dan",
+      "name": "姬旦",
+      "aliasText": "执政 制礼者",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 74
+    },
+    {
+      "id": "person_qu_yuan",
+      "name": "屈平",
+      "aliasText": "原 大夫 诗人",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 74
+    },
+    {
+      "id": "person_meng_zi",
+      "name": "孟轲",
+      "aliasText": "子舆 思想家 儒家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 74
+    },
+    {
+      "id": "person_chen_sheng",
+      "name": "陈胜",
+      "aliasText": "涉 起义领袖 张楚王",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 74
+    },
+    {
+      "id": "person_xiao_he",
+      "name": "萧何",
+      "aliasText": "文终 酂侯 丞相 政治家 法学家",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 74
+    },
+    {
+      "id": "person_huo_qubing",
+      "name": "霍去病",
+      "aliasText": "将领 骠骑将军",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 74
+    },
+    {
+      "id": "person_zhang_fei",
+      "name": "张飞",
+      "aliasText": "益德 桓 新亭侯 西乡侯 名将 万人敌",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 74
+    },
+    {
+      "id": "person_dugu_qieluo",
+      "name": "独孤伽罗",
+      "aliasText": "文献 皇后 政治家",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 74
+    },
+    {
+      "id": "person_su_shi",
+      "name": "苏轼",
+      "aliasText": "子瞻 东坡居士 文臣 文学家 书画家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 74
+    },
+    {
+      "id": "person_yue_fei",
+      "name": "岳飞",
+      "aliasText": "鹏举 将领",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 74
+    },
+    {
+      "id": "person_zhu_xi",
+      "name": "朱熹",
+      "aliasText": "元晦 晦庵 紫阳 思想家 教育家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 74
+    },
+    {
+      "id": "person_jiang_shang",
+      "name": "吕尚",
+      "aliasText": "子牙 军事家 齐国始封君",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 72
+    },
+    {
+      "id": "person_jin_wen_gong",
+      "name": "姬重耳",
+      "aliasText": "诸侯 霸主",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 72
+    },
+    {
+      "id": "person_qi_huan_gong",
+      "name": "姜小白",
+      "aliasText": "诸侯 霸主",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 71
+    },
+    {
+      "id": "person_shang_yang",
+      "name": "公孙鞅",
+      "aliasText": "政治家 法家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 71
+    },
+    {
+      "id": "person_li_si",
+      "name": "李斯",
+      "aliasText": "通古 丞相 法家 文字学家",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 71
+    },
+    {
+      "id": "person_wei_qing",
+      "name": "卫青",
+      "aliasText": "将领 大将军",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 71
+    },
+    {
+      "id": "person_lv_bu",
+      "name": "吕布",
+      "aliasText": "奉先 飞将 温侯 猛将 军阀",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 71
+    },
+    {
+      "id": "person_xun_yu",
+      "name": "荀彧",
+      "aliasText": "文若 敬 万岁亭侯 谋士 尚书令 政治家",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 71
+    },
+    {
+      "id": "person_lu_xun",
+      "name": "陆逊",
+      "aliasText": "伯言 昭 娄侯 江陵侯 军事统帅 丞相",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 71
+    },
+    {
+      "id": "person_du_ruhui",
+      "name": "杜如晦",
+      "aliasText": "克明 成 蔡国公 宰相 政治家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 71
+    },
+    {
+      "id": "person_an_lushan",
+      "name": "安禄山",
+      "aliasText": "藩镇节度使 叛乱首领",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 71
+    },
+    {
+      "id": "person_wang_an_shi",
+      "name": "王安石",
+      "aliasText": "介甫 半山 宰相 文学家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 71
+    },
+    {
+      "id": "person_tie_mu_zhen",
+      "name": "铁木真",
+      "aliasText": "可汗",
+      "dynasty": "yuan",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 71
+    },
+    {
+      "id": "person_wang_shouren",
+      "name": "王守仁",
+      "aliasText": "伯安 阳明 思想家 将领",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 71
+    },
+    {
+      "id": "person_guan_zhong",
+      "name": "管夷吾",
+      "aliasText": "仲 相国 思想家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 69
+    },
+    {
+      "id": "person_sun_wu",
+      "name": "孙武",
+      "aliasText": "长卿 军事家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 67
+    },
+    {
+      "id": "person_han_fei",
+      "name": "韩非",
+      "aliasText": "思想家 法家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 67
+    },
+    {
+      "id": "person_zhuang_zi",
+      "name": "庄周",
+      "aliasText": "思想家 道家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 67
+    },
+    {
+      "id": "person_liu_heng",
+      "name": "刘恒",
+      "aliasText": "孝文皇帝 太宗 代王 皇帝 皇帝 政治家",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 67
+    },
+    {
+      "id": "person_lv_buwei",
+      "name": "吕不韦",
+      "aliasText": "相国 商人 思想家",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 67
+    },
+    {
+      "id": "person_zhang_qian",
+      "name": "张骞",
+      "aliasText": "使臣 博望侯",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 67
+    },
+    {
+      "id": "person_dong_zhuo",
+      "name": "董卓",
+      "aliasText": "仲颖 军阀 权臣 相国",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 67
+    },
+    {
+      "id": "person_si_ma_zhao",
+      "name": "司马昭",
+      "aliasText": "子上 文 太祖 高都侯 晋公 晋王 权臣 军事统帅",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 67
+    },
+    {
+      "id": "person_sima_yan",
+      "name": "司马炎",
+      "aliasText": "皇帝",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 67
+    },
+    {
+      "id": "person_yuchi_gong",
+      "name": "尉迟恭",
+      "aliasText": "敬德 忠武 吴国公 鄂国公 名将 门神",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 67
+    },
+    {
+      "id": "person_hu_bi_lie",
+      "name": "忽必烈",
+      "aliasText": "皇帝",
+      "dynasty": "yuan",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 67
+    },
+    {
+      "id": "person_zhang_juzheng",
+      "name": "张居正",
+      "aliasText": "叔大 太岳 宰相",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 67
+    },
+    {
+      "id": "person_hong_li",
+      "name": "弘历",
+      "aliasText": "皇帝",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 67
+    },
+    {
+      "id": "person_chai_rong",
+      "name": "柴荣",
+      "aliasText": "皇帝",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 67
+    },
+    {
+      "id": "person_qin_mu_gong",
+      "name": "嬴任好",
+      "aliasText": "诸侯 霸主",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_bai_qi",
+      "name": "白起",
+      "aliasText": "统帅",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_chen_ping",
+      "name": "陈平",
+      "aliasText": "献 户牖侯 曲逆侯 谋士 丞相",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_wang_jian",
+      "name": "王翦",
+      "aliasText": "将领 大将军",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_su_wu",
+      "name": "苏武",
+      "aliasText": "使臣 典属国",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_dong_zhongshu",
+      "name": "董仲舒",
+      "aliasText": "儒学家 相",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_yuan_shao",
+      "name": "袁绍",
+      "aliasText": "本初 军阀 关东联军盟主",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_jia_xu",
+      "name": "贾诩",
+      "aliasText": "文和 肃 都亭侯 魏寿乡侯 谋士 太尉",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_zhao_yun",
+      "name": "赵云",
+      "aliasText": "子龙 顺平 永昌亭侯 镇东将军 名将",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_sun_ce",
+      "name": "孙策",
+      "aliasText": "伯符 长沙桓王 吴侯 军阀 军事统帅",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_fa_zheng",
+      "name": "法正",
+      "aliasText": "孝直 翼 谋士 政治家",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_cao_ren",
+      "name": "曹仁",
+      "aliasText": "子孝 宗室将领 大司马",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_si_ma_shi",
+      "name": "司马师",
+      "aliasText": "子元 权臣 大将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_deng_ai",
+      "name": "邓艾",
+      "aliasText": "士载 将领 太尉",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_wang_xizhi",
+      "name": "王羲之",
+      "aliasText": "书法家",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_tao_yuanming",
+      "name": "陶潜",
+      "aliasText": "诗人",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_liu_yu",
+      "name": "刘裕",
+      "aliasText": "皇帝",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_zhangsun_wuji",
+      "name": "长孙无忌",
+      "aliasText": "辅机 文昭 齐国公 赵国公 宰相 外戚",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_fan_zhongyan",
+      "name": "范仲淹",
+      "aliasText": "希文 宰相 文学家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_ouyang_xiu",
+      "name": "欧阳修",
+      "aliasText": "永叔 醉翁 六一居士 文臣 文学家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_si_ma_guang",
+      "name": "司马光",
+      "aliasText": "君实 迂叟 宰相 史学家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_wen_tianxiang",
+      "name": "文天祥",
+      "aliasText": "宋瑞 文山 宰相 文学家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_zhu_di",
+      "name": "朱棣",
+      "aliasText": "皇帝",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_cao_xueqin",
+      "name": "曹雪芹",
+      "aliasText": "梦阮 雪芹 芹圃 小说家",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_zeng_guofan",
+      "name": "曾国藩",
+      "aliasText": "伯涵 涤生 文臣 将领",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_li_hongzhang",
+      "name": "李鸿章",
+      "aliasText": "渐甫 少荃 文臣",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_li_cunxu",
+      "name": "李存勖",
+      "aliasText": "皇帝 将领",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_chu_zhuang_wang",
+      "name": "熊侣",
+      "aliasText": "诸侯 霸主",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 62
+    },
+    {
+      "id": "person_gou_jian",
+      "name": "姒勾践",
+      "aliasText": "诸侯 霸主",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_wu_qi",
+      "name": "吴起",
+      "aliasText": "军事家 变法者",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_zhang_yi_qin",
+      "name": "张仪",
+      "aliasText": "相国 纵横家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_qin_zhaoxiang",
+      "name": "嬴稷",
+      "aliasText": "诸侯 秦王",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_mo_zi",
+      "name": "墨翟",
+      "aliasText": "思想家 墨家创始人",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_xun_zi",
+      "name": "荀况",
+      "aliasText": "卿 思想家 儒家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_su_qin",
+      "name": "苏秦",
+      "aliasText": "季子 纵横家 相国",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_li_guang",
+      "name": "李广",
+      "aliasText": "飞将军 名将 边塞统帅",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_jia_yi",
+      "name": "贾谊",
+      "aliasText": "政论家 文学家 太傅",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_zhou_yafu",
+      "name": "周亚夫",
+      "aliasText": "太尉 丞相",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_huo_guang",
+      "name": "霍光",
+      "aliasText": "大司马 权臣",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_sima_xiangru",
+      "name": "司马相如",
+      "aliasText": "辞赋家 中郎将",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_cao_pi",
+      "name": "曹丕",
+      "aliasText": "子桓 文皇帝 高祖 黄初 魏王 魏太子 皇帝 文学家",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_ma_chao",
+      "name": "马超",
+      "aliasText": "孟起 威 都亭侯 斄乡侯 名将 凉州军阀",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_lv_meng",
+      "name": "吕蒙",
+      "aliasText": "子明 肃 孱陵侯 名将 军事统帅",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_xun_you",
+      "name": "荀攸",
+      "aliasText": "公达 敬 谋士 军师",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_zhang_he",
+      "name": "张郃",
+      "aliasText": "儁乂 将领 车骑将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_chen_qun",
+      "name": "陈群",
+      "aliasText": "长文 文臣 司空",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_xie_an",
+      "name": "谢安",
+      "aliasText": "宰相",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_shangguan_waner",
+      "name": "上官婉儿",
+      "aliasText": "惠文 女官 诗人 政治家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_yang_su",
+      "name": "杨素",
+      "aliasText": "权臣 统帅 文学家",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_xuan_zang",
+      "name": "玄奘",
+      "aliasText": "僧人 翻译家 旅行家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_li_heng",
+      "name": "李亨",
+      "aliasText": "皇帝",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_han_yu",
+      "name": "韩愈",
+      "aliasText": "文学家 思想家 大臣",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_zhao_guangyi",
+      "name": "赵光义",
+      "aliasText": "皇帝",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_nu_erhachi",
+      "name": "努尔哈赤",
+      "aliasText": "首领 皇帝",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_zuo_zongtang",
+      "name": "左宗棠",
+      "aliasText": "季高 文臣 将领",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 61
+    },
+    {
+      "id": "person_xu_huang",
+      "name": "徐晃",
+      "aliasText": "公明 将领 右将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 59
+    },
+    {
+      "id": "person_wu_zixu",
+      "name": "伍员",
+      "aliasText": "子胥 大夫 军事家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_sun_bin",
+      "name": "孙膑",
+      "aliasText": "军事家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_qin_xiaogong",
+      "name": "嬴渠梁",
+      "aliasText": "诸侯",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_mao_dun",
+      "name": "冒顿单于",
+      "aliasText": "冒顿 单于 军事统帅",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_zhang_han",
+      "name": "章邯",
+      "aliasText": "将领 少府 雍王",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_guo_jia",
+      "name": "郭嘉",
+      "aliasText": "奉孝 贞 谋士 军师祭酒",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_jiang_wei",
+      "name": "姜维",
+      "aliasText": "伯约 当阳亭侯 平襄侯 大将军 军事家",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_sun_jian",
+      "name": "孙坚",
+      "aliasText": "文台 武烈皇帝 始祖 乌程侯 军阀 名将",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_lu_su",
+      "name": "鲁肃",
+      "aliasText": "子敬 横江将军 汉昌太守 战略家 外交家",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_wei_yan",
+      "name": "魏延",
+      "aliasText": "文长 将领 汉中太守",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_zhong_hui",
+      "name": "钟会",
+      "aliasText": "士季 将领 司徒",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_li_jiancheng",
+      "name": "李建成",
+      "aliasText": "隐 太子 军事统帅",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_li_zhi",
+      "name": "李治",
+      "aliasText": "天 高宗 永徽 显庆 麟德 乾封 总章 咸亨 上元 仪凤 调露 永隆 开耀 永淳 弘道 晋王 皇太子 皇帝",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_yao_chong",
+      "name": "姚崇",
+      "aliasText": "宰相",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_yan_zhenqing",
+      "name": "颜真卿",
+      "aliasText": "书法家 忠臣 宰相",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_bai_juyi",
+      "name": "白居易",
+      "aliasText": "诗人 官员",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_zhao_ji",
+      "name": "赵佶",
+      "aliasText": "皇帝 书画家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_xin_qiji",
+      "name": "辛弃疾",
+      "aliasText": "幼安 稼轩 词人 将领",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_yu_qian",
+      "name": "于谦",
+      "aliasText": "廷益 节庵 宰相",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_ci_xi",
+      "name": "慈禧",
+      "aliasText": "太后 摄政",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_feng_dao",
+      "name": "冯道",
+      "aliasText": "可道 长乐老 宰相 文臣",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 56
+    },
+    {
+      "id": "person_yan_ying",
+      "name": "晏婴",
+      "aliasText": "仲 相国 政治家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_fan_li",
+      "name": "范蠡",
+      "aliasText": "少伯 谋臣 商人",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_zhao_wuling",
+      "name": "赵雍",
+      "aliasText": "诸侯",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_lian_po",
+      "name": "廉颇",
+      "aliasText": "统帅",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_wei_wuji",
+      "name": "魏无忌",
+      "aliasText": "公子 战国四公子",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_fan_zeng",
+      "name": "范增",
+      "aliasText": "亚父 谋士 亚父",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_zhang_er",
+      "name": "张耳",
+      "aliasText": "纵横家 赵王 赵相",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_cao_zhi",
+      "name": "曹植",
+      "aliasText": "子建 思 陈王 东阿王 文学家 诗人",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_zhang_liao",
+      "name": "张辽",
+      "aliasText": "文远 刚 关内侯 都亭侯 晋阳侯 名将",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_xiahou_yuan",
+      "name": "夏侯渊",
+      "aliasText": "妙才 愍 名将 军事统帅",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_cao_zhen",
+      "name": "曹真",
+      "aliasText": "子丹 宗室将领 大司马",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_zhong_yao",
+      "name": "钟繇",
+      "aliasText": "元常 文臣 太傅 书法家",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_yuan_hong",
+      "name": "元宏",
+      "aliasText": "皇帝 改革者",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_gao_jiong",
+      "name": "高颎",
+      "aliasText": "宰相 统帅",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_li_mi",
+      "name": "李密",
+      "aliasText": "瓦岗军首领 魏公",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_zhang_jiuling",
+      "name": "张九龄",
+      "aliasText": "宰相 诗人",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_li_guangbi",
+      "name": "李光弼",
+      "aliasText": "将领",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_wang_wei",
+      "name": "王维",
+      "aliasText": "诗人 画家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_zhao_zhen",
+      "name": "赵祯",
+      "aliasText": "皇帝",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_ye_lu_abaoji",
+      "name": "耶律阿保机",
+      "aliasText": "皇帝",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_han_shizhong",
+      "name": "韩世忠",
+      "aliasText": "良臣 清凉居士 将领",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_xu_da",
+      "name": "徐达",
+      "aliasText": "天德 将领",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_qi_jiguang",
+      "name": "戚继光",
+      "aliasText": "元敬 南塘 将领",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_yin_zhen",
+      "name": "胤禛",
+      "aliasText": "皇帝",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_lin_zexu",
+      "name": "林则徐",
+      "aliasText": "元抚 少穆 文臣",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_liang_qichao",
+      "name": "梁启超",
+      "aliasText": "卓如 任公 饮冰室主人 思想家 政论家",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_shi_jingtang",
+      "name": "石敬瑭",
+      "aliasText": "皇帝 节度使",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_zhou_chengwang",
+      "name": "姬诵",
+      "aliasText": "周王",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_zi_chan",
+      "name": "公孙侨",
+      "aliasText": "子产 执政 思想家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_wei_wenhou",
+      "name": "魏斯",
+      "aliasText": "诸侯",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_qi_weiwang",
+      "name": "田因齐",
+      "aliasText": "诸侯",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_fan_ju",
+      "name": "范雎",
+      "aliasText": "叔 相国 谋臣",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_lin_xiangru",
+      "name": "蔺相如",
+      "aliasText": "相国 外交家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_li_mu",
+      "name": "李牧",
+      "aliasText": "统帅",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_jing_ke",
+      "name": "荆轲",
+      "aliasText": "刺客",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_zhao_gao",
+      "name": "赵高",
+      "aliasText": "中车府令 权臣",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_zhou_bo",
+      "name": "周勃",
+      "aliasText": "武 绛侯 名将 太尉 丞相",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_xiang_liang",
+      "name": "项梁",
+      "aliasText": "将领 武信君",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_dou_yifang",
+      "name": "窦漪房",
+      "aliasText": "皇后 太后 太皇太后",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_chao_cuo",
+      "name": "晁错",
+      "aliasText": "政治家 御史大夫",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_cheng_yu",
+      "name": "程昱",
+      "aliasText": "仲德 肃 谋士 守将",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_huang_zhong",
+      "name": "黄忠",
+      "aliasText": "汉升 刚 名将",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_yu_jin",
+      "name": "于禁",
+      "aliasText": "文则 将领 左将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_wang_yun",
+      "name": "王允",
+      "aliasText": "子师 文臣 司徒",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_shi_le",
+      "name": "石勒",
+      "aliasText": "君主",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_fu_jian",
+      "name": "苻坚",
+      "aliasText": "君主",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_xiao_yan",
+      "name": "萧衍",
+      "aliasText": "皇帝",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_song_jing",
+      "name": "宋璟",
+      "aliasText": "宰相",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_pei_du",
+      "name": "裴度",
+      "aliasText": "宰相",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_liu_zongyuan",
+      "name": "柳宗元",
+      "aliasText": "文学家 思想家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_shen_kuo",
+      "name": "沈括",
+      "aliasText": "存中 梦溪丈人 科学家 文臣",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_zhao_gou",
+      "name": "赵构",
+      "aliasText": "皇帝",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_li_qingzhao",
+      "name": "李清照",
+      "aliasText": "易安居士 词人",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_lu_you",
+      "name": "陆游",
+      "aliasText": "务观 放翁 诗人",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_wan_yan_aguda",
+      "name": "完颜阿骨打",
+      "aliasText": "皇帝",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_liu_ji_ming",
+      "name": "刘基",
+      "aliasText": "伯温 谋臣 文学家",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_zheng_he",
+      "name": "郑和",
+      "aliasText": "宦官 航海家",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_xu_guangqi",
+      "name": "徐光启",
+      "aliasText": "子先 玄扈 文臣 科学家",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_zheng_chenggong",
+      "name": "郑成功",
+      "aliasText": "将领",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_li_siyuan",
+      "name": "李嗣源",
+      "aliasText": "皇帝 将领",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_wu_wang_helv",
+      "name": "姬光",
+      "aliasText": "诸侯",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_mengchang_jun",
+      "name": "田文",
+      "aliasText": "相国 战国四公子",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_qin_huiwen",
+      "name": "嬴驷",
+      "aliasText": "诸侯 秦王",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_yue_yi",
+      "name": "乐毅",
+      "aliasText": "统帅",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_ying_bu",
+      "name": "英布",
+      "aliasText": "黥布 九江王 淮南王 名将 诸侯王",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_cao_can",
+      "name": "曹参",
+      "aliasText": "懿 建成侯 平阳侯 名将 丞相",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_liu_bi",
+      "name": "刘濞",
+      "aliasText": "吴王 叛乱首领",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_liu_xie",
+      "name": "刘协",
+      "aliasText": "伯和 孝献皇帝 永汉 初平 兴平 建安 延康 陈留王 皇帝 山阳公 皇帝",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_dian_wei",
+      "name": "典韦",
+      "aliasText": "亲卫 校尉",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_xu_chu",
+      "name": "许褚",
+      "aliasText": "仲康 亲卫 武卫将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_huang_fu_song",
+      "name": "皇甫嵩",
+      "aliasText": "义真 将领 太尉",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_lu_kang",
+      "name": "陆抗",
+      "aliasText": "幼节 将领 大司马 荆州牧",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_zhang_zhao",
+      "name": "张昭",
+      "aliasText": "子布 文臣 辅吴将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_liu_biao",
+      "name": "刘表",
+      "aliasText": "景升 军阀 荆州牧",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_du_yu",
+      "name": "杜预",
+      "aliasText": "统帅 学者",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_ji_kang",
+      "name": "嵇康",
+      "aliasText": "名士 音乐家",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_chen_shou",
+      "name": "陈寿",
+      "aliasText": "史学家",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_wang_dao",
+      "name": "王导",
+      "aliasText": "丞相 政治家",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_yu_wen_tai",
+      "name": "宇文泰",
+      "aliasText": "权臣 改革者",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_dou_jiande",
+      "name": "窦建德",
+      "aliasText": "夏王 义军首领",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_qin_shubao",
+      "name": "秦琼",
+      "aliasText": "叔宝 将领",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_li_linfu",
+      "name": "李林甫",
+      "aliasText": "宰相 权臣",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_li_yu",
+      "name": "李豫",
+      "aliasText": "皇帝",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_li_shi",
+      "name": "李适",
+      "aliasText": "皇帝",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_li_chun",
+      "name": "李纯",
+      "aliasText": "皇帝",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_li_deyu",
+      "name": "李德裕",
+      "aliasText": "宰相",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_zhao_pu",
+      "name": "赵普",
+      "aliasText": "宰相",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_zhao_heng",
+      "name": "赵恒",
+      "aliasText": "皇帝",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_ye_lv_chucai",
+      "name": "耶律楚材",
+      "aliasText": "晋卿 湛然居士 宰相",
+      "dynasty": "yuan",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_guo_shoujing",
+      "name": "郭守敬",
+      "aliasText": "若思 科学家",
+      "dynasty": "yuan",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_li_shizhen",
+      "name": "李时珍",
+      "aliasText": "东璧 濒湖山人 医学家",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_huang_taiji",
+      "name": "皇太极",
+      "aliasText": "皇帝",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_duo_ergun",
+      "name": "多尔衮",
+      "aliasText": "摄政王",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_liu_zhiyuan",
+      "name": "刘知远",
+      "aliasText": "皇帝 节度使",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_zhou_pingwang",
+      "name": "姬宜臼",
+      "aliasText": "周王",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_bai_li_xi",
+      "name": "百里奚",
+      "aliasText": "井伯 相国",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_wang_ben",
+      "name": "王贲",
+      "aliasText": "将领",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_zhao_tuo",
+      "name": "赵佗",
+      "aliasText": "南越王 割据君主",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_li_ling",
+      "name": "李陵",
+      "aliasText": "将领",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_pang_tong",
+      "name": "庞统",
+      "aliasText": "士元 凤雏 靖 谋士",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_cao_hong",
+      "name": "曹洪",
+      "aliasText": "子廉 宗室将领 骠骑将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_cao_xiu",
+      "name": "曹休",
+      "aliasText": "文烈 宗室将领 大司马",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_jiang_wan",
+      "name": "蒋琬",
+      "aliasText": "公琰 文臣 大将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_gan_ning",
+      "name": "甘宁",
+      "aliasText": "兴霸 将领 西陵太守",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_gong_sun_zan",
+      "name": "公孙瓒",
+      "aliasText": "伯珪 军阀 前将军",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_yang_hu",
+      "name": "羊祜",
+      "aliasText": "统帅 政治家",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_sima_rui",
+      "name": "司马睿",
+      "aliasText": "皇帝",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_xie_xuan",
+      "name": "谢玄",
+      "aliasText": "统帅",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_gu_kaizhi",
+      "name": "顾恺之",
+      "aliasText": "画家",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_gao_huan",
+      "name": "高欢",
+      "aliasText": "权臣",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_cheng_yaojin",
+      "name": "程知节",
+      "aliasText": "咬金 将领",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_xue_rengui",
+      "name": "薛仁贵",
+      "aliasText": "将领",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_zhang_xun",
+      "name": "张巡",
+      "aliasText": "将领 忠臣",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_huang_chao",
+      "name": "黄巢",
+      "aliasText": "起义首领 大齐皇帝",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_zhu_wen",
+      "name": "朱温",
+      "aliasText": "节度使 后梁开国之君",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_li_shangyin",
+      "name": "李商隐",
+      "aliasText": "诗人",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_sun_simiao",
+      "name": "孙思邈",
+      "aliasText": "医学家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_kou_zhun",
+      "name": "寇准",
+      "aliasText": "宰相",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_li_gang",
+      "name": "李纲",
+      "aliasText": "伯纪 宰相 将领",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_zhao_mengfu",
+      "name": "赵孟頫",
+      "aliasText": "子昂 松雪道人 书画家",
+      "dynasty": "yuan",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_tang_xianzu",
+      "name": "汤显祖",
+      "aliasText": "义仍 玉茗堂主人 剧作家",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_yuan_chonghuan",
+      "name": "袁崇焕",
+      "aliasText": "元素 将领",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_zhu_youjian",
+      "name": "朱由检",
+      "aliasText": "皇帝",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_zhang_zhidong",
+      "name": "张之洞",
+      "aliasText": "孝达 香涛 文臣",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_yan_fu",
+      "name": "严复",
+      "aliasText": "又陵 几道 翻译家 思想家",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_zhou_youwang",
+      "name": "姬宫湦",
+      "aliasText": "周王",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_zheng_zhuang_gong",
+      "name": "姬寤生",
+      "aliasText": "诸侯 周室卿士",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_li_kui",
+      "name": "李悝",
+      "aliasText": "相国 法家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_zhao_she",
+      "name": "赵奢",
+      "aliasText": "将领",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_pingyuan_jun",
+      "name": "赵胜",
+      "aliasText": "相国 战国四公子",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_yan_zhaowang",
+      "name": "姬职",
+      "aliasText": "诸侯",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_chunshen_jun",
+      "name": "黄歇",
+      "aliasText": "相国 战国四公子",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_liu_qi",
+      "name": "刘启",
+      "aliasText": "孝景皇帝 皇太子 皇帝 皇帝",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_chen_yu",
+      "name": "陈馀",
+      "aliasText": "将领 代王",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_zhang_cang",
+      "name": "张苍",
+      "aliasText": "丞相 历算家",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_liu_an",
+      "name": "刘安",
+      "aliasText": "淮南王 学者",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_zhufu_yan",
+      "name": "主父偃",
+      "aliasText": "谋臣",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_ji_an",
+      "name": "汲黯",
+      "aliasText": "太守 主爵都尉",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_liu_ju",
+      "name": "刘据",
+      "aliasText": "皇太子",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_dongfang_shuo",
+      "name": "东方朔",
+      "aliasText": "辞赋家 太中大夫",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_xiahou_dun",
+      "name": "夏侯惇",
+      "aliasText": "元让 忠 高安乡侯 名将 宗亲",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_ma_su",
+      "name": "马谡",
+      "aliasText": "幼常 谋士 将领",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_yue_jin",
+      "name": "乐进",
+      "aliasText": "文谦 将领 右将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_cao_zhang",
+      "name": "曹彰",
+      "aliasText": "子文 宗室将领 任城王",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_hua_xin",
+      "name": "华歆",
+      "aliasText": "子鱼 文臣 太尉",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_li_yan",
+      "name": "李严",
+      "aliasText": "正方 文臣 骠骑将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_fei_yi",
+      "name": "费祎",
+      "aliasText": "文伟 文臣 大将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_kong_rong",
+      "name": "孔融",
+      "aliasText": "文举 文臣 文学家",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_he_jin",
+      "name": "何进",
+      "aliasText": "遂高 外戚 大将军",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_taishi_ci",
+      "name": "太史慈",
+      "aliasText": "子义 将领 建昌都尉",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_huang_gai",
+      "name": "黄盖",
+      "aliasText": "公覆 将领 武锋中郎将",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_zhuge_jin",
+      "name": "诸葛瑾",
+      "aliasText": "子瑜 文臣 大将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_sima_zhong",
+      "name": "司马衷",
+      "aliasText": "皇帝",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_ruan_ji",
+      "name": "阮籍",
+      "aliasText": "名士 诗人",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_lu_ji",
+      "name": "陆机",
+      "aliasText": "文学家 官员",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_liu_yuan",
+      "name": "刘渊",
+      "aliasText": "君主",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_zu_ti",
+      "name": "祖逖",
+      "aliasText": "将领",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_huan_wen",
+      "name": "桓温",
+      "aliasText": "军阀 权臣",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_wang_xianzhi_shu",
+      "name": "王献之",
+      "aliasText": "书法家",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_jiumoluoshi",
+      "name": "鸠摩罗什",
+      "aliasText": "译经师",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_feng_taihou",
+      "name": "冯氏",
+      "aliasText": "皇太后 改革者",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_li_xiaogong",
+      "name": "李孝恭",
+      "aliasText": "宗室 统帅",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_ma_zhou",
+      "name": "马周",
+      "aliasText": "宰相",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_chu_suiliang",
+      "name": "褚遂良",
+      "aliasText": "宰相 书法家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_su_dingfang",
+      "name": "苏定方",
+      "aliasText": "将领",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_tai_ping",
+      "name": "太平公主",
+      "aliasText": "公主 权臣",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_zhang_yue",
+      "name": "张说",
+      "aliasText": "宰相 文学家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_liu_yan",
+      "name": "刘晏",
+      "aliasText": "理财家 宰相",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_li_su",
+      "name": "李愬",
+      "aliasText": "将领",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_li_keyong",
+      "name": "李克用",
+      "aliasText": "节度使 晋王",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_ouyang_xun",
+      "name": "欧阳询",
+      "aliasText": "书法家 学者",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_liu_yuxi",
+      "name": "刘禹锡",
+      "aliasText": "诗人 哲学家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_du_mu",
+      "name": "杜牧",
+      "aliasText": "诗人 官员",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_wu_daozi",
+      "name": "吴道子",
+      "aliasText": "画家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_bao_zheng",
+      "name": "包拯",
+      "aliasText": "希仁 监察官",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_su_zhe",
+      "name": "苏辙",
+      "aliasText": "子由 颍滨遗老 文臣 文学家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_xiao_chuo",
+      "name": "萧绰",
+      "aliasText": "皇后 摄政",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_qin_hui",
+      "name": "秦桧",
+      "aliasText": "会之 宰相",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_lu_jiuyuan",
+      "name": "陆九渊",
+      "aliasText": "子静 象山 思想家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_guan_han_qing",
+      "name": "关汉卿",
+      "aliasText": "已斋叟 剧作家",
+      "dynasty": "yuan",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_pu_songling",
+      "name": "蒲松龄",
+      "aliasText": "留仙 柳泉居士 小说家",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_tan_sitong",
+      "name": "谭嗣同",
+      "aliasText": "复生 壮飞 思想家",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_yuan_shikai",
+      "name": "袁世凯",
+      "aliasText": "慰亭 将领 总统",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_zhu_youzhen",
+      "name": "朱友贞",
+      "aliasText": "皇帝",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_yang_xingmi",
+      "name": "杨行密",
+      "aliasText": "化源 节度使 首领",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_qin_er_shi",
+      "name": "胡亥",
+      "aliasText": "二世皇帝 皇帝",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 42
+    },
+    {
+      "id": "person_shao_gong_shi",
+      "name": "姬奭",
+      "aliasText": "执政 燕国始封君",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_peng_yue",
+      "name": "彭越",
+      "aliasText": "仲 建成侯 梁王 游击战鼻祖 诸侯王",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_fan_kuai",
+      "name": "樊哙",
+      "aliasText": "临武侯 舞阳侯 猛将 外戚",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_tian_heng",
+      "name": "田横",
+      "aliasText": "齐王 义士",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_guan_ying",
+      "name": "灌婴",
+      "aliasText": "将领 丞相",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_zhang_shizhi",
+      "name": "张释之",
+      "aliasText": "廷尉",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_zhang_tang",
+      "name": "张汤",
+      "aliasText": "御史大夫 酷吏",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_wei_zifu",
+      "name": "卫子夫",
+      "aliasText": "皇后",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_zhu_jun",
+      "name": "朱儁",
+      "aliasText": "公伟 将领 太尉",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_zhuge_ke",
+      "name": "诸葛恪",
+      "aliasText": "元逊 权臣 太傅",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_yuan_shu",
+      "name": "袁术",
+      "aliasText": "公路 军阀",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_tao_kan",
+      "name": "陶侃",
+      "aliasText": "统帅 政治家",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_wang_meng",
+      "name": "王猛",
+      "aliasText": "宰相",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_tuo_ba_tao",
+      "name": "拓跋焘",
+      "aliasText": "皇帝",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_he_ruobi",
+      "name": "贺若弼",
+      "aliasText": "将领",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_wang_zhongsi",
+      "name": "王忠嗣",
+      "aliasText": "将领",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_shi_siming",
+      "name": "史思明",
+      "aliasText": "叛军首领 大燕皇帝",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_li_bi",
+      "name": "李泌",
+      "aliasText": "宰相 谋臣",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_yu_shinan",
+      "name": "虞世南",
+      "aliasText": "书法家 大臣",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_wang_bo",
+      "name": "王勃",
+      "aliasText": "诗人",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_chen_ziang",
+      "name": "陈子昂",
+      "aliasText": "诗人 政治家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_jian_zhen",
+      "name": "鉴真",
+      "aliasText": "僧人 律宗祖师",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_huang_tingjian",
+      "name": "黄庭坚",
+      "aliasText": "鲁直 山谷道人 诗人 书法家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_di_qing",
+      "name": "狄青",
+      "aliasText": "汉臣 将领",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_zong_ze",
+      "name": "宗泽",
+      "aliasText": "汝霖 将领",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_zhang_zai",
+      "name": "张载",
+      "aliasText": "子厚 横渠先生 思想家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_cheng_hao",
+      "name": "程颢",
+      "aliasText": "伯淳 明道先生 思想家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_cheng_yi",
+      "name": "程颐",
+      "aliasText": "正叔 伊川先生 思想家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_ye_lu_deguang",
+      "name": "耶律德光",
+      "aliasText": "皇帝",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_li_yuanhao",
+      "name": "李元昊",
+      "aliasText": "皇帝",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_fang_xiaoru",
+      "name": "方孝孺",
+      "aliasText": "希直 逊志 文臣",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_hai_rui",
+      "name": "海瑞",
+      "aliasText": "汝贤 刚峰 文臣",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_song_yingxing",
+      "name": "宋应星",
+      "aliasText": "长庚 科学家",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_li_zicheng",
+      "name": "李自成",
+      "aliasText": "首领",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_kang_youwei",
+      "name": "康有为",
+      "aliasText": "广厦 长素 南海 思想家",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_li_bian",
+      "name": "李昪",
+      "aliasText": "正伦 皇帝",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_zhou_xuanwang",
+      "name": "姬静",
+      "aliasText": "周王",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 40
+    },
+    {
+      "id": "person_xian_zhen",
+      "name": "先轸",
+      "aliasText": "统帅",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 40
+    },
+    {
+      "id": "person_zhou_liwang",
+      "name": "姬胡",
+      "aliasText": "周王",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_hu_yan",
+      "name": "狐偃",
+      "aliasText": "子犯 谋臣",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_sun_shu_ao",
+      "name": "蔿敖",
+      "aliasText": "孙叔 令尹 水利家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_yan_hui",
+      "name": "颜回",
+      "aliasText": "子渊 儒者",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_shen_buhai",
+      "name": "申不害",
+      "aliasText": "相国 法家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_xiang_yan",
+      "name": "项燕",
+      "aliasText": "统帅",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_fu_su",
+      "name": "扶苏",
+      "aliasText": "皇子 监军",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_li_xin",
+      "name": "李信",
+      "aliasText": "将领",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_long_ju",
+      "name": "龙且",
+      "aliasText": "将领",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_xiahou_ying",
+      "name": "夏侯婴",
+      "aliasText": "太仆 将领",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_liu_wu_liang",
+      "name": "刘武",
+      "aliasText": "梁王",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_yuan_ang",
+      "name": "袁盎",
+      "aliasText": "大臣 中郎将",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_sang_hongyang",
+      "name": "桑弘羊",
+      "aliasText": "理财家 御史大夫",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_jin_midi",
+      "name": "金日磾",
+      "aliasText": "匈奴王子 车骑将军",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_liu_shan",
+      "name": "刘禅",
+      "aliasText": "公嗣 阿斗 思公 建兴 延熙 景耀 炎兴 皇太子 安乐公 皇帝",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_wang_lang",
+      "name": "王朗",
+      "aliasText": "景兴 文臣 司徒 经学家",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_mao_jie",
+      "name": "毛玠",
+      "aliasText": "孝先 文臣 尚书仆射",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_man_chong",
+      "name": "满宠",
+      "aliasText": "伯宁 文臣 将领 太尉",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_jiang_ji",
+      "name": "蒋济",
+      "aliasText": "子通 文臣 太尉",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_wang_ping",
+      "name": "王平",
+      "aliasText": "子均 将领 镇北大将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_zhu_ge_zhan",
+      "name": "诸葛瞻",
+      "aliasText": "思远 文臣 卫将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_lu_zhi",
+      "name": "卢植",
+      "aliasText": "子干 文臣 将领 经学家",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_cheng_pu",
+      "name": "程普",
+      "aliasText": "德谋 将领 江夏太守",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_gu_yong",
+      "name": "顾雍",
+      "aliasText": "元叹 文臣 丞相",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_jia_nanfeng",
+      "name": "贾南风",
+      "aliasText": "皇后",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_zhang_hua",
+      "name": "张华",
+      "aliasText": "执政 学者",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_wang_jun",
+      "name": "王濬",
+      "aliasText": "统帅",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_liu_kun",
+      "name": "刘琨",
+      "aliasText": "将领 诗人",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_liu_yilong",
+      "name": "刘义隆",
+      "aliasText": "皇帝",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_zu_chongzhi",
+      "name": "祖冲之",
+      "aliasText": "数学家 天文学家",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_liu_xie_wenxin",
+      "name": "刘勰",
+      "aliasText": "文论家",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_yu_wen_yong",
+      "name": "宇文邕",
+      "aliasText": "皇帝",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_li_yuanji",
+      "name": "李元吉",
+      "aliasText": "剌 宗室 将领",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_yang_yong",
+      "name": "杨勇",
+      "aliasText": "皇太子",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_han_qinhu",
+      "name": "韩擒虎",
+      "aliasText": "将领",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_wang_shichong",
+      "name": "王世充",
+      "aliasText": "郑帝 隋将",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_pei_xingjian",
+      "name": "裴行俭",
+      "aliasText": "将领 书法家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_zhang_jianzhi",
+      "name": "张柬之",
+      "aliasText": "宰相 政变首领",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_ge_shuhan",
+      "name": "哥舒翰",
+      "aliasText": "将领",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_lu_zhi_tang",
+      "name": "陆贽",
+      "aliasText": "宰相 政论家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_du_you",
+      "name": "杜佑",
+      "aliasText": "宰相 史学家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_meng_haoran",
+      "name": "孟浩然",
+      "aliasText": "诗人",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_gao_shi",
+      "name": "高适",
+      "aliasText": "诗人 节度使",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_yan_liben",
+      "name": "阎立本",
+      "aliasText": "画家 宰相",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_yi_xing",
+      "name": "僧一行",
+      "aliasText": "天文学家 僧人",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_mi_fu",
+      "name": "米芾",
+      "aliasText": "元章 襄阳漫士 海岳外史 书画家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_yang_ye",
+      "name": "杨业",
+      "aliasText": "将领",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_zhao_huan",
+      "name": "赵桓",
+      "aliasText": "皇帝",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_zhou_dunyi",
+      "name": "周敦颐",
+      "aliasText": "茂叔 濂溪先生 思想家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_zhao_shen",
+      "name": "赵昚",
+      "aliasText": "皇帝",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_wu_jie",
+      "name": "吴玠",
+      "aliasText": "晋卿 将领",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_meng_gong",
+      "name": "孟珙",
+      "aliasText": "璞玉 将领",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_wan_yan_zongbi",
+      "name": "完颜宗弼",
+      "aliasText": "将领",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_wo_kuo_tai",
+      "name": "窝阔台",
+      "aliasText": "可汗",
+      "dynasty": "yuan",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_bo_yan",
+      "name": "伯颜",
+      "aliasText": "将领 宰相",
+      "dynasty": "yuan",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_huang_gongwang",
+      "name": "黄公望",
+      "aliasText": "子久 大痴道人 一峰 画家",
+      "dynasty": "yuan",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_chang_yuchun",
+      "name": "常遇春",
+      "aliasText": "伯仁 将领",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_xu_xiake",
+      "name": "徐弘祖",
+      "aliasText": "振之 霞客 地理学家",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_shi_lang",
+      "name": "施琅",
+      "aliasText": "尊侯 琢公 将领",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_guang_xu",
+      "name": "载湉",
+      "aliasText": "皇帝",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_wang_yanzhang",
+      "name": "王彦章",
+      "aliasText": "贤明 将领",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_li_congke",
+      "name": "李从珂",
+      "aliasText": "皇帝 将领",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_zhou_muwang",
+      "name": "姬满",
+      "aliasText": "周王",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_zhao_shuai",
+      "name": "赵衰",
+      "aliasText": "子余 谋臣",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_jin_xian_gong",
+      "name": "姬诡诸",
+      "aliasText": "诸侯",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_zi_lu",
+      "name": "仲由",
+      "aliasText": "子路 儒者 家臣",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_xi_men_bao",
+      "name": "西门豹",
+      "aliasText": "地方官 水利家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_zou_ji",
+      "name": "邹忌",
+      "aliasText": "相国",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_wei_ran",
+      "name": "魏冉",
+      "aliasText": "相国 将领",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_zhao_kuo",
+      "name": "赵括",
+      "aliasText": "将领",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_zou_yan",
+      "name": "邹衍",
+      "aliasText": "思想家 阴阳家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_lu_jia",
+      "name": "陆贾",
+      "aliasText": "辩士 思想家 外交家",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_xiong_xin",
+      "name": "熊心",
+      "aliasText": "楚王 义帝",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_ji_bu",
+      "name": "季布",
+      "aliasText": "将领 河东守",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_wang_zhi",
+      "name": "王娡",
+      "aliasText": "皇后 太后",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_dou_ying",
+      "name": "窦婴",
+      "aliasText": "大将军 丞相",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_gongsun_hong",
+      "name": "公孙弘",
+      "aliasText": "丞相 儒学家",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_cui_yan",
+      "name": "崔琰",
+      "aliasText": "季珪 文臣 尚书",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_liu_ye",
+      "name": "刘晔",
+      "aliasText": "子扬 谋士",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_guo_huai",
+      "name": "郭淮",
+      "aliasText": "伯济 将领 车骑将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_cai_yong",
+      "name": "蔡邕",
+      "aliasText": "伯喈 文臣 文学家 书法家",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_ding_feng",
+      "name": "丁奉",
+      "aliasText": "承渊 将领 右大司马",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_liu_zhang",
+      "name": "刘璋",
+      "aliasText": "季玉 军阀 益州牧",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_ma_teng",
+      "name": "马腾",
+      "aliasText": "寿成 军阀 卫尉",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_wei_guan",
+      "name": "卫瓘",
+      "aliasText": "执政 书法家",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_pan_yue",
+      "name": "潘岳",
+      "aliasText": "文学家 官员",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_liu_cong",
+      "name": "刘聪",
+      "aliasText": "君主",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_murong_chui",
+      "name": "慕容垂",
+      "aliasText": "君主",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_shen_yue",
+      "name": "沈约",
+      "aliasText": "史学家 文学家",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_xiao_tong",
+      "name": "萧统",
+      "aliasText": "太子 文学家",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_chen_baxian",
+      "name": "陈霸先",
+      "aliasText": "皇帝",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_tuo_ba_gui",
+      "name": "拓跋珪",
+      "aliasText": "皇帝",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_li_daoyuan",
+      "name": "郦道元",
+      "aliasText": "地理学家",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_shi_wansui",
+      "name": "史万岁",
+      "aliasText": "将领",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_hou_junji",
+      "name": "侯君集",
+      "aliasText": "将领",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_gao_shilian",
+      "name": "高士廉",
+      "aliasText": "宰相 外戚",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_gao_lishi",
+      "name": "高力士",
+      "aliasText": "宦官",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_gao_xianzhi",
+      "name": "高仙芝",
+      "aliasText": "将领",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_luo_binwang",
+      "name": "骆宾王",
+      "aliasText": "诗人",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_wang_changling",
+      "name": "王昌龄",
+      "aliasText": "诗人",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_cen_shen",
+      "name": "岑参",
+      "aliasText": "诗人",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_yuan_zhen",
+      "name": "元稹",
+      "aliasText": "诗人 宰相",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_zeng_gong",
+      "name": "曾巩",
+      "aliasText": "子固 文臣 文学家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_cai_jing",
+      "name": "蔡京",
+      "aliasText": "元长 宰相",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_yan_shu",
+      "name": "晏殊",
+      "aliasText": "同叔 宰相 词人",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_yuan_haowen",
+      "name": "元好问",
+      "aliasText": "裕之 遗山 诗人 史学家",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_wang_shifu",
+      "name": "王实甫",
+      "aliasText": "剧作家",
+      "dynasty": "yuan",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_wu_sangui",
+      "name": "吴三桂",
+      "aliasText": "长伯 将领",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_fu_lin",
+      "name": "福临",
+      "aliasText": "皇帝",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_he_shen",
+      "name": "和珅",
+      "aliasText": "宰相",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_ji_yun",
+      "name": "纪昀",
+      "aliasText": "晓岚 观弈道人 文臣",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_zhan_tianyou",
+      "name": "詹天佑",
+      "aliasText": "眷诚 工程师",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_sang_weihan",
+      "name": "桑维翰",
+      "aliasText": "国侨 宰相 谋士",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_qian_liu",
+      "name": "钱镠",
+      "aliasText": "具美 节度使 首领",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_zheng_huan_gong",
+      "name": "姬友",
+      "aliasText": "诸侯 周室卿士",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_bao_shuya",
+      "name": "鲍叔牙",
+      "aliasText": "大夫",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_jian_shu",
+      "name": "蹇叔",
+      "aliasText": "上大夫",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_chu_cheng_wang",
+      "name": "熊恽",
+      "aliasText": "诸侯",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_song_xiang_gong",
+      "name": "子兹甫",
+      "aliasText": "诸侯",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_wen_zhong",
+      "name": "文种",
+      "aliasText": "少禽 谋臣",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_tian_ji",
+      "name": "田忌",
+      "aliasText": "将领",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_chu_liji",
+      "name": "嬴疾",
+      "aliasText": "相国 将领",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_gan_mao",
+      "name": "甘茂",
+      "aliasText": "相国 将领",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_si_ma_cuo",
+      "name": "司马错",
+      "aliasText": "将领",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_tai_zi_dan",
+      "name": "姬丹",
+      "aliasText": "太子",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_hui_shi",
+      "name": "惠施",
+      "aliasText": "相国 名家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_meng_tian",
+      "name": "蒙恬",
+      "aliasText": "名将 边塞统帅",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_liu_ying",
+      "name": "刘盈",
+      "aliasText": "孝惠皇帝 皇太子 皇帝 皇帝",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_meng_yi",
+      "name": "蒙毅",
+      "aliasText": "上卿 内廷近臣",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_wei_liao",
+      "name": "尉缭",
+      "aliasText": "国尉 兵家",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_wang_ling_han",
+      "name": "王陵",
+      "aliasText": "丞相",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_bo_ji",
+      "name": "薄姬",
+      "aliasText": "太后 后妃",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_chunyu_yi",
+      "name": "淳于意",
+      "aliasText": "医家",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_mei_cheng",
+      "name": "枚乘",
+      "aliasText": "辞赋家",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_yizhixie",
+      "name": "伊稚斜单于",
+      "aliasText": "匈奴单于",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_yang_xiu",
+      "name": "杨修",
+      "aliasText": "德祖 文臣 主簿",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_huang_quan",
+      "name": "黄权",
+      "aliasText": "公衡 文臣 将领",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_dong_yun",
+      "name": "董允",
+      "aliasText": "休昭 文臣 侍中",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_qiao_zhou",
+      "name": "谯周",
+      "aliasText": "允南 文臣 学者",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_cai_yan",
+      "name": "蔡琰",
+      "aliasText": "昭姬 文学家 琴家",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_wang_can",
+      "name": "王粲",
+      "aliasText": "仲宣 文学家 文臣",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_zhu_ran",
+      "name": "朱然",
+      "aliasText": "义封 将领 左大司马",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_sun_hao",
+      "name": "孙皓",
+      "aliasText": "元宗 皇帝",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_zhang_lu",
+      "name": "张鲁",
+      "aliasText": "公祺 军阀 宗教领袖",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_tao_qian",
+      "name": "陶谦",
+      "aliasText": "恭祖 军阀 徐州牧",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_zhang_xiu",
+      "name": "张绣",
+      "aliasText": "军阀 破羌将军",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_zhu_ge_dan",
+      "name": "诸葛诞",
+      "aliasText": "公休 将领 征东大将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_shan_tao",
+      "name": "山涛",
+      "aliasText": "名士 吏部尚书",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_pei_xiu",
+      "name": "裴秀",
+      "aliasText": "地图学家 司空",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_zuo_si",
+      "name": "左思",
+      "aliasText": "诗人",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_wang_dun",
+      "name": "王敦",
+      "aliasText": "军阀 权臣",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_ge_hong",
+      "name": "葛洪",
+      "aliasText": "道教学者 医药学家",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_tan_daoji",
+      "name": "檀道济",
+      "aliasText": "统帅",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_tao_hongjing",
+      "name": "陶弘景",
+      "aliasText": "道教学者 医药学家",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_hou_jing",
+      "name": "侯景",
+      "aliasText": "军阀",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_chen_qingzhi",
+      "name": "陈庆之",
+      "aliasText": "统帅",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_cui_hao",
+      "name": "崔浩",
+      "aliasText": "谋臣 史学家",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_gao_changgong",
+      "name": "高长恭",
+      "aliasText": "将领",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_niu_hong",
+      "name": "牛弘",
+      "aliasText": "宰相 文献学家",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_su_wei",
+      "name": "苏威",
+      "aliasText": "宰相",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_yang_xuangan",
+      "name": "杨玄感",
+      "aliasText": "叛臣 礼部尚书",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_liu_heita",
+      "name": "刘黑闼",
+      "aliasText": "汉东王 义军首领",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_li_daozong",
+      "name": "李道宗",
+      "aliasText": "宗室 将领",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_yang_guozhong",
+      "name": "杨国忠",
+      "aliasText": "宰相 外戚",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_yan_gaoqing",
+      "name": "颜杲卿",
+      "aliasText": "太守 忠臣",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_he_zhizhang",
+      "name": "贺知章",
+      "aliasText": "诗人 书法家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_wen_tingyun",
+      "name": "温庭筠",
+      "aliasText": "词人 诗人",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_li_chunfeng",
+      "name": "李淳风",
+      "aliasText": "天文学家 数学家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_lu_yu",
+      "name": "陆羽",
+      "aliasText": "茶学家 隐士",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_su_xun",
+      "name": "苏洵",
+      "aliasText": "明允 老泉 文学家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_cai_xiang",
+      "name": "蔡襄",
+      "aliasText": "君谟 文臣 书法家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_liu_yong",
+      "name": "柳永",
+      "aliasText": "耆卿 词人",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_shao_yong",
+      "name": "邵雍",
+      "aliasText": "尧夫 安乐先生 思想家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_jiang_kui",
+      "name": "姜夔",
+      "aliasText": "尧章 白石道人 词人 音乐家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_lv_zuiqian",
+      "name": "吕祖谦",
+      "aliasText": "伯恭 东莱 思想家 史学家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_wan_yan_yong",
+      "name": "完颜雍",
+      "aliasText": "皇帝",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_mu_hua_li",
+      "name": "木华黎",
+      "aliasText": "将领",
+      "dynasty": "yuan",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_ma_zhiyuan",
+      "name": "马致远",
+      "aliasText": "千里 东篱 剧作家",
+      "dynasty": "yuan",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_yao_guangxiao",
+      "name": "姚广孝",
+      "aliasText": "逃虚子 僧侣 谋臣",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_jing_xiang",
+      "name": "敬翔",
+      "aliasText": "子振 谋士 宰相",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_li_cunxiao",
+      "name": "李存孝",
+      "aliasText": "将领",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_shi_chonggui",
+      "name": "石重贵",
+      "aliasText": "皇帝",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_wei_zhuang",
+      "name": "韦庄",
+      "aliasText": "端己 诗人 词人 宰相",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_han_zhaohou",
+      "name": "韩武",
+      "aliasText": "诸侯",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_chu_weiwang",
+      "name": "熊商",
+      "aliasText": "诸侯",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_li_shi_qi",
+      "name": "郦食其",
+      "aliasText": "高阳酒徒 狂生 辩士 说客",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_zhou_wen",
+      "name": "周文",
+      "aliasText": "将领",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_lu_wan",
+      "name": "卢绾",
+      "aliasText": "燕王 太尉",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_zhou_chang",
+      "name": "周昌",
+      "aliasText": "御史大夫 赵相",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_tian_fen",
+      "name": "田蚡",
+      "aliasText": "丞相 外戚",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_han_anguo",
+      "name": "韩安国",
+      "aliasText": "御史大夫 将领",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_zhu_maichen",
+      "name": "朱买臣",
+      "aliasText": "会稽太守 丞相长史",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_zhao_guo",
+      "name": "赵过",
+      "aliasText": "农学家",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_laoshang",
+      "name": "老上单于",
+      "aliasText": "匈奴单于",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_liu_ba",
+      "name": "刘巴",
+      "aliasText": "子初 文臣 尚书令",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_yang_yi",
+      "name": "杨仪",
+      "aliasText": "威公 文臣 长史",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_deng_zhi",
+      "name": "邓芝",
+      "aliasText": "伯苗 文臣 使者 车骑将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_zhou_tai",
+      "name": "周泰",
+      "aliasText": "幼平 将领 汉中太守",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_bu_zhi",
+      "name": "步骘",
+      "aliasText": "子山 文臣 丞相",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_lv_fan",
+      "name": "吕范",
+      "aliasText": "子衡 文臣 大司马",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_han_sui",
+      "name": "韩遂",
+      "aliasText": "文约 军阀",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_guan_qiu_jian",
+      "name": "毌丘俭",
+      "aliasText": "仲恭 将领 镇东将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_wen_pin",
+      "name": "文聘",
+      "aliasText": "仲业 将领 后将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_wang_rong",
+      "name": "王戎",
+      "aliasText": "名士 司徒",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_lu_yun",
+      "name": "陆云",
+      "aliasText": "文学家 官员",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_shi_chong",
+      "name": "石崇",
+      "aliasText": "富豪 官员",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_wang_yan",
+      "name": "王衍",
+      "aliasText": "清谈领袖 太尉",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_fa_xian",
+      "name": "法显",
+      "aliasText": "僧人 旅行家",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_jiang_yan",
+      "name": "江淹",
+      "aliasText": "文学家",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_fan_zhen",
+      "name": "范缜",
+      "aliasText": "思想家",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_xiao_daocheng",
+      "name": "萧道成",
+      "aliasText": "皇帝",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_su_chuo",
+      "name": "苏绰",
+      "aliasText": "谋臣 改革者",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_du_gu_xin",
+      "name": "独孤信",
+      "aliasText": "将领 外戚",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_yan_zhitui",
+      "name": "颜之推",
+      "aliasText": "文学家 教育家",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_jia_sixie",
+      "name": "贾思勰",
+      "aliasText": "农学家",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_yuwen_shu",
+      "name": "宇文述",
+      "aliasText": "将领 权臣",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_du_fuwei",
+      "name": "杜伏威",
+      "aliasText": "江淮义军首领 吴王",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_xiao_xian",
+      "name": "萧铣",
+      "aliasText": "梁帝 义军首领",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_qu_tutong",
+      "name": "屈突通",
+      "aliasText": "将领",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_cen_wenben",
+      "name": "岑文本",
+      "aliasText": "宰相 文学家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_wang_xuance",
+      "name": "王玄策",
+      "aliasText": "使臣",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_wei_hou",
+      "name": "韦皇后",
+      "aliasText": "皇后",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_feng_changqing",
+      "name": "封常清",
+      "aliasText": "将领",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_pu_gu_huai_en",
+      "name": "仆固怀恩",
+      "aliasText": "将领 叛臣",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_li_fuguo",
+      "name": "李辅国",
+      "aliasText": "宦官 权臣",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_yang_yan",
+      "name": "杨炎",
+      "aliasText": "宰相 理财家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_niu_sengru",
+      "name": "牛僧孺",
+      "aliasText": "宰相 小说家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_wang_shuwen",
+      "name": "王叔文",
+      "aliasText": "政治家 改革者",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_li_ang",
+      "name": "李昂",
+      "aliasText": "皇帝",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_zhang_zeduan",
+      "name": "张择端",
+      "aliasText": "正道 画家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_wang_jian_song",
+      "name": "王坚",
+      "aliasText": "将领",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_jia_sidao",
+      "name": "贾似道",
+      "aliasText": "师宪 秋壑 宰相",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_lu_xiufu",
+      "name": "陆秀夫",
+      "aliasText": "君实 宰相",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_zhang_shi",
+      "name": "张栻",
+      "aliasText": "敬夫 南轩 思想家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_chen_liang",
+      "name": "陈亮",
+      "aliasText": "同甫 龙川 思想家",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_ye_shi",
+      "name": "叶适",
+      "aliasText": "正则 水心 思想家 文臣",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_wan_yan_liang",
+      "name": "完颜亮",
+      "aliasText": "皇帝",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_tuo_lei",
+      "name": "拖雷",
+      "aliasText": "宗王",
+      "dynasty": "yuan",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_tuo_tuo",
+      "name": "脱脱",
+      "aliasText": "宰相",
+      "dynasty": "yuan",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_wang_pu",
+      "name": "王朴",
+      "aliasText": "文伯 谋士 宰相",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_xu_wen",
+      "name": "徐温",
+      "aliasText": "敦美 权臣 节度使",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_meng_zhixiang",
+      "name": "孟知祥",
+      "aliasText": "保胤 节度使 皇帝",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_luo_yin",
+      "name": "罗隐",
+      "aliasText": "昭谏 诗人 幕僚",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_han_xizai",
+      "name": "韩熙载",
+      "aliasText": "叔言 文臣 文学家",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_bao_si",
+      "name": "褒姒",
+      "aliasText": "王后",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 30
+    },
+    {
+      "id": "person_jie_zitui",
+      "name": "介子推",
+      "aliasText": "隐士",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 30
+    },
+    {
+      "id": "person_you_yu",
+      "name": "由余",
+      "aliasText": "谋臣",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 30
+    },
+    {
+      "id": "person_zi_wen",
+      "name": "斗谷於菟",
+      "aliasText": "子文 令尹",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 30
+    },
+    {
+      "id": "person_mao_sui",
+      "name": "毛遂",
+      "aliasText": "门客",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 30
+    },
+    {
+      "id": "person_gongsun_long",
+      "name": "公孙龙",
+      "aliasText": "子秉 思想家 名家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 30
+    },
+    {
+      "id": "person_wu_guang",
+      "name": "吴广",
+      "aliasText": "叔 起义领袖 假王",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 30
+    },
+    {
+      "id": "person_lao_ai",
+      "name": "嫪毐",
+      "aliasText": "内廷幸臣 长信侯",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 30
+    },
+    {
+      "id": "person_guo_chongtao",
+      "name": "郭崇韬",
+      "aliasText": "安时 谋士 宰相",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 30
+    },
+    {
+      "id": "person_shu_sun_tong",
+      "name": "叔孙通",
+      "aliasText": "儒生 礼学家",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_wang_li",
+      "name": "王离",
+      "aliasText": "将领",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_wu_rui",
+      "name": "吴芮",
+      "aliasText": "番君 长沙王",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_liu_jiao",
+      "name": "刘交",
+      "aliasText": "楚王 学者",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_shen_tujia",
+      "name": "申屠嘉",
+      "aliasText": "丞相",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_chen_ajiao",
+      "name": "陈阿娇",
+      "aliasText": "皇后",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_li_guangli",
+      "name": "李广利",
+      "aliasText": "将领 贰师将军",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_er_kuan",
+      "name": "兒宽",
+      "aliasText": "御史大夫 历算家",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_zhong_jun",
+      "name": "终军",
+      "aliasText": "使臣 谏大夫",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_touman",
+      "name": "头曼单于",
+      "aliasText": "匈奴单于",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_junchen",
+      "name": "军臣单于",
+      "aliasText": "匈奴单于",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_ma_liang",
+      "name": "马良",
+      "aliasText": "季常 文臣 使者",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_zhang_yi",
+      "name": "张翼",
+      "aliasText": "伯恭 将领 左车骑将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_han_dang",
+      "name": "韩当",
+      "aliasText": "义公 将领 昭武将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_ling_tong",
+      "name": "凌统",
+      "aliasText": "公绩 将领 偏将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_zhu_huan",
+      "name": "朱桓",
+      "aliasText": "休穆 将领 前将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_zhang_hong",
+      "name": "张纮",
+      "aliasText": "子纲 文臣 长史",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_gong_sun_du",
+      "name": "公孙度",
+      "aliasText": "升济 军阀 辽东太守",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_shi_xie",
+      "name": "士燮",
+      "aliasText": "威彦 军阀 交趾太守",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_jia_kui",
+      "name": "贾逵",
+      "aliasText": "梁道 文臣 建威将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_wang_ling",
+      "name": "王凌",
+      "aliasText": "彦云 将领 太尉",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_xiang_xiu",
+      "name": "向秀",
+      "aliasText": "名士 学者",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_yu_liang",
+      "name": "庾亮",
+      "aliasText": "执政",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_hui_yuan",
+      "name": "慧远",
+      "aliasText": "僧人",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_gao_yang",
+      "name": "高洋",
+      "aliasText": "皇帝",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_yuwen_huaji",
+      "name": "宇文化及",
+      "aliasText": "叛臣 许帝",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_liu_wuzhou",
+      "name": "刘武周",
+      "aliasText": "定杨可汗 义军首领",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_duan_zhixuan",
+      "name": "段志玄",
+      "aliasText": "将领",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_xu_jingzong",
+      "name": "许敬宗",
+      "aliasText": "宰相 史学家",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_huan_yanfan",
+      "name": "桓彦范",
+      "aliasText": "宰相 政变首领",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_yan_wu",
+      "name": "严武",
+      "aliasText": "将领 节度使",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_wu_yuanheng",
+      "name": "武元衡",
+      "aliasText": "宰相 诗人",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_qiu_shiliang",
+      "name": "仇士良",
+      "aliasText": "宦官 权臣",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_wang_xianzhi",
+      "name": "王仙芝",
+      "aliasText": "起义首领",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_li_yan_tang",
+      "name": "李炎",
+      "aliasText": "皇帝",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_li_chen",
+      "name": "李忱",
+      "aliasText": "皇帝",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_chao_heng",
+      "name": "晁衡",
+      "aliasText": "遣唐使 官员",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_tong_guan",
+      "name": "童贯",
+      "aliasText": "宦官 将领",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_yue_yun",
+      "name": "岳云",
+      "aliasText": "将领",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_zhang_jun_song",
+      "name": "张俊",
+      "aliasText": "将领",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_zhang_shijie",
+      "name": "张世杰",
+      "aliasText": "将领",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_yuan_shundi",
+      "name": "妥懽帖睦尔",
+      "aliasText": "皇帝",
+      "dynasty": "yuan",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_zhu_qizhen",
+      "name": "朱祁镇",
+      "aliasText": "皇帝",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_nian_gengyao",
+      "name": "年羹尧",
+      "aliasText": "亮工 将领",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_liu_xun",
+      "name": "刘鄩",
+      "aliasText": "去非 将领",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_zhang_chengye",
+      "name": "张承业",
+      "aliasText": "继元 宦官 监军",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_dong_yuan",
+      "name": "董源",
+      "aliasText": "叔达 画家",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_li_ji_jin",
+      "name": "骊姬",
+      "aliasText": "夫人",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_meng_ming_shi",
+      "name": "百里视",
+      "aliasText": "孟明 统帅",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_zhuan_zhu",
+      "name": "专诸",
+      "aliasText": "刺客",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_yue_yang",
+      "name": "乐羊",
+      "aliasText": "将领",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_guo_wei",
+      "name": "郭隗",
+      "aliasText": "谋臣",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_xiang_bo",
+      "name": "项伯",
+      "aliasText": "伯 项缠 射阳侯 楚将 刘邦姻亲",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_sima_xin",
+      "name": "司马欣",
+      "aliasText": "长史 塞王",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_tian_dan",
+      "name": "田儋",
+      "aliasText": "齐王",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_zhongli_mo",
+      "name": "钟离眛",
+      "aliasText": "将领",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_han_xin_han",
+      "name": "韩王信",
+      "aliasText": "韩王",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_ti_ying",
+      "name": "缇萦",
+      "aliasText": "孝女",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_du_zhou",
+      "name": "杜周",
+      "aliasText": "廷尉 御史大夫 酷吏",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_zheng_dangshi",
+      "name": "郑当时",
+      "aliasText": "大农令",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_hao_zhao",
+      "name": "郝昭",
+      "aliasText": "伯道 将领 杂号将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_xu_jing",
+      "name": "许靖",
+      "aliasText": "文休 文臣 司徒",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_liao_hua",
+      "name": "廖化",
+      "aliasText": "元俭 将领 右车骑将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_guan_ping",
+      "name": "关平",
+      "aliasText": "将领",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_ma_zhong",
+      "name": "马忠",
+      "aliasText": "德信 将领 庲降都督",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_chen_lin",
+      "name": "陈琳",
+      "aliasText": "孔璋 文学家 文臣",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_dong_cheng",
+      "name": "董承",
+      "aliasText": "外戚 车骑将军",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_xu_sheng",
+      "name": "徐盛",
+      "aliasText": "文向 将领 安东将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_pan_zhang",
+      "name": "潘璋",
+      "aliasText": "文珪 将领 右将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_yu_fan",
+      "name": "虞翻",
+      "aliasText": "仲翔 文臣 经学家",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_zang_ba",
+      "name": "臧霸",
+      "aliasText": "宣高 将领 执金吾",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_liu_ling",
+      "name": "刘伶",
+      "aliasText": "名士",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_xi_jian",
+      "name": "郗鉴",
+      "aliasText": "流民帅 太尉",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_murong_ke",
+      "name": "慕容恪",
+      "aliasText": "统帅",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_zhong_rong",
+      "name": "钟嵘",
+      "aliasText": "诗论家",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_chen_shubao",
+      "name": "陈叔宝",
+      "aliasText": "皇帝",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_li_yifu",
+      "name": "李义府",
+      "aliasText": "宰相",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_xu_yuan",
+      "name": "许远",
+      "aliasText": "太守 忠臣",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_li_xun",
+      "name": "李训",
+      "aliasText": "宰相 政变主谋",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_bi_sheng",
+      "name": "毕昇",
+      "aliasText": "匠人",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_han_tuozhou",
+      "name": "韩侂胄",
+      "aliasText": "节夫 宰相",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_liu_futong",
+      "name": "刘福通",
+      "aliasText": "首领",
+      "dynasty": "yuan",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_zhu_yunwen",
+      "name": "朱允炆",
+      "aliasText": "皇帝",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_ao_bai",
+      "name": "鳌拜",
+      "aliasText": "将领 辅政大臣",
+      "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_zhang_quanyi",
+      "name": "张全义",
+      "aliasText": "地方官 节度使",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_jing_yanguang",
+      "name": "景延广",
+      "aliasText": "航川 将领 宰相",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_ma_yin",
+      "name": "马殷",
+      "aliasText": "霸图 节度使 首领",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_wang_shenzhi",
+      "name": "王审知",
+      "aliasText": "信通 节度使 首领",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_chen_tuan",
+      "name": "陈抟",
+      "aliasText": "图南 扶摇子 希夷先生 道士 隐士",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_wu_ju",
+      "name": "伍举",
+      "aliasText": "大夫",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_ji_zu",
+      "name": "祭足",
+      "aliasText": "仲 卿",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_feng_xuan",
+      "name": "冯谖",
+      "aliasText": "门客",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_wu_chen",
+      "name": "武臣",
+      "aliasText": "将领 赵王",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_chen_ying",
+      "name": "陈婴",
+      "aliasText": "东阳令史 列侯",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_chen_xi",
+      "name": "陈豨",
+      "aliasText": "相国 代王",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_li_shang",
+      "name": "郦商",
+      "aliasText": "将领",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_feng_tang",
+      "name": "冯唐",
+      "aliasText": "中郎署长 车骑都尉",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_zou_yang",
+      "name": "邹阳",
+      "aliasText": "辩士 文学家",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_bu_shi",
+      "name": "卜式",
+      "aliasText": "牧羊人 御史大夫",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_zhonghang_shuo",
+      "name": "中行说",
+      "aliasText": "宦者 单于谋主",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_mi_zhu",
+      "name": "糜竺",
+      "aliasText": "子仲 富商 文臣",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_guan_xing",
+      "name": "关兴",
+      "aliasText": "安国 将领",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_liu_chen",
+      "name": "刘谌",
+      "aliasText": "宗室 北地王",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_zhang_ni",
+      "name": "张嶷",
+      "aliasText": "伯岐 将领 越巂太守",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_mi_heng",
+      "name": "祢衡",
+      "aliasText": "正平 文士",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_ruan_yu",
+      "name": "阮瑀",
+      "aliasText": "元瑜 文学家 文臣",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_fu_shou",
+      "name": "伏寿",
+      "aliasText": "皇后",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_he_qi",
+      "name": "贺齐",
+      "aliasText": "公苗 将领 后将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_pan_jun",
+      "name": "潘濬",
+      "aliasText": "承明 文臣 太常",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_sun_xiu",
+      "name": "孙休",
+      "aliasText": "子烈 皇帝",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_ma_dai",
+      "name": "马岱",
+      "aliasText": "将领 平北将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_yang_jun",
+      "name": "杨骏",
+      "aliasText": "执政",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_huan_xuan",
+      "name": "桓玄",
+      "aliasText": "僭主",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_yao_chang",
+      "name": "姚苌",
+      "aliasText": "君主",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_wang_sengbian",
+      "name": "王僧辩",
+      "aliasText": "统帅",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_yu_shiji",
+      "name": "虞世基",
+      "aliasText": "内史侍郎 书法家",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_liu_ji",
+      "name": "刘洎",
+      "aliasText": "宰相",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_yu_chaoen",
+      "name": "鱼朝恩",
+      "aliasText": "宦官 观军容使",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_yuan_zai",
+      "name": "元载",
+      "aliasText": "宰相",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_gao_pian",
+      "name": "高骈",
+      "aliasText": "节度使",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_zhang_xian",
+      "name": "张宪",
+      "aliasText": "将领",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_shi_miyuan",
+      "name": "史弥远",
+      "aliasText": "同叔 宰相",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_wei_zhongxian",
+      "name": "魏忠贤",
+      "aliasText": "宦官",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_zhou_dewei",
+      "name": "周德威",
+      "aliasText": "镇远 将领",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_liu_chong",
+      "name": "刘崇",
+      "aliasText": "皇帝",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_xi_peng",
+      "name": "隰朋",
+      "aliasText": "大夫",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_kuai_tong",
+      "name": "蒯通",
+      "aliasText": "蒯彻 纵横家 辩士",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_dong_yi",
+      "name": "董翳",
+      "aliasText": "都尉 翟王",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_song_yi",
+      "name": "宋义",
+      "aliasText": "上将军",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_yan_zhu",
+      "name": "严助",
+      "aliasText": "辞赋家 会稽太守",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_jian_yong",
+      "name": "简雍",
+      "aliasText": "宪和 文臣 说客",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_meng_huo",
+      "name": "孟获",
+      "aliasText": "南中豪帅",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_huo_jun",
+      "name": "霍峻",
+      "aliasText": "仲邈 将领 梓潼太守",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_sun_huan",
+      "name": "孙桓",
+      "aliasText": "叔武 宗室将领 建武将军",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_kan_ze",
+      "name": "阚泽",
+      "aliasText": "德润 文臣 太子太傅",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_sun_liang",
+      "name": "孙亮",
+      "aliasText": "皇帝",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_zhang_yan",
+      "name": "张燕",
+      "aliasText": "军阀 平北将军",
+      "dynasty": "eastern_han",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_xie_shi",
+      "name": "谢石",
+      "aliasText": "统帅",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_pei_yun",
+      "name": "裴蕴",
+      "aliasText": "御史大夫",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_fu_gongshi",
+      "name": "辅公祏",
+      "aliasText": "宋帝 义军首领",
+      "dynasty": "sui",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_an_le",
+      "name": "安乐公主",
+      "aliasText": "公主",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_tian_lingzi",
+      "name": "田令孜",
+      "aliasText": "宦官 权臣",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_shi_hongzhao",
+      "name": "史弘肇",
+      "aliasText": "化元 将领",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_gu_hongzhong",
+      "name": "顾闳中",
+      "aliasText": "画家",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_yi_ya",
+      "name": "易牙",
+      "aliasText": "内廷幸臣 庖人",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_yu_ji",
+      "name": "虞姬",
+      "aliasText": "虞美人 姬妾 舞者",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_feng_quji",
+      "name": "冯去疾",
+      "aliasText": "右丞相",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_zhao_xie",
+      "name": "赵歇",
+      "aliasText": "赵王",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_shen_yiji",
+      "name": "审食其",
+      "aliasText": "左丞相 辟阳侯",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_ren_xiao",
+      "name": "任嚣",
+      "aliasText": "南海尉",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_yong_chi",
+      "name": "雍齿",
+      "aliasText": "将领 列侯",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_li_ji_han",
+      "name": "栗姬",
+      "aliasText": "后妃",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_sun_qian",
+      "name": "孙乾",
+      "aliasText": "公祐 文臣 使者",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_zong_yu",
+      "name": "宗预",
+      "aliasText": "德艳 文臣 使者",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_xi_zheng",
+      "name": "郤正",
+      "aliasText": "令先 文臣 学者",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_xu_gan",
+      "name": "徐干",
+      "aliasText": "伟长 文学家 学者",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_liu_zhen",
+      "name": "刘桢",
+      "aliasText": "公干 文学家",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_wang_kai",
+      "name": "王恺",
+      "aliasText": "外戚",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_sima_yue",
+      "name": "司马越",
+      "aliasText": "宗王 执政",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_zheng_zhu",
+      "name": "郑注",
+      "aliasText": "医官 谋臣",
+      "dynasty": "tang",
+      "shardId": "shard_05_sui_tang",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_gao_qiu",
+      "name": "高俅",
+      "aliasText": "佞幸",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_wang_zhen",
+      "name": "王振",
+      "aliasText": "宦官",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_zhang_yongde",
+      "name": "张永德",
+      "aliasText": "抱一 将领 驸马",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_ju_ran",
+      "name": "巨然",
+      "aliasText": "僧人 画家",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_gan_luo",
+      "name": "甘罗",
+      "aliasText": "使臣 上卿",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 20
+    },
+    {
+      "id": "person_zhao_cheng",
+      "name": "赵成",
+      "aliasText": "郎中令",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 19
+    },
+    {
+      "id": "person_han_guang",
+      "name": "韩广",
+      "aliasText": "燕王",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 19
+    },
+    {
+      "id": "person_xiang_zhuang",
+      "name": "项庄",
+      "aliasText": "将领",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 19
+    },
+    {
+      "id": "person_cao_jiu",
+      "name": "曹咎",
+      "aliasText": "大司马 海春侯",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 19
+    },
+    {
+      "id": "person_liu_jia",
+      "name": "刘贾",
+      "aliasText": "荆王 将领",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 19
+    },
+    {
+      "id": "person_zang_tu",
+      "name": "臧荼",
+      "aliasText": "燕王",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 19
+    },
+    {
+      "id": "person_zhang_yan_han",
+      "name": "张嫣",
+      "aliasText": "皇后",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 19
+    },
+    {
+      "id": "person_mei_gao",
+      "name": "枚皋",
+      "aliasText": "辞赋家",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 19
+    },
+    {
+      "id": "person_yi_ji",
+      "name": "伊籍",
+      "aliasText": "机伯 文臣 使者",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 19
+    },
+    {
+      "id": "person_ying_yang",
+      "name": "应玚",
+      "aliasText": "德琏 文学家",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 19
+    },
+    {
+      "id": "person_shi_yi",
+      "name": "是仪",
+      "aliasText": "子羽 文臣 尚书仆射",
+      "dynasty": "three_kingdoms",
+      "shardId": "shard_03_three_kingdoms",
+      "importanceWeight": 19
+    },
+    {
+      "id": "person_jia_mi",
+      "name": "贾谧",
+      "aliasText": "外戚 文人",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 19
+    },
+    {
+      "id": "person_sima_liang",
+      "name": "司马亮",
+      "aliasText": "宗王",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 19
+    },
+    {
+      "id": "person_sima_wei",
+      "name": "司马玮",
+      "aliasText": "宗王",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 19
+    },
+    {
+      "id": "person_sima_lun",
+      "name": "司马伦",
+      "aliasText": "宗王 僭主",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 19
+    },
+    {
+      "id": "person_yang_bin",
+      "name": "杨邠",
+      "aliasText": "宰相",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 19
+    },
+    {
+      "id": "person_gao_jixing",
+      "name": "高季兴",
+      "aliasText": "贻孙 节度使 首领",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 19
+    },
+    {
+      "id": "person_qi_fu_ren",
+      "name": "戚夫人",
+      "aliasText": "戚姬 姬妾 舞者",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 18
+    },
+    {
+      "id": "person_zhou_yin",
+      "name": "周殷",
+      "aliasText": "大司马",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 18
+    },
+    {
+      "id": "person_lv_xu",
+      "name": "吕媭",
+      "aliasText": "列侯 外戚",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 18
+    },
+    {
+      "id": "person_sima_jiong",
+      "name": "司马冏",
+      "aliasText": "宗王",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 18
+    },
+    {
+      "id": "person_sima_yi",
+      "name": "司马乂",
+      "aliasText": "宗王",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 18
+    },
+    {
+      "id": "person_sima_ying",
+      "name": "司马颖",
+      "aliasText": "宗王",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 18
+    },
+    {
+      "id": "person_sima_yong",
+      "name": "司马颙",
+      "aliasText": "宗王",
+      "dynasty": "jin",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 18
+    },
+    {
+      "id": "person_zi_ying",
+      "name": "子婴",
+      "aliasText": "秦王",
+      "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 16
+    },
+    {
+      "id": "person_cao_wushang",
+      "name": "曹无伤",
+      "aliasText": "左司马",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 16
+    },
+    {
+      "id": "person_liu_ruyi",
+      "name": "刘如意",
+      "aliasText": "隐王 代王 赵王 皇子 诸侯王",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 12
+    }
+  ],
+  "highlights": [
+    {
+      "label": "在册人物",
+      "value": "824",
+      "note": "全部经正史本传核验"
+    },
+    {
+      "label": "关系边",
+      "value": "1334",
+      "note": "每条均附文言原文为证"
+    },
+    {
+      "label": "奇闻轶事",
+      "value": "146",
+      "note": "含注疏与笔记分级"
+    },
+    {
+      "label": "史源引文",
+      "value": "605",
+      "note": "文白对照，可溯源"
+    }
+  ],
+  "plannedShards": []
+}

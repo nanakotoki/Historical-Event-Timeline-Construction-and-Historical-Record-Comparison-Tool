@@ -1,0 +1,46 @@
+# 依赖与构建产物
+node_modules/
+.next/
+out/
+# NEXT_DIST_DIR=.build 时用的替代构建目录
+.build/
+# 构建目录被本机文件锁占用时，会临时改名成 .next.old.<ts> / out.bak.<ts> 之类；
+# 这些不在上面的规则里，若不忽略会被 git 跟踪。
+.next.*
+out.*
+*.tsbuildinfo
+next-env.d.ts
+
+# 编译期临时目录（build-seed / render-portraits 在此打包 TS）
+node_modules/.seed-build/
+
+# Python ETL 中间产物（原始语料、缓存、抽取结果、待复核队列、报告）
+build/
+scripts/build/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 本地环境与凭据
+.env
+.env.local
+.env.*.local
+
+# CBDB 数据库文件（体积大，请自行下载）
+*.sqlite3
+*.sqlite3-journal
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# 取图过程的临时产物与验收截图（体积大，不随仓库走）
+.probe/
+.audit/
+.workbuddy/
+
+# 图档探测落盘的候选缩略图（供人眼比定，不入库；命中的才进 public/data/portraits）
+scripts/portraits/probed/

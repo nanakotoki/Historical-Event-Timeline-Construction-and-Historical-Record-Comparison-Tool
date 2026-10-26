@@ -1,0 +1,26 @@
+# 华夏史网 · 二十四史 ETL 依赖
+#
+# 最小可用（校验 + 打包，缺 pydantic 时自动降级为等价的纯结构校验）：
+#   pip install pydantic
+#
+# 完整安装：
+#   pip install -r requirements.txt
+
+# —— 数据契约与 JSON Schema 生成 ——
+# 必须用 v2：脚本使用 model_validate / model_json_schema / field_validator(mode=...)
+pydantic>=2.6,<3
+
+# —— 图中心度（PageRank / Degree）——
+# 未安装时 build_shards.py 会退化为内置的带权幂迭代实现，结果同构但略慢
+networkx>=3.2
+
+# —— 繁简转换（--simplify 语料回核时使用）——
+# 维基文库为繁体、本站正文为简体，不转换会产生大量引文假阴性
+# 安装失败不影响主流程，只影响 --simplify 效果
+opencc-python-reimplemented>=0.1.7
+
+# 说明：
+# · HTTP 请求全部使用标准库 urllib，不依赖 requests，少一个安装项就少一类环境问题。
+# · CBDB 数据库文件不通过 pip 分发，需从官网下载：
+#     https://projects.iq.harvard.edu/cbdb/cbdb-downloads
+#   下载后用 --sqlite 指定，或设置环境变量 CBDB_SQLITE_PATH。

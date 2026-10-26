@@ -1,0 +1,288 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   华夏史网 · 新中式数字人文设计系统
+   Parchment Light（宣纸日间） / Obsidian Dark（玄墨夜间）
+   —— 色彩变量以 `R G B` 三元组存放，供 Tailwind 的 <alpha-value> 使用
+   ========================================================================== */
+
+:root {
+  /* —— 宣纸日间模式（默认）—— */
+  --c-canvas: 246 243 235; /* #F6F3EB 古宣纸 */
+  --c-surface: 252 251 247; /* #FCFBF7 卡片面 */
+  --c-surface-2: 241 236 224; /* 略深的次层 */
+  --c-border: 226 217 200; /* #E2D9C8 竹简黄 */
+  --c-ink: 38 33 26; /* 松烟墨字 */
+  --c-ink-2: 92 82 66;
+  --c-ink-3: 143 131 110;
+
+  /* —— 语义色 —— */
+  --c-cinnabar: 200 62 49; /* #C83E31 朱砂 */
+  --c-gold: 197 155 39; /* #C59B27 泥金 */
+  --c-jade: 43 122 120; /* #2B7A78 石青 / 竹青 */
+  --c-azure: 58 96 138; /* 青黛蓝 */
+  --c-plum: 142 53 74; /* #8E354A 绛紫 */
+  --c-violet: 108 91 123; /* #6C5B7B 玄铁紫灰 */
+  --c-pine: 91 140 90; /* #5B8C5A 松花绿 */
+
+  --shadow-ink: 43 33 18;
+  --paper-fiber: 0.055;
+  --edge-fade: 0.12;
+}
+
+[data-theme='dark'] {
+  /* —— 玄墨夜间模式 —— */
+  --c-canvas: 17 19 24; /* #111318 松烟墨 */
+  --c-surface: 26 29 36; /* #1A1D24 */
+  --c-surface-2: 34 38 47;
+  --c-border: 46 51 64; /* #2E3340 */
+  --c-ink: 232 226 213; /* 淡金宣字 */
+  --c-ink-2: 179 172 157;
+  --c-ink-3: 128 122 111;
+
+  --c-cinnabar: 222 96 78;
+  --c-gold: 214 175 74;
+  --c-jade: 86 166 160;
+  --c-azure: 110 156 202;
+  --c-plum: 190 96 122;
+  --c-violet: 154 133 176;
+  --c-pine: 122 170 118;
+
+  --shadow-ink: 0 0 0;
+  --paper-fiber: 0.03;
+  --edge-fade: 0.1;
+}
+
+* {
+  border-color: rgb(var(--c-border));
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background-color: rgb(var(--c-canvas));
+  color: rgb(var(--c-ink));
+  font-family: 'Source Han Serif SC', 'Noto Serif SC', 'Songti SC', STSong, SimSun, Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+  font-feature-settings: 'kern' 1;
+}
+
+/* 宣纸纤维肌理：极轻的噪声叠加，避免大色块死板 */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: var(--paper-fiber);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+[data-theme='dark'] body::before {
+  mix-blend-mode: screen;
+}
+
+::selection {
+  background: rgb(var(--c-cinnabar) / 0.22);
+  color: rgb(var(--c-ink));
+}
+
+/* —— 自定义精致滚动条 —— */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--c-ink-3) / 0.28);
+  border-radius: 99px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--c-ink-3) / 0.5);
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+@layer components {
+  /* 纸面卡片：细边框 + 内高光，模拟裱糊册页 */
+  .panel {
+    @apply rounded-xl border border-line backdrop-blur-md;
+    background-color: rgb(var(--c-surface) / 0.92);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.35),
+      0 16px 40px -28px rgb(var(--shadow-ink) / 0.55);
+  }
+
+  .panel-flat {
+    @apply rounded-lg border border-line bg-surface-2/60;
+  }
+
+  /* 竹简分隔线 */
+  .hairline {
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgb(var(--c-border)) 12%,
+      rgb(var(--c-border)) 88%,
+      transparent
+    );
+  }
+
+  .vert-divider {
+    width: 1px;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--c-border)) 10%,
+      rgb(var(--c-border)) 90%,
+      transparent
+    );
+  }
+
+  /* 印章：朱砂方印，略微倾斜，模拟钤印 */
+  .seal {
+    @apply inline-flex items-center justify-center rounded-[3px] font-serif font-bold tracking-widest;
+    color: rgb(var(--c-cinnabar));
+    border: 1.5px solid rgb(var(--c-cinnabar) / 0.75);
+    box-shadow: 0 0 0 1px rgb(var(--c-cinnabar) / 0.18) inset;
+    background: rgb(var(--c-cinnabar) / 0.06);
+  }
+
+  /* 史料可信度徽章 */
+  .reliability-badge {
+    @apply inline-flex items-center gap-1 rounded-[3px] px-1.5 py-[1px] text-[10px] font-medium leading-[16px] tracking-wide whitespace-nowrap;
+    border-width: 1px;
+  }
+  .rel-primary {
+    color: rgb(var(--c-pine));
+    background: rgb(var(--c-pine) / 0.1);
+    border-color: rgb(var(--c-pine) / 0.4);
+  }
+  .rel-hujian {
+    color: rgb(var(--c-azure));
+    background: rgb(var(--c-azure) / 0.1);
+    border-color: rgb(var(--c-azure) / 0.38);
+  }
+  .rel-commentary {
+    color: rgb(var(--c-violet));
+    background: rgb(var(--c-violet) / 0.12);
+    border-color: rgb(var(--c-violet) / 0.4);
+  }
+  .rel-chronicle {
+    color: rgb(var(--c-gold));
+    background: rgb(var(--c-gold) / 0.1);
+    border-color: rgb(var(--c-gold) / 0.4);
+  }
+  .rel-anecdotal {
+    color: rgb(var(--c-cinnabar));
+    background: rgb(var(--c-cinnabar) / 0.09);
+    border-color: rgb(var(--c-cinnabar) / 0.38);
+  }
+
+  /* 古籍正文 */
+  .classical-text {
+    @apply font-serif text-[14.5px] leading-[2.05] tracking-[0.02em];
+    color: rgb(var(--c-ink));
+    text-align: justify;
+  }
+
+  .modern-text {
+    @apply font-sans text-[13px] leading-[1.9];
+    color: rgb(var(--c-ink-2));
+    text-align: justify;
+  }
+
+  /* 竖排阅读 */
+  .vertical-rl {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+
+  /* 朱砂下划线实体词条 */
+  .entity-link {
+    cursor: pointer;
+    color: rgb(var(--c-ink));
+    border-bottom: 1px solid rgb(var(--c-cinnabar) / 0.75);
+    text-decoration: none;
+    padding-bottom: 0.5px;
+    transition:
+      color 0.16s ease,
+      background 0.16s ease;
+  }
+  .entity-link:hover {
+    color: rgb(var(--c-cinnabar));
+    background: rgb(var(--c-cinnabar) / 0.08);
+  }
+
+  .tool-btn {
+    @apply inline-flex items-center gap-1.5 rounded-md border border-line bg-surface/70 px-2 py-1 text-[11.5px] text-ink-2 transition-colors;
+  }
+  .tool-btn:hover {
+    @apply border-cinnabar/45 text-ink;
+    background: rgb(var(--c-cinnabar) / 0.06);
+  }
+  .tool-btn[data-active='true'] {
+    border-color: rgb(var(--c-cinnabar) / 0.55);
+    color: rgb(var(--c-cinnabar));
+    background: rgb(var(--c-cinnabar) / 0.09);
+  }
+
+  .pill {
+    @apply inline-flex items-center rounded-full border border-line px-2 py-[2px] text-[10.5px] text-ink-2;
+    background: rgb(var(--c-surface-2) / 0.75);
+  }
+
+  .scroll-thin {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--c-ink-3) / 0.3) transparent;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+  .writing-vertical {
+    writing-mode: vertical-rl;
+  }
+}
+
+/* 打印友好：导出史源段落时保留文白对照 */
+@media print {
+  body {
+    overflow: visible;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

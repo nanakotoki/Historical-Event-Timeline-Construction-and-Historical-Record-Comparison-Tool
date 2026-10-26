@@ -1,0 +1,467 @@
+{
+  "note": "传世画像逐图审计账本。build-catalog.mjs 只接受本账本中 verdict=keep 的图档；未经审计的图档一律不注入分片（前端退回 L3/L4）。判定口径：须为古代纸绢本画像或古籍刻本绣像，且确为该人物本人；现代照片、影视剧照、现代白描重绘、雕塑／塑像照片、石刻、无人物之书法页，一律 reject。",
+  "generatedAt": "2026-10-24T06:13:07.220Z",
+  "counts": {
+    "total": 76,
+    "keep": 60,
+    "reject": 16
+  },
+  "entries": {
+    "Fan Zeng.jpg": {
+      "name": "范增",
+      "verdict": "reject",
+      "reason": "现代画家范曾的活动照，与秦末范增无关",
+      "bookTitle": ""
+    },
+    "Liu Bang.jpg": {
+      "name": "刘邦",
+      "verdict": "keep",
+      "reason": "白描像赞体，四周有边框与题赞，属古籍刻本系统",
+      "bookTitle": ""
+    },
+    "Portraits of Famous Men - Liu Heng.jpg": {
+      "name": "刘恒",
+      "verdict": "keep",
+      "reason": "费城艺术博物馆《Portraits of Famous Men》册页，绢本设色",
+      "bookTitle": ""
+    },
+    "Xiao He.png": {
+      "name": "萧何",
+      "verdict": "keep",
+      "reason": "设色人物像，旧绢底，非现代重绘",
+      "bookTitle": ""
+    },
+    "陸賈.jpg": {
+      "name": "陆贾",
+      "verdict": "keep",
+      "reason": "白描像赞，旧纸底色并题名框，属刻本系统",
+      "bookTitle": ""
+    },
+    "歷代聖賢半身像 冊 司馬遷 (Sima Qian).png": {
+      "name": "司马迁",
+      "verdict": "keep",
+      "reason": "台北故宫《歷代聖賢半身像》冊",
+      "bookTitle": ""
+    },
+    "Lü Bu Portrait.jpg": {
+      "name": "吕布",
+      "verdict": "keep",
+      "reason": "清代《三國演義》刊本繡像",
+      "bookTitle": ""
+    },
+    "Cao Cao scth.jpg": {
+      "name": "曹操",
+      "verdict": "keep",
+      "reason": "明萬曆《三才圖會·人物卷》",
+      "bookTitle": ""
+    },
+    "CaoZhiPortrait.jpg": {
+      "name": "曹植",
+      "verdict": "keep",
+      "reason": "Commons 著錄為清代《三國演義》刊本人物繡像，公有領域。圖檔經後人描清，紙墨特徵不存，原刻版本待考。",
+      "bookTitle": "（清）《三國演義》刊本繡像（版本待考）"
+    },
+    "Jia Xu.jpg": {
+      "name": "贾诩",
+      "verdict": "keep",
+      "reason": "明清刻本繡像，有刀痕与旧纸底",
+      "bookTitle": ""
+    },
+    "Zhang Liao Portrait.jpg": {
+      "name": "张辽",
+      "verdict": "keep",
+      "reason": "清代《三國演義》刊本繡像",
+      "bookTitle": ""
+    },
+    "Xiahou Dun Portrait.jpg": {
+      "name": "夏侯惇",
+      "verdict": "keep",
+      "reason": "清代《三國演義》刊本繡像",
+      "bookTitle": ""
+    },
+    "歷代聖賢半身像 冊 司馬懿 (Sima Yi).png": {
+      "name": "司马懿",
+      "verdict": "keep",
+      "reason": "台北故宫《歷代聖賢半身像》冊",
+      "bookTitle": ""
+    },
+    "SimaZhao.jpg": {
+      "name": "司马昭",
+      "verdict": "keep",
+      "reason": "明清刻本繡像，人物故事图",
+      "bookTitle": ""
+    },
+    "Liu Bei Portrait.jpg": {
+      "name": "刘备",
+      "verdict": "keep",
+      "reason": "清代《三國演義》刊本繡像",
+      "bookTitle": ""
+    },
+    "ZhaoYun.jpg": {
+      "name": "赵云",
+      "verdict": "reject",
+      "reason": "拍摄极暗的书页照片，图像不可辨",
+      "bookTitle": ""
+    },
+    "歷代聖賢半身像 冊 諸葛亮 (Zhuge Liang).png": {
+      "name": "诸葛亮",
+      "verdict": "keep",
+      "reason": "台北故宫《歷代聖賢半身像》冊",
+      "bookTitle": ""
+    },
+    "龐統.jpg": {
+      "name": "庞统",
+      "verdict": "reject",
+      "reason": "庙宇塑像的相机照片，非纸绢本画像",
+      "bookTitle": ""
+    },
+    "MaChao.jpg": {
+      "name": "马超",
+      "verdict": "keep",
+      "reason": "Commons 著錄為清代《三國演義》刊本人物繡像，公有領域。圖檔經後人描清，紙墨特徵不存，原刻版本待考。",
+      "bookTitle": "（清）《三國演義》刊本繡像（版本待考）"
+    },
+    "JiangWei.jpg": {
+      "name": "姜维",
+      "verdict": "keep",
+      "reason": "Commons 著錄為清代《三國演義》刊本人物繡像，公有領域。圖檔經後人描清，紙墨特徵不存，原刻版本待考。",
+      "bookTitle": "（清）《三國演義》刊本繡像（版本待考）"
+    },
+    "Liu Shan.jpg": {
+      "name": "刘禅",
+      "verdict": "reject",
+      "reason": "200×324 图片站转载，无出处，画风为现代白描",
+      "bookTitle": ""
+    },
+    "Sun Jian Qing dynasty illustration.jpg": {
+      "name": "孙坚",
+      "verdict": "keep",
+      "reason": "清代《三國演義》刊本繡像",
+      "bookTitle": ""
+    },
+    "Portraits of Famous Men - Sun Quan.jpg": {
+      "name": "孙权",
+      "verdict": "keep",
+      "reason": "同上册页",
+      "bookTitle": ""
+    },
+    "ZhouYu.jpg": {
+      "name": "周瑜",
+      "verdict": "keep",
+      "reason": "Commons 著錄為清代《三國演義》刊本人物繡像，公有領域。惟圖檔經後人描清，紙色與刀痕特徵不存，原刻版本待考，故不記具體刊本。",
+      "bookTitle": "（清）《三國演義》刊本繡像（版本待考）"
+    },
+    "LuSu.jpg": {
+      "name": "鲁肃",
+      "verdict": "keep",
+      "reason": "Commons 著錄為清代《三國演義》刊本人物繡像，公有領域。圖檔經後人描清，紙墨特徵不存，原刻版本待考。",
+      "bookTitle": "（清）《三國演義》刊本繡像（版本待考）"
+    },
+    "LuXun.jpg": {
+      "name": "陆逊",
+      "verdict": "keep",
+      "reason": "Commons 著錄為清代《三國演義》刊本人物繡像，公有領域。圖檔經後人描清，紙墨特徵不存，原刻版本待考。",
+      "bookTitle": "（清）《三國演義》刊本繡像（版本待考）"
+    },
+    "Huang Zhong Portrait.jpg": {
+      "name": "黄忠",
+      "verdict": "keep",
+      "reason": "清代《三國演義》刊本繡像",
+      "bookTitle": ""
+    },
+    "FaZheng.jpg": {
+      "name": "法正",
+      "verdict": "keep",
+      "reason": "Commons 著錄為清代《三國演義》刊本人物繡像，公有領域。圖檔經後人描清，紙墨特徵不存，原刻版本待考。",
+      "bookTitle": "（清）《三國演義》刊本繡像（版本待考）"
+    },
+    "Ma Su.jpg": {
+      "name": "马谡",
+      "verdict": "reject",
+      "reason": "民国人物马素的照片",
+      "bookTitle": ""
+    },
+    "Li Yuan.jpg": {
+      "name": "李渊",
+      "verdict": "reject",
+      "reason": "现代官员照片（Commons 归入 Mayors of Beijing）",
+      "bookTitle": ""
+    },
+    "長孫無忌.jpg": {
+      "name": "长孙无忌",
+      "verdict": "reject",
+      "reason": "4:3 塑像照片，无纸绢本著录",
+      "bookTitle": ""
+    },
+    "Portraits of Famous Men - Fang Xuanling.jpg": {
+      "name": "房玄龄",
+      "verdict": "keep",
+      "reason": "同上册页",
+      "bookTitle": ""
+    },
+    "Du Ruhui.jpg": {
+      "name": "杜如晦",
+      "verdict": "keep",
+      "reason": "旧纸底白描绣像，有题名框",
+      "bookTitle": ""
+    },
+    "Portraits of Famous Men - Li Jing 2.jpg": {
+      "name": "李靖",
+      "verdict": "reject",
+      "reason": "该文件为册页题跋文字页，仅有画像的一页 Commons 未收录",
+      "bookTitle": ""
+    },
+    "李勣.jpg": {
+      "name": "李勣",
+      "verdict": "keep",
+      "reason": "设色人物像，旧绢底",
+      "bookTitle": ""
+    },
+    "Li Zhi.jpg": {
+      "name": "李治",
+      "verdict": "reject",
+      "reason": "实为明代思想家李贄像，非唐高宗李治",
+      "bookTitle": ""
+    },
+    "武則天.png": {
+      "name": "武则天",
+      "verdict": "reject",
+      "reason": "现代白描插画，无古籍著录",
+      "bookTitle": ""
+    },
+    "Portraits of Famous Men - Di Renjie.jpg": {
+      "name": "狄仁杰",
+      "verdict": "keep",
+      "reason": "同上册页",
+      "bookTitle": ""
+    },
+    "安祿山.jpg": {
+      "name": "安禄山",
+      "verdict": "reject",
+      "reason": "现代白描插画，无古籍著录",
+      "bookTitle": ""
+    },
+    "李白.png": {
+      "name": "李白",
+      "verdict": "keep",
+      "reason": "设色人物像，旧绢底",
+      "bookTitle": ""
+    },
+    "Portraits of Famous Men - Liu Qi.jpg": {
+      "name": "刘启",
+      "verdict": "keep",
+      "reason": "同上册页",
+      "bookTitle": ""
+    },
+    "Zhang Liang.jpg": {
+      "name": "张良",
+      "verdict": "keep",
+      "reason": "清乾隆八年（1743）上官周《晚笑堂竹莊畫傳》張良像，木刻版畫，原書藏日本早稻田大學圖書館。（本庫另有《明人画张良像轴》絹本設色立軸，考據度更高，故以像軸為主圖，此圖列為次選。）",
+      "bookTitle": "（清）上官周《晚笑堂竹莊畫傳》"
+    },
+    "Chen Ping.jpg": {
+      "name": "陈平",
+      "verdict": "reject",
+      "reason": "现代企业家照片",
+      "bookTitle": ""
+    },
+    "Dong Zhuo Portrait.jpg": {
+      "name": "董卓",
+      "verdict": "keep",
+      "reason": "清代《三國演義》刊本繡像",
+      "bookTitle": ""
+    },
+    "Yuan Shao Portrait.jpg": {
+      "name": "袁绍",
+      "verdict": "keep",
+      "reason": "清代《三國演義》刊本繡像",
+      "bookTitle": ""
+    },
+    "GuoJia.jpg": {
+      "name": "郭嘉",
+      "verdict": "keep",
+      "reason": "旧纸底白描绣像，属刻本系统",
+      "bookTitle": ""
+    },
+    "Guan Yu Portrait.jpg": {
+      "name": "关羽",
+      "verdict": "keep",
+      "reason": "清代《三國演義》刊本繡像",
+      "bookTitle": ""
+    },
+    "ZhangFei.jpg": {
+      "name": "张飞",
+      "verdict": "keep",
+      "reason": "明清刻本繡像，刀痕明显",
+      "bookTitle": ""
+    },
+    "Sun Ce Portrait.jpg": {
+      "name": "孙策",
+      "verdict": "keep",
+      "reason": "清代《三國演義》刊本繡像",
+      "bookTitle": ""
+    },
+    "項羽.jpg": {
+      "name": "项羽",
+      "verdict": "keep",
+      "reason": "旧纸底白描绣像，有题名框",
+      "bookTitle": ""
+    },
+    "Portrait of Qin Shi Huang.jpg": {
+      "name": "秦始皇",
+      "verdict": "keep",
+      "reason": "十九世紀彩繪人物像冊，摹一六〇九年底本",
+      "bookTitle": ""
+    },
+    "Consort Yu.jpg": {
+      "name": "虞姬",
+      "verdict": "keep",
+      "reason": "早稻田大學藏清刻本《百美新詠》書頁",
+      "bookTitle": "（清）《百美新詠》"
+    },
+    "Lu Meng.jpg": {
+      "name": "吕蒙",
+      "verdict": "keep",
+      "reason": "明清刻本繡像，刀痕明显",
+      "bookTitle": ""
+    },
+    "魏徵.jpg": {
+      "name": "魏征",
+      "verdict": "keep",
+      "reason": "设色人物像，旧绢底",
+      "bookTitle": ""
+    },
+    "Portraits of Famous Men - Yüchi Gong.jpg": {
+      "name": "尉迟恭",
+      "verdict": "keep",
+      "reason": "同上册页",
+      "bookTitle": ""
+    },
+    "Shangguan Wan'er.jpg": {
+      "name": "上官婉儿",
+      "verdict": "keep",
+      "reason": "同上",
+      "bookTitle": "（清）《百美新詠》"
+    },
+    "杨贵妃.jpg": {
+      "name": "杨玉环",
+      "verdict": "keep",
+      "reason": "旧纸底白描绣像，属《百美新詠》一系，版本待考",
+      "bookTitle": ""
+    },
+    "Portraits of Famous Men - Guo Ziyi.jpg": {
+      "name": "郭子仪",
+      "verdict": "keep",
+      "reason": "同上册页",
+      "bookTitle": ""
+    },
+    "Dufu.jpg": {
+      "name": "杜甫",
+      "verdict": "keep",
+      "reason": "设色人物像，旧绢底",
+      "bookTitle": ""
+    },
+    "汉淮阴侯韩信.jpg": {
+      "name": "韩信",
+      "verdict": "keep",
+      "reason": "设色人物像，旧绢底",
+      "bookTitle": ""
+    },
+    "冥山射虎.jpg": {
+      "name": "李广",
+      "verdict": "reject",
+      "reason": "民国马骀《馬駘畫寶》画谱，20 世纪创作",
+      "bookTitle": ""
+    },
+    "Portrait of Xun Yu.jpg": {
+      "name": "荀彧",
+      "verdict": "keep",
+      "reason": "清雍正十二年（1734）刊本《三國演義》繡像，圖檔源出東京大學東洋文化研究所善本庫（shanben.ioc.u-tokyo.ac.jp，書號 D8633300）。刀痕深淺不一、衣褶關節處見墨聚，具木刻版畫特徵。該本為現存可考的早期《三國》繡像刊本之一。",
+      "bookTitle": "（清）《三國演義》刊本繡像（雍正十二年刊本）"
+    },
+    "李隆基像.jpg": {
+      "name": "李隆基",
+      "verdict": "keep",
+      "reason": "设色人物像，旧绢底",
+      "bookTitle": ""
+    },
+    "Fan Kuai.jpg": {
+      "name": "樊哙",
+      "verdict": "keep",
+      "reason": "设色人物像，旧绢底",
+      "bookTitle": ""
+    },
+    "CaoPiPortrait.jpg": {
+      "name": "曹丕",
+      "verdict": "keep",
+      "reason": "清代《三國演義》刊本繡像",
+      "bookTitle": ""
+    },
+    "Sui Wendi Tang.jpg": {
+      "name": "杨坚",
+      "verdict": "keep",
+      "reason": "波士頓美術館《歷代帝王圖》卷（傳唐閻立本）",
+      "bookTitle": ""
+    },
+    "TangTaizong (cropped).jpg": {
+      "name": "李世民",
+      "verdict": "keep",
+      "reason": "台北故宮《唐太宗立像》軸，中畫000263，明",
+      "bookTitle": ""
+    },
+    "Cao Shen.jpg": {
+      "name": "曹参",
+      "verdict": "keep",
+      "reason": "旧纸底白描绣像，有题名框",
+      "bookTitle": ""
+    },
+    "Xiahou Yuan Qing dynasty portrait.jpg": {
+      "name": "夏侯渊",
+      "verdict": "keep",
+      "reason": "清代《三國演義》刊本繡像",
+      "bookTitle": ""
+    },
+    "Qin Er Shi.png": {
+      "name": "胡亥",
+      "verdict": "reject",
+      "reason": "博物馆展陈屏幕截图，未注明原作年代与作者",
+      "bookTitle": ""
+    },
+    "范增像.jpg": {
+      "name": "范增",
+      "verdict": "reject",
+      "reason": "殘損壁畫的攝影照片，畫面剝落、成像模糊，且無法比定繪製年代、作者與像主，不足以作為范增像，仍退回 L3 復原像。",
+      "bookTitle": ""
+    },
+    "张良像.jpg": {
+      "name": "张良",
+      "verdict": "reject",
+      "reason": "殘損壁畫的攝影照片，與「范增像.jpg」同出一處，畫面剝落、成像模糊，無法比定年代與作者，不收。",
+      "bookTitle": ""
+    },
+    "明人画张良像轴.png": {
+      "name": "张良",
+      "verdict": "keep",
+      "reason": "故宮舊藏《明人畫張良像軸》，絹本設色立軸。張良作士人裝束、拱手而立，屬清宮歷代名臣像一系。Commons 題名「明人畫」即明人所繪，圖檔屬公有領域。",
+      "bookTitle": "（明）佚名《張良像》軸"
+    },
+    "唐高祖立像 軸.png": {
+      "name": "李渊",
+      "verdict": "keep",
+      "reason": "南薰殿舊藏歷代帝王像之一《唐高祖立像》軸，絹本設色，與本庫已收《唐太宗立像》軸同系；原件高逾二公尺，後入藏國立故宮博物院。圖檔屬公有領域。",
+      "bookTitle": "（明）佚名《唐高祖立像》軸（南薰殿舊藏）"
+    },
+    "隋煬帝（說唐演義全傳）.jpg": {
+      "name": "杨广",
+      "verdict": "keep",
+      "reason": "清刻本《說唐演義全傳》人物繡像，木刻版畫，隋煬帝楊廣像。",
+      "bookTitle": "（清）《說唐演義全傳》"
+    },
+    "李藥師（說唐演義全傳）.jpg": {
+      "name": "李靖",
+      "verdict": "keep",
+      "reason": "清刻本《說唐演義全傳》人物繡像，題名「李藥師」即李靖（字藥師），木刻版畫。",
+      "bookTitle": "（清）《說唐演義全傳》"
+    }
+  }
+}

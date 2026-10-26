@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- 朱砂印章式站点图标：与页头 logo 同形，取「史」字 -->
+  <rect width="64" height="64" rx="12" fill="#C83E31"/>
+  <rect x="4.5" y="4.5" width="55" height="55" rx="9" fill="none" stroke="#F6F3EB" stroke-opacity="0.55" stroke-width="1.5"/>
+  <text x="32" y="45" text-anchor="middle" font-family="Songti SC, SimSun, STSong, serif" font-size="38" font-weight="600" fill="#FCFBF7">史</text>
+</svg>

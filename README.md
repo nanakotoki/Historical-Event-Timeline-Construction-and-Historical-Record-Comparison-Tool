@@ -288,6 +288,27 @@ npm run build           # 静态导出到 out/（可加 NEXT_PUBLIC_BASE_PATH �
 
 > `public/data/` 已随仓库提交，通常无需重跑 `seed:build`。只有改动 `src/data/**` 时才需要。
 
+### 部署：GitHub Pages（纯静态，零后端成本）
+
+线上地址：<https://nanakotoki.github.io/Historical-Event-Timeline-Construction-and-Historical-Record-Comparison-Tool/>
+
+推送到 `main` 即自动部署，流水线在 `.github/workflows/deploy.yml`：
+`npm ci` → `typecheck` → `next build`（`NEXT_PUBLIC_BASE_PATH` 取仓库名）→
+补 `.nojekyll` → 上传 `out/` → `deploy-pages`。
+
+三个容易踩空的点：
+
+* **basePath 必须等于仓库名**。项目站不是用户站，页面挂在 `/<repo>/` 下，
+  少了前缀则 `_next` 与 `data/` 全部 404。`data-loader.ts` 与 `portrait-resolver.ts`
+  都从 `NEXT_PUBLIC_BASE_PATH` 取值拼路径，所以只要构建期注入一次即可。
+* **必须放 `.nojekyll`**。Pages 默认走 Jekyll，会跳过以下划线开头的目录，
+  `_next` 正好撞上，结果就是样式与脚本全丢。
+* **本地验证要挂在同一子路径下**，直接开 `out/` 用根路径访问测不出版本前缀问题。
+  `scripts/shots/verify-pages.mjs` 起一个只服务 `/<repo>/` 前缀的静态服务，
+  `scripts/shots/verify-live.mjs` 则直接打线上地址，两者都按
+  「逼帧 → 等 `canvas[data-intro=done]` → 量墨量」判定画布真的画出来了，
+  空白直接抛错而不是截一张空图当通过。
+
 ---
 
 ## 五、目录结构

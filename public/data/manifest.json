@@ -1,14 +1,14 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-27T14:05:41.379Z",
+  "generatedAt": "2026-10-27T15:08:00.858Z",
   "site": {
     "title": "华夏史网",
     "subtitle": "ChronoGraph China · 二十四史人物关系图谱与史料对勘引擎",
     "edition": "首发种子库 · 楚汉 / 三国 / 隋唐三簇"
   },
   "stats": {
-    "personCount": 997,
-    "edgeCount": 1600,
+    "personCount": 1027,
+    "edgeCount": 1656,
     "anecdoteCount": 146,
     "citationCount": 605,
     "dynastyCount": 17,
@@ -287,9 +287,9 @@
         265,
         589
       ],
-      "personCount": 95,
-      "edgeCount": 154,
-      "byteSize": 329038
+      "personCount": 125,
+      "edgeCount": 210,
+      "byteSize": 441372
     },
     {
       "shardId": "shard_05_sui_tang",
@@ -4333,6 +4333,14 @@
       "importanceWeight": 38
     },
     {
+      "id": "person_wei_rui",
+      "name": "韦睿",
+      "aliasText": "怀文 将领 刺史",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 38
+    },
+    {
       "id": "person_li_yuanji",
       "name": "李元吉",
       "aliasText": "剌 宗室 将领",
@@ -4864,6 +4872,22 @@
       "id": "person_li_daoyuan",
       "name": "郦道元",
       "aliasText": "地理学家",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_erzhu_rong",
+      "name": "尔朱荣",
+      "aliasText": "天宝 军阀 权臣",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_wei_xiaokuan",
+      "name": "韦孝宽",
+      "aliasText": "孝宽 将领 守城名将",
       "dynasty": "southern_northern",
       "shardId": "shard_04_jin_nanbeichao",
       "importanceWeight": 36
@@ -5445,6 +5469,14 @@
       "importanceWeight": 34
     },
     {
+      "id": "person_hulv_guang",
+      "name": "斛律光",
+      "aliasText": "明月 将领",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 34
+    },
+    {
       "id": "person_niu_hong",
       "name": "牛弘",
       "aliasText": "宰相 文献学家",
@@ -5941,6 +5973,30 @@
       "importanceWeight": 31
     },
     {
+      "id": "person_xie_lingyun",
+      "name": "谢灵运",
+      "aliasText": "灵运 诗人 山水诗派开创者",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_yu_xin",
+      "name": "庾信",
+      "aliasText": "子山 兰成 文学家 骈文家",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_gao_cheng",
+      "name": "高澄",
+      "aliasText": "子惠 权臣 政治家",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 31
+    },
+    {
       "id": "person_yuwen_shu",
       "name": "宇文述",
       "aliasText": "将领 权臣",
@@ -6282,6 +6338,14 @@
       "aliasText": "内廷幸臣 长信侯",
       "dynasty": "qin",
       "shardId": "shard_02_chu_han",
+      "importanceWeight": 30
+    },
+    {
+      "id": "person_yuwen_hu",
+      "name": "宇文护",
+      "aliasText": "萨保 权臣 大冢宰",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
       "importanceWeight": 30
     },
     {
@@ -6949,6 +7013,38 @@
       "importanceWeight": 27
     },
     {
+      "id": "person_xiao_ze",
+      "name": "萧赜",
+      "aliasText": "世祖 皇帝",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_xiao_gang",
+      "name": "萧纲",
+      "aliasText": "太宗 皇帝 诗人",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_xiao_yi",
+      "name": "萧绎",
+      "aliasText": "世祖 皇帝 藏书家",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_li_chong",
+      "name": "李冲",
+      "aliasText": "思顺 政治家 制度设计者",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 27
+    },
+    {
       "id": "person_li_yifu",
       "name": "李义府",
       "aliasText": "宰相",
@@ -7325,6 +7421,54 @@
       "importanceWeight": 25
     },
     {
+      "id": "person_liu_yikang",
+      "name": "刘义康",
+      "aliasText": "宗室 宰相",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_xie_tiao",
+      "name": "谢朓",
+      "aliasText": "玄晖 诗人",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_wu_mingche",
+      "name": "吴明彻",
+      "aliasText": "通昭 将领",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_xu_ling",
+      "name": "徐陵",
+      "aliasText": "孝穆 文学家 骈文家",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_hu_taihou",
+      "name": "胡太后",
+      "aliasText": "皇太后 摄政",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_yu_jin_nb",
+      "name": "于谨",
+      "aliasText": "思敬 将领 柱国",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 25
+    },
+    {
       "id": "person_yu_shiji",
       "name": "虞世基",
       "aliasText": "内史侍郎 书法家",
@@ -7621,6 +7765,38 @@
       "importanceWeight": 23
     },
     {
+      "id": "person_shen_qingzhi",
+      "name": "沈庆之",
+      "aliasText": "弘先 将领 司空",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_chen_qian",
+      "name": "陈蒨",
+      "aliasText": "世祖 皇帝",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_yuan_cheng",
+      "name": "元澄",
+      "aliasText": "道镜 宗室 宰相",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_duan_shao",
+      "name": "段韶",
+      "aliasText": "孝先 将领 宰相",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 23
+    },
+    {
       "id": "person_pei_yun",
       "name": "裴蕴",
       "aliasText": "御史大夫",
@@ -7893,6 +8069,30 @@
       "importanceWeight": 21
     },
     {
+      "id": "person_yan_yanzhi",
+      "name": "颜延之",
+      "aliasText": "延年 诗人 骈文家",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_wang_jian_nq",
+      "name": "王俭",
+      "aliasText": "仲宝 宰相 目录学家",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 21
+    },
+    {
+      "id": "person_yuan_ziyou",
+      "name": "元子攸",
+      "aliasText": "敬宗 皇帝",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 21
+    },
+    {
       "id": "person_zheng_zhu",
       "name": "郑注",
       "aliasText": "医官 谋臣",
@@ -8157,6 +8357,22 @@
       "importanceWeight": 19
     },
     {
+      "id": "person_chen_xu",
+      "name": "陈顼",
+      "aliasText": "高宗 皇帝",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 19
+    },
+    {
+      "id": "person_wang_sizheng",
+      "name": "王思政",
+      "aliasText": "将领",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 19
+    },
+    {
       "id": "person_yang_bin",
       "name": "杨邠",
       "aliasText": "宰相",
@@ -8285,6 +8501,30 @@
       "importanceWeight": 18
     },
     {
+      "id": "person_zang_zhi",
+      "name": "臧质",
+      "aliasText": "将领 刺史",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 18
+    },
+    {
+      "id": "person_chang_yizhi",
+      "name": "昌义之",
+      "aliasText": "将领",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 18
+    },
+    {
+      "id": "person_yuan_xiu",
+      "name": "元修",
+      "aliasText": "显宗 皇帝",
+      "dynasty": "southern_northern",
+      "shardId": "shard_04_jin_nanbeichao",
+      "importanceWeight": 18
+    },
+    {
       "id": "person_jing_jin",
       "name": "景进",
       "aliasText": "伶人 宦官",
@@ -8344,12 +8584,12 @@
   "highlights": [
     {
       "label": "在册人物",
-      "value": "997",
+      "value": "1027",
       "note": "全部经正史本传核验"
     },
     {
       "label": "关系边",
-      "value": "1600",
+      "value": "1656",
       "note": "每条均附文言原文为证"
     },
     {

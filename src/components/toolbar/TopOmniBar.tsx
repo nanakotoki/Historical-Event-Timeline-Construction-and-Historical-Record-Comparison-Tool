@@ -72,6 +72,7 @@ export function TopOmniBar({
               type="button"
               onClick={() => onToggleShard(shard.shardId)}
               title={`${shard.title}\n${shard.personCount} 人 · ${shard.edgeCount} 条关系边 · 点击加载/卸载`}
+              data-shard-id={shard.shardId}
               data-active={active}
               className="tool-btn data-[active=true]:border-cinnabar/55 data-[active=true]:bg-cinnabar/10 data-[active=true]:text-cinnabar"
             >

@@ -13,8 +13,11 @@
  */
 import type { ShardDataset } from '../../types/history';
 import { jinBriefEdges } from './edges-brief';
+import { jinBriefEdgesC } from './edges-brief-c';
 import { jinBriefA } from './persons-brief-a';
 import { jinBriefB } from './persons-brief-b';
+import { jinBriefC } from './persons-brief-c';
+import { jinBriefD } from './persons-brief-d';
 
 export const jinNanbeichaoShard: ShardDataset = {
   shardId: 'shard_04_jin_nanbeichao',
@@ -29,6 +32,6 @@ export const jinNanbeichaoShard: ShardDataset = {
     'person_fu_jian',
     'person_yuan_hong',
   ],
-  nodes: [...jinBriefA, ...jinBriefB],
-  edges: [...jinBriefEdges],
+  nodes: [...jinBriefA, ...jinBriefB, ...jinBriefC, ...jinBriefD],
+  edges: [...jinBriefEdges, ...jinBriefEdgesC],
 };

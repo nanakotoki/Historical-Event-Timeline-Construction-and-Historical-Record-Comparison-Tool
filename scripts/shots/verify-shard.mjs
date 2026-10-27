@@ -113,17 +113,16 @@ const head = await page.evaluate(() => document.body.innerText.replace(/\s+/g, '
 console.log('整库首屏: ' + head);
 console.log('整库墨量: ' + full.ink);
 
-const unloaded = await page.evaluate((target) => {
+const unloaded = await page.evaluate((shardId) => {
   const clicked = [];
   for (const b of [...document.querySelectorAll('button')]) {
-    const t = b.textContent?.trim() ?? '';
-    if (!(b.title ?? '').includes('点击加载/卸载')) continue;
-    if (t.startsWith(target)) continue;
+    if (b.dataset.shardId === undefined) continue;
+    if (b.dataset.shardId === shardId) continue;
     b.click();
-    clicked.push(t.slice(0, 4));
+    clicked.push(b.dataset.shardId.replace('shard_', ''));
   }
   return clicked;
-}, TARGET);
+}, targetShard.shardId);
 console.log('已卸载: ' + JSON.stringify(unloaded));
 
 const solo = await waitCanvasSettled();
@@ -132,15 +131,35 @@ await page.screenshot({ path: `${OUT}/${TAG}-02-solo.png` });
 const soloText = await page.evaluate(() => document.body.innerText.replace(/\s+/g, ' '));
 console.log('单片墨量: ' + solo.ink);
 
-/* 断言：页面上必须出现该片人数与全站在册人数 */
-const missing = [
-  ['分片人数', String(targetShard.personCount)],
-  ['全站在册', String(manifest.stats.personCount)],
-].filter(([, v]) => !soloText.includes(v));
-if (missing.length) {
-  throw new Error(`单片视图缺统计: ${missing.map(([k, v]) => `${k} ${v}`).join('、')}`);
+/* 断言必须读右上的「可见 N/M」，不能拿全页文本 includes 一个数字：
+   分片按钮上本来就印着人数，那种断言无论卸载对不对都会通过（实测踩过）。
+
+   期望值也不能直接用 personCount 当分母：单片激活后时间窗收窄到该片的 yearRange，
+   卒于起始年之前的人会被剔掉（两晋片的阮籍 263、嵇康 262 卒，就不在 265—589 里）。
+   这里按前端的同一口径（birthYear ≤ end && deathYear ≥ start）自己算一遍，
+   再要求「可见 = 可见总数 = 窗口内人数」——整片丢失、部分丢失、被 LOD 裁掉，三种都会失败。 */
+const shardJson = JSON.parse(readFileSync(path.join('public/data/shards', targetShard.file), 'utf8'));
+const [wStart, wEnd] = targetShard.yearRange;
+const expectedInWindow = shardJson.nodes.filter((n) => {
+  const birth = n.birthYear ?? -Infinity;
+  const death = n.deathYear ?? Infinity;
+  return birth <= wEnd && death >= wStart;
+}).length;
+
+const seen = soloText.match(/可见\s*(\d+)\s*\/\s*(\d+)/);
+if (!seen) throw new Error('单片视图没读到「可见 N/M」，无法断言可见人数');
+const [seenN, seenM] = [Number(seen[1]), Number(seen[2])];
+if (seenN !== expectedInWindow || seenM !== expectedInWindow) {
+  throw new Error(
+    `单片可见人数不符：可见 ${seenN}/${seenM}，按 ${wStart}—${wEnd} 窗口应为 ${expectedInWindow}（片内共 ${shardJson.nodes.length} 人）`,
+  );
 }
-console.log(`✓ 单片含 ${targetShard.personCount} 人 · 全站 ${manifest.stats.personCount} 人`);
+if (!soloText.includes(String(manifest.stats.personCount))) {
+  throw new Error(`单片视图缺全站在册人数 ${manifest.stats.personCount}`);
+}
+console.log(
+  `✓ 单片可见 ${seenN}/${seenM} 人（片内 ${shardJson.nodes.length} 人，${expectedInWindow} 人落在 ${wStart}—${wEnd} 窗口内）· 全站 ${manifest.stats.personCount} 人`,
+);
 
 await page.evaluate(() => {
   const b = [...document.querySelectorAll('button')].find((x) => x.textContent?.trim() === '纪年泳道');

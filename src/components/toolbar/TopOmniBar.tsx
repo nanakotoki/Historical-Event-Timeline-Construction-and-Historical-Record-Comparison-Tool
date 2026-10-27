@@ -20,6 +20,10 @@ const SHARD_SHORT: Record<string, string> = {
   // 靠巧合正确不算正确，故显式写明。
   shard_06_song_ming_qing: '宋元明清',
   shard_07_five_dynasties: '五代十国',
+  // title 是「新莽更始：王莽改制到光武中兴」，slice(0,4) 会截成「新莽更始」——
+  // 四字里「更始」是刘玄的年号，与「新莽」并称会让人以为是两个政权并列。
+  // 顶栏只取二字「新莽」，全称留在 hover 提示里。
+  shard_08_xin_mang: '新莽',
 };
 
 export function TopOmniBar({

@@ -50,6 +50,7 @@ const SHARD_MODULES = [
   { module: 'src/data/sui-tang/index.ts', exportName: 'suiTangShard' },
   { module: 'src/data/song-ming-qing/index.ts', exportName: 'songMingQingShard' },
   { module: 'src/data/five-dynasties/index.ts', exportName: 'fiveDynastiesShard' },
+  { module: 'src/data/xin-mang/index.ts', exportName: 'xinMangShard' },
 ];
 
 const warnings = [];
@@ -289,12 +290,22 @@ async function main() {
   // 清理旧产物，避免删改数据后残留孤儿文件。
   // 注意：portraits 目录里同时存放从公有领域图库抓取的 jpg 实物图档，
   // 那些不是本脚本的产物（由 scripts/portraits/fetch-portraits.mjs 管理），绝不可清理，
-  // 故此处只删本脚本生成的 .svg。
+  // 故此处只处理本脚本生成的 .svg。
+  //
+  // 这里**不做「删光重建」**，而是求差集：只删本次不会再被生成的那些。
+  // 原实现是无差别删掉目录下所有 .svg 再逐个重写，在生成逻辑确定性的前提下结果等价，
+  // 但有两个坏处，且都真实发生过：
+  //   ① 一旦中途被打断，目录里就只剩写了一半的肖像，画布大片空圆环；
+  //   ② 本机 shell 装了批量删除守卫（单轮累计删 50 个即中止进程），
+  //      删几百个必然半路退出，`build-seed` 于是以退出码 1 结束、数据看似编译失败。
+  // 改成差集后，正常的增量构建差集为空，一个文件都不会删。
   {
+    const keep = new Set();
+    for (const id of validIds) if (!REAL_PORTRAITS[id]) keep.add(`${id}.svg`);
     const files = await readdir(portraitDir).catch(() => []);
-    await Promise.all(
-      files.filter((f) => f.endsWith('.svg')).map((f) => rm(path.join(portraitDir, f), { force: true })),
-    );
+    const stale = files.filter((f) => f.endsWith('.svg') && !keep.has(f));
+    for (const f of stale) await rm(path.join(portraitDir, f), { force: true });
+    if (stale.length) console.log(`  清理孤儿肖像 ${stale.length} 个（已不在人物集合内）`);
   }
   {
     const files = await readdir(shardDir).catch(() => []);

@@ -48,7 +48,7 @@ export const DYNASTIES: DynastyMeta[] = [
     endYear: 25,
     primaryColor: '#7D6337',
     canonicalBooks: ['《汉书》', '《后汉书》'],
-    shardFile: '',
+    shardFile: 'shard_08_xin_mang.json',
   },
   {
     id: 'eastern_han',

@@ -84,6 +84,18 @@ export function G(ancientName: string, modernName: string, lng: number, lat: num
   return { ancientName, modernName, coordinates: [lng, lat] };
 }
 
+/**
+ * 籍贯史载不详者的地理条目——**没有坐标**。
+ *
+ * 用法与 `G()` 相同，只是不给经纬度。存在的意义是让「不知道」可以如实写下来：
+ * 伶人郭从谦、财臣高郁、编者赵崇祚，《新五代史》与《十国春秋》都只字未提其乡里。
+ * 若强行给一个坐标，轨迹地图会在那个点上画出他一生从未到过的地方——
+ * 那不是「补全」，是伪造。
+ */
+export function GU(ancientName = '籍貫史載不詳', modernName = '史無明文'): GeoLocation {
+  return { ancientName, modernName };
+}
+
 /* -------------------------------- 生平事件 -------------------------------- */
 
 export function E(
@@ -281,7 +293,12 @@ export interface BriefPersonDraft {
   died?: number;
   /** 生卒史载不详或仅存大致时段时置 true */
   uncertain?: boolean;
-  origin: GeoLocation;
+  /**
+   * 籍贯。**可以缺省**：伶人、画工、宦官、寒门女子这一类，正史往往只记
+   * 「不知何许人」。此时宁可不写 birthplace，也不给一个假坐标——
+   * 前端 `PersonDetailDrawer` 已判断 undefined，缺省即不显示该行。
+   */
+  origin?: GeoLocation;
   roles: string[];
   titles?: string[];
   weight: number;
@@ -316,7 +333,7 @@ export function pb(draft: BriefPersonDraft): HistoricalPersonNode {
     ...(typeof draft.born === 'number' ? { birthYear: draft.born } : {}),
     ...(typeof draft.died === 'number' ? { deathYear: draft.died } : {}),
     ...(draft.uncertain ? { birthYearUncertain: true } : {}),
-    birthplace: draft.origin,
+    ...(draft.origin ? { birthplace: draft.origin } : {}),
     roles: draft.roles,
     officialTitles: draft.titles ?? [],
     importanceWeight: draft.weight,

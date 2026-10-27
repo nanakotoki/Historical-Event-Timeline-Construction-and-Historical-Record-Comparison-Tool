@@ -128,7 +128,14 @@ export interface PortraitInfo {
 export interface GeoLocation {
   ancientName: string; // 历史古地名，如 "琅邪阳都"、"沛国谯县"、"黄州"
   modernName: string; // 现代行政区划名，如 "山东省临沂市沂南县"
-  coordinates: [number, number]; // [经度 lng, 纬度 lat]，用于历史轨迹地图绘制
+  /**
+   * [经度 lng, 纬度 lat]，用于历史轨迹地图绘制。
+   *
+   * **可缺省。** 伶人、画工、宦官、寒门女子这一类，正史往往只记「不知何许人」；
+   * 此时该记的是「籍贯史载不详」，而不是给一个人为坐标——后者会让轨迹地图
+   * 在几内亚湾画出一个点，比留白更糟。缺省者不参与轨迹绘制。
+   */
+  coordinates?: [number, number];
 }
 
 export interface LifeEvent {

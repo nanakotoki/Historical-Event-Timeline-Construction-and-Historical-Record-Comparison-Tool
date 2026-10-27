@@ -9,7 +9,9 @@ import { createRequire } from 'node:module';
 const require = createRequire('C:/Users/时嘉庆/.workbuddy/binaries/node/workspace/');
 const puppeteer = require('puppeteer-core');
 
-const ROOT = '.build';
+// 构建目录名不固定：NEXT_DIST_DIR 常因 .next/trace 被锁而临时改名（.build/.b4/.b5…），
+// 写死 .build 会去验上一次的旧产物——看着通过，其实验的不是这一版代码。
+const ROOT = process.env.PAGES_ROOT ?? '.build';
 const PREFIX = '/Historical-Event-Timeline-Construction-and-Historical-Record-Comparison-Tool';
 const PORT = 4371;
 

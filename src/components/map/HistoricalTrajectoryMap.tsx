@@ -52,9 +52,14 @@ export function HistoricalTrajectoryMap({
     return person.lifeTimeline
       .filter((event) => Boolean(event.location?.coordinates))
       .sort((a, b) => a.year - b.year)
-      .map((event) => {
-        const [x, y] = project(event.location!.coordinates);
-        return { event, location: event.location!, x, y };
+      // 用 flatMap 而非 map + 非空断言：GeoLocation.coordinates 现在允许缺省
+      // （籍贯史载不详者不编造坐标），这里据实过滤，不靠 ! 压过类型。
+      .flatMap((event) => {
+        const location = event.location;
+        const coordinates = location?.coordinates;
+        if (!location || !coordinates) return [];
+        const [x, y] = project(coordinates);
+        return [{ event, location, x, y }];
       });
   }, [person]);
 
@@ -167,8 +172,10 @@ export function HistoricalTrajectoryMap({
               </span>
             </div>
             <div className="mt-0.5 text-[10.5px] text-ink-3">
-              {active.location.ancientName}（今 {active.location.modernName}） · {active.location.coordinates[0]}°E /{' '}
-              {active.location.coordinates[1]}°N
+              {active.location.ancientName}（今 {active.location.modernName}）
+              {active.location.coordinates
+                ? ` · ${active.location.coordinates[0]}°E / ${active.location.coordinates[1]}°N`
+                : ''}
             </div>
             {active.event.participatingPersonIds?.length ? (
               <div className="mt-0.5 flex flex-wrap gap-1 text-[10px] text-ink-3">

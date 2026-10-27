@@ -198,10 +198,19 @@ function auditPerson(where, p) {
   }
 
   // —— 籍贯经纬度
+  // 坐标可以缺省，但**只在 ancientName 显式写明「不詳」时**才允许。
+  // 这条豁免不是给偷懒留的口子：写「籍貫史載不詳」比填一个坐标更刺眼，
+  // 想省事的人反而不会走这条路。它挡的是另一种错误——为凑字段而编一个
+  // 人物一生从未到过的坐标，让轨迹地图去画一条假路线。
   const bp = p.birthplace;
+  const unknownOrigin = /不詳|不详/.test(bp?.ancientName ?? '');
   if (!bp || !isNonEmptyString(bp.ancientName) || !isNonEmptyString(bp.modernName)) {
     fail(label, '缺少籍贯（ancientName / modernName）');
-  } else if (!Array.isArray(bp.coordinates) || bp.coordinates.length !== 2) {
+  } else if (!Array.isArray(bp.coordinates)) {
+    if (!unknownOrigin) {
+      fail(label, '籍贯缺少 coordinates，且 ancientName 未标明「不詳」——请补坐标，或如实写「籍貫史載不詳」');
+    }
+  } else if (bp.coordinates.length !== 2) {
     fail(label, '籍贯 coordinates 必须是 [lng, lat]');
   } else {
     const [lng, lat] = bp.coordinates;

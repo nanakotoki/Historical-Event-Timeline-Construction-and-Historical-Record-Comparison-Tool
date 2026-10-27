@@ -87,6 +87,28 @@ export interface HistoryGraphCanvasProps {
 const LOD_WEIGHT: [number, number, number] = [75, 40, 0];
 
 /**
+ * 权重裁剪只在「大图」下生效，视图人数低于此数就不按权重删人。
+ * ------------------------------------------------------------------
+ * 75 / 40 / 0 这三档是按九百人全景定的：远景只留曹操、李世民这个量级的人，
+ * 其余等凑近再放出来。问题在于它是**绝对阈值**，而权重分布是按分片各自编排的
+ * ——一旦当前视图本来就没多少人，裁剪的后果不是「少画几个」，而是**整片空白**：
+ *
+ *   两晋南北朝（95 人）、五代十国（90 人）两片，最高权重都停在 67，
+ *   各自没有一个人跨过 75 这条线。单片加载时力导向人少反而铺得更开
+ *   （FR 的 k ∝ √(面积/n)），fitView 的适配缩放掉到 0.7 以下，正好落进 LOD 0，
+ *   于是 90 个人一个都过不了门槛，画布墨量归零。
+ *
+ * 低倍率裁剪的本意是「别让人挤成一团」，前提是图本来就够大。人数少时把成本交给
+ * draw() 里的 denseView 头像降级去控即可，不必删人。
+ */
+/** 图例要读这个常量：界面文案必须与这里的裁剪口径一致 */
+export const LOD_CULL_MIN_COUNT = 240;
+
+function lodMinWeight(lod: 0 | 1 | 2, nodeCount: number): number {
+  return nodeCount < LOD_CULL_MIN_COUNT ? 0 : LOD_WEIGHT[lod];
+}
+
+/**
  * 缩放区间。
  * ------------------------------------------------------------------
  * 上限原为 3.6×，是按「整库全景够用」估的，实测不够：九百人的力导向图铺开后，
@@ -251,6 +273,11 @@ export function HistoryGraphCanvas({
   const camera = useRef({ scale: 1, tx: 0, ty: 0 });
   const sizeRef = useRef({ w: 0, h: 0 });
   const dirtyRef = useRef(true);
+  /**
+   * 左下常驻面板占掉的矩形（相对画布左上角）。
+   * 泳道标签画在屏幕上固定的 x=14，面板一盖就是几道没名字，故按实测矩形避让。
+   */
+  const panelRectRef = useRef<{ right: number; top: number; bottom: number } | null>(null);
   /** 标签排布缓存：见 draw() 内的说明 */
   const placementCacheRef = useRef<
     { key: string; layout: LayoutResult; placements: Map<string, Placement> } | null
@@ -341,10 +368,27 @@ export function HistoryGraphCanvas({
   useEffect(() => {
     const wrap = wrapRef.current;
     if (!wrap) return;
+    const measurePanel = () => {
+      const panelEl = wrap.closest('main')?.querySelector<HTMLElement>('[data-legend-panel]');
+      const base = wrap.getBoundingClientRect();
+      if (!panelEl) {
+        panelRectRef.current = null;
+        return;
+      }
+      const r = panelEl.getBoundingClientRect();
+      panelRectRef.current = { right: r.right - base.left, top: r.top - base.top, bottom: r.bottom - base.top };
+      dirtyRef.current = true;
+    };
+    measurePanel();
+    // 图例可折叠，折叠后面板高度会变，必须跟着重测，否则避让区还按旧高度算
+    const panelEl = wrap.closest('main')?.querySelector<HTMLElement>('[data-legend-panel]');
+    const panelObserver = panelEl ? new ResizeObserver(measurePanel) : null;
+    if (panelEl) panelObserver?.observe(panelEl);
     const observer = new ResizeObserver(() => {
       const rect = wrap.getBoundingClientRect();
       const prev = sizeRef.current;
       sizeRef.current = { w: rect.width, h: rect.height };
+      measurePanel();
       const canvas = canvasRef.current;
       if (canvas) {
         const dpr = Math.min(2, window.devicePixelRatio || 1);
@@ -362,7 +406,10 @@ export function HistoryGraphCanvas({
       dirtyRef.current = true;
     });
     observer.observe(wrap);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      panelObserver?.disconnect();
+    };
   }, [fitView]);
 
   /* 布局变化 / 数据变化时重新适配 */
@@ -429,7 +476,7 @@ export function HistoryGraphCanvas({
     const s = latest.current;
     const { scale, tx, ty } = camera.current;
     const lod = lodOf(scale);
-    const minWeight = LOD_WEIGHT[lod];
+    const minWeight = lodMinWeight(lod, s.nodes.length);
     const intro = Math.min(1, (performance.now() - introRef.current) / 720);
 
     const project = (x: number, y: number): [number, number] => [x * scale + tx, y * scale + ty];
@@ -451,7 +498,22 @@ export function HistoryGraphCanvas({
         ctx.fillStyle = s.isDark ? 'rgba(230,225,210,0.34)' : 'rgba(80,64,40,0.42)';
         ctx.textAlign = 'left';
         ctx.textBaseline = 'middle';
-        ctx.fillText(lane.label, 14, (y1 + y2) / 2);
+        /**
+         * 左下常驻面板（图谱布局 / 图例 / 筛选）会盖住下半幅画布，而泳道标签一直画在 x=14：
+         * 八道时正好有四道的名字躲在面板后面，读图的人只看到四条标签，
+         * 剩下四道看着像没名字的散点带。命中面板的纵向区间就把标签挪到面板右侧，
+         * 并用底色描一圈，免得压在人物名字上读不清。
+         */
+        const cy = (y1 + y2) / 2;
+        const panel = panelRectRef.current;
+        const occluded = panel !== null && cy > panel.top - 12 && cy < panel.bottom + 12 && panel.right >= 14;
+        const labelX = occluded ? panel.right + 12 : 14;
+        if (occluded) {
+          ctx.strokeStyle = s.isDark ? 'rgba(17,19,24,0.92)' : 'rgba(246,243,235,0.92)';
+          ctx.lineWidth = 3;
+          ctx.strokeText(lane.label, labelX, cy);
+        }
+        ctx.fillText(lane.label, labelX, cy);
       }
     }
 
@@ -983,7 +1045,7 @@ export function HistoryGraphCanvas({
       const { scale, tx, ty } = camera.current;
       const s = latest.current;
       const lod = lodOf(scale);
-      const minWeight = LOD_WEIGHT[lod];
+      const minWeight = lodMinWeight(lod, s.nodes.length);
       let best: { id: string; dist: number } | null = null;
       for (const node of s.nodes) {
         if (node.importanceWeight < minWeight) continue;
@@ -1005,7 +1067,7 @@ export function HistoryGraphCanvas({
     const { scale, tx, ty } = camera.current;
     const s = latest.current;
     const lod = lodOf(scale);
-    const minWeight = LOD_WEIGHT[lod];
+    const minWeight = lodMinWeight(lod, s.nodes.length);
     let best: { edge: HistoricalRelationEdge; dist: number } | null = null;
 
     for (const edge of s.edges) {

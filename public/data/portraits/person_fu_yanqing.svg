@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="620" viewBox="0 0 440 620" role="img" aria-label="符彦卿 冠服考据复原像">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#F7F2E4"/>
+      <stop offset="0.55" stop-color="#F1E9D6"/>
+      <stop offset="1" stop-color="#E8DEC6"/>
+    </linearGradient>
+    <linearGradient id="silk" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#A6906B" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#A6906B" stop-opacity="0.28"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="34%" r="52%">
+      <stop offset="0" stop-color="#8A6A45" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#8A6A45" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="robeGrad" x1="0" y1="0" x2="0.2" y2="1">
+      <stop offset="0" stop-color="#4C4038" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#4C4038" stop-opacity="0.72"/>
+    </linearGradient>
+    <pattern id="weave" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#6B5B42" stroke-width="0.5" opacity="0.10"/>
+    </pattern>
+    <filter id="soft"><feGaussianBlur stdDeviation="0.4"/></filter>
+  </defs>
+
+  <!-- 裱边（绫） -->
+  <rect x="0" y="0" width="440" height="620" fill="url(#silk)"/>
+  <rect x="0" y="0" width="440" height="620" fill="url(#weave)"/>
+  <!-- 画心 -->
+  <rect x="34" y="34" width="372" height="552" fill="url(#paper)"/>
+  <rect x="34" y="34" width="372" height="552" fill="url(#halo)"/>
+  <rect x="40" y="40" width="360" height="540" fill="none" stroke="#A6906B" stroke-width="0.9" opacity="0.85"/>
+  <rect x="46" y="46" width="348" height="528" fill="none" stroke="#A6906B" stroke-width="0.5" opacity="0.55"/>
+
+  <g stroke-linejoin="round">
+    <!-- 衣袍 -->
+    <path d="M200 268 C142 276 96 314 82 470 C76 528 74 560 74 574 L326 574 C326 560 324 528 318 470 C304 314 258 276 200 268 Z" fill="url(#robeGrad)"/>
+    <!-- 衣纹 -->
+    <g stroke="#241E17" stroke-width="0.9" opacity="0.35" fill="none">
+      <path d="M120 360 C132 420 130 500 126 570"/>
+      <path d="M152 340 C160 410 158 500 156 570"/>
+      <path d="M248 340 C240 410 242 500 244 570"/>
+      <path d="M280 360 C268 420 270 500 274 570"/>
+    </g>
+    <!-- 交领右衽 -->
+    <path d="M200 270 L164 300 L200 336 L236 300 Z" fill="#EFE6D2" opacity="0.92"/>
+    <path d="M200 270 L164 300 L200 470 L200 336 Z" fill="#E4D8BE" opacity="0.75"/>
+    <path d="M164 300 L200 470" stroke="#241E17" stroke-width="1.6" opacity="0.55" fill="none"/>
+    <path d="M236 300 L200 470" stroke="#241E17" stroke-width="1.4" opacity="0.45" fill="none"/>
+    <path d="M150 306 C160 390 176 470 200 512 C224 470 240 390 250 306" fill="none" stroke="#8A6A45" stroke-width="5" opacity="0.55"/>
+    <!-- 胸前团花补子 -->
+    <circle cx="200" cy="392" r="22" fill="none" stroke="#8A6A45" stroke-width="1" opacity="0.45"/>
+    <!-- 腰带 -->
+    <path d="M96 470 C140 486 260 486 304 470 L306 496 C260 512 140 512 94 496 Z" fill="#2E2822" opacity="0.82"/>
+    <rect x="182" y="472" width="36" height="26" rx="3" fill="#8A6A45" opacity="0.72"/>
+
+    <!-- 颈 -->
+    <path d="M178 244 L178 280 C178 292 222 292 222 280 L222 244 Z" fill="#E8D3B8"/>
+    <path d="M178 262 C188 274 212 274 222 262" fill="none" stroke="#B99B78" stroke-width="1.4" opacity="0.7"/>
+
+    <!-- 耳 -->
+    <ellipse cx="146" cy="218" rx="7" ry="12" fill="#E8D3B8"/>
+    <ellipse cx="254" cy="218" rx="7" ry="12" fill="#E8D3B8"/>
+
+    <!-- 面 -->
+    <path d="M200 146 C252 156 252 236 200 258 C148 236 148 156 200 146 Z" fill="#EFDCC2"/>
+    <!-- 面部明暗 -->
+    <path d="M200 156 C252 160 252 236 200 256" fill="#E6CFB0" opacity="0.5"/>
+    <!-- 发际 -->
+    <path d="M150 176 C170 150 230 150 250 176 C224 164 176 164 150 176 Z" fill="#221C18" opacity="0.9"/>
+
+    <!-- 眉 -->
+    <path d="M156 175 q20 -7 38 -4" fill="none" stroke="#2A231B" stroke-width="3.4" stroke-linecap="round"/>
+    <path d="M244 175 q-20 -7 -38 -4" fill="none" stroke="#2A231B" stroke-width="3.4" stroke-linecap="round"/>
+
+    <!-- 目 -->
+    <path d="M158 196 q12 -8 26 0 q-13 7 -26 0 Z" fill="#FBF6EA" stroke="#2A231B" stroke-width="1.5"/>
+    <path d="M216 196 q12 -8 26 0 q-13 7 -26 0 Z" fill="#FBF6EA" stroke="#2A231B" stroke-width="1.5"/>
+    <circle cx="171" cy="196" r="3.2" fill="#241E18"/>
+    <circle cx="229" cy="196" r="3.2" fill="#241E18"/>
+    <path d="M158 196 q13 6 26 0" fill="none" stroke="#2A231B" stroke-width="1" opacity="0.5"/>
+    <path d="M216 196 q13 6 26 0" fill="none" stroke="#2A231B" stroke-width="1" opacity="0.5"/>
+
+    <!-- 鼻 -->
+    <path d="M200 200 L197 222 q4 3 8 0" fill="none" stroke="#A98862" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- 口 -->
+    <path d="M190 234 q10 5 20 0" fill="none" stroke="#9C4A3E" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M190 234 q10 -3 20 0" fill="none" stroke="#9C4A3E" stroke-width="1" opacity="0.5"/>
+
+    <path d="M190 224 q10 5 20 0" stroke="#26221C" stroke-width="2.2" fill="none"/>
+            <path d="M186 240 C184 252 188 262 192 266" stroke="#26221C" stroke-width="1.8" fill="none"/>
+            <path d="M214 240 C216 252 212 262 208 266" stroke="#26221C" stroke-width="1.8" fill="none"/>
+            <path d="M196 250 C198 262 202 262 204 250" fill="none" stroke="#26221C" stroke-width="1.6"/>
+    
+      <g>
+        <path d="M154 164 C154 126 174 108 200 108 C226 108 246 126 246 164 Z" fill="#191C22"/>
+        <path d="M154 150 C154 136 174 128 200 128 C226 128 246 136 246 150" fill="none" stroke="#232830" stroke-width="12" stroke-linecap="round"/>
+        <path d="M168 148 C150 158 138 178 136 200" stroke="#191C22" stroke-width="9" fill="none" stroke-linecap="round"/>
+        <path d="M232 148 C250 158 262 178 264 200" stroke="#191C22" stroke-width="9" fill="none" stroke-linecap="round"/>
+      </g>
+  </g>
+
+  <!-- 侧题（竖排） -->
+  <g font-family="Songti SC, SimSun, serif" fill="#4A3E2E" opacity="0.82">
+    <text x="358" y="112" font-size="15" writing-mode="tb">符彦卿</text>
+    <text x="336" y="112" font-size="11" writing-mode="tb" opacity="0.75">字冠侯</text>
+  </g>
+
+  <!-- 印章 -->
+  <g transform="translate(58 512) rotate(-1.2)" font-family="Songti SC, SimSun, serif">
+    <rect x="0" y="0" width="64" height="64" rx="3" fill="#B03A2E" opacity="0.9"/>
+    <rect x="4" y="4" width="56" height="56" rx="2" fill="none" stroke="#F7F2E4" stroke-width="1.2" opacity="0.85"/>
+    <g fill="#F7F2E4" text-anchor="middle" font-weight="700"><text x="26" y="30" font-size="17">符</text><text x="44" y="30" font-size="17">彦</text><text x="26" y="50" font-size="17">卿</text></g>
+  </g>
+
+  <!-- 落款 -->
+  <text x="358" y="566" font-size="8.5" font-family="Songti SC, SimSun, serif" fill="#6B5B42" opacity="0.6" text-anchor="end">华夏史网 · 冠服考据复原 · 五代</text>
+</svg>

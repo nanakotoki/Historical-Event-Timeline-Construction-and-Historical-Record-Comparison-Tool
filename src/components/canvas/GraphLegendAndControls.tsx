@@ -8,6 +8,7 @@ import { ChevronDown, GitBranch, Layers, Maximize2, Minus, Network, Plus, Slider
 import type { GraphLayoutMode, RelationCategory } from '@/types/history';
 import { RELATION_META } from '@/lib/search-engine';
 import { useTheme } from '@/components/providers/ThemeProvider';
+import { LOD_CULL_MIN_COUNT } from '@/components/canvas/HistoryGraphCanvas';
 
 const LAYOUTS: { key: GraphLayoutMode; label: string; hint: string; icon: typeof Network }[] = [
   { key: 'force', label: '力导向', hint: '按关系亲疏自然聚集，观察整体结构', icon: Network },
@@ -58,13 +59,22 @@ export function GraphLegendAndControls({
   const { isDark } = useTheme();
   const [legendOpen, setLegendOpen] = useState(true);
 
-  // 阈值与 HistoryGraphCanvas 的 LOD_WEIGHT 必须一字不差，否则界面会报出与实际渲染不符的分层
-  const lodLabel = ['宏观 · 权重≥75', '中观 · 权重≥40 + 头像', '微观 · 全部 + 关系胶囊'][lod];
+  // 阈值与 HistoryGraphCanvas 的 LOD_WEIGHT / LOD_CULL_MIN_COUNT 必须一字不差，
+  // 否则界面会报出与实际渲染不符的分层：单片九十人时画布明明「可见 90/90」，
+  // 标签却还写着「宏观 · 权重≥75」，自相矛盾。
+  const lodLabel =
+    totalNodes < LOD_CULL_MIN_COUNT
+      ? `全量 · ${totalNodes} 人尽出`
+      : ['宏观 · 权重≥75', '中观 · 权重≥40 + 头像', '微观 · 全部 + 关系胶囊'][lod];
 
   return (
     <>
       {/* 左下：布局 + 图例 + 筛选 */}
-      <div className="pointer-events-none absolute bottom-3 left-3 z-20 flex w-[268px] flex-col gap-2">
+      {/* data-legend-panel 供画布量取遮挡区域：泳道标签画在 x=14，会被这块面板盖住 */}
+      <div
+        data-legend-panel
+        className="pointer-events-none absolute bottom-3 left-3 z-20 flex w-[268px] flex-col gap-2"
+      >
         <div className="panel pointer-events-auto p-2">
           <div className="mb-1.5 flex items-center gap-1.5 px-0.5">
             <SlidersHorizontal size={11} className="text-ink-3" />

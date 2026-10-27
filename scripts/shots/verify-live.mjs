@@ -21,9 +21,15 @@ page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
 page.on('pageerror', (e) => errors.push(String(e)));
 page.on('response', (r) => r.status() >= 400 && bad.push(`${r.status()} ${r.url()}`));
 
-await page.goto(URL, { waitUntil: 'networkidle0', timeout: 180000 });
+/**
+ * 不要用 networkidle0 判「加载完成」：首屏会预取近千张画像 SVG，
+ * 线上链路下连接池几乎一直有活动请求，500ms 内零连接的窗口可能根本不出现——
+ * 实测 180s 直接超时，而站点本身 0.8s 就返回 200。
+ * 真正的就绪判据只有一个：画布画出 intro=done 且墨量够（见 waitCanvasSettled）。
+ */
+await page.goto(URL, { waitUntil: 'domcontentloaded', timeout: 120000 });
 
-async function waitCanvasSettled(budgetMs = 30000) {
+async function waitCanvasSettled(budgetMs = 60000) {
   const t0 = Date.now();
   let last = -1;
   while (Date.now() - t0 < budgetMs) {

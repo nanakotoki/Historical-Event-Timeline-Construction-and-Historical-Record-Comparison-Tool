@@ -262,6 +262,17 @@ export interface BriefPersonDraft {
   name: string;
   zi?: string;
   hao?: string[];
+  /**
+   * 庙号（如「圣宗」「熙宗」）。简目档同样需要，理由有二：
+   *  ① 辽金西夏诸帝的本名（耶律隆绪、完颜亶）反不如庙号通行，
+   *     读者搜「辽圣宗」必须能命中，否则等于搜不到；
+   *  ② 帝王与后妃的「号」是尊号（应天太后），与庙号是两套东西，
+   *     混进 `hao` 会让档案页把庙号显示成「别号」，是错的。
+   * 故与考据档 `p()` 同口径，单列 templeName。
+   */
+  miao?: string;
+  /** 年号，如 ['统和', '开泰', '太平'] */
+  nian?: string[];
   dyn: DynastyId;
   faction?: string;
   /** 缺省为男；后妃、女官、才女须显式声明 */
@@ -290,6 +301,8 @@ export function pb(draft: BriefPersonDraft): HistoricalPersonNode {
   const aliases: HistoricalPersonNode['aliases'] = {};
   if (draft.zi) aliases.courtesyName = draft.zi;
   if (draft.hao?.length) aliases.pseudonyms = draft.hao;
+  if (draft.miao) aliases.templeName = draft.miao;
+  if (draft.nian?.length) aliases.eraNames = draft.nian;
 
   const [earlyLife, majorAchievements, turningPointsAndEnd] = draft.bio ?? [];
 

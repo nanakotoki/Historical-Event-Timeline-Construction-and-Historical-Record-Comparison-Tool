@@ -1,14 +1,14 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-27T04:47:15.793Z",
+  "generatedAt": "2026-10-27T05:10:44.125Z",
   "site": {
     "title": "华夏史网",
     "subtitle": "ChronoGraph China · 二十四史人物关系图谱与史料对勘引擎",
     "edition": "首发种子库 · 楚汉 / 三国 / 隋唐三簇"
   },
   "stats": {
-    "personCount": 877,
-    "edgeCount": 1397,
+    "personCount": 902,
+    "edgeCount": 1439,
     "anecdoteCount": 146,
     "citationCount": 605,
     "dynastyCount": 17,
@@ -306,7 +306,7 @@
       ],
       "personCount": 146,
       "edgeCount": 264,
-      "byteSize": 722433
+      "byteSize": 722606
     },
     {
       "shardId": "shard_06_song_ming_qing",
@@ -324,9 +324,9 @@
         860,
         1912
       ],
-      "personCount": 143,
-      "edgeCount": 203,
-      "byteSize": 455392
+      "personCount": 168,
+      "edgeCount": 245,
+      "byteSize": 542379
     },
     {
       "shardId": "shard_07_five_dynasties",
@@ -777,6 +777,14 @@
       "name": "朱熹",
       "aliasText": "元晦 晦庵 紫阳 思想家 教育家",
       "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 74
+    },
+    {
+      "id": "person_ye_lu_long_xu",
+      "name": "耶律隆绪",
+      "aliasText": "圣宗 统和 开泰 太平 皇帝",
+      "dynasty": "liao_jin_xia",
       "shardId": "shard_06_song_ming_qing",
       "importanceWeight": 74
     },
@@ -1637,6 +1645,22 @@
       "importanceWeight": 58
     },
     {
+      "id": "person_han_de_rang",
+      "name": "韩德让",
+      "aliasText": "耶律隆运 南院枢密使 大丞相",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 58
+    },
+    {
+      "id": "person_wan_yan_zong_han",
+      "name": "完颜宗翰",
+      "aliasText": "粘罕 左副元帅 西路军主帅",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 58
+    },
+    {
       "id": "person_deng_yu",
       "name": "邓禹",
       "aliasText": "仲华 宰辅 将领",
@@ -1857,6 +1881,14 @@
       "name": "梁启超",
       "aliasText": "卓如 任公 饮冰室主人 思想家 政论家",
       "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 55
+    },
+    {
+      "id": "person_wan_yan_zong_wang",
+      "name": "完颜宗望",
+      "aliasText": "二太子 右副元帅 东路军主帅",
+      "dynasty": "liao_jin_xia",
       "shardId": "shard_06_song_ming_qing",
       "importanceWeight": 55
     },
@@ -2129,6 +2161,14 @@
       "name": "郑成功",
       "aliasText": "将领",
       "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 52
+    },
+    {
+      "id": "person_li_ji_qian",
+      "name": "李继迁",
+      "aliasText": "定难军都知蕃落使 西平王",
+      "dynasty": "liao_jin_xia",
       "shardId": "shard_06_song_ming_qing",
       "importanceWeight": 52
     },
@@ -2429,6 +2469,22 @@
       "importanceWeight": 49
     },
     {
+      "id": "person_ye_lu_xiu_ge",
+      "name": "耶律休哥",
+      "aliasText": "于越 南京留守",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 49
+    },
+    {
+      "id": "person_yu_yun_wen",
+      "name": "虞允文",
+      "aliasText": "彬甫 中书舍人 督视江淮军马 宰相",
+      "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 49
+    },
+    {
       "id": "person_liu_zhiyuan",
       "name": "刘知远",
       "aliasText": "皇帝 节度使",
@@ -2721,6 +2777,38 @@
       "name": "严复",
       "aliasText": "又陵 几道 翻译家 思想家",
       "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_shu_lv_ping",
+      "name": "述律平",
+      "aliasText": "应天太后 太祖淳钦皇后 皇后 摄政太后",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_ye_lv_xie_zhen",
+      "name": "耶律斜轸",
+      "aliasText": "北院枢密使 都统",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_wan_yan_xi_yin",
+      "name": "完颜希尹",
+      "aliasText": "丞相 右监军",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_fu_bi",
+      "name": "富弼",
+      "aliasText": "彦国 郑国公 枢密副使 宰相 使辽正使",
+      "dynasty": "song",
       "shardId": "shard_06_song_ming_qing",
       "importanceWeight": 46
     },
@@ -3205,6 +3293,30 @@
       "importanceWeight": 44
     },
     {
+      "id": "person_ye_lv_da_shi",
+      "name": "耶律大石",
+      "aliasText": "德宗 节度使 菊儿汗",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_wan_yan_chen_heshang",
+      "name": "完颜陈和尚",
+      "aliasText": "良佐 完颜彝 忠孝军提控",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_li_de_ming",
+      "name": "李德明",
+      "aliasText": "定难军节度使 夏国王",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 44
+    },
+    {
       "id": "person_zhu_youzhen",
       "name": "朱友贞",
       "aliasText": "皇帝",
@@ -3513,6 +3625,38 @@
       "name": "康有为",
       "aliasText": "广厦 长素 南海 思想家",
       "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_ye_lv_yan_xi",
+      "name": "耶律延禧",
+      "aliasText": "天祚帝 乾统 天庆 保大 皇帝",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_wan_yan_dan",
+      "name": "完颜亶",
+      "aliasText": "熙宗 天会 天眷 皇统 皇帝",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_wan_yan_shou_xu",
+      "name": "完颜守绪",
+      "aliasText": "哀宗 正大 开兴 天兴 皇帝",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_chong_shi_dao",
+      "name": "种师道",
+      "aliasText": "彝叔 老种 泾原路经略使 京畿河北制置使",
+      "dynasty": "song",
       "shardId": "shard_06_song_ming_qing",
       "importanceWeight": 41
     },
@@ -4029,6 +4173,30 @@
       "importanceWeight": 38
     },
     {
+      "id": "person_wan_yan_jing",
+      "name": "完颜璟",
+      "aliasText": "章宗 明昌 承安 泰和 皇帝",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_he_shi_lie_zhi_ning",
+      "name": "纥石烈志宁",
+      "aliasText": "左副元帅 平章政事",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_li_ren_xiao",
+      "name": "李仁孝",
+      "aliasText": "仁宗 皇帝",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 38
+    },
+    {
       "id": "person_wang_yanzhang",
       "name": "王彦章",
       "aliasText": "贤明 将领",
@@ -4457,6 +4625,14 @@
       "name": "詹天佑",
       "aliasText": "眷诚 工程师",
       "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_xiao_ta_lin",
+      "name": "萧挞凛",
+      "aliasText": "驼宁 南京统军使 兰陵郡王",
+      "dynasty": "liao_jin_xia",
       "shardId": "shard_06_song_ming_qing",
       "importanceWeight": 36
     },
@@ -5037,6 +5213,14 @@
       "importanceWeight": 34
     },
     {
+      "id": "person_li_liang_zuo",
+      "name": "李谅祚",
+      "aliasText": "毅宗 皇帝",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 34
+    },
+    {
       "id": "person_jing_xiang",
       "name": "敬翔",
       "aliasText": "子振 谋士 宰相",
@@ -5525,6 +5709,14 @@
       "importanceWeight": 31
     },
     {
+      "id": "person_wang_ruo_xu",
+      "name": "王若虚",
+      "aliasText": "从之 滹南遗老 翰林直学士 学者",
+      "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 31
+    },
+    {
       "id": "person_wang_pu",
       "name": "王朴",
       "aliasText": "文伯 谋士 宰相",
@@ -6001,6 +6193,14 @@
       "name": "年羹尧",
       "aliasText": "亮工 将领",
       "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 29
+    },
+    {
+      "id": "person_li_xian",
+      "name": "李睍",
+      "aliasText": "末帝 皇帝",
+      "dynasty": "liao_jin_xia",
       "shardId": "shard_06_song_ming_qing",
       "importanceWeight": 29
     },
@@ -7384,12 +7584,12 @@
   "highlights": [
     {
       "label": "在册人物",
-      "value": "877",
+      "value": "902",
       "note": "全部经正史本传核验"
     },
     {
       "label": "关系边",
-      "value": "1397",
+      "value": "1439",
       "note": "每条均附文言原文为证"
     },
     {

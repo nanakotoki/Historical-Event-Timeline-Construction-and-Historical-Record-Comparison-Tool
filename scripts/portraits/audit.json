@@ -1,10 +1,10 @@
 {
   "note": "传世画像逐图审计账本。build-catalog.mjs 只接受本账本中 verdict=keep 的图档；未经审计的图档一律不注入分片（前端退回 L3/L4）。判定口径：须为古代纸绢本画像或古籍刻本绣像，且确为该人物本人；现代照片、影视剧照、现代白描重绘、雕塑／塑像照片、石刻、无人物之书法页，一律 reject。",
-  "generatedAt": "2026-10-27T08:19:16.421Z",
+  "generatedAt": "2026-10-27T12:13:25.961Z",
   "counts": {
-    "total": 100,
-    "keep": 83,
-    "reject": 17
+    "total": 126,
+    "keep": 107,
+    "reject": 19
   },
   "entries": {
     "Fan Zeng.jpg": {
@@ -606,6 +606,171 @@
       "verdict": "keep",
       "reason": "金上京博物馆藏本，传统画像体制；Commons 著录断代「与阿骨打同时」存疑，catalog 已标「（传）…存疑」",
       "bookTitle": ""
+    },
+    "Möngke Khan.jpg": {
+      "name": "蒙哥",
+      "verdict": "keep",
+      "reason": "十四世紀伊利汗國拉施特《史集》（Jāmiʿ al-Tawārīkh）抄本細密畫：蒙哥御座錦袍、旁有侍者，卷面存阿拉伯文題字。紙本設色手繪，與旭烈兀一幀同屬一套抄本，故並列 L1；具體抄本葉次與藏所待考。",
+      "bookTitle": "（伊利汗國）拉施特《史集》抄本插圖（傳）",
+      "tier": "tier1_authentic_painting"
+    },
+    "Zhang Shicheng.jpg": {
+      "name": "张士诚",
+      "verdict": "keep",
+      "reason": "明清刻本绣像风，乌纱红袍，单人像；具体刊本待考，按「版本待考」低记。",
+      "bookTitle": ""
+    },
+    "Portrait officiel de l'empereur Jiajing.jpg": {
+      "name": "朱厚熜",
+      "verdict": "keep",
+      "reason": "台北故宫《明世宗坐像》轴（中畫000318）高清数字件，绢本设色，确为嘉靖帝御容，无争议。",
+      "bookTitle": ""
+    },
+    "Hulagu Khan.jpg": {
+      "name": "旭烈兀",
+      "verdict": "keep",
+      "reason": "《史集》系统十四世纪细密画，羽饰冠、锦袍坐像，即世传旭烈兀御容，纸本绘画确为与其人同代之古老相。",
+      "bookTitle": ""
+    },
+    "Yang Shiqi.jpg": {
+      "name": "杨士奇",
+      "verdict": "reject",
+      "reason": "黑白照片，人物戴清代瓜皮帽，显系晚清民国人，与明代杨士奇无关——同名误传。"
+    },
+    "胡宗憲.jpg": {
+      "name": "胡宗宪",
+      "verdict": "keep",
+      "reason": "忠靜冠、紅袍、玉帶、正面坐姿，筆法為明清祖容像一路的紙本設色手繪。非刻本，故列 L1；藏所與具體年代待考。",
+      "bookTitle": "（明）佚名《胡宗憲像》（紙本設色坐像）",
+      "tier": "tier1_authentic_painting"
+    },
+    "楊慎.jpg": {
+      "name": "杨慎",
+      "verdict": "keep",
+      "reason": "立像一幅，幅内自题「明翰林脩撰…楊先生象」，旁有长跋记云南昆明、建水等地存有三本，此幅为壬申年摹本。原像为明人手笔，摹绘时代存疑（壬申或为1872或1932），如实注明「摹本」。",
+      "bookTitle": "（明）佚名原像、后世摹本《楊慎像》軸"
+    },
+    "唐寅.jpg": {
+      "name": "唐寅",
+      "verdict": "keep",
+      "reason": "明代官服立像：烏紗帽、紅袍，紙本設色，面容與明代名臣像冊系統一致。筆墨為手繪而非刻本，故列 L1；原件藏所與繪製年代待考。",
+      "bookTitle": "（明清）佚名《唐寅像》（紙本設色立像）",
+      "tier": "tier1_authentic_painting"
+    },
+    "夏言.jpg": {
+      "name": "夏言",
+      "verdict": "keep",
+      "reason": "籠巾（貂蟬冠）、紅袍、執笏的正面坐像，紙本設色，屬明代名臣像冊一路。手繪，非刻本，故列 L1；版本待考。",
+      "bookTitle": "（明）佚名《夏言像》（紙本設色坐像）",
+      "tier": "tier1_authentic_painting"
+    },
+    "嚴嵩.jpg": {
+      "name": "严嵩",
+      "verdict": "keep",
+      "reason": "烏紗帽、蟒服、正面坐姿，紙本設色，與夏言像同屬一套明代名臣像冊。手繪，非刻本，故列 L1；版本待考。",
+      "bookTitle": "（明）佚名《嚴嵩像》（紙本設色坐像）",
+      "tier": "tier1_authentic_painting"
+    },
+    "高拱.jpg": {
+      "name": "高拱",
+      "verdict": "keep",
+      "reason": "梁冠执笏彩色像，属明清上色版画或手绘像册一路；颜色平涂但纸面有旧痕，按「版本待考」低记。",
+      "bookTitle": ""
+    },
+    "秦良玉.jpg": {
+      "name": "秦良玉",
+      "verdict": "keep",
+      "reason": "黃衣、手執書卷而按劍的立軸式像，紙絹本設色，人物戎裝而具文飾，與忠州秦良玉祠系統的畫像同源。手繪，非刻本，故列 L1；繪製年代與藏所待考。",
+      "bookTitle": "（清）佚名《秦良玉像》軸",
+      "tier": "tier1_authentic_painting"
+    },
+    "Portrait of Wen Zhengming.jpg": {
+      "name": "文徵明",
+      "verdict": "keep",
+      "reason": "团扇式立像，幅内题「明翰林待詔衡山先生…圖」，黑白复制件，原作为旧画。注意：此档题名以「Portrait of 」开头，会被十九世纪像册规则误判出处，必须用本条覆盖。",
+      "bookTitle": "（明）佚名《文徵明像》軸（旧摹本）"
+    },
+    "Shi Kefa.jpg": {
+      "name": "史可法",
+      "verdict": "keep",
+      "reason": "烏紗、紅袍彩色立像，幅頂有篆書題名，屬忠正公一系的舊傳畫像。紙絹本手繪，非刻本，故列 L1；繪製年代與藏所待考。",
+      "bookTitle": "（明—清）佚名《史可法像》軸（幅頂篆書題名）",
+      "tier": "tier1_authentic_painting"
+    },
+    "Wang Fuzhi.jpg": {
+      "name": "王夫之",
+      "verdict": "keep",
+      "reason": "木刻线描半身像，幅内自题「王船山肖像」，出清刊本卷首；具体刊本待考。",
+      "bookTitle": "（清）刻本《王船山肖像》"
+    },
+    "Gu yanwu.jpg": {
+      "name": "顾炎武",
+      "verdict": "keep",
+      "reason": "《清代学者像传》第一集（叶衍兰辑、黄小泉摹绘）顾炎武一开，白袍方巾立像，与 Commons 分类「清代學者象傳」著录一致。",
+      "bookTitle": ""
+    },
+    "孝莊文皇后朝服像.jpg": {
+      "name": "孝庄文皇后",
+      "verdict": "keep",
+      "reason": "清宮舊藏朝服坐像：朝冠、藍底金龍朝袍、東珠朝珠，絹本設色，筆法屬康熙朝宮廷寫真一路，為孝莊文皇后御容。手繪絹本，非刻本，故列 L1；原件藏所待核。",
+      "bookTitle": "（清）佚名《孝莊文皇后朝服像》軸（清宮舊藏）",
+      "tier": "tier1_authentic_painting"
+    },
+    "福康安.jpg": {
+      "name": "福康安",
+      "verdict": "keep",
+      "reason": "暖帽如意、憑幾坐於榻上的行樂圖式畫像，紙本設色，清代中期作風。手繪，非刻本，故列 L1；繪製年代與藏所待考。",
+      "bookTitle": "（清）佚名《福康安行樂圖》（紙本設色）",
+      "tier": "tier1_authentic_painting"
+    },
+    "Zhang Tingyu.jpg": {
+      "name": "张廷玉",
+      "verdict": "keep",
+      "reason": "頂戴、補服的正面坐像，清容像一路，紙本設色手繪。非刻本，故列 L1；繪製年代與藏所待考。",
+      "bookTitle": "（清）佚名《張廷玉像》（紙本設色坐像）",
+      "tier": "tier1_authentic_painting"
+    },
+    "Fu Heng.jpg": {
+      "name": "傅恒",
+      "verdict": "keep",
+      "reason": "暖帽官服立像，画法简括、设色平匀，疑为清末石印本或刻本绣像上色，按「版本待考」低记。",
+      "bookTitle": ""
+    },
+    "Dai Zhen.png": {
+      "name": "戴震",
+      "verdict": "keep",
+      "reason": "《清代学者像传》第一集戴震一开，书案展卷坐像，与 Commons 分类「清代學者象傳」著录一致。",
+      "bookTitle": ""
+    },
+    "Gong Zizhen.jpg": {
+      "name": "龚自珍",
+      "verdict": "reject",
+      "reason": "现代炭笔素描（据十九世纪照片摹绘），非古代纸绢本画像，按判定红线 reject。"
+    },
+    "Wei Yuan.png": {
+      "name": "魏源",
+      "verdict": "keep",
+      "reason": "《清代学者像传》第一集魏源一开，灰袍背手立像，与 Commons 分类「清代學者象傳」著录一致。",
+      "bookTitle": ""
+    },
+    "Nalan Xingde.jpg": {
+      "name": "纳兰性德",
+      "verdict": "keep",
+      "reason": "《清代学者像传》第一集纳兰性德一开，书案坐像，与 Commons 分类「清代學者象傳」著录一致。",
+      "bookTitle": ""
+    },
+    "Hong Xiuquan.jpg": {
+      "name": "洪秀全",
+      "verdict": "keep",
+      "reason": "十九世纪西文报刊雕版画像（龙袍装束），为与太平天国同时代的印刷品；西人据时人记述绘刻，形貌未必传神，如实注明「雕版画像」而非传世画像。",
+      "bookTitle": "（清季）西文报刊雕版画像"
+    },
+    "Xiong Tingbi.jpg": {
+      "name": "熊廷弼",
+      "verdict": "keep",
+      "reason": "明代容像風格的設色坐像，絹本作風，筆法為晚明寫真一路。非刻本，故列 L1；藏所與具體年代待考。",
+      "bookTitle": "（明）佚名《熊廷弼像》（設色絹本坐像）",
+      "tier": "tier1_authentic_painting"
     }
   }
 }

@@ -818,6 +818,240 @@
       "thumbBytes": 89684,
       "fullBytes": 89684,
       "fullResolved": false
+    },
+    "person_meng_ge": {
+      "id": "person_meng_ge",
+      "name": "蒙哥",
+      "file": "Möngke Khan.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:M%C3%B6ngke_Khan.jpg",
+      "thumbBytes": 95401,
+      "fullBytes": 95401,
+      "fullResolved": false
+    },
+    "person_zhang_shi_cheng": {
+      "id": "person_zhang_shi_cheng",
+      "name": "张士诚",
+      "file": "Zhang Shicheng.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Zhang_Shicheng.jpg",
+      "thumbBytes": 58813,
+      "fullBytes": 58813,
+      "fullResolved": false
+    },
+    "person_zhu_hou_cong": {
+      "id": "person_zhu_hou_cong",
+      "name": "朱厚熜",
+      "file": "Portrait officiel de l'empereur Jiajing.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Portrait_officiel_de_l'empereur_Jiajing.jpg",
+      "thumbBytes": 195811,
+      "fullBytes": 195811,
+      "fullResolved": false
+    },
+    "person_xu_lie_wu": {
+      "id": "person_xu_lie_wu",
+      "name": "旭烈兀",
+      "file": "Hulagu Khan.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Hulagu_Khan.jpg",
+      "thumbBytes": 217181,
+      "fullBytes": 217181,
+      "fullResolved": false
+    },
+    "person_yang_shi_qi": {
+      "id": "person_yang_shi_qi",
+      "name": "杨士奇",
+      "file": "Yang Shiqi.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Yang_Shiqi.jpg",
+      "thumbBytes": 64010,
+      "fullBytes": 64010,
+      "fullResolved": false
+    },
+    "person_hu_zong_xian": {
+      "id": "person_hu_zong_xian",
+      "name": "胡宗宪",
+      "file": "胡宗憲.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E8%83%A1%E5%AE%97%E6%86%B2.jpg",
+      "thumbBytes": 110024,
+      "fullBytes": 110024,
+      "fullResolved": false
+    },
+    "person_yang_shen": {
+      "id": "person_yang_shen",
+      "name": "杨慎",
+      "file": "楊慎.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E6%A5%8A%E6%85%8E.jpg",
+      "thumbBytes": 120474,
+      "fullBytes": 120474,
+      "fullResolved": false
+    },
+    "person_tang_yin": {
+      "id": "person_tang_yin",
+      "name": "唐寅",
+      "file": "唐寅.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E5%94%90%E5%AF%85.jpg",
+      "thumbBytes": 83885,
+      "fullBytes": 83885,
+      "fullResolved": false
+    },
+    "person_xia_yan": {
+      "id": "person_xia_yan",
+      "name": "夏言",
+      "file": "夏言.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E5%A4%8F%E8%A8%80.jpg",
+      "thumbBytes": 70504,
+      "fullBytes": 70504,
+      "fullResolved": false
+    },
+    "person_yan_song": {
+      "id": "person_yan_song",
+      "name": "严嵩",
+      "file": "嚴嵩.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E5%9A%B4%E5%B5%A9.jpg",
+      "thumbBytes": 51320,
+      "fullBytes": 51320,
+      "fullResolved": false
+    },
+    "person_gao_gong": {
+      "id": "person_gao_gong",
+      "name": "高拱",
+      "file": "高拱.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E9%AB%98%E6%8B%B1.jpg",
+      "thumbBytes": 170885,
+      "fullBytes": 170885,
+      "fullResolved": false
+    },
+    "person_qin_liang_yu": {
+      "id": "person_qin_liang_yu",
+      "name": "秦良玉",
+      "file": "秦良玉.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E7%A7%A6%E8%89%AF%E7%8E%89.jpg",
+      "thumbBytes": 149007,
+      "fullBytes": 149007,
+      "fullResolved": false
+    },
+    "person_wen_zheng_ming": {
+      "id": "person_wen_zheng_ming",
+      "name": "文徵明",
+      "file": "Portrait of Wen Zhengming.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Portrait_of_Wen_Zhengming.jpg",
+      "thumbBytes": 85569,
+      "fullBytes": 85569,
+      "fullResolved": false
+    },
+    "person_shi_ke_fa": {
+      "id": "person_shi_ke_fa",
+      "name": "史可法",
+      "file": "Shi Kefa.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Shi_Kefa.jpg",
+      "thumbBytes": 106904,
+      "fullBytes": 106904,
+      "fullResolved": false
+    },
+    "person_wang_fu_zhi": {
+      "id": "person_wang_fu_zhi",
+      "name": "王夫之",
+      "file": "Wang Fuzhi.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Wang_Fuzhi.jpg",
+      "thumbBytes": 130667,
+      "fullBytes": 130667,
+      "fullResolved": false
+    },
+    "person_gu_yan_wu": {
+      "id": "person_gu_yan_wu",
+      "name": "顾炎武",
+      "file": "Gu yanwu.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Gu_yanwu.jpg",
+      "thumbBytes": 73562,
+      "fullBytes": 73562,
+      "fullResolved": false
+    },
+    "person_xiao_zhuang": {
+      "id": "person_xiao_zhuang",
+      "name": "孝庄文皇后",
+      "file": "孝莊文皇后朝服像.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E5%AD%9D%E8%8E%8A%E6%96%87%E7%9A%87%E5%90%8E%E6%9C%9D%E6%9C%8D%E5%83%8F.jpg",
+      "thumbBytes": 250972,
+      "fullBytes": 250972,
+      "fullResolved": false
+    },
+    "person_fu_kang_an": {
+      "id": "person_fu_kang_an",
+      "name": "福康安",
+      "file": "福康安.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E7%A6%8F%E5%BA%B7%E5%AE%89.jpg",
+      "thumbBytes": 175529,
+      "fullBytes": 175529,
+      "fullResolved": false
+    },
+    "person_zhang_ting_yu": {
+      "id": "person_zhang_ting_yu",
+      "name": "张廷玉",
+      "file": "Zhang Tingyu.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Zhang_Tingyu.jpg",
+      "thumbBytes": 76840,
+      "fullBytes": 76840,
+      "fullResolved": false
+    },
+    "person_fu_heng": {
+      "id": "person_fu_heng",
+      "name": "傅恒",
+      "file": "Fu Heng.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Fu_Heng.jpg",
+      "thumbBytes": 52744,
+      "fullBytes": 52744,
+      "fullResolved": false
+    },
+    "person_dai_zhen": {
+      "id": "person_dai_zhen",
+      "name": "戴震",
+      "file": "Dai Zhen.png",
+      "commons": "https://commons.wikimedia.org/wiki/File:Dai_Zhen.png",
+      "thumbBytes": 71748,
+      "fullBytes": 71748,
+      "fullResolved": false
+    },
+    "person_gong_zi_zhen": {
+      "id": "person_gong_zi_zhen",
+      "name": "龚自珍",
+      "file": "Gong Zizhen.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Gong_Zizhen.jpg",
+      "thumbBytes": 81420,
+      "fullBytes": 81420,
+      "fullResolved": false
+    },
+    "person_wei_yuan": {
+      "id": "person_wei_yuan",
+      "name": "魏源",
+      "file": "Wei Yuan.png",
+      "commons": "https://commons.wikimedia.org/wiki/File:Wei_Yuan.png",
+      "thumbBytes": 52401,
+      "fullBytes": 52401,
+      "fullResolved": false
+    },
+    "person_na_lan_xing_de": {
+      "id": "person_na_lan_xing_de",
+      "name": "纳兰性德",
+      "file": "Nalan Xingde.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Nalan_Xingde.jpg",
+      "thumbBytes": 96983,
+      "fullBytes": 96983,
+      "fullResolved": false
+    },
+    "person_hong_xiu_quan": {
+      "id": "person_hong_xiu_quan",
+      "name": "洪秀全",
+      "file": "Hong Xiuquan.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Hong_Xiuquan.jpg",
+      "thumbBytes": 88726,
+      "fullBytes": 88726,
+      "fullResolved": false
+    },
+    "person_xiong_ting_bi": {
+      "id": "person_xiong_ting_bi",
+      "name": "熊廷弼",
+      "file": "Xiong Tingbi.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Xiong_Tingbi.jpg",
+      "thumbBytes": 88055,
+      "fullBytes": 88055,
+      "fullResolved": false
     }
   }
 }

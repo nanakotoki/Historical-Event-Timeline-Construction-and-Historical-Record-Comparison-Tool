@@ -15,8 +15,12 @@ import { songBriefC } from './persons-brief-c';
 import { songBriefD } from './persons-brief-d';
 import { liaoJinXiaPersons } from './persons-liao-jin-xia';
 import { songWarPersons } from './persons-song-war';
+import { yuanPersons } from './persons-yuan';
+import { mingPersons } from './persons-ming';
+import { qingPersons } from './persons-qing';
 import { songBriefEdges } from './edges-brief';
 import { songWarEdges } from './edges-liao-jin-xia';
+import { ymqEdges } from './edges-ymq';
 
 export const songMingQingShard: ShardDataset = {
   shardId: 'shard_06_song_ming_qing',
@@ -25,6 +29,16 @@ export const songMingQingShard: ShardDataset = {
   dynasties: ['song', 'liao_jin_xia', 'yuan', 'ming', 'qing'],
   yearRange: [860, 1912],
   heroPersonIds: ['person_su_shi', 'person_wen_tianxiang', 'person_hu_bi_lie', 'person_zhu_yuanzhang', 'person_xuan_ye'],
-  nodes: [...songBriefA, ...songBriefB, ...songBriefC, ...songBriefD, ...liaoJinXiaPersons, ...songWarPersons],
-  edges: [...songBriefEdges, ...songWarEdges],
+  nodes: [
+    ...songBriefA,
+    ...songBriefB,
+    ...songBriefC,
+    ...songBriefD,
+    ...liaoJinXiaPersons,
+    ...songWarPersons,
+    ...yuanPersons,
+    ...mingPersons,
+    ...qingPersons,
+  ],
+  edges: [...songBriefEdges, ...songWarEdges, ...ymqEdges],
 };

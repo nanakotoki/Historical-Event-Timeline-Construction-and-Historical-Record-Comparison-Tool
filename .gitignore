@@ -44,3 +44,7 @@ Thumbs.db
 
 # 图档探测落盘的候选缩略图（供人眼比定，不入库；命中的才进 public/data/portraits）
 scripts/portraits/probed/
+
+# 临时换用的构建目录（EPERM 绕行时 NEXT_DIST_DIR=.b2）
+.b2/
+.next-stale-1/

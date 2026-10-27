@@ -82,6 +82,39 @@ const RULES = [
     license: 'PD-Art（公有領域二維藝術品忠實複製）',
   },
   {
+    // 南薰殿舊藏《明世宗坐像》軸（嘉靖帝）：臺北故宮 Open Data 以法文題名上傳，
+    // 館藏編號中畫000318；另有早期上傳的 Jiajing.jpg 為同一軸之裁切版。
+    test: (f) => /Portrait officiel de l'empereur Jiajing\.jpg|^Jiajing\.jpg$/.test(f),
+    tier: 'tier1_authentic_painting',
+    painterOrBook: '（明）佚名《明世宗坐像》軸',
+    sourceAttribution:
+      '國立故宮博物院（臺北）藏《明世宗坐像》軸，絹本設色，縱 209.7 公分，館藏編號中畫000318，' +
+      '屬南薰殿舊藏明代帝王坐像之一。圖檔依故宮 Open Data 釋出後經 Wikimedia Commons 轉錄，屬公有領域。',
+    license: 'PD-Art（公有領域二維藝術品忠實複製）',
+  },
+  {
+    // 《清代學者象傳》第一集（葉衍蘭輯、黃小泉摹繪，光緒間紙本設色）：
+    // Commons「清代學者象傳」分類已核實的拼音題名在此白名單內；
+    // 同書的中文裸題名檔（如「黃宗羲.jpg」）無法按檔名判別，由 audit 賬本
+    // 的 bookTitle 欄位逐件覆寫，不走本規則。
+    test: (f) => /^(Gu yanwu|Dai Zhen|Nalan Xingde|Wei Yuan)\.(png|jpg)$/i.test(f),
+    tier: 'tier1_authentic_painting',
+    painterOrBook: '（清末）葉衍蘭輯、黃小泉摹繪《清代學者象傳》第一集',
+    sourceAttribution:
+      '《清代學者象傳》第一集，葉衍蘭（1823-1897）輯、黃小泉摹繪，紙本設色冊頁，光緒間成書；' +
+      '摹繪去其人未遠，形貌有所本。圖檔經 Wikimedia Commons 轉錄，屬公有領域。',
+    license: 'PD-Art（公有領域二維藝術品忠實複製）',
+  },
+  {
+    test: (f) => /^Hulagu Khan\.jpg$/i.test(f),
+    tier: 'tier1_authentic_painting',
+    painterOrBook: '（伊利汗國）拉施特《史集》抄本插圖',
+    sourceAttribution:
+      '拉施特主編《史集》（Jāmiʿ al-tawārīkh）十四世紀抄本插圖，紙本設色細密畫，' +
+      '繪伊利汗國開國之君旭烈兀。波斯抄本畫非中土卷軸，然確為與其人同代的紙本繪畫，故收為 L1 並如實著錄。',
+    license: 'PD-Art（公有領域二維藝術品忠實複製）',
+  },
+  {
     // 南薰殿舊藏歷代帝王像一系：《唐高祖立像》軸、《唐太宗立像》軸等，
     // 题名多为「〇〇立像 軸.png」（立像与軸之间有一空格，且用繁体「軸」）。
     test: (f) => /立像\s*軸\.png$/.test(f),
@@ -201,7 +234,9 @@ const RULES = [
   {
     test: (f) => /^[\u4e00-\u9fff（）()·]+\.(jpg|png)$/.test(f),
     tier: 'tier2_ancient_woodcut',
-    painterOrBook: '（明清）佚名',
+    // 「（明清）佚名」單獨出現會被界面原樣讀成「這是明清的佚名作品」——
+    // 那是斷代，不是著錄。本庫對這批圖只到「是舊像」這一步，故一併寫明待考。
+    painterOrBook: '（明清）佚名舊像（版本待考）',
     sourceAttribution:
       '明清人物像（或為繪本，或為刻本插圖，本庫未逐件比定其版本與媒材），' +
       '圖檔經 Wikimedia Commons 轉錄，屬公有領域。出處存疑處一律記為「版本待考」，不臆題書名。',
@@ -211,7 +246,7 @@ const RULES = [
 
 const FALLBACK = {
   tier: 'tier2_ancient_woodcut',
-  painterOrBook: '（明清）佚名',
+  painterOrBook: '（明清）佚名舊像（版本待考）',
   sourceAttribution:
     'Wikimedia Commons 收錄之公有領域人物圖像。原書版本待比定，故記為「版本待考」。',
   license: 'PD-Art（公有領域二維藝術品忠實複製）',
@@ -280,12 +315,21 @@ async function main() {
       ? { painterOrBook: verdict.bookTitle, sourceAttribution: verdict.reason }
       : {};
 
-    byTier[rule.tier] = (byTier[rule.tier] || 0) + 1;
+    // 账本亦可覆盖层级。
+    // 起因：中文题名一律走「（明清）佚名舊像」规则，而该规则只有 tier2，
+    // 于是「孝莊文皇后朝服像」这类清宫旧藏绢本立轴、纸本容像全被标成刻本版画。
+    // 层级是给读者看的判断（L1 传世古画 / L2 古籍版画），不是内部标签，
+    // 故允许审计时逐件改判；不改则沿用规则推断。
+    const tier = verdict.tier === 'tier1_authentic_painting' || verdict.tier === 'tier2_ancient_woodcut'
+      ? verdict.tier
+      : rule.tier;
+
+    byTier[tier] = (byTier[tier] || 0) + 1;
     catalog[id] = {
       id,
       name: rec.name,
       file: rec.file,
-      tier: rule.tier,
+      tier,
       painterOrBook: overridden.painterOrBook || rule.painterOrBook,
       sourceAttribution: overridden.sourceAttribution || rule.sourceAttribution,
       license: rule.license,

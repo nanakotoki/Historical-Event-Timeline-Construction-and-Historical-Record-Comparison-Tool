@@ -126,4 +126,70 @@ export const HINTS = {
   李存勖: ['Zhuangzong of Later Tang.jpg', '後唐莊宗李存勗.jpg'],
   柴荣: ['Chai Rong (Zhou Shizong).jpg', 'Chai Rong scth.jpg', '周世宗.jpg'],
   王莽: ['Wang Mang.jpg', '王莽.jpg'],
+
+  /* ------------------------ 第七批：元 11 / 明 22 / 清 17 ------------------------
+     三条主要线索，都经过在 Commons 分类页的实际核对：
+     ① 台北故宫《南薰殿历代帝后像》：明代帝王坐像轴以法文题名上传
+        （Portrait officiel de l'empereur Jiajing.jpg，NPM Open Data 中畫000318）；
+        **注意**《元代帝半身像》册在 Commons 只有太祖至文宗几叶，宪宗蒙哥一叶
+        （YuanEmperorAlbumMöngkePortrait.jpg）因出处存疑已于 2014 年被删，
+        故蒙哥不再尝试该族题名，只试单件上传的旧题。
+     ② 《清代學者象傳》第一集（叶衍兰辑、黄小泉摹绘，纸本设色）：Commons 分类
+        「清代學者象傳」有 366 档，顾炎武、戴震、纳兰性德、魏源等已核实确有。
+     ③ 各人单件上传的中文裸题名与英文常见题名，逐个探测，存在才收。 */
+  蒙哥: ['Möngke Khan.jpg', 'Mongke Khan.jpg', '元憲宗.jpg', '蒙哥.jpg'],
+  旭烈兀: ['Hulagu Khan.jpg', 'Hulegu Khan.jpg', 'Hulagu.jpg', '旭烈兀.jpg'],
+  刘秉忠: ['劉秉忠.jpg', '刘秉忠.jpg'],
+  许衡: ['許衡.jpg', 'Xu Heng.jpg'],
+  张弘范: ['張弘範.jpg', '张弘范.jpg'],
+  阿合马: ['阿合馬.jpg', '阿合马.jpg'],
+  王保保: ['扩廓帖木儿.jpg', '擴廓帖木兒.jpg', '王保保.jpg'],
+  韩林儿: ['韓林兒.jpg', '韩林儿.jpg'],
+  陈友谅: ['陳友諒.jpg', 'Chen Youliang.jpg'],
+  张士诚: ['張士誠.jpg', 'Zhang Shicheng.jpg'],
+  明玉珍: ['明玉珍.jpg'],
+  朱厚熜: ["Portrait officiel de l'empereur Jiajing.jpg", 'Jiajing.jpg', '明世宗坐像.jpg', '明世宗.jpg'],
+  杨士奇: ['楊士奇.jpg', 'Yang Shiqi.jpg'],
+  杨荣: ['楊榮.jpg'],
+  杨溥: ['楊溥.jpg'],
+  俞大猷: ['俞大猷.jpg', 'Yu Dayou.jpg', '俞大猷像.jpg'],
+  胡宗宪: ['胡宗憲.jpg', 'Hu Zongxian.jpg'],
+  杨慎: ['楊慎.jpg', 'Yang Shen.jpg'],
+  唐寅: ['Tang Yin.jpg', '唐寅.jpg', '唐伯虎.jpg', 'Tang Yin portrait.jpg'],
+  文徵明: ['Wen Zhengming.jpg', '文徵明.jpg', '文徵明像.jpg'],
+  徐渭: ['Xu Wei.jpg', '徐渭.jpg', '徐文长.jpg', '徐渭像.jpg'],
+  严嵩: ['嚴嵩.jpg', 'Yan Song.jpg'],
+  夏言: ['夏言.jpg', 'Xia Yan.jpg'],
+  高拱: ['高拱.jpg', 'Gao Gong.jpg'],
+  孙承宗: ['孫承宗.jpg', 'Sun Chengzong.jpg'],
+  熊廷弼: ['熊廷弼.jpg', 'Xiong Tingbi.jpg'],
+  卢象升: ['盧象升.jpg', 'Lu Xiangsheng.jpg'],
+  秦良玉: ['秦良玉.jpg', 'Qin Liangyu.jpg'],
+  李定国: ['李定國.jpg', 'Li Dingguo.jpg'],
+  史可法: ['Shi Kefa.jpg', '史可法.jpg', '史可法像.jpg'],
+  黄宗羲: ['Huang Zongxi.jpg', '黃宗羲.jpg', '黄宗羲.jpg'],
+  王夫之: ['Wang Fuzhi.jpg', '王夫之.jpg', '王夫之像.jpg'],
+  顾炎武: ['Gu yanwu.jpg', 'Gu Yanwu.jpg', '顾炎武.jpg', '顾亭林.jpg'],
+  孝庄文皇后: [
+    '孝庄文皇后朝服像.jpg',
+    'Empress Dowager Xiaozhuang.jpg',
+    '孝莊文皇后朝服像.jpg',
+    '孝庄文皇后.jpg',
+    'Xiaozhuang.jpg',
+  ],
+  张廷玉: ['张廷玉.jpg', '張廷玉.jpg', 'Zhang Tingyu.jpg'],
+  傅恒: ['傅恆.jpg', '傅恒.jpg', 'Fu Heng.jpg'],
+  福康安: ['福康安.jpg', "Fukang'an.jpg", 'Fukang an.jpg'],
+  兆惠: ['兆惠.jpg', 'Zhao Hui.jpg'],
+  岳钟琪: ['岳鍾琪.jpg', '岳钟琪.jpg', 'Yue Zhongqi.jpg'],
+  戴震: ['Dai Zhen.png', 'Dai Zhen.jpg', '戴震.jpg', '戴東原.jpg'],
+  龚自珍: ['龔自珍.png', '龔自珍.jpg', '龚自珍.jpg', 'Gong Zizhen.jpg'],
+  魏源: ['Wei Yuan.png', '魏源.jpg', 'Wei Yuan.jpg'],
+  纳兰性德: ['Nalan Xingde.jpg', '納蘭性德.jpg', '纳兰性德.jpg'],
+  洪秀全: ['Hong Xiuquan.jpg', '洪秀全.jpg'],
+  杨秀清: ['楊秀清.jpg', 'Yang Xiuqing.jpg'],
+  石达开: ['石達開.jpg', '石达开.jpg'],
+  李秀成: ['李秀成.jpg', 'Li Xiucheng.jpg'],
+  邓世昌: ['鄧世昌.jpg', '邓世昌.jpg', 'Deng Shichang.jpg'],
+  丁汝昌: ['丁汝昌.jpg', 'Ding Ruchang.jpg'],
 };

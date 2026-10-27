@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T06:33:03.734Z",
+  "generatedAt": "2026-10-27T08:20:18.196Z",
   "source": "Wikimedia Commons（经 images.weserv.nl 取回）",
   "note": "本清单只登记确实取回的公有领域/CC 授权图档。未列出的条目＝该人物在 Commons 上无可定位的传世画像，系统按 tier4_attire_silhouette 呈现，绝不伪作真迹。",
   "entries": {
@@ -638,6 +638,186 @@
       "name": "杨广",
       "file": "隋煬帝（說唐演義全傳）.jpg",
       "commons": "https://commons.wikimedia.org/wiki/File:%E9%9A%8B%E7%85%AC%E5%B8%9D%EF%BC%88%E8%AA%AA%E5%94%90%E6%BC%94%E7%BE%A9%E5%85%A8%E5%82%B3%EF%BC%89.jpg"
+    },
+    "person_wang_an_shi": {
+      "id": "person_wang_an_shi",
+      "name": "王安石",
+      "file": "Wang Anshi.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Wang_Anshi.jpg",
+      "thumbBytes": 117357,
+      "fullBytes": 117357,
+      "fullResolved": false
+    },
+    "person_si_ma_guang": {
+      "id": "person_si_ma_guang",
+      "name": "司马光",
+      "file": "Sima Guang.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Sima_Guang.jpg",
+      "thumbBytes": 160255,
+      "fullBytes": 160255,
+      "fullResolved": false
+    },
+    "person_wen_tianxiang": {
+      "id": "person_wen_tianxiang",
+      "name": "文天祥",
+      "file": "WenTianxiang.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:WenTianxiang.jpg",
+      "thumbBytes": 96144,
+      "fullBytes": 96144,
+      "fullResolved": false
+    },
+    "person_hu_bi_lie": {
+      "id": "person_hu_bi_lie",
+      "name": "忽必烈",
+      "file": "YuanEmperorAlbumKhubilaiPortrait.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumKhubilaiPortrait.jpg",
+      "thumbBytes": 91341,
+      "fullBytes": 91341,
+      "fullResolved": false
+    },
+    "person_zhao_ji": {
+      "id": "person_zhao_ji",
+      "name": "赵佶",
+      "file": "Emperor Huizong of Song.png",
+      "commons": "https://commons.wikimedia.org/wiki/File:Emperor_Huizong_of_Song.png",
+      "thumbBytes": 94125,
+      "fullBytes": 94125,
+      "fullResolved": false
+    },
+    "person_wan_yan_aguda": {
+      "id": "person_wan_yan_aguda",
+      "name": "完颜阿骨打",
+      "file": "Wanggiyan Aguda.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Wanggiyan_Aguda.jpg",
+      "thumbBytes": 86871,
+      "fullBytes": 86871,
+      "fullResolved": false
+    },
+    "person_li_cunxu": {
+      "id": "person_li_cunxu",
+      "name": "李存勖",
+      "file": "後唐莊宗李存勗.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E5%BE%8C%E5%94%90%E8%8E%8A%E5%AE%97%E6%9D%8E%E5%AD%98%E5%8B%97.jpg",
+      "thumbBytes": 93972,
+      "fullBytes": 93972,
+      "fullResolved": false
+    },
+    "person_chai_rong": {
+      "id": "person_chai_rong",
+      "name": "柴荣",
+      "file": "Chai Rong (Zhou Shizong).jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Chai_Rong_(Zhou_Shizong).jpg",
+      "thumbBytes": 98732,
+      "fullBytes": 98732,
+      "fullResolved": false
+    },
+    "person_ouyang_xiu": {
+      "id": "person_ouyang_xiu",
+      "name": "欧阳修",
+      "file": "Ouyang Xiu.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Ouyang_Xiu.jpg",
+      "thumbBytes": 74382,
+      "fullBytes": 74382,
+      "fullResolved": false
+    },
+    "person_yue_fei": {
+      "id": "person_yue_fei",
+      "name": "岳飞",
+      "file": "Yue Fei.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Yue_Fei.jpg",
+      "thumbBytes": 41307,
+      "fullBytes": 41307,
+      "fullResolved": false
+    },
+    "person_zhu_xi": {
+      "id": "person_zhu_xi",
+      "name": "朱熹",
+      "file": "Portraits of Famous Men - Zhu Xi.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Zhu_Xi.jpg",
+      "thumbBytes": 119505,
+      "fullBytes": 119505,
+      "fullResolved": false
+    },
+    "person_zhu_yuanzhang": {
+      "id": "person_zhu_yuanzhang",
+      "name": "朱元璋",
+      "file": "明太祖畫像.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E6%98%8E%E5%A4%AA%E7%A5%96%E7%95%AB%E5%83%8F.jpg",
+      "thumbBytes": 80612,
+      "fullBytes": 80612,
+      "fullResolved": false
+    },
+    "person_zhao_kuangyin": {
+      "id": "person_zhao_kuangyin",
+      "name": "赵匡胤",
+      "file": "Song Taizu.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Song_Taizu.jpg",
+      "thumbBytes": 84401,
+      "fullBytes": 84401,
+      "fullResolved": false
+    },
+    "person_su_shi": {
+      "id": "person_su_shi",
+      "name": "苏轼",
+      "file": "Su shi.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Su_shi.jpg",
+      "thumbBytes": 112773,
+      "fullBytes": 112773,
+      "fullResolved": false
+    },
+    "person_fan_zhongyan": {
+      "id": "person_fan_zhongyan",
+      "name": "范仲淹",
+      "file": "Fan Zhongyan.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Fan_Zhongyan.jpg",
+      "thumbBytes": 112353,
+      "fullBytes": 112353,
+      "fullResolved": false
+    },
+    "person_zhu_di": {
+      "id": "person_zhu_di",
+      "name": "朱棣",
+      "file": "Yongle.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Yongle.jpg",
+      "thumbBytes": 82884,
+      "fullBytes": 82884,
+      "fullResolved": false
+    },
+    "person_zhang_juzheng": {
+      "id": "person_zhang_juzheng",
+      "name": "张居正",
+      "file": "Zhang Juzheng.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Zhang_Juzheng.jpg",
+      "thumbBytes": 142346,
+      "fullBytes": 142346,
+      "fullResolved": false
+    },
+    "person_hong_li": {
+      "id": "person_hong_li",
+      "name": "弘历",
+      "file": "Portrait of Emperor Qianlong.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Portrait_of_Emperor_Qianlong.jpg",
+      "thumbBytes": 94596,
+      "fullBytes": 94596,
+      "fullResolved": false
+    },
+    "person_li_qingzhao": {
+      "id": "person_li_qingzhao",
+      "name": "李清照",
+      "file": "李清照畫像.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E6%9D%8E%E6%B8%85%E7%85%A7%E7%95%AB%E5%83%8F.jpg",
+      "thumbBytes": 108395,
+      "fullBytes": 108395,
+      "fullResolved": false
+    },
+    "person_zhu_wen": {
+      "id": "person_zhu_wen",
+      "name": "朱温",
+      "file": "Zhu Wen (Liang Taizu).jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Zhu_Wen_(Liang_Taizu).jpg",
+      "thumbBytes": 89684,
+      "fullBytes": 89684,
+      "fullResolved": false
     }
   }
 }

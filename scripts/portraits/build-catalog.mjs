@@ -54,6 +54,16 @@ const RULES = [
     license: 'PD-Art（公有領域二維藝術品忠實複製）',
   },
   {
+    // 臺北故宮《元代帝后半身像册》（YuanEmperorAlbum* 一族）：元世祖忽必烈等
+    test: (f) => f.startsWith('YuanEmperorAlbum'),
+    tier: 'tier1_authentic_painting',
+    painterOrBook: '（元）佚名《元代帝后半身像》册',
+    sourceAttribution:
+      '國立故宮博物院（臺北）藏《元代帝后半身像》册，絹本設色半身像，' +
+      '屬南薰殿舊藏系統；圖檔經 Wikimedia Commons 轉錄，屬公有領域。',
+    license: 'PD-Art（公有領域二維藝術品忠實複製）',
+  },
+  {
     test: (f) => /^TangTaizong/.test(f),
     tier: 'tier1_authentic_painting',
     painterOrBook: '（明）佚名《唐太宗立像》軸',
@@ -90,6 +100,16 @@ const RULES = [
     sourceAttribution:
       '明清人繪人物像軸（故宮舊藏歷代名臣像一系），絹本設色立軸。圖檔經 Wikimedia Commons 轉錄，屬公有領域。',
     license: 'PD-Art（公有領域二維藝術品忠實複製）',
+  },
+  {
+    // 金上京博物馆藏完颜阿骨打像：Commons 著录称「与阿骨打同时」，但女真早期
+    // 无画像传世，此断代学界存疑。仍按真图入库，但出处必须写「传」并注明存疑。
+    test: (f) => /^Wanggiyan Aguda\.jpg$/i.test(f),
+    tier: 'tier2_ancient_woodcut',
+    painterOrBook: '（传）金上京博物馆藏本',
+    sourceAttribution:
+      '哈尔滨金上京博物馆藏女真帝王画像，Commons 著录称「与阿骨打同时」；女真早期无画像传世，此断代存疑，故标「传」。图档经 Wikimedia Commons 转录。',
+    license: '见 Commons 原页著录',
   },
   {
     test: (f) => /說唐演義全傳/.test(f),
@@ -153,8 +173,25 @@ const RULES = [
   },
   {
     // 「X Portrait.jpg / X Qing dynasty portrait.jpg」一族：本庫中皆三國人物，
-    // 屬清代《三國演義》刊本繡像系統。非三國人物者不會落到此規則。
-    test: (f) => /Portrait|Qing (dynasty )?(portrait|illustration)/i.test(f),
+    // 屬清代《三國演義》刊本繡像系統。
+    // **必須先用白名單鎖定三國人物**：這條規則若只看「Portrait」字樣，
+    // 「Qi Jiguang Portrait.jpg」這類非三國人物的英文題名也會被安上
+    // 「清代《三國演義》刊本繡像」的出處——那是無中生有。白名單外者
+    // 落到末尾的 FALLBACK（版本待考），寧可低記，不可錯記。
+    test: (f) =>
+      /(Portrait|Qing (dynasty )?(portrait|illustration))/i.test(f) &&
+      [
+        'Cao Cao', 'CaoCao', 'Cao Zhi', 'CaoZhi', 'Cao Pi', 'CaoPi',
+        'Liu Bei', 'LiuBei', 'Guan Yu', 'GuanYu', 'Zhang Fei', 'ZhangFei',
+        'Zhao Yun', 'ZhaoYun', 'Ma Chao', 'MaChao', 'Huang Zhong', 'HuangZhong',
+        'Jiang Wei', 'JiangWei', 'Zhou Yu', 'ZhouYu', 'Lu Su', 'LuSu',
+        'Lu Xun', 'LuXun', 'Fa Zheng', 'FaZheng', 'Xun Yu', 'XunYu',
+        'Jia Xu', 'JiaXu', 'Zhang Liao', 'ZhangLiao', 'Xu Huang', 'XuHuang',
+        'Xiahou Dun', 'XiahouDun', 'Xiahou Yuan', 'XiahouYuan',
+        'Dong Zhuo', 'DongZhuo', 'Lü Bu', 'Lu Bu', 'LüBu', 'LuBu',
+        'Sun Quan', 'SunQuan', 'Sun Jian', 'SunJian', 'Sun Ce', 'SunCe',
+        'Sima Yi', 'SimaYi', 'Yuan Shao', 'YuanShao', 'Chen Sheng', 'ChenSheng',
+      ].some((n) => f.includes(n)),
     tier: 'tier2_ancient_woodcut',
     painterOrBook: '（清）《三國演義》刊本繡像',
     sourceAttribution:

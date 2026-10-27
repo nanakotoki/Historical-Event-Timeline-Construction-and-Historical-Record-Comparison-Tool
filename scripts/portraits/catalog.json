@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-24T06:43:02.118Z",
+  "generatedAt": "2026-10-27T08:19:35.468Z",
   "note": "本目录只登记已实际取回落盘的传世画像。未列入者＝未在公有领域图库中找到可定位的传世图档，前端按 tier3/tier4 呈现「本站复原」，绝不冒充实物。",
   "counts": {
-    "total": 59,
-    "tier1_authentic_painting": 15,
-    "tier2_ancient_woodcut": 44
+    "total": 79,
+    "tier1_authentic_painting": 18,
+    "tier2_ancient_woodcut": 61
   },
   "entries": {
     "person_liu_bang": {
@@ -714,6 +714,246 @@
       "commonsPage": "https://commons.wikimedia.org/wiki/File:%E9%9A%8B%E7%85%AC%E5%B8%9D%EF%BC%88%E8%AA%AA%E5%94%90%E6%BC%94%E7%BE%A9%E5%85%A8%E5%82%B3%EF%BC%89.jpg",
       "thumb": "/data/portraits/person_yang_guang.jpg",
       "full": "/data/portraits/full_person_yang_guang.jpg"
+    },
+    "person_wang_an_shi": {
+      "id": "person_wang_an_shi",
+      "name": "王安石",
+      "file": "Wang Anshi.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（明清）佚名",
+      "sourceAttribution": "Wikimedia Commons 收錄之公有領域人物圖像。原書版本待比定，故記為「版本待考」。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Wang_Anshi.jpg",
+      "thumb": "/data/portraits/person_wang_an_shi.jpg",
+      "full": "/data/portraits/full_person_wang_an_shi.jpg"
+    },
+    "person_si_ma_guang": {
+      "id": "person_si_ma_guang",
+      "name": "司马光",
+      "file": "Sima Guang.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（明清）佚名",
+      "sourceAttribution": "Wikimedia Commons 收錄之公有領域人物圖像。原書版本待比定，故記為「版本待考」。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Sima_Guang.jpg",
+      "thumb": "/data/portraits/person_si_ma_guang.jpg",
+      "full": "/data/portraits/full_person_si_ma_guang.jpg"
+    },
+    "person_wen_tianxiang": {
+      "id": "person_wen_tianxiang",
+      "name": "文天祥",
+      "file": "WenTianxiang.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（明清）佚名",
+      "sourceAttribution": "Wikimedia Commons 收錄之公有領域人物圖像。原書版本待比定，故記為「版本待考」。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:WenTianxiang.jpg",
+      "thumb": "/data/portraits/person_wen_tianxiang.jpg",
+      "full": "/data/portraits/full_person_wen_tianxiang.jpg"
+    },
+    "person_hu_bi_lie": {
+      "id": "person_hu_bi_lie",
+      "name": "忽必烈",
+      "file": "YuanEmperorAlbumKhubilaiPortrait.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "元代帝后半身像册",
+      "sourceAttribution": "台北故宫《元代帝后半身像》册之元世祖开，绢本设色，南薰殿旧藏系统",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumKhubilaiPortrait.jpg",
+      "thumb": "/data/portraits/person_hu_bi_lie.jpg",
+      "full": "/data/portraits/full_person_hu_bi_lie.jpg"
+    },
+    "person_zhao_ji": {
+      "id": "person_zhao_ji",
+      "name": "赵佶",
+      "file": "Emperor Huizong of Song.png",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（明清）佚名",
+      "sourceAttribution": "Wikimedia Commons 收錄之公有領域人物圖像。原書版本待比定，故記為「版本待考」。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Emperor_Huizong_of_Song.png",
+      "thumb": "/data/portraits/person_zhao_ji.jpg",
+      "full": "/data/portraits/full_person_zhao_ji.jpg"
+    },
+    "person_wan_yan_aguda": {
+      "id": "person_wan_yan_aguda",
+      "name": "完颜阿骨打",
+      "file": "Wanggiyan Aguda.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（传）金上京博物馆藏本",
+      "sourceAttribution": "哈尔滨金上京博物馆藏女真帝王画像，Commons 著录称「与阿骨打同时」；女真早期无画像传世，此断代存疑，故标「传」。图档经 Wikimedia Commons 转录。",
+      "license": "见 Commons 原页著录",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Wanggiyan_Aguda.jpg",
+      "thumb": "/data/portraits/person_wan_yan_aguda.jpg",
+      "full": "/data/portraits/full_person_wan_yan_aguda.jpg"
+    },
+    "person_li_cunxu": {
+      "id": "person_li_cunxu",
+      "name": "李存勖",
+      "file": "後唐莊宗李存勗.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（明清）佚名",
+      "sourceAttribution": "明清人物像（或為繪本，或為刻本插圖，本庫未逐件比定其版本與媒材），圖檔經 Wikimedia Commons 轉錄，屬公有領域。出處存疑處一律記為「版本待考」，不臆題書名。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E5%BE%8C%E5%94%90%E8%8E%8A%E5%AE%97%E6%9D%8E%E5%AD%98%E5%8B%97.jpg",
+      "thumb": "/data/portraits/person_li_cunxu.jpg",
+      "full": "/data/portraits/full_person_li_cunxu.jpg"
+    },
+    "person_chai_rong": {
+      "id": "person_chai_rong",
+      "name": "柴荣",
+      "file": "Chai Rong (Zhou Shizong).jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（明清）佚名",
+      "sourceAttribution": "Wikimedia Commons 收錄之公有領域人物圖像。原書版本待比定，故記為「版本待考」。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Chai_Rong_(Zhou_Shizong).jpg",
+      "thumb": "/data/portraits/person_chai_rong.jpg",
+      "full": "/data/portraits/full_person_chai_rong.jpg"
+    },
+    "person_ouyang_xiu": {
+      "id": "person_ouyang_xiu",
+      "name": "欧阳修",
+      "file": "Ouyang Xiu.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（明清）佚名",
+      "sourceAttribution": "Wikimedia Commons 收錄之公有領域人物圖像。原書版本待比定，故記為「版本待考」。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Ouyang_Xiu.jpg",
+      "thumb": "/data/portraits/person_ouyang_xiu.jpg",
+      "full": "/data/portraits/full_person_ouyang_xiu.jpg"
+    },
+    "person_yue_fei": {
+      "id": "person_yue_fei",
+      "name": "岳飞",
+      "file": "Yue Fei.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（明清）佚名",
+      "sourceAttribution": "Wikimedia Commons 收錄之公有領域人物圖像。原書版本待比定，故記為「版本待考」。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Yue_Fei.jpg",
+      "thumb": "/data/portraits/person_yue_fei.jpg",
+      "full": "/data/portraits/full_person_yue_fei.jpg"
+    },
+    "person_zhu_xi": {
+      "id": "person_zhu_xi",
+      "name": "朱熹",
+      "file": "Portraits of Famous Men - Zhu Xi.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "历代名臣像册",
+      "sourceAttribution": "费城艺术博物馆《历代名臣像》册之朱熹开，绢本设色",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Zhu_Xi.jpg",
+      "thumb": "/data/portraits/person_zhu_xi.jpg",
+      "full": "/data/portraits/full_person_zhu_xi.jpg"
+    },
+    "person_zhu_yuanzhang": {
+      "id": "person_zhu_yuanzhang",
+      "name": "朱元璋",
+      "file": "明太祖畫像.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（明清）佚名",
+      "sourceAttribution": "明清人物像（或為繪本，或為刻本插圖，本庫未逐件比定其版本與媒材），圖檔經 Wikimedia Commons 轉錄，屬公有領域。出處存疑處一律記為「版本待考」，不臆題書名。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E6%98%8E%E5%A4%AA%E7%A5%96%E7%95%AB%E5%83%8F.jpg",
+      "thumb": "/data/portraits/person_zhu_yuanzhang.jpg",
+      "full": "/data/portraits/full_person_zhu_yuanzhang.jpg"
+    },
+    "person_zhao_kuangyin": {
+      "id": "person_zhao_kuangyin",
+      "name": "赵匡胤",
+      "file": "Song Taizu.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（明清）佚名",
+      "sourceAttribution": "Wikimedia Commons 收錄之公有領域人物圖像。原書版本待比定，故記為「版本待考」。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Song_Taizu.jpg",
+      "thumb": "/data/portraits/person_zhao_kuangyin.jpg",
+      "full": "/data/portraits/full_person_zhao_kuangyin.jpg"
+    },
+    "person_su_shi": {
+      "id": "person_su_shi",
+      "name": "苏轼",
+      "file": "Su shi.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（明清）佚名",
+      "sourceAttribution": "Wikimedia Commons 收錄之公有領域人物圖像。原書版本待比定，故記為「版本待考」。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Su_shi.jpg",
+      "thumb": "/data/portraits/person_su_shi.jpg",
+      "full": "/data/portraits/full_person_su_shi.jpg"
+    },
+    "person_fan_zhongyan": {
+      "id": "person_fan_zhongyan",
+      "name": "范仲淹",
+      "file": "Fan Zhongyan.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（明清）佚名",
+      "sourceAttribution": "Wikimedia Commons 收錄之公有領域人物圖像。原書版本待比定，故記為「版本待考」。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Fan_Zhongyan.jpg",
+      "thumb": "/data/portraits/person_fan_zhongyan.jpg",
+      "full": "/data/portraits/full_person_fan_zhongyan.jpg"
+    },
+    "person_zhu_di": {
+      "id": "person_zhu_di",
+      "name": "朱棣",
+      "file": "Yongle.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（明清）佚名",
+      "sourceAttribution": "Wikimedia Commons 收錄之公有領域人物圖像。原書版本待比定，故記為「版本待考」。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Yongle.jpg",
+      "thumb": "/data/portraits/person_zhu_di.jpg",
+      "full": "/data/portraits/full_person_zhu_di.jpg"
+    },
+    "person_zhang_juzheng": {
+      "id": "person_zhang_juzheng",
+      "name": "张居正",
+      "file": "Zhang Juzheng.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（明清）佚名",
+      "sourceAttribution": "Wikimedia Commons 收錄之公有領域人物圖像。原書版本待比定，故記為「版本待考」。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Zhang_Juzheng.jpg",
+      "thumb": "/data/portraits/person_zhang_juzheng.jpg",
+      "full": "/data/portraits/full_person_zhang_juzheng.jpg"
+    },
+    "person_hong_li": {
+      "id": "person_hong_li",
+      "name": "弘历",
+      "file": "Portrait of Emperor Qianlong.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《歷代人物像冊》",
+      "sourceAttribution": "十九世紀彩繪歷代人物像冊（絹本設色，每開一人，右上題名）。Commons 著錄云其中國帝王一開摹自一六〇九年底本；底本究屬何書，尚待比定，故不徑題書名。公有領域。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Portrait_of_Emperor_Qianlong.jpg",
+      "thumb": "/data/portraits/person_hong_li.jpg",
+      "full": "/data/portraits/full_person_hong_li.jpg"
+    },
+    "person_li_qingzhao": {
+      "id": "person_li_qingzhao",
+      "name": "李清照",
+      "file": "李清照畫像.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（明清）佚名",
+      "sourceAttribution": "明清人物像（或為繪本，或為刻本插圖，本庫未逐件比定其版本與媒材），圖檔經 Wikimedia Commons 轉錄，屬公有領域。出處存疑處一律記為「版本待考」，不臆題書名。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E6%9D%8E%E6%B8%85%E7%85%A7%E7%95%AB%E5%83%8F.jpg",
+      "thumb": "/data/portraits/person_li_qingzhao.jpg",
+      "full": "/data/portraits/full_person_li_qingzhao.jpg"
+    },
+    "person_zhu_wen": {
+      "id": "person_zhu_wen",
+      "name": "朱温",
+      "file": "Zhu Wen (Liang Taizu).jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（明清）佚名",
+      "sourceAttribution": "Wikimedia Commons 收錄之公有領域人物圖像。原書版本待比定，故記為「版本待考」。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Zhu_Wen_(Liang_Taizu).jpg",
+      "thumb": "/data/portraits/person_zhu_wen.jpg",
+      "full": "/data/portraits/full_person_zhu_wen.jpg"
     }
   }
 }

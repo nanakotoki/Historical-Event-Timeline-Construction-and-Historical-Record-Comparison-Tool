@@ -1,10 +1,10 @@
 {
   "note": "传世画像逐图审计账本。build-catalog.mjs 只接受本账本中 verdict=keep 的图档；未经审计的图档一律不注入分片（前端退回 L3/L4）。判定口径：须为古代纸绢本画像或古籍刻本绣像，且确为该人物本人；现代照片、影视剧照、现代白描重绘、雕塑／塑像照片、石刻、无人物之书法页，一律 reject。",
-  "generatedAt": "2026-10-24T06:13:07.220Z",
+  "generatedAt": "2026-10-27T08:19:16.421Z",
   "counts": {
-    "total": 76,
-    "keep": 60,
-    "reject": 16
+    "total": 100,
+    "keep": 83,
+    "reject": 17
   },
   "entries": {
     "Fan Zeng.jpg": {
@@ -462,6 +462,150 @@
       "verdict": "keep",
       "reason": "清刻本《說唐演義全傳》人物繡像，題名「李藥師」即李靖（字藥師），木刻版畫。",
       "bookTitle": "（清）《說唐演義全傳》"
+    },
+    "雍正帝.jpg": {
+      "name": "胤禛",
+      "verdict": "keep",
+      "reason": "清宫廷朝服坐像一系，绢本设色，传统帝后像体制",
+      "bookTitle": ""
+    },
+    "Kangxi Emperor.jpg": {
+      "name": "玄烨",
+      "verdict": "keep",
+      "reason": "清宫廷便装像，绢本设色，传统帝像体制",
+      "bookTitle": ""
+    },
+    "Qi Jiguang Portrait.jpg": {
+      "name": "戚继光",
+      "verdict": "keep",
+      "reason": "明代红袍官服像，传统绘画体制；题名虽含 Portrait 但不在三国绣像名单内，落「待考」档",
+      "bookTitle": ""
+    },
+    "Sima Guang.jpg": {
+      "name": "司马光",
+      "verdict": "keep",
+      "reason": "传统白描立像，纸本线描，古籍像赞系统",
+      "bookTitle": ""
+    },
+    "Wang Anshi.jpg": {
+      "name": "王安石",
+      "verdict": "keep",
+      "reason": "宋人画王安石像（传），绢本设色半身像",
+      "bookTitle": ""
+    },
+    "YuanEmperorAlbumKhubilaiPortrait.jpg": {
+      "name": "忽必烈",
+      "verdict": "keep",
+      "reason": "台北故宫《元代帝后半身像》册之元世祖开，绢本设色，南薰殿旧藏系统",
+      "bookTitle": "元代帝后半身像册"
+    },
+    "WenTianxiang.jpg": {
+      "name": "文天祥",
+      "verdict": "keep",
+      "reason": "题「文天祥真像」之设色画像，传统纸本",
+      "bookTitle": ""
+    },
+    "Emperor Huizong of Song.png": {
+      "name": "赵佶",
+      "verdict": "keep",
+      "reason": "宋徽宗画像，十二世纪宫廷像一系，绢本设色",
+      "bookTitle": ""
+    },
+    "後唐莊宗李存勗.jpg": {
+      "name": "李存勖",
+      "verdict": "keep",
+      "reason": "题「後唐莊宗」白描像，古籍刻本像赞系统",
+      "bookTitle": ""
+    },
+    "Chai Rong (Zhou Shizong).jpg": {
+      "name": "柴荣",
+      "verdict": "keep",
+      "reason": "清人绘后周世宗像（《中国历代名人画像谱》2003 翻印清绘本）",
+      "bookTitle": ""
+    },
+    "Song Taizu.jpg": {
+      "name": "赵匡胤",
+      "verdict": "keep",
+      "reason": "宋太祖坐像，南薰殿旧藏一系，绢本设色",
+      "bookTitle": ""
+    },
+    "Su shi.jpg": {
+      "name": "苏轼",
+      "verdict": "keep",
+      "reason": "苏轼像，传统纸本设色立像",
+      "bookTitle": ""
+    },
+    "Ouyang Xiu.jpg": {
+      "name": "欧阳修",
+      "verdict": "keep",
+      "reason": "传统白描像，古籍像赞系统",
+      "bookTitle": ""
+    },
+    "Fan Zhongyan.jpg": {
+      "name": "范仲淹",
+      "verdict": "keep",
+      "reason": "范仲淹官服持笏像，传统设色",
+      "bookTitle": ""
+    },
+    "Yue Fei.jpg": {
+      "name": "岳飞",
+      "verdict": "keep",
+      "reason": "岳飞像，刻本系统黑白版画（PD-Mark 著录为传世像）",
+      "bookTitle": ""
+    },
+    "Portraits of Famous Men - Zhu Xi.jpg": {
+      "name": "朱熹",
+      "verdict": "keep",
+      "reason": "费城艺术博物馆《历代名臣像》册之朱熹开，绢本设色",
+      "bookTitle": "历代名臣像册"
+    },
+    "明太祖畫像.jpg": {
+      "name": "朱元璋",
+      "verdict": "keep",
+      "reason": "明宫廷画家绘明太祖画像一系，绢本设色",
+      "bookTitle": ""
+    },
+    "Yongle.jpg": {
+      "name": "朱棣",
+      "verdict": "keep",
+      "reason": "明成祖坐像，南薰殿旧藏系统，绢本设色",
+      "bookTitle": ""
+    },
+    "Zhang Juzheng.jpg": {
+      "name": "张居正",
+      "verdict": "keep",
+      "reason": "明代红袍官服坐像（后世摹绘本），传统绘画体制",
+      "bookTitle": ""
+    },
+    "Portrait of Emperor Qianlong.jpg": {
+      "name": "弘历",
+      "verdict": "keep",
+      "reason": "乾隆帝朝服像（郎世宁稿一系），宫廷绘画",
+      "bookTitle": ""
+    },
+    "李清照畫像.jpg": {
+      "name": "李清照",
+      "verdict": "keep",
+      "reason": "清人所绘「李易安像」（题字可辨），绢本设色，1911 年前，臺湾藏",
+      "bookTitle": ""
+    },
+    "Zhu Wen (Liang Taizu).jpg": {
+      "name": "朱温",
+      "verdict": "keep",
+      "reason": "清人绘后梁太祖像（《中国历代名人画像谱》2003 翻印清绘本）",
+      "bookTitle": ""
+    },
+    "王守仁.jpg": {
+      "name": "王守仁",
+      "verdict": "reject",
+      "reason": "Commons 该文件为 2025 年当代摹本（沈俊绘「新建伯赠侯王文成公像」），非传世原件，按红线不采",
+      "bookTitle": ""
+    },
+    "Wanggiyan Aguda.jpg": {
+      "name": "完颜阿骨打",
+      "verdict": "keep",
+      "reason": "金上京博物馆藏本，传统画像体制；Commons 著录断代「与阿骨打同时」存疑，catalog 已标「（传）…存疑」",
+      "bookTitle": ""
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-27T05:10:44.125Z",
+  "generatedAt": "2026-10-27T08:20:21.131Z",
   "site": {
     "title": "华夏史网",
     "subtitle": "ChronoGraph China · 二十四史人物关系图谱与史料对勘引擎",
@@ -306,7 +306,7 @@
       ],
       "personCount": 146,
       "edgeCount": 264,
-      "byteSize": 722606
+      "byteSize": 722723
     },
     {
       "shardId": "shard_06_song_ming_qing",
@@ -326,7 +326,7 @@
       ],
       "personCount": 168,
       "edgeCount": 245,
-      "byteSize": 542379
+      "byteSize": 545017
     },
     {
       "shardId": "shard_07_five_dynasties",
@@ -342,7 +342,7 @@
       ],
       "personCount": 45,
       "edgeCount": 60,
-      "byteSize": 143757
+      "byteSize": 144109
     },
     {
       "shardId": "shard_08_xin_mang",
@@ -360,7 +360,7 @@
       ],
       "personCount": 47,
       "edgeCount": 66,
-      "byteSize": 155090
+      "byteSize": 155153
     }
   ],
   "searchIndex": [

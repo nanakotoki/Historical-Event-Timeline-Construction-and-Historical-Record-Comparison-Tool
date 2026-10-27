@@ -87,6 +87,41 @@ export interface HistoryGraphCanvasProps {
 const LOD_WEIGHT: [number, number, number] = [75, 40, 0];
 
 /**
+ * 缩放区间。
+ * ------------------------------------------------------------------
+ * 上限原为 3.6×，是按「整库全景够用」估的，实测不够：九百人的力导向图铺开后，
+ * 相邻两人在世界坐标里只隔二三十个单位，3.6× 时屏幕上也就百来像素——
+ * 两个人像仍挤在一起、标签互相让位，滚轮滚到底也认不出想看的那一个人。
+ *
+ * 放到 12× 之后，单人可占屏数百像素，配合下面的半径与字号生长曲线，
+ * 「凑近看清是谁」这件事才成立。下限 0.25 不动：再缩下去整库只是一团墨。
+ */
+export const ZOOM_MIN = 0.25;
+export const ZOOM_MAX = 12;
+
+/**
+ * 节点半径随缩放的生长曲线。
+ * ------------------------------------------------------------------
+ * 低倍（≤1.35×）按比例压小，避免几百人同屏时糊成一片墨；
+ * 高倍不能继续封顶在 1.35——那正是「放大也没变大」的直接原因：
+ * 间距按 scale 线性拉开，圆却纹丝不动，越放越像满地芝麻。
+ *
+ * 这里取次线性 growth = 1.35 · (scale/1.35)^0.62：
+ * 线性放大会让高倍下的人像大到吞掉整屏，次线性则「越近长得越慢」，
+ * 12× 时约为基半径的 3.2 倍（权重 100 者直径约 140px，一张脸看得清五官），
+ * 3.2 倍封顶是防呆——再大就只剩一个圆了。
+ *
+ * 判定半径的地方（绘制、命中测试）必须共用这一个函数：
+ * 两处各写一份公式，早晚会有一处忘了改，表现为「看着点中了却选不中」。
+ */
+export function nodeRadius(weight: number, scale: number): number {
+  const base = 7 + (weight / 100) * 15;
+  const grow =
+    scale <= 1.35 ? Math.max(0.42, scale) : Math.min(3.2, 1.35 * Math.pow(scale / 1.35, 0.62));
+  return base * grow;
+}
+
+/**
  * 画布上那一行「核心头衔」取什么：
  * 谥号/庙号 > 封爵 > 首个官职 > 首个身份标签。
  * 帝王取「魏武帝」这类谥号最合史书习惯，谋臣武将则多半没有谥号，
@@ -371,8 +406,10 @@ export function HistoryGraphCanvas({
     if (!pos) return;
     const { w, h } = sizeRef.current;
     if (w < 40 || h < 40) return;
-    // 只放大到「够看清此人近邻」的程度；已经放得更大就不再拉远
-    const scale = Math.max(1.35, Math.min(2.4, camera.current.scale));
+    // 只放大到「够看清此人近邻」的程度；已经放得更大就不再拉远。
+    // 下限从 1.35 提到 2.0：搜人/点人之后镜头贴上去，是要看清这个人，
+    // 1.35× 时他还是和七八个邻居挤在一起，等于没聚焦。
+    const scale = Math.min(ZOOM_MAX, Math.max(2.0, camera.current.scale));
     const usableW = Math.max(240, w - latest.current.rightInset);
     animateCamera({ scale, tx: usableW / 2 - pos.x * scale, ty: h / 2 - pos.y * scale });
   }, [focusRequest, animateCamera]);
@@ -427,7 +464,7 @@ export function HistoryGraphCanvas({
       if (!pos) continue;
       const [sx, sy] = project(pos.x, pos.y);
       if (sx < -140 || sx > w + 140 || sy < -140 || sy > h + 140) continue;
-      const r = (7 + (node.importanceWeight / 100) * 15) * Math.max(0.42, Math.min(scale, 1.35));
+      const r = nodeRadius(node.importanceWeight, scale);
       visible.set(node.id, { x: sx, y: sy, r, weight: node.importanceWeight });
     }
 
@@ -444,10 +481,17 @@ export function HistoryGraphCanvas({
      * 若只试「正下方」并在冲突时一律放弃，密集处会把曹操、荀彧这类主角的名字
      * 整片抹掉——那比文字重叠更糟。四向试位之后，绝大多数人都能保住名字。
      */
-    const nameSize = lod === 0 ? 10.5 : lod === 1 ? 12 : 13.5;
-    const nameFont = `600 ${nameSize}px "Noto Serif SC", "Songti SC", serif`;
-    const secondFont = '400 9.5px "Noto Sans SC", sans-serif';
-    const secondSize = 9.5;
+    /**
+     * 字号也要随放大一起长。
+     * 原本三档 LOD 各定死一个字号（13.5px 封顶），10× 时人像有 140px 大，
+     * 底下的名字还是 13.5px——比例失衡，远看像标签浮在别人的肩上。
+     * 用 √(scale/2) 缓慢加成、1.7 倍封顶：既跟上画面，又不会在高倍时占满视野。
+     */
+    const zoomBoost = Math.min(1.7, Math.max(1, Math.sqrt(scale / 2)));
+    const nameSize = (lod === 0 ? 10.5 : lod === 1 ? 12 : 13.5) * zoomBoost;
+    const nameFont = `600 ${nameSize.toFixed(1)}px "Noto Serif SC", "Songti SC", serif`;
+    const secondSize = 9.5 * Math.min(1.45, zoomBoost);
+    const secondFont = `400 ${secondSize.toFixed(1)}px "Noto Sans SC", sans-serif`;
     const LABEL_PAD = 2;
     const LABEL_GAP = 5;
 
@@ -893,7 +937,7 @@ export function HistoryGraphCanvas({
       const factor = typeof detail === 'number' ? detail : 1.2;
       const { w, h } = sizeRef.current;
       const cam = camera.current;
-      const next = Math.max(0.24, Math.min(3.6, cam.scale * factor));
+      const next = Math.min(ZOOM_MAX, Math.max(ZOOM_MIN, cam.scale * factor));
       const worldX = (w / 2 - cam.tx) / cam.scale;
       const worldY = (h / 2 - cam.ty) / cam.scale;
       camera.current = { scale: next, tx: w / 2 - worldX * next, ty: h / 2 - worldY * next };
@@ -948,7 +992,7 @@ export function HistoryGraphCanvas({
         if (!pos) continue;
         const x = pos.x * scale + tx;
         const y = pos.y * scale + ty;
-        const r = (7 + (node.importanceWeight / 100) * 15) * Math.max(0.42, Math.min(scale, 1.35)) + 5;
+        const r = nodeRadius(node.importanceWeight, scale) + 5;
         const dist = Math.hypot(x - sx, y - sy);
         if (dist <= r && (!best || dist < best.dist)) best = { id: node.id, dist };
       }
@@ -990,19 +1034,40 @@ export function HistoryGraphCanvas({
     return best?.edge ?? null;
   }, []);
 
-  const onWheel = useCallback((event: React.WheelEvent<HTMLCanvasElement>) => {
-    event.preventDefault();
-    tweenRef.current = null;
-    const rect = event.currentTarget.getBoundingClientRect();
-    const mx = event.clientX - rect.left;
-    const my = event.clientY - rect.top;
-    const cam = camera.current;
-    const factor = Math.exp(-event.deltaY * 0.0016);
-    const next = Math.max(0.24, Math.min(3.6, cam.scale * factor));
-    const worldX = (mx - cam.tx) / cam.scale;
-    const worldY = (my - cam.ty) / cam.scale;
-    camera.current = { scale: next, tx: mx - worldX * next, ty: my - worldY * next };
-    dirtyRef.current = true;
+  /**
+   * 滚轮 / 触控板缩放：挂原生监听，浏览器捏合也归这里。
+   * ------------------------------------------------------------------
+   * 两个必踩的坑：
+   *  ① React 把 wheel 委托成**被动**监听，`preventDefault()` 只会换来一条
+   *     「Unable to preventDefault inside passive event listener」警告，
+   *     页面照样滚——所以这里必须 addEventListener + `{ passive: false }`。
+   *  ② 触控板捏合在浏览器里是 `ctrlKey: true` 的 wheel 事件。若照常规步长处理，
+   *     捏合一下就把整页放大（浏览器原生缩放），画布纹丝不动。
+   *     故 ctrlKey 一路单独给更细的灵敏度（0.006），做成真正的「捏合看细节」。
+   */
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const handler = (event: WheelEvent) => {
+      event.preventDefault();
+      tweenRef.current = null;
+      const rect = canvas.getBoundingClientRect();
+      const mx = event.clientX - rect.left;
+      const my = event.clientY - rect.top;
+      const cam = camera.current;
+      // 捏合的手指位移远小于滚轮格数，灵敏度要放大；鼠标滚轮走常规步长
+      const sensitivity = event.ctrlKey ? 0.006 : 0.0016;
+      const factor = Math.exp(-event.deltaY * sensitivity);
+      const next = Math.min(ZOOM_MAX, Math.max(ZOOM_MIN, cam.scale * factor));
+      if (next === cam.scale) return;
+      // 以光标为锚：光标下的那一点在缩放前后钉在原地
+      const worldX = (mx - cam.tx) / cam.scale;
+      const worldY = (my - cam.ty) / cam.scale;
+      camera.current = { scale: next, tx: mx - worldX * next, ty: my - worldY * next };
+      dirtyRef.current = true;
+    };
+    canvas.addEventListener('wheel', handler, { passive: false });
+    return () => canvas.removeEventListener('wheel', handler);
   }, []);
 
   const onPointerDown = useCallback((event: React.PointerEvent<HTMLCanvasElement>) => {
@@ -1077,6 +1142,27 @@ export function HistoryGraphCanvas({
     [hitTest, hitEdge, onSelectPerson, onSelectEdge, onClearSelection],
   );
 
+  /**
+   * 双击某人：镜头直接贴上去（3.2× 起）。
+   * 滚轮要滚十几下才到得了一个人，双击是「我就要看这一个」的快捷路径。
+   */
+  const onDoubleClick = useCallback(
+    (event: React.MouseEvent<HTMLCanvasElement>) => {
+      const rect = event.currentTarget.getBoundingClientRect();
+      const mx = event.clientX - rect.left;
+      const my = event.clientY - rect.top;
+      const id = hitTest(mx, my);
+      if (!id) return;
+      const pos = latest.current.layout.positions.get(id);
+      if (!pos) return;
+      const { h } = sizeRef.current;
+      const scale = Math.min(ZOOM_MAX, Math.max(3.2, camera.current.scale));
+      const usableW = Math.max(240, sizeRef.current.w - (latest.current.rightInset ?? 0));
+      animateCamera({ scale, tx: usableW / 2 - pos.x * scale, ty: h / 2 - pos.y * scale });
+    },
+    [hitTest, animateCamera],
+  );
+
   const hoverPerson = hoverId ? nodeIndex.get(hoverId) ?? null : null;
 
   return (
@@ -1084,10 +1170,10 @@ export function HistoryGraphCanvas({
       <canvas
         ref={canvasRef}
         className="block h-full w-full cursor-grab active:cursor-grabbing"
-        onWheel={onWheel}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
+        onDoubleClick={onDoubleClick}
         onPointerLeave={() => {
           draggingRef.current = null;
           if (hoverId) setHoverId(null);

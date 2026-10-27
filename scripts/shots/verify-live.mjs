@@ -2,6 +2,7 @@
  * 线上验收：直接访问 GitHub Pages 地址，等画布画完再截图，并统计 4xx/5xx。
  */
 import { createRequire } from 'node:module';
+import { readFileSync } from 'node:fs';
 const require = createRequire('C:/Users/时嘉庆/.workbuddy/binaries/node/workspace/');
 const puppeteer = require('puppeteer-core');
 
@@ -46,15 +47,34 @@ async function waitCanvasSettled(budgetMs = 30000) {
 const ink = await waitCanvasSettled();
 await page.screenshot({ path: 'C:/tmp/shots/live-pages.png' });
 
+/* 断言口径从「本地 public/data/manifest.json」取，不写死在脚本里。
+   原先这里写的是 `has824`（探页面是否残留上一版的旧统计），
+   这种写法每加一批人就退化成一个只会返回 false 的僵尸判断——
+   所以改成读真值：页面上的在册人数、关系条数必须与本地产物一致。 */
+const manifest = JSON.parse(readFileSync('public/data/manifest.json', 'utf8'));
+const expectPersons = String(manifest.stats.personCount);
+const expectEdges = String(manifest.stats.edgeCount);
+const expectShards = String(manifest.stats.shardCount);
+
 const info = await page.evaluate(() => {
   const t = document.body.innerText.replace(/\s+/g, ' ');
-  return { has824: t.includes('824'), head: t.slice(0, 120) };
+  return { text: t, head: t.slice(0, 120) };
 });
 
 console.log('墨量: ' + ink.ink);
 console.log('标题段: ' + info.head);
-console.log('出现 824: ' + info.has824);
+console.log(`本地期望: ${expectPersons} 人 / ${expectEdges} 条 / ${expectShards} 片`);
+
+const missing = [
+  ['在册人数', expectPersons],
+  ['关系条数', expectEdges],
+].filter(([, v]) => !info.text.includes(v));
+if (missing.length) {
+  throw new Error(`页面统计与本地产物不一致，缺: ${missing.map(([k, v]) => `${k} ${v}`).join('、')}`);
+}
+
 console.log('console errors: ' + (errors.length ? JSON.stringify(errors.slice(0, 3)) : 'none'));
 console.log('HTTP 4xx/5xx: ' + (bad.length ? JSON.stringify(bad.slice(0, 5)) : 'none'));
+if (errors.length || bad.length) throw new Error('线上存在控制台错误或 HTTP 失败');
 
 await browser.close();

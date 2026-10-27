@@ -3,7 +3,7 @@
  * 检查资源无 404、画布有墨、数据能取到。
  */
 import http from 'node:http';
-import { createReadStream, statSync } from 'node:fs';
+import { createReadStream, statSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
 const require = createRequire('C:/Users/时嘉庆/.workbuddy/binaries/node/workspace/');
@@ -93,21 +93,36 @@ async function waitCanvasSettled(budgetMs = 25000) {
 const ink = await waitCanvasSettled();
 await page.screenshot({ path: 'C:/tmp/shots/pages-verify.png' });
 
+/* 断言口径从 manifest 取真值，不写死人数——写死的话每加一批人就退化成僵尸判断。
+   （原先是 `has824`：探页面是否残留上一版旧统计，现在已无意义。） */
+const manifest = JSON.parse(readFileSync('public/data/manifest.json', 'utf8'));
+const expectPersons = String(manifest.stats.personCount);
+const expectEdges = String(manifest.stats.edgeCount);
+
 const info = await page.evaluate(() => {
   const t = document.body.innerText.replace(/\s+/g, ' ');
   return {
+    text: t,
     head: t.slice(0, 200),
-    has824: t.includes('824'),
-    shards: t.match(/先秦|楚汉|三国|两晋|隋唐|宋元明清|五代十国/g)?.slice(0, 12) ?? [],
+    shards: t.match(/先秦|楚汉|三国|两晋|隋唐|宋元明清|五代十国|新莽/g)?.slice(0, 12) ?? [],
   };
 });
 
 console.log('墨量: ' + ink.ink);
 console.log('页面首段: ' + info.head);
-console.log('出现 824: ' + info.has824);
+console.log(`本地期望: ${expectPersons} 人 / ${expectEdges} 条`);
 console.log('分片标签: ' + JSON.stringify([...new Set(info.shards)]));
 console.log('console errors: ' + (errors.length ? JSON.stringify(errors.slice(0, 3)) : 'none'));
 console.log('HTTP 失败: ' + (bad.length ? JSON.stringify(bad.slice(0, 5)) : 'none'));
+
+const missing = [
+  ['在册人数', expectPersons],
+  ['关系条数', expectEdges],
+].filter(([, v]) => !info.text.includes(v));
+if (missing.length) {
+  throw new Error(`页面统计与本地产物不一致，缺: ${missing.map(([k, v]) => `${k} ${v}`).join('、')}`);
+}
+if (errors.length || bad.length) throw new Error('子路径下存在控制台错误或 HTTP 失败');
 
 await browser.close();
 server.close();

@@ -26,8 +26,10 @@ import { fiveDynBriefC } from './persons-brief-c';
 import { fiveDynBriefD } from './persons-brief-d';
 import { fiveDynBriefE } from './persons-brief-e';
 import { fiveDynBriefF } from './persons-brief-f';
+import { fiveDynBriefG } from './persons-brief-g';
 import { fiveDynBriefEdges } from './edges-brief';
 import { fiveDynBriefEdgesE } from './edges-brief-e';
+import { fiveDynBriefEdgesG } from './edges-brief-g';
 
 export const fiveDynastiesShard: ShardDataset = {
   shardId: 'shard_07_five_dynasties',
@@ -46,6 +48,7 @@ export const fiveDynastiesShard: ShardDataset = {
     ...fiveDynBriefD,
     ...fiveDynBriefE,
     ...fiveDynBriefF,
+    ...fiveDynBriefG,
   ],
-  edges: [...fiveDynBriefEdges, ...fiveDynBriefEdgesE],
+  edges: [...fiveDynBriefEdges, ...fiveDynBriefEdgesE, ...fiveDynBriefEdgesG],
 };

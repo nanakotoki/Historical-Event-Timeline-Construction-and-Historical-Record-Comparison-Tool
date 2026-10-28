@@ -7,6 +7,7 @@
 import type { ShardDataset } from '../../types/history';
 import { chuHanEdges } from './edges';
 import { chuHanBriefEdges } from './edges-brief';
+import { chuHanBriefEdgesD } from './edges-brief-d';
 import { chuHanPersonsA } from './persons-a';
 import { chuHanPersonsB } from './persons-b';
 import { chuHanPersonsC } from './persons-c';
@@ -17,6 +18,7 @@ import { chuHanPersonsG } from './persons-g';
 import { chuHanBriefA } from './persons-brief-a';
 import { chuHanBriefB } from './persons-brief-b';
 import { chuHanBriefC } from './persons-brief-c';
+import { chuHanBriefD } from './persons-brief-d';
 
 export const chuHanShard: ShardDataset = {
   shardId: 'shard_02_chu_han',
@@ -36,6 +38,7 @@ export const chuHanShard: ShardDataset = {
     ...chuHanBriefA,
     ...chuHanBriefB,
     ...chuHanBriefC,
+    ...chuHanBriefD,
   ],
-  edges: [...chuHanEdges, ...chuHanBriefEdges],
+  edges: [...chuHanEdges, ...chuHanBriefEdges, ...chuHanBriefEdgesD],
 };

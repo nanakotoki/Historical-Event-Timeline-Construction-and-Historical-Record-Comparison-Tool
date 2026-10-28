@@ -1,14 +1,14 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-28T06:24:38.671Z",
+  "generatedAt": "2026-10-28T09:01:50.604Z",
   "site": {
     "title": "华夏史网",
     "subtitle": "ChronoGraph China · 二十四史人物关系图谱与史料对勘引擎",
     "edition": "首发种子库 · 楚汉 / 三国 / 隋唐三簇"
   },
   "stats": {
-    "personCount": 1126,
-    "edgeCount": 1822,
+    "personCount": 1136,
+    "edgeCount": 1843,
     "anecdoteCount": 146,
     "citationCount": 605,
     "dynastyCount": 17,
@@ -252,9 +252,9 @@
         -259,
         -60
       ],
-      "personCount": 143,
-      "edgeCount": 280,
-      "byteSize": 747177
+      "personCount": 151,
+      "edgeCount": 297,
+      "byteSize": 780107
     },
     {
       "shardId": "shard_03_three_kingdoms",
@@ -340,9 +340,9 @@
         830,
         995
       ],
-      "personCount": 90,
-      "edgeCount": 150,
-      "byteSize": 313514
+      "personCount": 92,
+      "edgeCount": 154,
+      "byteSize": 321048
     },
     {
       "shardId": "shard_08_xin_mang",
@@ -4205,6 +4205,14 @@
       "importanceWeight": 38
     },
     {
+      "id": "person_lou_jing",
+      "name": "娄敬",
+      "aliasText": "谋臣 戍卒 使者",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 38
+    },
+    {
       "id": "person_liu_shan",
       "name": "刘禅",
       "aliasText": "公嗣 阿斗 思公 建兴 延熙 景耀 炎兴 皇太子 安乐公 皇帝",
@@ -5325,6 +5333,14 @@
       "importanceWeight": 34
     },
     {
+      "id": "person_lv_jia",
+      "name": "吕嘉",
+      "aliasText": "南越丞相 权臣",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 34
+    },
+    {
       "id": "person_yang_xiu",
       "name": "杨修",
       "aliasText": "德祖 文臣 主簿",
@@ -5744,6 +5760,14 @@
       "id": "person_an_zhonghui",
       "name": "安重诲",
       "aliasText": "权臣 枢密使",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 34
+    },
+    {
+      "id": "person_liu_xu",
+      "name": "刘昫",
+      "aliasText": "耀远 宰相 史学家 监修国史",
       "dynasty": "five_dynasties",
       "shardId": "shard_07_five_dynasties",
       "importanceWeight": 34
@@ -6437,6 +6461,14 @@
       "importanceWeight": 30
     },
     {
+      "id": "person_zhao_hu",
+      "name": "赵胡",
+      "aliasText": "文王 南越王",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 30
+    },
+    {
       "id": "person_yuwen_hu",
       "name": "宇文护",
       "aliasText": "萨保 权臣 大冢宰",
@@ -6464,6 +6496,14 @@
       "id": "person_song_qiqiu",
       "name": "宋齐丘",
       "aliasText": "子嵩 谋士 宰相",
+      "dynasty": "five_dynasties",
+      "shardId": "shard_07_five_dynasties",
+      "importanceWeight": 30
+    },
+    {
+      "id": "person_li_song",
+      "name": "李崧",
+      "aliasText": "宰相 翰林学士",
       "dynasty": "five_dynasties",
       "shardId": "shard_07_five_dynasties",
       "importanceWeight": 30
@@ -7016,6 +7056,22 @@
       "id": "person_zheng_dangshi",
       "name": "郑当时",
       "aliasText": "大农令",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_sui_he",
+      "name": "随何",
+      "aliasText": "辩士 使者 护军中尉",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_zhao_yingqi",
+      "name": "赵婴齐",
+      "aliasText": "明王 南越王 宿卫",
       "dynasty": "western_han",
       "shardId": "shard_02_chu_han",
       "importanceWeight": 27
@@ -7877,6 +7933,14 @@
       "importanceWeight": 23
     },
     {
+      "id": "person_zhao_xing",
+      "name": "赵兴",
+      "aliasText": "哀王 南越王",
+      "dynasty": "western_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 23
+    },
+    {
       "id": "person_jian_yong",
       "name": "简雍",
       "aliasText": "宪和 文臣 说客",
@@ -8497,6 +8561,22 @@
       "name": "甘罗",
       "aliasText": "使臣 上卿",
       "dynasty": "qin",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 20
+    },
+    {
+      "id": "person_hou_gong",
+      "name": "侯公",
+      "aliasText": "辩士 使者",
+      "dynasty": "chu_han",
+      "shardId": "shard_02_chu_han",
+      "importanceWeight": 20
+    },
+    {
+      "id": "person_jiu_taihou",
+      "name": "樛太后",
+      "aliasText": "王后 太后",
+      "dynasty": "western_han",
       "shardId": "shard_02_chu_han",
       "importanceWeight": 20
     },
@@ -9376,12 +9456,12 @@
   "highlights": [
     {
       "label": "在册人物",
-      "value": "1126",
+      "value": "1136",
       "note": "全部经正史本传核验"
     },
     {
       "label": "关系边",
-      "value": "1822",
+      "value": "1843",
       "note": "每条均附文言原文为证"
     },
     {

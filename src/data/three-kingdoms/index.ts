@@ -6,9 +6,11 @@ import type { ShardDataset } from '../../types/history';
 import { threeKingdomsEdges } from './edges';
 import { threeKingdomsBriefEdges } from './edges-brief';
 import { threeKingdomsBriefEdgesB } from './edges-brief-b';
+import { threeKingdomsBriefEdgesC } from './edges-brief-c';
 import { threeKingdomsPersonsA } from './persons-a';
 import { threeKingdomsBriefA } from './persons-brief-a';
 import { threeKingdomsBriefB } from './persons-brief-b';
+import { threeKingdomsBriefC } from './persons-brief-c';
 import { threeKingdomsPersonsB } from './persons-b';
 import { threeKingdomsPersonsC } from './persons-c';
 import { threeKingdomsPersonsD } from './persons-d';
@@ -40,6 +42,12 @@ export const threeKingdomsShard: ShardDataset = {
     ...threeKingdomsPersonsG,
     ...threeKingdomsBriefA,
     ...threeKingdomsBriefB,
+    ...threeKingdomsBriefC,
   ],
-  edges: [...threeKingdomsEdges, ...threeKingdomsBriefEdges, ...threeKingdomsBriefEdgesB],
+  edges: [
+    ...threeKingdomsEdges,
+    ...threeKingdomsBriefEdges,
+    ...threeKingdomsBriefEdgesB,
+    ...threeKingdomsBriefEdgesC,
+  ],
 };

@@ -1307,7 +1307,7 @@ export const threeKingdomsBriefA = [
     name: '孔融',
     zi: '文举',
     dyn: 'eastern_han',
-    faction: '鲁国孔氏',
+    faction: '鲁国孔氏',  // 鲁国孔氏：靠 graph-layout 的 /^鲁国孔氏/ 规则归入「汉末文苑」，不可落进先秦的「中原诸国」
     died: 208,
     origin: G('鲁国', '山东省曲阜市', 116.99, 35.58),
     roles: ['文臣', '文学家'],
@@ -1330,7 +1330,7 @@ export const threeKingdomsBriefA = [
     name: '祢衡',
     zi: '正平',
     dyn: 'eastern_han',
-    faction: '（无）',
+    faction: '汉末名士',  // 原为占位符「（无）」，是把缺省当数据；与孔融、蔡邕父女同归「汉末文苑」
     died: 198,
     origin: G('平原般县', '山东省临邑县', 116.87, 37.19),
     roles: ['文士'],

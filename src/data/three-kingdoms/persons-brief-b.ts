@@ -694,7 +694,7 @@ export const threeKingdomsBriefB = [
     name: '钟会',
     zi: '士季',
     dyn: 'three_kingdoms',
-    faction: '颍川钟氏',
+    faction: '颍川士族',  // 钟会为钟繇之子，原署「颍川钟氏」遂与父分属两泳道，今归父籍
     born: 225,
     died: 264,
     origin: G('颍川长社', '河南省长葛市', 113.77, 34.22),
@@ -860,7 +860,7 @@ export const threeKingdomsBriefB = [
     name: '张鲁',
     zi: '公祺',
     dyn: 'eastern_han',
-    faction: '（五斗米道）',
+    faction: '五斗米道',  // 原值带全角括号，是排版遗留而非阵营名
     died: 216,
     uncertain: true,
     origin: G('沛国丰县', '江苏省丰县', 116.59, 34.70),

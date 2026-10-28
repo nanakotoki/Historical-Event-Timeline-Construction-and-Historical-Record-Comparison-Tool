@@ -11,8 +11,9 @@ out.*
 *.tsbuildinfo
 next-env.d.ts
 
-# 编译期临时目录（build-seed / render-portraits 在此打包 TS）
+# 编译期临时目录（build-seed / render-portraits / lane-stats 在此打包 TS）
 node_modules/.seed-build/
+.tmp/
 
 # Python ETL 中间产物（原始语料、缓存、抽取结果、待复核队列、报告）
 build/

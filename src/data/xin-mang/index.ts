@@ -29,13 +29,20 @@
  * 与既有分片无一人重名。王匡、王凤这两个极易混淆的名字，
  * 本片所收皆为绿林首领，与王莽之侄太师王匡、王莽叔父王凤并非一人，
  * 已在各自 summary 内点明，不再另立同名节点。
+ *
+ * **第五层（persons-brief-e / edges-brief-e）是补述层，理由见该文件头：**
+ * 本片曾是全站最小的一片（47 人），却要覆盖二十七年，云台二十八将只收其九，
+ * 七处割据「每处一人」。补三十人后，隗嚣帐下有将吏、公孙述帐下有谋主、
+ * 更始有朱鲔李轶、逸民有逢萌梁鸿，泳道才不再是一人一道。
  */
 import type { ShardDataset } from '@/types/history';
 import { xinMangBriefA } from './persons-brief-a';
 import { xinMangBriefB } from './persons-brief-b';
 import { xinMangBriefC } from './persons-brief-c';
 import { xinMangBriefD } from './persons-brief-d';
+import { xinMangBriefE } from './persons-brief-e';
 import { xinMangBriefEdges } from './edges-brief';
+import { xinMangBriefEdgesE } from './edges-brief-e';
 
 export const xinMangShard: ShardDataset = {
   shardId: 'shard_08_xin_mang',
@@ -50,6 +57,6 @@ export const xinMangShard: ShardDataset = {
     'person_wei_xiao',
     'person_ma_yuan',
   ],
-  nodes: [...xinMangBriefA, ...xinMangBriefB, ...xinMangBriefC, ...xinMangBriefD],
-  edges: [...xinMangBriefEdges],
+  nodes: [...xinMangBriefA, ...xinMangBriefB, ...xinMangBriefC, ...xinMangBriefD, ...xinMangBriefE],
+  edges: [...xinMangBriefEdges, ...xinMangBriefEdgesE],
 };

@@ -1,14 +1,14 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-28T04:12:15.790Z",
+  "generatedAt": "2026-10-28T06:01:59.735Z",
   "site": {
     "title": "华夏史网",
     "subtitle": "ChronoGraph China · 二十四史人物关系图谱与史料对勘引擎",
     "edition": "首发种子库 · 楚汉 / 三国 / 隋唐三簇"
   },
   "stats": {
-    "personCount": 1046,
-    "edgeCount": 1692,
+    "personCount": 1081,
+    "edgeCount": 1747,
     "anecdoteCount": 146,
     "citationCount": 605,
     "dynastyCount": 17,
@@ -358,9 +358,9 @@
         -75,
         70
       ],
-      "personCount": 47,
-      "edgeCount": 66,
-      "byteSize": 155153
+      "personCount": 82,
+      "edgeCount": 121,
+      "byteSize": 269364
     }
   ],
   "searchIndex": [
@@ -6877,6 +6877,14 @@
       "importanceWeight": 29
     },
     {
+      "id": "person_zhai_zun",
+      "name": "祭遵",
+      "aliasText": "弟孙 将领",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 29
+    },
+    {
       "id": "person_li_ji_jin",
       "name": "骊姬",
       "aliasText": "夫人",
@@ -7328,6 +7336,14 @@
       "id": "person_yan_guang",
       "name": "严光",
       "aliasText": "子陵 严遵 隐士",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_wang_ba",
+      "name": "王霸",
+      "aliasText": "元伯 将领",
       "dynasty": "eastern_han",
       "shardId": "shard_08_xin_mang",
       "importanceWeight": 27
@@ -7789,6 +7805,14 @@
       "importanceWeight": 25
     },
     {
+      "id": "person_geng_chun",
+      "name": "耿纯",
+      "aliasText": "伯山 将领",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 25
+    },
+    {
       "id": "person_xi_peng",
       "name": "隰朋",
       "aliasText": "大夫",
@@ -8080,6 +8104,22 @@
       "id": "person_zhang_bu",
       "name": "张步",
       "aliasText": "文公 割据首领",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_gai_yan",
+      "name": "盖延",
+      "aliasText": "巨卿 将领",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 23
+    },
+    {
+      "id": "person_zang_gong",
+      "name": "臧宫",
+      "aliasText": "君翁 将领",
       "dynasty": "eastern_han",
       "shardId": "shard_08_xin_mang",
       "importanceWeight": 23
@@ -8381,11 +8421,35 @@
       "importanceWeight": 21
     },
     {
+      "id": "person_zhu_you",
+      "name": "朱祐",
+      "aliasText": "仲先 将领",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 21
+    },
+    {
       "id": "person_gan_luo",
       "name": "甘罗",
       "aliasText": "使臣 上卿",
       "dynasty": "qin",
       "shardId": "shard_02_chu_han",
+      "importanceWeight": 20
+    },
+    {
+      "id": "person_jing_dan",
+      "name": "景丹",
+      "aliasText": "孙卿 将领",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 20
+    },
+    {
+      "id": "person_wang_liang",
+      "name": "王梁",
+      "aliasText": "君严 将领 宰辅",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
       "importanceWeight": 20
     },
     {
@@ -8597,6 +8661,14 @@
       "importanceWeight": 19
     },
     {
+      "id": "person_wang_yuan",
+      "name": "王元",
+      "aliasText": "惠孟 将领",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 19
+    },
+    {
       "id": "person_qi_fu_ren",
       "name": "戚夫人",
       "aliasText": "戚姬 姬妾 舞者",
@@ -8693,6 +8765,30 @@
       "importanceWeight": 18
     },
     {
+      "id": "person_wei_cui",
+      "name": "隗崔",
+      "aliasText": "割据首领",
+      "dynasty": "xin",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 18
+    },
+    {
+      "id": "person_zhu_wei",
+      "name": "朱鲔",
+      "aliasText": "将领",
+      "dynasty": "xin",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 18
+    },
+    {
+      "id": "person_wang_chong",
+      "name": "王充",
+      "aliasText": "仲任 学者",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 18
+    },
+    {
       "id": "person_zi_ying",
       "name": "子婴",
       "aliasText": "秦王",
@@ -8717,6 +8813,38 @@
       "importanceWeight": 16
     },
     {
+      "id": "person_yan_cen",
+      "name": "延岑",
+      "aliasText": "割据首领 将领",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 16
+    },
+    {
+      "id": "person_liang_tong",
+      "name": "梁统",
+      "aliasText": "仲宁 太守 宰辅",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 16
+    },
+    {
+      "id": "person_du_lin",
+      "name": "杜林",
+      "aliasText": "伯山 学者 宰辅",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 14
+    },
+    {
+      "id": "person_wang_zun",
+      "name": "王遵",
+      "aliasText": "子春 将领",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 13
+    },
+    {
       "id": "person_liu_ruyi",
       "name": "刘如意",
       "aliasText": "隐王 代王 赵王 皇子 诸侯王",
@@ -8731,17 +8859,169 @@
       "dynasty": "xin",
       "shardId": "shard_08_xin_mang",
       "importanceWeight": 12
+    },
+    {
+      "id": "person_yang_guang_ly",
+      "name": "杨广",
+      "aliasText": "将领",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 12
+    },
+    {
+      "id": "person_niu_han",
+      "name": "牛邯",
+      "aliasText": "孺卿 将领",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 12
+    },
+    {
+      "id": "person_jing_han",
+      "name": "荆邯",
+      "aliasText": "将领 谋臣",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 12
+    },
+    {
+      "id": "person_li_yi",
+      "name": "李轶",
+      "aliasText": "将领",
+      "dynasty": "xin",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 12
+    },
+    {
+      "id": "person_li_xiong",
+      "name": "李熊",
+      "aliasText": "谋臣",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 10
+    },
+    {
+      "id": "person_tian_rong",
+      "name": "田戎",
+      "aliasText": "将领",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 10
+    },
+    {
+      "id": "person_kong_fen",
+      "name": "孔奋",
+      "aliasText": "君鱼 循吏",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 10
+    },
+    {
+      "id": "person_pang_meng",
+      "name": "庞萌",
+      "aliasText": "将领",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 10
+    },
+    {
+      "id": "person_liu_xin_yx",
+      "name": "刘信",
+      "aliasText": "宗室",
+      "dynasty": "western_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 10
+    },
+    {
+      "id": "person_fei_yi_xm",
+      "name": "费邑",
+      "aliasText": "将领",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 9
+    },
+    {
+      "id": "person_liang_hong",
+      "name": "梁鸿",
+      "aliasText": "伯鸾 隐士 文人",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 9
+    },
+    {
+      "id": "person_zhang_lan",
+      "name": "张蓝",
+      "aliasText": "将领",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 8
+    },
+    {
+      "id": "person_xie_lu",
+      "name": "谢禄",
+      "aliasText": "将领",
+      "dynasty": "xin",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 8
+    },
+    {
+      "id": "person_feng_meng",
+      "name": "逢萌",
+      "aliasText": "子康 隐士",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 8
+    },
+    {
+      "id": "person_zi_mi",
+      "name": "子密",
+      "aliasText": "家奴",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 7
+    },
+    {
+      "id": "person_liu_huang",
+      "name": "刘璜",
+      "aliasText": "宗室",
+      "dynasty": "western_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 7
+    },
+    {
+      "id": "person_lu_cheng",
+      "name": "卢程",
+      "aliasText": "将领",
+      "dynasty": "xin",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 7
+    },
+    {
+      "id": "person_sui_yu",
+      "name": "随昱",
+      "aliasText": "豪帅 太守",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 7
+    },
+    {
+      "id": "person_jia_lan",
+      "name": "贾览",
+      "aliasText": "将领",
+      "dynasty": "eastern_han",
+      "shardId": "shard_08_xin_mang",
+      "importanceWeight": 6
     }
   ],
   "highlights": [
     {
       "label": "在册人物",
-      "value": "1046",
+      "value": "1081",
       "note": "全部经正史本传核验"
     },
     {
       "label": "关系边",
-      "value": "1692",
+      "value": "1747",
       "note": "每条均附文言原文为证"
     },
     {

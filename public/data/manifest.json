@@ -1,14 +1,14 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-27T15:08:00.858Z",
+  "generatedAt": "2026-10-28T04:12:15.790Z",
   "site": {
     "title": "华夏史网",
     "subtitle": "ChronoGraph China · 二十四史人物关系图谱与史料对勘引擎",
     "edition": "首发种子库 · 楚汉 / 三国 / 隋唐三簇"
   },
   "stats": {
-    "personCount": 1027,
-    "edgeCount": 1656,
+    "personCount": 1046,
+    "edgeCount": 1692,
     "anecdoteCount": 146,
     "citationCount": 605,
     "dynastyCount": 17,
@@ -234,9 +234,9 @@
         -1100,
         -221
       ],
-      "personCount": 102,
-      "edgeCount": 133,
-      "byteSize": 352964
+      "personCount": 121,
+      "edgeCount": 169,
+      "byteSize": 426145
     },
     {
       "shardId": "shard_02_chu_han",
@@ -3253,6 +3253,14 @@
       "importanceWeight": 44
     },
     {
+      "id": "person_wu_wang_fuchai",
+      "name": "夫差",
+      "aliasText": "诸侯",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 44
+    },
+    {
       "id": "person_liu_qi",
       "name": "刘启",
       "aliasText": "孝景皇帝 皇太子 皇帝 皇帝",
@@ -4077,6 +4085,14 @@
       "importanceWeight": 40
     },
     {
+      "id": "person_tian_dan_zg",
+      "name": "田单",
+      "aliasText": "将领 军事家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 40
+    },
+    {
       "id": "person_zhou_liwang",
       "name": "姬胡",
       "aliasText": "周王",
@@ -4629,6 +4645,14 @@
       "importanceWeight": 38
     },
     {
+      "id": "person_mi_bazi",
+      "name": "芈八子",
+      "aliasText": "太后 摄政",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 37
+    },
+    {
       "id": "person_zhou_muwang",
       "name": "姬满",
       "aliasText": "周王",
@@ -4696,6 +4720,22 @@
       "id": "person_zou_yan",
       "name": "邹衍",
       "aliasText": "思想家 阴阳家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_chu_huaiwang",
+      "name": "熊槐",
+      "aliasText": "诸侯",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_zhao_dun",
+      "name": "赵盾",
+      "aliasText": "正卿",
       "dynasty": "pre_qin",
       "shardId": "shard_01_pre_qin_qin",
       "importanceWeight": 36
@@ -5717,6 +5757,30 @@
       "importanceWeight": 34
     },
     {
+      "id": "person_qi_minwang",
+      "name": "田地",
+      "aliasText": "诸侯",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 32
+    },
+    {
+      "id": "person_pang_juan",
+      "name": "庞涓",
+      "aliasText": "将领",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 32
+    },
+    {
+      "id": "person_zhi_bo_yao",
+      "name": "智瑶",
+      "aliasText": "正卿",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 32
+    },
+    {
       "id": "person_han_zhaohou",
       "name": "韩武",
       "aliasText": "诸侯",
@@ -5728,6 +5792,22 @@
       "id": "person_chu_weiwang",
       "name": "熊商",
       "aliasText": "诸侯",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_cao_gui",
+      "name": "曹刿",
+      "aliasText": "士 军事家",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_zhou_kangwang",
+      "name": "姬钊",
+      "aliasText": "天子",
       "dynasty": "pre_qin",
       "shardId": "shard_01_pre_qin_qin",
       "importanceWeight": 31
@@ -6325,6 +6405,14 @@
       "importanceWeight": 30
     },
     {
+      "id": "person_zhao_xiangzi",
+      "name": "赵无恤",
+      "aliasText": "正卿 宗主",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 30
+    },
+    {
       "id": "person_wu_guang",
       "name": "吴广",
       "aliasText": "叔 起义领袖 假王",
@@ -6371,6 +6459,14 @@
       "dynasty": "five_dynasties",
       "shardId": "shard_07_five_dynasties",
       "importanceWeight": 30
+    },
+    {
+      "id": "person_gongsun_yan",
+      "name": "公孙衍",
+      "aliasText": "纵横家 将领",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 29
     },
     {
       "id": "person_shu_sun_tong",
@@ -6821,6 +6917,30 @@
       "importanceWeight": 27
     },
     {
+      "id": "person_hua_yuan",
+      "name": "华元",
+      "aliasText": "大夫 执政",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_ji_you",
+      "name": "季友",
+      "aliasText": "公子 执政",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_shen_baoxu",
+      "name": "申包胥",
+      "aliasText": "大夫",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 27
+    },
+    {
       "id": "person_xiang_bo",
       "name": "项伯",
       "aliasText": "伯 项缠 射阳侯 楚将 刘邦姻亲",
@@ -7232,6 +7352,14 @@
       "id": "person_feng_xuan",
       "name": "冯谖",
       "aliasText": "门客",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 25
+    },
+    {
+      "id": "person_lu_zhuang_gong",
+      "name": "姬同",
+      "aliasText": "诸侯",
       "dynasty": "pre_qin",
       "shardId": "shard_01_pre_qin_qin",
       "importanceWeight": 25
@@ -7669,6 +7797,14 @@
       "importanceWeight": 23
     },
     {
+      "id": "person_qing_fu",
+      "name": "庆父",
+      "aliasText": "公子 权臣",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 23
+    },
+    {
       "id": "person_kuai_tong",
       "name": "蒯通",
       "aliasText": "蒯彻 纵横家 辩士",
@@ -7947,6 +8083,22 @@
       "dynasty": "eastern_han",
       "shardId": "shard_08_xin_mang",
       "importanceWeight": 23
+    },
+    {
+      "id": "person_bo_pi",
+      "name": "伯嚭",
+      "aliasText": "大夫 权臣",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 22
+    },
+    {
+      "id": "person_xiang_xu",
+      "name": "向戌",
+      "aliasText": "大夫",
+      "dynasty": "pre_qin",
+      "shardId": "shard_01_pre_qin_qin",
+      "importanceWeight": 22
     },
     {
       "id": "person_yi_ya",
@@ -8584,12 +8736,12 @@
   "highlights": [
     {
       "label": "在册人物",
-      "value": "1027",
+      "value": "1046",
       "note": "全部经正史本传核验"
     },
     {
       "label": "关系边",
-      "value": "1656",
+      "value": "1692",
       "note": "每条均附文言原文为证"
     },
     {

@@ -283,6 +283,28 @@ async function main() {
   const validIds = new Set();
   shards.forEach((s) => s.nodes.forEach((n) => validIds.add(n.id.startsWith('person_') ? n.id : `person_${n.id}`)));
 
+  /* 跨分片 id 撞车检测。
+   * 这事真发生过：先秦的「田单」与楚汉的「田儋」都取 id `tian_dan`，
+   * 前端 mergeShards 以 id 为 Map 键，后到者整条覆盖先到者——结果是楚汉分片
+   * 悄悄少了一个人，构建日志一行不报，只有把两片的 JSON 逐个相加才发现差 1。
+   * 所以此处必须**先查后建**，撞了就点名报错，不留给下游猜。
+   * 处置原则：先建者保留原 id，后建者加朝代后缀（tian_dan → tian_dan_zg）。 */
+  const owner = new Map();
+  const collisions = [];
+  for (const s of shards) {
+    for (const n of s.nodes) {
+      const id = n.id.startsWith('person_') ? n.id : `person_${n.id}`;
+      if (owner.has(id)) collisions.push({ id, first: owner.get(id), second: s.shardId, name: n.name });
+      else owner.set(id, s.shardId);
+    }
+  }
+  if (collisions.length) {
+    for (const c of collisions) {
+      fail(`id 撞车：${c.id}（${c.name}）已被 ${c.first} 占用，${c.second} 又建了一个。`
+        + ' 前端按 id 合并，后建者会把先建者整条覆盖。请给后建者加朝代后缀。');
+    }
+  }
+
   const portraitDir = path.join(ROOT, 'public', 'data', 'portraits');
   const shardDir = path.join(ROOT, 'public', 'data', 'shards');
   await mkdir(portraitDir, { recursive: true });

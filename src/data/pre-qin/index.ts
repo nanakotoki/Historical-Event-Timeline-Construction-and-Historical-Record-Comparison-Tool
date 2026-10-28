@@ -10,8 +10,10 @@
  */
 import type { ShardDataset } from '../../types/history';
 import { preQinBriefEdges } from './edges-brief';
+import { preQinBriefEdgesC } from './edges-brief-c';
 import { preQinBriefA } from './persons-brief-a';
 import { preQinBriefB } from './persons-brief-b';
+import { preQinBriefC } from './persons-brief-c';
 
 export const preQinShard: ShardDataset = {
   shardId: 'shard_01_pre_qin_qin',
@@ -20,6 +22,6 @@ export const preQinShard: ShardDataset = {
   dynasties: ['pre_qin'],
   yearRange: [-1100, -221],
   heroPersonIds: ['person_kong_zi', 'person_lao_zi', 'person_qi_huan_gong', 'person_jin_wen_gong', 'person_shang_yang'],
-  nodes: [...preQinBriefA, ...preQinBriefB],
-  edges: [...preQinBriefEdges],
+  nodes: [...preQinBriefA, ...preQinBriefB, ...preQinBriefC],
+  edges: [...preQinBriefEdges, ...preQinBriefEdgesC],
 };

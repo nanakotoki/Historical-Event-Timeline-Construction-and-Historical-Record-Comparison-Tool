@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T09:15:16.342Z",
+  "generatedAt": "2026-10-28T15:00:32.871Z",
   "source": "Wikimedia Commons（经 images.weserv.nl 取回）",
   "note": "本清单只登记确实取回的公有领域/CC 授权图档。未列出的条目＝该人物在 Commons 上无可定位的传世画像，系统按 tier4_attire_silhouette 呈现，绝不伪作真迹。",
   "entries": {
@@ -1088,6 +1088,96 @@
       "thumbBytes": 162669,
       "fullBytes": 162669,
       "fullResolved": true
+    },
+    "person_zhu_qizhen": {
+      "id": "person_zhu_qizhen",
+      "name": "朱祁镇",
+      "file": "Ming Yingzong.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Ming_Yingzong.jpg",
+      "thumbBytes": 175164,
+      "fullBytes": 175164,
+      "fullResolved": true
+    },
+    "person_xuan_ye": {
+      "id": "person_xuan_ye",
+      "name": "玄烨",
+      "file": "Kangxi Emperor.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Kangxi_Emperor.jpg",
+      "thumbBytes": 118222,
+      "fullBytes": 118222,
+      "fullResolved": true
+    },
+    "person_fu_lin": {
+      "id": "person_fu_lin",
+      "name": "福临",
+      "file": "Shunzhi.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Shunzhi.jpg",
+      "thumbBytes": 114553,
+      "fullBytes": 114553,
+      "fullResolved": true
+    },
+    "person_zhao_guangyi": {
+      "id": "person_zhao_guangyi",
+      "name": "赵光义",
+      "file": "Song Taizong.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Song_Taizong.jpg",
+      "thumbBytes": 124592,
+      "fullBytes": 124592,
+      "fullResolved": false
+    },
+    "person_zhao_heng": {
+      "id": "person_zhao_heng",
+      "name": "赵恒",
+      "file": "Song Zhenzong.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Song_Zhenzong.jpg",
+      "thumbBytes": 86566,
+      "fullBytes": 86566,
+      "fullResolved": false
+    },
+    "person_zhao_zhen": {
+      "id": "person_zhao_zhen",
+      "name": "赵祯",
+      "file": "Song Renzong.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Song_Renzong.jpg",
+      "thumbBytes": 105204,
+      "fullBytes": 105204,
+      "fullResolved": false
+    },
+    "person_zhao_gou": {
+      "id": "person_zhao_gou",
+      "name": "赵构",
+      "file": "Song Gaozong.png",
+      "commons": "https://commons.wikimedia.org/wiki/File:Song_Gaozong.png",
+      "thumbBytes": 94001,
+      "fullBytes": 94001,
+      "fullResolved": false
+    },
+    "person_zhu_yunwen": {
+      "id": "person_zhu_yunwen",
+      "name": "朱允炆",
+      "file": "Ming Jianwen.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Ming_Jianwen.jpg",
+      "thumbBytes": 65774,
+      "fullBytes": 65774,
+      "fullResolved": false
+    },
+    "person_yin_zhen": {
+      "id": "person_yin_zhen",
+      "name": "胤禛",
+      "file": "雍正朝服像轴.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E9%9B%8D%E6%AD%A3%E6%9C%9D%E6%9C%8D%E5%83%8F%E8%BD%B4.jpg",
+      "thumbBytes": 217708,
+      "fullBytes": 217708,
+      "fullResolved": false
+    },
+    "person_zhu_youjian": {
+      "id": "person_zhu_youjian",
+      "name": "朱由检",
+      "file": "明愍帝朱由检.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E6%98%8E%E6%84%8D%E5%B8%9D%E6%9C%B1%E7%94%B1%E6%A3%80.jpg",
+      "thumbBytes": 293174,
+      "fullBytes": 293174,
+      "fullResolved": false
     }
   }
 }

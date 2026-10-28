@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-28T09:16:29.029Z",
+  "generatedAt": "2026-10-28T15:14:49.397Z",
   "note": "本目录只登记已实际取回落盘的传世画像。未列入者＝未在公有领域图库中找到可定位的传世图档，前端按 tier3/tier4 呈现「本站复原」，绝不冒充实物。",
   "counts": {
-    "total": 107,
-    "tier1_authentic_painting": 40,
+    "total": 117,
+    "tier1_authentic_painting": 50,
     "tier2_ancient_woodcut": 67
   },
   "entries": {
@@ -863,9 +863,9 @@
       "id": "person_zhao_kuangyin",
       "name": "赵匡胤",
       "file": "Song Taizu.jpg",
-      "tier": "tier2_ancient_woodcut",
-      "painterOrBook": "（明清）佚名舊像（版本待考）",
-      "sourceAttribution": "Wikimedia Commons 收錄之公有領域人物圖像。原書版本待比定，故記為「版本待考」。",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（明—清）南薰殿舊藏歷代帝后像",
+      "sourceAttribution": "南薰殿舊藏歷代帝后像一系：宋帝像冊今藏國立故宮博物院（臺北），絹本設色；清帝像分藏兩岸故宮。《雍正朝服像軸》藏故宮博物院（北京），絹本設色，館藏編號故00006431。圖檔經 Wikimedia Commons 轉錄，屬公有領域（PD-Art）。",
       "license": "PD-Art（公有領域二維藝術品忠實複製）",
       "commonsPage": "https://commons.wikimedia.org/wiki/File:Song_Taizu.jpg",
       "thumb": "/data/portraits/person_zhao_kuangyin.jpg",
@@ -1290,6 +1290,126 @@
       "commonsPage": "https://commons.wikimedia.org/wiki/File:Yen_Li-pen_001.jpg",
       "thumb": "/data/portraits/person_yu_wen_yong.jpg",
       "full": "/data/portraits/full_person_yu_wen_yong.jpg"
+    },
+    "person_zhu_qizhen": {
+      "id": "person_zhu_qizhen",
+      "name": "朱祁镇",
+      "file": "Ming Yingzong.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（明—清）南薰殿舊藏歷代帝后像",
+      "sourceAttribution": "南薰殿舊藏歷代帝后像一系：宋帝像冊今藏國立故宮博物院（臺北），絹本設色；清帝像分藏兩岸故宮。《雍正朝服像軸》藏故宮博物院（北京），絹本設色，館藏編號故00006431。圖檔經 Wikimedia Commons 轉錄，屬公有領域（PD-Art）。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Ming_Yingzong.jpg",
+      "thumb": "/data/portraits/person_zhu_qizhen.jpg",
+      "full": "/data/portraits/full_person_zhu_qizhen.jpg"
+    },
+    "person_xuan_ye": {
+      "id": "person_xuan_ye",
+      "name": "玄烨",
+      "file": "Kangxi Emperor.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（明—清）南薰殿舊藏歷代帝后像",
+      "sourceAttribution": "南薰殿舊藏歷代帝后像一系：宋帝像冊今藏國立故宮博物院（臺北），絹本設色；清帝像分藏兩岸故宮。《雍正朝服像軸》藏故宮博物院（北京），絹本設色，館藏編號故00006431。圖檔經 Wikimedia Commons 轉錄，屬公有領域（PD-Art）。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Kangxi_Emperor.jpg",
+      "thumb": "/data/portraits/person_xuan_ye.jpg",
+      "full": "/data/portraits/full_person_xuan_ye.jpg"
+    },
+    "person_fu_lin": {
+      "id": "person_fu_lin",
+      "name": "福临",
+      "file": "Shunzhi.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（明—清）南薰殿舊藏歷代帝后像",
+      "sourceAttribution": "南薰殿舊藏歷代帝后像一系：宋帝像冊今藏國立故宮博物院（臺北），絹本設色；清帝像分藏兩岸故宮。《雍正朝服像軸》藏故宮博物院（北京），絹本設色，館藏編號故00006431。圖檔經 Wikimedia Commons 轉錄，屬公有領域（PD-Art）。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Shunzhi.jpg",
+      "thumb": "/data/portraits/person_fu_lin.jpg",
+      "full": "/data/portraits/full_person_fu_lin.jpg"
+    },
+    "person_zhao_guangyi": {
+      "id": "person_zhao_guangyi",
+      "name": "赵光义",
+      "file": "Song Taizong.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（明—清）南薰殿舊藏歷代帝后像",
+      "sourceAttribution": "南薰殿舊藏歷代帝后像一系：宋帝像冊今藏國立故宮博物院（臺北），絹本設色；清帝像分藏兩岸故宮。《雍正朝服像軸》藏故宮博物院（北京），絹本設色，館藏編號故00006431。圖檔經 Wikimedia Commons 轉錄，屬公有領域（PD-Art）。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Song_Taizong.jpg",
+      "thumb": "/data/portraits/person_zhao_guangyi.jpg",
+      "full": "/data/portraits/full_person_zhao_guangyi.jpg"
+    },
+    "person_zhao_heng": {
+      "id": "person_zhao_heng",
+      "name": "赵恒",
+      "file": "Song Zhenzong.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（明—清）南薰殿舊藏歷代帝后像",
+      "sourceAttribution": "南薰殿舊藏歷代帝后像一系：宋帝像冊今藏國立故宮博物院（臺北），絹本設色；清帝像分藏兩岸故宮。《雍正朝服像軸》藏故宮博物院（北京），絹本設色，館藏編號故00006431。圖檔經 Wikimedia Commons 轉錄，屬公有領域（PD-Art）。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Song_Zhenzong.jpg",
+      "thumb": "/data/portraits/person_zhao_heng.jpg",
+      "full": "/data/portraits/full_person_zhao_heng.jpg"
+    },
+    "person_zhao_zhen": {
+      "id": "person_zhao_zhen",
+      "name": "赵祯",
+      "file": "Song Renzong.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（明—清）南薰殿舊藏歷代帝后像",
+      "sourceAttribution": "南薰殿舊藏歷代帝后像一系：宋帝像冊今藏國立故宮博物院（臺北），絹本設色；清帝像分藏兩岸故宮。《雍正朝服像軸》藏故宮博物院（北京），絹本設色，館藏編號故00006431。圖檔經 Wikimedia Commons 轉錄，屬公有領域（PD-Art）。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Song_Renzong.jpg",
+      "thumb": "/data/portraits/person_zhao_zhen.jpg",
+      "full": "/data/portraits/full_person_zhao_zhen.jpg"
+    },
+    "person_zhao_gou": {
+      "id": "person_zhao_gou",
+      "name": "赵构",
+      "file": "Song Gaozong.png",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（明—清）南薰殿舊藏歷代帝后像",
+      "sourceAttribution": "南薰殿舊藏歷代帝后像一系：宋帝像冊今藏國立故宮博物院（臺北），絹本設色；清帝像分藏兩岸故宮。《雍正朝服像軸》藏故宮博物院（北京），絹本設色，館藏編號故00006431。圖檔經 Wikimedia Commons 轉錄，屬公有領域（PD-Art）。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Song_Gaozong.png",
+      "thumb": "/data/portraits/person_zhao_gou.jpg",
+      "full": "/data/portraits/full_person_zhao_gou.jpg"
+    },
+    "person_zhu_yunwen": {
+      "id": "person_zhu_yunwen",
+      "name": "朱允炆",
+      "file": "Ming Jianwen.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（明—清）南薰殿舊藏歷代帝后像",
+      "sourceAttribution": "南薰殿舊藏歷代帝后像一系：宋帝像冊今藏國立故宮博物院（臺北），絹本設色；清帝像分藏兩岸故宮。《雍正朝服像軸》藏故宮博物院（北京），絹本設色，館藏編號故00006431。圖檔經 Wikimedia Commons 轉錄，屬公有領域（PD-Art）。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Ming_Jianwen.jpg",
+      "thumb": "/data/portraits/person_zhu_yunwen.jpg",
+      "full": "/data/portraits/full_person_zhu_yunwen.jpg"
+    },
+    "person_yin_zhen": {
+      "id": "person_yin_zhen",
+      "name": "胤禛",
+      "file": "雍正朝服像轴.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（明—清）南薰殿舊藏歷代帝后像",
+      "sourceAttribution": "南薰殿舊藏歷代帝后像一系：宋帝像冊今藏國立故宮博物院（臺北），絹本設色；清帝像分藏兩岸故宮。《雍正朝服像軸》藏故宮博物院（北京），絹本設色，館藏編號故00006431。圖檔經 Wikimedia Commons 轉錄，屬公有領域（PD-Art）。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E9%9B%8D%E6%AD%A3%E6%9C%9D%E6%9C%8D%E5%83%8F%E8%BD%B4.jpg",
+      "thumb": "/data/portraits/person_yin_zhen.jpg",
+      "full": "/data/portraits/full_person_yin_zhen.jpg"
+    },
+    "person_zhu_youjian": {
+      "id": "person_zhu_youjian",
+      "name": "朱由检",
+      "file": "明愍帝朱由检.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（明清）佚名舊像（版本待考）",
+      "sourceAttribution": "明清人物像（或為繪本，或為刻本插圖，本庫未逐件比定其版本與媒材），圖檔經 Wikimedia Commons 轉錄，屬公有領域。出處存疑處一律記為「版本待考」，不臆題書名。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E6%98%8E%E6%84%8D%E5%B8%9D%E6%9C%B1%E7%94%B1%E6%A3%80.jpg",
+      "thumb": "/data/portraits/person_zhu_youjian.jpg",
+      "full": "/data/portraits/full_person_zhu_youjian.jpg"
     }
   }
 }

@@ -28,6 +28,28 @@ const CATALOG = path.join(__dirname, 'catalog.json');
  */
 const RULES = [
   {
+    /*
+     * 南薰殿舊藏歷代帝后像一系（臺北故宮）＋清宮帝像（北京故宮）。
+     * 这批题名是英文，散在若干套册页里，此前一律落到「（明清）佚名舊像」规则、
+     * 被标成 tier2 刻本版画——**宋太祖那张就此被误判成版画**，其实它是绢本设色坐像。
+     * 层级按媒材判不按题名判，故此处逐件点名，不放开前缀匹配：
+     * 放开会把 Emperor Huizong of Song.png（赵佶，确为版画）一并吞进来。
+     *
+     * `雍正朝服像轴.jpg` 走中文题名，附带北京故宫馆藏编号故00006431。
+     */
+    test: (f) =>
+      /^(Song (Taizu|Taizong|Zhenzong|Renzong|Gaozong)|Ming (Jianwen|Yingzong)|Kangxi Emperor|Shunzhi|雍正朝服像轴)\.(jpg|png)$/.test(
+        f,
+      ),
+    tier: 'tier1_authentic_painting',
+    painterOrBook: '（明—清）南薰殿舊藏歷代帝后像',
+    sourceAttribution:
+      '南薰殿舊藏歷代帝后像一系：宋帝像冊今藏國立故宮博物院（臺北），絹本設色；' +
+      '清帝像分藏兩岸故宮。《雍正朝服像軸》藏故宮博物院（北京），絹本設色，館藏編號故00006431。' +
+      '圖檔經 Wikimedia Commons 轉錄，屬公有領域（PD-Art）。',
+    license: 'PD-Art（公有領域二維藝術品忠實複製）',
+  },
+  {
     test: (f) => f.includes('歷代聖賢半身像'),
     tier: 'tier1_authentic_painting',
     painterOrBook: '（元）佚名《歷代聖賢半身像》冊',

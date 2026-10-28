@@ -19,6 +19,7 @@
  *   node scripts/portraits/probe.mjs --only 李斯,蒙恬   # 指定人物
  *   node scripts/portraits/probe.mjs --all            # 含已有真图者，用于复核换图
  */
+import crypto from 'node:crypto';
 import { mkdir, writeFile, readFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
@@ -41,8 +42,23 @@ const ONLY = onlyIdx >= 0 ? argv[onlyIdx + 1].split(',').map((s) => s.trim()).fi
 const DRY = argv.includes('--dry-run');
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-const fileUrl = (f) => `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(f.replace(/ /g, '_'))}`;
-const proxy = (f, w) => `${PROXY}?url=${encodeURIComponent(fileUrl(f))}&w=${w}&output=jpg&q=88`;
+/**
+ * 取图通道（2026-10-28 改）：**不再走 Special:FilePath。**
+ * 该链路经 weserv 回源已劣化到 10s 以上甚至恒 404，`upload.wikimedia.org` 原图亦然。
+ * 现改为本地算文件名 MD5、拼 `thumb.wikimedia.org` 的 500px 直链，再经 weserv 包装
+ * （实测 200 / 数秒）。thumb 直链本机直连不通，故 weserv 仍是必需的一层。
+ * 文件本身小于 500px 时 thumb 会 404，这种情况本就该由原图路径兜底，
+ * 但那条路已死——故此处只认 thumb，探不到就记探不到，不猜。
+ */
+const md5 = (s) => crypto.createHash('md5').update(s).digest('hex');
+const fileUrl = (f) =>
+  `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(f.replace(/ /g, '_'))}`;
+const proxy = (f, w) => {
+  const n = f.replace(/ /g, '_');
+  const h = md5(n);
+  const thumb = `thumb.wikimedia.org/wikipedia/commons/thumb/${h[0]}/${h.slice(0, 2)}/${n}/${w}px-${n}`;
+  return `${PROXY}?url=${encodeURIComponent(thumb)}&output=jpg&q=88`;
+};
 
 function isImage(buf, ct) {
   if (!/^image\//i.test(ct || '') || !buf || buf.length < 512) return false;

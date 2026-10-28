@@ -771,6 +771,30 @@
       "reason": "明代容像風格的設色坐像，絹本作風，筆法為晚明寫真一路。非刻本，故列 L1；藏所與具體年代待考。",
       "bookTitle": "（明）佚名《熊廷弼像》（設色絹本坐像）",
       "tier": "tier1_authentic_painting"
+    },
+    "Chen Wendi Tang.jpg": {
+      "name": "陈蒨",
+      "verdict": "keep",
+      "reason": "《历代帝王图》陈文帝一段。榜书可读「陳文帝在位八年　深崇道教」，身份确凿；绢本设色，鹿皮裘、执如意，与史传所述合",
+      "bookTitle": ""
+    },
+    "Chen Xuandi Tang.jpg": {
+      "name": "陈顼",
+      "verdict": "keep",
+      "reason": "《历代帝王图》陈宣帝一段。乘步辇（腰舆）、着黑色常服、侍从持笏、辇夫八人，与画史所记合",
+      "bookTitle": ""
+    },
+    "Chen Shubao.jpg": {
+      "name": "陈叔宝",
+      "verdict": "keep",
+      "reason": "《历代帝王图》陈后主一段。榜书可读「陳後主叔寶在位七年」，立像而仅一侍，与「陈后主只有一侍」的记载合",
+      "bookTitle": ""
+    },
+    "Yen Li-pen 001.jpg": {
+      "name": "宇文邕",
+      "verdict": "keep",
+      "reason": "《历代帝王图》北周武帝一段。榜书可读「後周武帝宇文邕在位十八年……毀滅佛法」，络腮胡、冕服，身份确凿",
+      "bookTitle": ""
     }
   }
 }

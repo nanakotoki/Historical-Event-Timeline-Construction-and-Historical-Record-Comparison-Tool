@@ -8,6 +8,7 @@
  *   node scripts/portraits/fetch-one.mjs 'person_li_yuan|李渊|唐高祖立像 軸.png'
  * 可一次传多组（每组用 | 分隔 id / 姓名 / Commons 题名）。
  */
+import crypto from 'node:crypto';
 import { writeFile, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -20,8 +21,17 @@ const MANIFEST = path.join(__dirname, 'manifest.json');
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const filePathUrl = (f) =>
   `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(f.replace(/ /g, '_'))}`;
-const proxy = (f, w) =>
-  `https://images.weserv.nl/?url=${encodeURIComponent(filePathUrl(f))}&w=${w}&output=jpg&q=90`;
+/**
+ * 2026-10-28 改道：Special:FilePath 经 weserv 回源已死（10s+ 后 404），
+ * 改走「本地算文件名 MD5 → thumb.wikimedia.org 直链 → weserv 包装」。
+ * 这条路 2026-10-27 在 fetch-ymq.mjs 上验过，实测 200 / 数秒。
+ */
+const proxy = (f, w) => {
+  const n = f.replace(/ /g, '_');
+  const h = crypto.createHash('md5').update(n).digest('hex');
+  const thumb = `thumb.wikimedia.org/wikipedia/commons/thumb/${h[0]}/${h.slice(0, 2)}/${n}/${w}px-${n}`;
+  return `https://images.weserv.nl/?url=${encodeURIComponent(thumb)}&output=jpg&q=90`;
+};
 
 async function grab(url, timeoutMs) {
   const ctrl = new AbortController();
@@ -64,12 +74,16 @@ for (const arg of args) {
     continue;
   }
   console.log(`\n→ ${name} ← ${file}`);
-  const thumb = await withRetry(() => grab(proxy(file, 480), 90000));
+  const thumb = await withRetry(() => grab(proxy(file, 500), 90000));
   if (!thumb.ok) {
     console.log(`  ✗ 失败 status=${thumb.status} ${thumb.reason || ''}`);
     continue;
   }
-  const full = await withRetry(() => grab(proxy(file, 1400), 120000));
+  /* 原图档一律取 500px：**thumb.wikimedia.org 只备了 500px 这一档**。
+     实测同一文件 400/480/600/800/1000/1400 全部 404，只有 500 返回 200。
+     所以 `full_*.jpg` 与 `*.jpg` 实际同源同尺寸，档案页的「原尺寸」看到的就是 500px。
+     这不是偷懒，是通道的硬限制——如实记在这里，免得下次有人以为改成 1400 就能拿到大图。 */
+  const full = await withRetry(() => grab(proxy(file, 500), 120000));
   const fullBuf = full.ok ? full.b : thumb.b;
   await writeFile(path.join(PUB, `${id}.jpg`), thumb.b);
   await writeFile(path.join(PUB, `full_${id}.jpg`), fullBuf);

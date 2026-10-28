@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-27T12:16:12.475Z",
+  "generatedAt": "2026-10-28T09:16:29.029Z",
   "note": "本目录只登记已实际取回落盘的传世画像。未列入者＝未在公有领域图库中找到可定位的传世图档，前端按 tier3/tier4 呈现「本站复原」，绝不冒充实物。",
   "counts": {
-    "total": 103,
-    "tier1_authentic_painting": 36,
+    "total": 107,
+    "tier1_authentic_painting": 40,
     "tier2_ancient_woodcut": 67
   },
   "entries": {
@@ -1242,6 +1242,54 @@
       "commonsPage": "https://commons.wikimedia.org/wiki/File:Xiong_Tingbi.jpg",
       "thumb": "/data/portraits/person_xiong_ting_bi.jpg",
       "full": "/data/portraits/full_person_xiong_ting_bi.jpg"
+    },
+    "person_chen_qian": {
+      "id": "person_chen_qian",
+      "name": "陈蒨",
+      "file": "Chen Wendi Tang.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（唐）閻立本《歷代帝王圖》（傳）",
+      "sourceAttribution": "波士頓美術館藏《歷代帝王圖》卷（傳唐閻立本繪，宋摹本），絹本設色，繪漢至隋十三帝；本圖為其中一帝之裁切。公有領域。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Chen_Wendi_Tang.jpg",
+      "thumb": "/data/portraits/person_chen_qian.jpg",
+      "full": "/data/portraits/full_person_chen_qian.jpg"
+    },
+    "person_chen_xu": {
+      "id": "person_chen_xu",
+      "name": "陈顼",
+      "file": "Chen Xuandi Tang.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（唐）閻立本《歷代帝王圖》（傳）",
+      "sourceAttribution": "波士頓美術館藏《歷代帝王圖》卷（傳唐閻立本繪，宋摹本），絹本設色，繪漢至隋十三帝；本圖為其中一帝之裁切。公有領域。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Chen_Xuandi_Tang.jpg",
+      "thumb": "/data/portraits/person_chen_xu.jpg",
+      "full": "/data/portraits/full_person_chen_xu.jpg"
+    },
+    "person_chen_shubao": {
+      "id": "person_chen_shubao",
+      "name": "陈叔宝",
+      "file": "Chen Shubao.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（唐）閻立本《歷代帝王圖》（傳）",
+      "sourceAttribution": "波士頓美術館藏《歷代帝王圖》卷（傳唐閻立本繪，宋摹本），絹本設色，繪漢至隋十三帝；本圖為其中一帝之裁切。公有領域。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Chen_Shubao.jpg",
+      "thumb": "/data/portraits/person_chen_shubao.jpg",
+      "full": "/data/portraits/full_person_chen_shubao.jpg"
+    },
+    "person_yu_wen_yong": {
+      "id": "person_yu_wen_yong",
+      "name": "宇文邕",
+      "file": "Yen Li-pen 001.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（唐）閻立本《歷代帝王圖》（傳）",
+      "sourceAttribution": "波士頓美術館藏《歷代帝王圖》卷（傳唐閻立本繪，宋摹本），絹本設色，繪漢至隋十三帝；本圖為其中一帝之裁切。公有領域。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Yen_Li-pen_001.jpg",
+      "thumb": "/data/portraits/person_yu_wen_yong.jpg",
+      "full": "/data/portraits/full_person_yu_wen_yong.jpg"
     }
   }
 }

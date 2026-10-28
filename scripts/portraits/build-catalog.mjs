@@ -73,7 +73,11 @@ const RULES = [
     license: 'PD-Art（公有領域二維藝術品忠實複製）',
   },
   {
-    test: (f) => /(Sui Wendi Tang|Cao Pi Tang)\.jpg/.test(f),
+    // 2026-10-28 增补：同一卷中的陈文帝、陈宣帝、陈后主、北周武帝四幅。
+    // 四张俱经榜书核对——「陳文帝在位八年　深崇道教」「陳後主叔寶在位七年」
+    // 「後周武帝宇文邕在位十八年……毀滅佛法」皆可在图上读出，非按题名猜人。
+    test: (f) =>
+      /(Sui Wendi Tang|Cao Pi Tang|Chen Wendi Tang|Chen Xuandi Tang|Chen Shubao|Yen Li-pen 001)\.jpg/.test(f),
     tier: 'tier1_authentic_painting',
     painterOrBook: '（唐）閻立本《歷代帝王圖》（傳）',
     sourceAttribution:

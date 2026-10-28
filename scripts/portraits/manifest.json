@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T08:20:18.196Z",
+  "generatedAt": "2026-10-28T09:15:16.342Z",
   "source": "Wikimedia Commons（经 images.weserv.nl 取回）",
   "note": "本清单只登记确实取回的公有领域/CC 授权图档。未列出的条目＝该人物在 Commons 上无可定位的传世画像，系统按 tier4_attire_silhouette 呈现，绝不伪作真迹。",
   "entries": {
@@ -1052,6 +1052,42 @@
       "thumbBytes": 88055,
       "fullBytes": 88055,
       "fullResolved": false
+    },
+    "person_chen_qian": {
+      "id": "person_chen_qian",
+      "name": "陈蒨",
+      "file": "Chen Wendi Tang.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Chen_Wendi_Tang.jpg",
+      "thumbBytes": 148839,
+      "fullBytes": 148839,
+      "fullResolved": true
+    },
+    "person_chen_xu": {
+      "id": "person_chen_xu",
+      "name": "陈顼",
+      "file": "Chen Xuandi Tang.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Chen_Xuandi_Tang.jpg",
+      "thumbBytes": 86663,
+      "fullBytes": 86663,
+      "fullResolved": true
+    },
+    "person_chen_shubao": {
+      "id": "person_chen_shubao",
+      "name": "陈叔宝",
+      "file": "Chen Shubao.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Chen_Shubao.jpg",
+      "thumbBytes": 108499,
+      "fullBytes": 108499,
+      "fullResolved": true
+    },
+    "person_yu_wen_yong": {
+      "id": "person_yu_wen_yong",
+      "name": "宇文邕",
+      "file": "Yen Li-pen 001.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Yen_Li-pen_001.jpg",
+      "thumbBytes": 162669,
+      "fullBytes": 162669,
+      "fullResolved": true
     }
   }
 }

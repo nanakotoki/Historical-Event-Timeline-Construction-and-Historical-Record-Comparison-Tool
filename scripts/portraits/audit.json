@@ -28,8 +28,9 @@
     "Xiao He.png": {
       "name": "萧何",
       "verdict": "keep",
-      "reason": "设色人物像，旧绢底，非现代重绘",
-      "bookTitle": ""
+      "reason": "紙本設色立像，幅頂篆書題名（蕭何謚「文終」，題作「蕭文終」），紙面有霉斑與老化點，衣紋為毛筆勾勒。手繪，改列 L1。",
+      "bookTitle": "（清）紙本設色像冊（幅頂篆書題名，版本待考）",
+      "tier": "tier1_authentic_painting"
     },
     "陸賈.jpg": {
       "name": "陆贾",
@@ -214,8 +215,9 @@
     "李勣.jpg": {
       "name": "李勣",
       "verdict": "keep",
-      "reason": "设色人物像，旧绢底",
-      "bookTitle": ""
+      "reason": "紙本設色，烏帽、緋袍、執笏，幅右窄栏題名雖被裁切，體例與韓信、李白諸幀一致。手繪，改列 L1。",
+      "bookTitle": "（清）紙本設色像冊（題名作官銜，體例同《歷代名臣像解》，版本待考）",
+      "tier": "tier1_authentic_painting"
     },
     "Li Zhi.jpg": {
       "name": "李治",
@@ -244,8 +246,9 @@
     "李白.png": {
       "name": "李白",
       "verdict": "keep",
-      "reason": "设色人物像，旧绢底",
-      "bookTitle": ""
+      "reason": "紙本設色，幅右窄栏題「唐翰林供奉李白」。與韓信、魏徵、杜甫諸幀同式，疑同出一部清人繪像冊；原書未能核到，故仍記「版本待考」。改列 L1。",
+      "bookTitle": "（清）紙本設色像冊（題名作官銜，體例同《歷代名臣像解》，版本待考）",
+      "tier": "tier1_authentic_painting"
     },
     "Portraits of Famous Men - Liu Qi.jpg": {
       "name": "刘启",
@@ -328,8 +331,9 @@
     "魏徵.jpg": {
       "name": "魏征",
       "verdict": "keep",
-      "reason": "设色人物像，旧绢底",
-      "bookTitle": ""
+      "reason": "紙本設色，幅右窄栏題名結尾可辨「鄭公」（魏徵封鄭國公）。官銜題名體例同上，手繪非刻本，改列 L1。",
+      "bookTitle": "（清）紙本設色像冊（題名作官銜，體例同《歷代名臣像解》，版本待考）",
+      "tier": "tier1_authentic_painting"
     },
     "Portraits of Famous Men - Yüchi Gong.jpg": {
       "name": "尉迟恭",
@@ -358,14 +362,16 @@
     "Dufu.jpg": {
       "name": "杜甫",
       "verdict": "keep",
-      "reason": "设色人物像，旧绢底",
-      "bookTitle": ""
+      "reason": "紙本設色，幅右窄栏題「唐劍南節度參謀檢校工部員外郎杜甫」——全銜照錄，正可證此系為官修或私家繪像冊，非坊刻繡像。手繪，改列 L1。",
+      "bookTitle": "（清）紙本設色像冊（題名作官銜，體例同《歷代名臣像解》，版本待考）",
+      "tier": "tier1_authentic_painting"
     },
     "汉淮阴侯韩信.jpg": {
       "name": "韩信",
       "verdict": "keep",
-      "reason": "设色人物像，旧绢底",
-      "bookTitle": ""
+      "reason": "紙本設色，幅右窄栏題「漢淮陰侯韓信」，官銜題名體例與已入庫王羲之一幀（《歷代名臣像解》）相同。筆觸、顏料層次為手繪，改列 L1。",
+      "bookTitle": "（清）紙本設色像冊（題名作官銜，體例同《歷代名臣像解》，版本待考）",
+      "tier": "tier1_authentic_painting"
     },
     "冥山射虎.jpg": {
       "name": "李广",
@@ -382,14 +388,16 @@
     "李隆基像.jpg": {
       "name": "李隆基",
       "verdict": "keep",
-      "reason": "设色人物像，旧绢底",
-      "bookTitle": ""
+      "reason": "紙本設色半身像：展腳幞頭、藍袍團龍補，設色平塗而有濃淡，紙底泛黃。手繪而非刻本，改列 L1；原冊與繪製年代待考。",
+      "bookTitle": "（明清）佚名《歷代帝王像》冊（版本待考）",
+      "tier": "tier1_authentic_painting"
     },
     "Fan Kuai.jpg": {
       "name": "樊哙",
       "verdict": "keep",
-      "reason": "设色人物像，旧绢底",
-      "bookTitle": ""
+      "reason": "紙本設色半身像，赭底、顏料有暈染，筆触為手繪而非刀刻。改列 L1；版本待考。",
+      "bookTitle": "（明清）佚名舊像（紙本設色，版本待考）",
+      "tier": "tier1_authentic_painting"
     },
     "CaoPiPortrait.jpg": {
       "name": "曹丕",
@@ -490,8 +498,9 @@
     "Wang Anshi.jpg": {
       "name": "王安石",
       "verdict": "keep",
-      "reason": "宋人画王安石像（传），绢本设色半身像",
-      "bookTitle": ""
+      "reason": "紙本設色，幅左小字題名，展腳幞頭、朱袍執笏。手繪，改列 L1；版本待考。",
+      "bookTitle": "（明清）佚名舊像（紙本設色，版本待考）",
+      "tier": "tier1_authentic_painting"
     },
     "YuanEmperorAlbumKhubilaiPortrait.jpg": {
       "name": "忽必烈",
@@ -502,14 +511,16 @@
     "WenTianxiang.jpg": {
       "name": "文天祥",
       "verdict": "keep",
-      "reason": "题「文天祥真像」之设色画像，传统纸本",
-      "bookTitle": ""
+      "reason": "紙本設色，幅右朱書「文天祥真像」，紙底有纖維與老化痕，設色有濃淡。手繪，改列 L1。",
+      "bookTitle": "（明清）佚名舊像（紙本設色，版本待考）",
+      "tier": "tier1_authentic_painting"
     },
     "Emperor Huizong of Song.png": {
       "name": "赵佶",
       "verdict": "keep",
-      "reason": "宋徽宗画像，十二世纪宫廷像一系，绢本设色",
-      "bookTitle": ""
+      "reason": "絹本設色：朱袍、展腳幞頭、烏帽上綴朱紅簪導，顏料有濃淡層次，絹底可見。此件此前在 README 中被記作「確為版畫」，係誤判——它是繪本，特此改正並改列 L1。",
+      "bookTitle": "（明—清）南薰殿舊藏《宋代帝后像》冊",
+      "tier": "tier1_authentic_painting"
     },
     "後唐莊宗李存勗.jpg": {
       "name": "李存勖",
@@ -520,8 +531,9 @@
     "Chai Rong (Zhou Shizong).jpg": {
       "name": "柴荣",
       "verdict": "keep",
-      "reason": "清人绘后周世宗像（《中国历代名人画像谱》2003 翻印清绘本）",
-      "bookTitle": ""
+      "reason": "紙本設色，襆頭、藍袍團龍，設色平塗而帶暈染。手繪，改列 L1；版本待考。",
+      "bookTitle": "（明清）佚名舊像（紙本設色，版本待考）",
+      "tier": "tier1_authentic_painting"
     },
     "Song Taizu.jpg": {
       "name": "赵匡胤",
@@ -544,8 +556,9 @@
     "Fan Zhongyan.jpg": {
       "name": "范仲淹",
       "verdict": "keep",
-      "reason": "范仲淹官服持笏像，传统设色",
-      "bookTitle": ""
+      "reason": "紙本設色，貂蟬冠、執笏、朱袍，幅左上有朱文印章。手繪，改列 L1。",
+      "bookTitle": "（明清）佚名舊像（紙本設色，版本待考）",
+      "tier": "tier1_authentic_painting"
     },
     "Yue Fei.jpg": {
       "name": "岳飞",
@@ -562,20 +575,23 @@
     "明太祖畫像.jpg": {
       "name": "朱元璋",
       "verdict": "keep",
-      "reason": "明宫廷画家绘明太祖画像一系，绢本设色",
-      "bookTitle": ""
+      "reason": "絹本設色半身像，幅右金書榜題「太祖高皇帝」，絹絲紋與礦物顏料層次清晰。原判 L2 是因題名不含出處、落入「中文題名一律 L2」的兜底規則，屬按題名判層級而非按媒材判，現改正。",
+      "bookTitle": "（明—清）南薰殿舊藏《明代帝后像》冊",
+      "tier": "tier1_authentic_painting"
     },
     "Yongle.jpg": {
       "name": "朱棣",
       "verdict": "keep",
-      "reason": "明成祖坐像，南薰殿旧藏系统，绢本设色",
-      "bookTitle": ""
+      "reason": "絹本設色半身像：翼善冠、明黃袞龍袍，鬚眉與袍紋的筆触為手繪。與同冊太祖一幀構圖、尺幅、絹色一致，同出一套。原判 L2 誤。",
+      "bookTitle": "（明—清）南薰殿舊藏《明代帝后像》冊",
+      "tier": "tier1_authentic_painting"
     },
     "Zhang Juzheng.jpg": {
       "name": "张居正",
       "verdict": "keep",
-      "reason": "明代红袍官服坐像（后世摹绘本），传统绘画体制",
-      "bookTitle": ""
+      "reason": "絹本設色坐像：烏紗帽、大紅蟒袍滿繡、玉帶，絹底與顏料層次清晰，屬明代祖容像一路。改列 L1。",
+      "bookTitle": "（明清）佚名舊像（紙本設色，版本待考）",
+      "tier": "tier1_authentic_painting"
     },
     "Portrait of Emperor Qianlong.jpg": {
       "name": "弘历",
@@ -586,14 +602,16 @@
     "李清照畫像.jpg": {
       "name": "李清照",
       "verdict": "keep",
-      "reason": "清人所绘「李易安像」（题字可辨），绢本设色，1911 年前，臺湾藏",
-      "bookTitle": ""
+      "reason": "紙本設色：行書題識與朱文印章俱在，衣紋為毛筆勾勒、顏料有暈染。手繪，改列 L1；原件藏所與年代待考。",
+      "bookTitle": "（清）紙本設色像（版本待考）",
+      "tier": "tier1_authentic_painting"
     },
     "Zhu Wen (Liang Taizu).jpg": {
       "name": "朱温",
       "verdict": "keep",
-      "reason": "清人绘后梁太祖像（《中国历代名人画像谱》2003 翻印清绘本）",
-      "bookTitle": ""
+      "reason": "紙本設色，冠飾與綠袍設色有濃淡，筆触為手繪。改列 L1；版本待考。",
+      "bookTitle": "（明清）佚名舊像（紙本設色，版本待考）",
+      "tier": "tier1_authentic_painting"
     },
     "王守仁.jpg": {
       "name": "王守仁",
@@ -617,8 +635,9 @@
     "Zhang Shicheng.jpg": {
       "name": "张士诚",
       "verdict": "keep",
-      "reason": "明清刻本绣像风，乌纱红袍，单人像；具体刊本待考，按「版本待考」低记。",
-      "bookTitle": ""
+      "reason": "紙本設色，通天冠式冠飾、緋袍，紙底老化點明顯。手繪，改列 L1；原件尺幅小、藏所待考。",
+      "bookTitle": "（明清）佚名舊像（紙本設色，版本待考）",
+      "tier": "tier1_authentic_painting"
     },
     "Portrait officiel de l'empereur Jiajing.jpg": {
       "name": "朱厚熜",
@@ -647,8 +666,9 @@
     "楊慎.jpg": {
       "name": "杨慎",
       "verdict": "keep",
-      "reason": "立像一幅，幅内自题「明翰林脩撰…楊先生象」，旁有长跋记云南昆明、建水等地存有三本，此幅为壬申年摹本。原像为明人手笔，摹绘时代存疑（壬申或为1872或1932），如实注明「摹本」。",
-      "bookTitle": "（明）佚名原像、后世摹本《楊慎像》軸"
+      "reason": "紙本設色立像，幅右長篇行書題跋並鈐印，筆墨為手繪。原判 L2 與其「原像、後世摹本」的著錄自相矛盾——摹本仍是紙本手繪，不是刻本，改列 L1。",
+      "bookTitle": "（明）佚名原像、後世摹本《楊慎像》軸",
+      "tier": "tier1_authentic_painting"
     },
     "唐寅.jpg": {
       "name": "唐寅",
@@ -674,8 +694,9 @@
     "高拱.jpg": {
       "name": "高拱",
       "verdict": "keep",
-      "reason": "梁冠执笏彩色像，属明清上色版画或手绘像册一路；颜色平涂但纸面有旧痕，按「版本待考」低记。",
-      "bookTitle": ""
+      "reason": "絹本設色坐像：烏紗帽、紅袍團蟒、玉帶，與張居正一幀同一畫法系統。手繪，改列 L1。",
+      "bookTitle": "（明清）佚名舊像（紙本設色，版本待考）",
+      "tier": "tier1_authentic_painting"
     },
     "秦良玉.jpg": {
       "name": "秦良玉",
@@ -733,8 +754,9 @@
     "Fu Heng.jpg": {
       "name": "傅恒",
       "verdict": "keep",
-      "reason": "暖帽官服立像，画法简括、设色平匀，疑为清末石印本或刻本绣像上色，按「版本待考」低记。",
-      "bookTitle": ""
+      "reason": "紙本設色立像：瓜皮帽、行服袍、手執荷囊，清代肖像一路。手繪，改列 L1；是否出紫光閣功臣像系統待考。",
+      "bookTitle": "（明清）佚名舊像（紙本設色，版本待考）",
+      "tier": "tier1_authentic_painting"
     },
     "Dai Zhen.png": {
       "name": "戴震",

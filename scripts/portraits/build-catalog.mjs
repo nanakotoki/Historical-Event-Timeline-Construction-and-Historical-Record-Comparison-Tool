@@ -29,6 +29,45 @@ const CATALOG = path.join(__dirname, 'catalog.json');
 const RULES = [
   {
     /*
+     * 《晚笑堂竹莊畫傳》一系（2026-10-29 一次补入三十件）。
+     * 这批在 Commons 上以人物拼音／威妥玛题名散存，文件名毫无规律
+     * （张载作 Chang Tsai、李纲作 Li Kang、常遇春直接是中文），故逐件点名。
+     *
+     * 判定顺序是「先核画传目录有无此人，再看刻风」：
+     * 《晚笑堂画传》三卷一百二十人（含《明太祖功臣图》一卷），
+     * 本规则内诸人俱在其中——**目录里没有的人，即便文件名写着，也不收**。
+     * 刻风特征：全身立像、纯白底、墨线无背景，与《三才图会》等带景刻本明显不同。
+     */
+    test: (f) =>
+      /^(Ti Ying|Su Wu|Xie An|Gu Kaizhi|Hui Yuan|Zhang Jiuling|Luo Binwang|Wang Bo|Zhang Xun|Wang Wei|Bai Juyi|Liu Zongyuan|Meng Haoran|Wen Tingyun|Du Mu|Han Yu|Zeng Gong|Xu Da|Cheng Yi|Yan Guang|Su Che|Shao Yong|Cai Xiang|Chang Tsai|Cheng Hao|Huang Tingjian|Li Kang|Liu Ji|Yu Qian|常遇春)\.jpg$/u.test(
+        f,
+      ),
+    tier: 'tier2_ancient_woodcut',
+    painterOrBook: '（清）上官周《晚笑堂竹莊畫傳》（民國十年翻刻本）',
+    sourceAttribution:
+      '清乾隆八年（1743）上官周繪《晚笑堂竹莊畫傳》，三卷，收西漢劉邦至明初郭德成一百二十人；' +
+      '每人一圖一傳，圖為全身像，以隸書題名、楷書系贊。本檔出民國十年翻刻本，非乾隆原刻。' +
+      '圖檔經 Wikimedia Commons 轉錄，屬公有領域。',
+    license: 'PD-Art（公有領域二維藝術品忠實複製）',
+  },
+  {
+    /*
+     * 《歷代名臣像解》：清乾隆年間**紙本設色繪本**冊頁（左書右圖），收倉頡至史可法二百五十六人。
+     * 是绘本不是刻本——孔网著录「清乾隆绘本……设色明丽，左书右图，册页一〇七开，纸本」，
+     * 影印见栾保群、王静编《中国历代帝王名臣像真迹》（河北美术出版社，1996）。
+     * 故列 L1。Commons 上目前只见王羲之一件。
+     */
+    test: (f) => /^Wang Xizhi\.png$/.test(f),
+    tier: 'tier1_authentic_painting',
+    painterOrBook: '（清）佚名《歷代名臣像解》（清乾隆繪本）',
+    sourceAttribution:
+      '《歷代名臣像解》，清乾隆年間繪本冊頁，紙本設色，左書右圖，收倉頡至史可法二百五十六人；' +
+      '影印本見欒保群、王靜編《中國歷代帝王名臣像真跡》（河北美術出版社，1996）。' +
+      '本幅為王羲之一開，圖檔經 Wikimedia Commons 轉錄，屬公有領域。',
+    license: 'PD-Art（公有領域二維藝術品忠實複製）',
+  },
+  {
+    /*
      * 南薰殿舊藏歷代帝后像一系（臺北故宮）＋清宮帝像（北京故宮）。
      * 这批题名是英文，散在若干套册页里，此前一律落到「（明清）佚名舊像」规则、
      * 被标成 tier2 刻本版画——**宋太祖那张就此被误判成版画**，其实它是绢本设色坐像。

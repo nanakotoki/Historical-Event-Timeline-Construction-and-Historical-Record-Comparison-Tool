@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-29T13:19:39.893Z",
+  "generatedAt": "2026-10-29T13:49:34.862Z",
   "note": "本目录只登记已实际取回落盘的传世画像。未列入者＝未在公有领域图库中找到可定位的传世图档，前端按 tier3/tier4 呈现「本站复原」，绝不冒充实物。",
   "counts": {
-    "total": 148,
-    "tier1_authentic_painting": 73,
+    "total": 158,
+    "tier1_authentic_painting": 83,
     "tier2_ancient_woodcut": 75
   },
   "entries": {
@@ -1782,6 +1782,126 @@
       "commonsPage": "https://commons.wikimedia.org/wiki/File:Wang_Xizhi.png",
       "thumb": "/data/portraits/person_wang_xizhi.jpg",
       "full": "/data/portraits/full_person_wang_xizhi.jpg"
+    },
+    "person_zhou_wuwang": {
+      "id": "person_zhou_wuwang",
+      "name": "姬发",
+      "file": "Portraits of Famous Men - King Wu of Zhou.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《歷代名臣像》冊",
+      "sourceAttribution": "冕旒袞服的帝王半身像，絹本設色。與同冊已入庫劉恒、劉啟、孫權諸幀同出一套（費城藝術博物館藏）。判 L1。費城藝術博物館藏《Portraits of Famous Men》冊頁（1929-40-213，Simkhovitch 舊藏），絹本設色，十九世紀摹一六〇九年底本。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_King_Wu_of_Zhou.jpg",
+      "thumb": "/data/portraits/person_zhou_wuwang.jpg",
+      "full": "/data/portraits/full_person_zhou_wuwang.jpg"
+    },
+    "person_liu_xiu": {
+      "id": "person_liu_xiu",
+      "name": "刘秀",
+      "file": "Portraits of Famous Men - Liu Xiu.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《歷代名臣像》冊",
+      "sourceAttribution": "冕旒袞服的帝王半身像，絹本設色，與同冊漢諸帝諸幀形制一致。判 L1。費城藝術博物館藏《Portraits of Famous Men》冊頁（1929-40-213，Simkhovitch 舊藏），絹本設色，十九世紀摹一六〇九年底本。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Liu_Xiu.jpg",
+      "thumb": "/data/portraits/person_liu_xiu.jpg",
+      "full": "/data/portraits/full_person_liu_xiu.jpg"
+    },
+    "person_tao_yuanming": {
+      "id": "person_tao_yuanming",
+      "name": "陶潜",
+      "file": "Portraits of Famous Men - Tao Yuanming.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《歷代名臣像》冊",
+      "sourceAttribution": "幅巾、寬衣、拄杖的隱者形象，絹本設色，與同冊諸幀同出一套。判 L1。費城藝術博物館藏《Portraits of Famous Men》冊頁（1929-40-213，Simkhovitch 舊藏），絹本設色，十九世紀摹一六〇九年底本。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Tao_Yuanming.jpg",
+      "thumb": "/data/portraits/person_tao_yuanming.jpg",
+      "full": "/data/portraits/full_person_tao_yuanming.jpg"
+    },
+    "person_zhou_dunyi": {
+      "id": "person_zhou_dunyi",
+      "name": "周敦颐",
+      "file": "Portraits of Famous Men - Zhou Dunyi.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《歷代名臣像》冊",
+      "sourceAttribution": "宋式巾帽、藍袍的理學家半身像，絹本設色，與同冊諸幀同出一套。判 L1。費城藝術博物館藏《Portraits of Famous Men》冊頁（1929-40-213，Simkhovitch 舊藏），絹本設色，十九世紀摹一六〇九年底本。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Zhou_Dunyi.jpg",
+      "thumb": "/data/portraits/person_zhou_dunyi.jpg",
+      "full": "/data/portraits/full_person_zhou_dunyi.jpg"
+    },
+    "person_yao_chong": {
+      "id": "person_yao_chong",
+      "name": "姚崇",
+      "file": "Portraits of Famous Men - Yao Chong.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《歷代名臣像》冊",
+      "sourceAttribution": "幞頭、綠袍的唐臣半身像，絹本設色，與同冊諸幀同出一套。判 L1。費城藝術博物館藏《Portraits of Famous Men》冊頁（1929-40-213，Simkhovitch 舊藏），絹本設色，十九世紀摹一六〇九年底本。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Yao_Chong.jpg",
+      "thumb": "/data/portraits/person_yao_chong.jpg",
+      "full": "/data/portraits/full_person_yao_chong.jpg"
+    },
+    "person_qu_yuan": {
+      "id": "person_qu_yuan",
+      "name": "屈平",
+      "file": "歷代聖賢半身像 冊 屈原 (Qu Yuan).png",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（元）佚名《歷代聖賢半身像》冊",
+      "sourceAttribution": "臺北故宮《歷代聖賢半身像》冊屈原一開：絹本設色半身像，幅上小楷題識「屈原。名平。楚之同姓也……」與本傳相符；媒材、尺幅、裝池與已入庫同冊司馬遷、司馬懿、諸葛亮三幀一致，同出一冊。判 L1。臺北故宮藏《歷代聖賢半身像》冊（中畫000328），絹本設色半身像，該冊收司馬遷至朱熹等歷代聖賢，本幅為屈原一開，幅上題識述其名平、為楚同姓、作離騷、自沉汨羅事。圖檔為故宮開放資料（CC0／CC BY 4.0），經 Wikimedia Commons 轉錄。",
+      "license": "CC BY 4.0（國立故宮博物院開放資料）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E6%AD%B7%E4%BB%A3%E8%81%96%E8%B3%A2%E5%8D%8A%E8%BA%AB%E5%83%8F_%E5%86%8A_%E5%B1%88%E5%8E%9F_(Qu_Yuan).png",
+      "thumb": "/data/portraits/person_qu_yuan.jpg",
+      "full": "/data/portraits/full_person_qu_yuan.jpg"
+    },
+    "person_lv_zuiqian": {
+      "id": "person_lv_zuiqian",
+      "name": "吕祖谦",
+      "file": "Portraits of Famous Men - Lü Zuqian.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《歷代名臣像》冊",
+      "sourceAttribution": "展腳幞頭、紅袍的宋臣半身像，絹本設色，與同冊諸幀同出一套。判 L1。費城藝術博物館藏《Portraits of Famous Men》冊頁（1929-40-213，Simkhovitch 舊藏），絹本設色，十九世紀摹一六〇九年底本。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_L%C3%BC_Zuqian.jpg",
+      "thumb": "/data/portraits/person_lv_zuiqian.jpg",
+      "full": "/data/portraits/full_person_lv_zuiqian.jpg"
+    },
+    "person_wang_shenzhi": {
+      "id": "person_wang_shenzhi",
+      "name": "王审知",
+      "file": "Portraits of Famous Men - Wang Shenzhi.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《歷代名臣像》冊",
+      "sourceAttribution": "幞頭、赭袍、執笏的十國君主半身像，絹本設色，與同冊諸幀同出一套。判 L1。費城藝術博物館藏《Portraits of Famous Men》冊頁（1929-40-213，Simkhovitch 舊藏），絹本設色，十九世紀摹一六〇九年底本。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Wang_Shenzhi.jpg",
+      "thumb": "/data/portraits/person_wang_shenzhi.jpg",
+      "full": "/data/portraits/full_person_wang_shenzhi.jpg"
+    },
+    "person_zhang_shi": {
+      "id": "person_zhang_shi",
+      "name": "张栻",
+      "file": "Portraits of Famous Men - Zhang Shi.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《歷代名臣像》冊",
+      "sourceAttribution": "展腳幞頭、紅袍的宋臣半身像，絹本設色，與同冊諸幀同出一套。判 L1。費城藝術博物館藏《Portraits of Famous Men》冊頁（1929-40-213，Simkhovitch 舊藏），絹本設色，十九世紀摹一六〇九年底本。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Zhang_Shi.jpg",
+      "thumb": "/data/portraits/person_zhang_shi.jpg",
+      "full": "/data/portraits/full_person_zhang_shi.jpg"
+    },
+    "person_zhou_gong_dan": {
+      "id": "person_zhou_gong_dan",
+      "name": "姬旦",
+      "file": "Portraits of Famous Men - Zhou Gong.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《歷代名臣像》冊",
+      "sourceAttribution": "玄端、側身而立的半身像，絹本設色，與同冊諸幀筆法一致。判 L1。費城藝術博物館藏《Portraits of Famous Men》冊頁（1929-40-213，Simkhovitch 舊藏），絹本設色，十九世紀摹一六〇九年底本。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Zhou_Gong.jpg",
+      "thumb": "/data/portraits/person_zhou_gong_dan.jpg",
+      "full": "/data/portraits/full_person_zhou_gong_dan.jpg"
     }
   }
 }

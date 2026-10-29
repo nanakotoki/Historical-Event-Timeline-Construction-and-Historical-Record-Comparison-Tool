@@ -1459,6 +1459,96 @@
       "thumbBytes": 78266,
       "fullBytes": 78266,
       "fullResolved": false
+    },
+    "person_zhou_wuwang": {
+      "id": "person_zhou_wuwang",
+      "name": "姬发",
+      "file": "Portraits of Famous Men - King Wu of Zhou.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_King_Wu_of_Zhou.jpg",
+      "thumbBytes": 138247,
+      "fullBytes": 138247,
+      "fullResolved": false
+    },
+    "person_liu_xiu": {
+      "id": "person_liu_xiu",
+      "name": "刘秀",
+      "file": "Portraits of Famous Men - Liu Xiu.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Liu_Xiu.jpg",
+      "thumbBytes": 143800,
+      "fullBytes": 143800,
+      "fullResolved": false
+    },
+    "person_tao_yuanming": {
+      "id": "person_tao_yuanming",
+      "name": "陶潜",
+      "file": "Portraits of Famous Men - Tao Yuanming.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Tao_Yuanming.jpg",
+      "thumbBytes": 111078,
+      "fullBytes": 111078,
+      "fullResolved": false
+    },
+    "person_zhou_dunyi": {
+      "id": "person_zhou_dunyi",
+      "name": "周敦颐",
+      "file": "Portraits of Famous Men - Zhou Dunyi.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Zhou_Dunyi.jpg",
+      "thumbBytes": 126610,
+      "fullBytes": 126610,
+      "fullResolved": false
+    },
+    "person_yao_chong": {
+      "id": "person_yao_chong",
+      "name": "姚崇",
+      "file": "Portraits of Famous Men - Yao Chong.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Yao_Chong.jpg",
+      "thumbBytes": 119087,
+      "fullBytes": 119087,
+      "fullResolved": false
+    },
+    "person_qu_yuan": {
+      "id": "person_qu_yuan",
+      "name": "屈平",
+      "file": "歷代聖賢半身像 冊 屈原 (Qu Yuan).png",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E6%AD%B7%E4%BB%A3%E8%81%96%E8%B3%A2%E5%8D%8A%E8%BA%AB%E5%83%8F_%E5%86%8A_%E5%B1%88%E5%8E%9F_(Qu_Yuan).png",
+      "thumbBytes": 61725,
+      "fullBytes": 61725,
+      "fullResolved": false
+    },
+    "person_lv_zuiqian": {
+      "id": "person_lv_zuiqian",
+      "name": "吕祖谦",
+      "file": "Portraits of Famous Men - Lü Zuqian.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_L%C3%BC_Zuqian.jpg",
+      "thumbBytes": 125732,
+      "fullBytes": 125732,
+      "fullResolved": false
+    },
+    "person_wang_shenzhi": {
+      "id": "person_wang_shenzhi",
+      "name": "王审知",
+      "file": "Portraits of Famous Men - Wang Shenzhi.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Wang_Shenzhi.jpg",
+      "thumbBytes": 116271,
+      "fullBytes": 116271,
+      "fullResolved": false
+    },
+    "person_zhang_shi": {
+      "id": "person_zhang_shi",
+      "name": "张栻",
+      "file": "Portraits of Famous Men - Zhang Shi.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Zhang_Shi.jpg",
+      "thumbBytes": 112633,
+      "fullBytes": 112633,
+      "fullResolved": false
+    },
+    "person_zhou_gong_dan": {
+      "id": "person_zhou_gong_dan",
+      "name": "姬旦",
+      "file": "Portraits of Famous Men - Zhou Gong.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Zhou_Gong.jpg",
+      "thumbBytes": 132537,
+      "fullBytes": 132537,
+      "fullResolved": false
     }
   }
 }

@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-29T13:49:34.862Z",
+  "generatedAt": "2026-10-29T14:40:02.555Z",
   "note": "本目录只登记已实际取回落盘的传世画像。未列入者＝未在公有领域图库中找到可定位的传世图档，前端按 tier3/tier4 呈现「本站复原」，绝不冒充实物。",
   "counts": {
-    "total": 158,
-    "tier1_authentic_painting": 83,
-    "tier2_ancient_woodcut": 75
+    "total": 164,
+    "tier1_authentic_painting": 88,
+    "tier2_ancient_woodcut": 76
   },
   "entries": {
     "person_liu_bang": {
@@ -1902,6 +1902,78 @@
       "commonsPage": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Zhou_Gong.jpg",
       "thumb": "/data/portraits/person_zhou_gong_dan.jpg",
       "full": "/data/portraits/full_person_zhou_gong_dan.jpg"
+    },
+    "person_shi_jingtang": {
+      "id": "person_shi_jingtang",
+      "name": "石敬瑭",
+      "file": "Shi Jingtang (Jin Gaozu).jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《中国历代名人画像谱》影印清宫殿藏画本",
+      "sourceAttribution": "黄底半身像，黑幞头、大红圆领袍，浓须。与刘知远、郭威三帧同出一版式，系《中国历代名人画像谱》影印清宫殿藏画本，纸本设色手绘，判 L1。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Shi_Jingtang_(Jin_Gaozu).jpg",
+      "thumb": "/data/portraits/person_shi_jingtang.jpg",
+      "full": "/data/portraits/full_person_shi_jingtang.jpg"
+    },
+    "person_liu_zhiyuan": {
+      "id": "person_liu_zhiyuan",
+      "name": "刘知远",
+      "file": "Liu Zhiyuan (Han Gaozu).jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《中国历代名人画像谱》影印清宫殿藏画本",
+      "sourceAttribution": "黄底半身像，黑幞头、红袍胸前有团龙纹，纸本设色。同版式三帧之一，判 L1。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Liu_Zhiyuan_(Han_Gaozu).jpg",
+      "thumb": "/data/portraits/person_liu_zhiyuan.jpg",
+      "full": "/data/portraits/full_person_liu_zhiyuan.jpg"
+    },
+    "person_guo_wei_fd": {
+      "id": "person_guo_wei_fd",
+      "name": "郭威",
+      "file": "Guo Wei (Zhou Taizu).jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《中国历代名人画像谱》影印清宫殿藏画本",
+      "sourceAttribution": "黄底半身像，黑幞头、蓝袍，纸本设色。同版式三帧之一，判 L1。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Guo_Wei_(Zhou_Taizu).jpg",
+      "thumb": "/data/portraits/person_guo_wei_fd.jpg",
+      "full": "/data/portraits/full_person_guo_wei_fd.jpg"
+    },
+    "person_qian_liu": {
+      "id": "person_qian_liu",
+      "name": "钱镠",
+      "file": "Qian Liu (King Wusu of Wuyue).jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "明人摹绘《吴越国王钱氏祖像》轴（浙江省博物馆藏）",
+      "sourceAttribution": "展脚幞头、赭黄袍、朱红领缘，绢本设色。Commons 著录为明人摹绘《吴越国王钱氏祖像轴》，浙江省博物馆藏——祖像属家族祠堂一系，非宫廷写像，故为摹本而非同时代写生。判 L1。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Qian_Liu_(King_Wusu_of_Wuyue).jpg",
+      "thumb": "/data/portraits/person_qian_liu.jpg",
+      "full": "/data/portraits/full_person_qian_liu.jpg"
+    },
+    "person_han_xizai": {
+      "id": "person_han_xizai",
+      "name": "韩熙载",
+      "file": "唐名臣像-22-南唐韓熙載.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《唐名臣像》册",
+      "sourceAttribution": "纸本设色半身像，黑软裹巾子、浅青灰袍，无版框，线条有毛笔提按。幅右窄栏题「南唐韓熙載」。系《唐名臣像》册第二十二幅，判 L1。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E5%94%90%E5%90%8D%E8%87%A3%E5%83%8F-22-%E5%8D%97%E5%94%90%E9%9F%93%E7%86%99%E8%BC%89.jpg",
+      "thumb": "/data/portraits/person_han_xizai.jpg",
+      "full": "/data/portraits/full_person_han_xizai.jpg"
+    },
+    "person_sang_weihan": {
+      "id": "person_sang_weihan",
+      "name": "桑维翰",
+      "file": "桑維翰.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "清修《江苏宜兴梅子境桑氏宗谱》像赞",
+      "sourceAttribution": "刻本像赞一页：幅顶横题「樞密使韓公維翰遺像」，左侧赞文（可辨「屹屹如山」「以公人物，光耀兩間」），线条为刀刻硬边、有版框。Commons 文件页著录「像取自清代修《江苏宜兴梅子境桑氏宗谱》」——宗谱像，判 L2。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E6%A1%91%E7%B6%AD%E7%BF%B0.jpg",
+      "thumb": "/data/portraits/person_sang_weihan.jpg",
+      "full": "/data/portraits/full_person_sang_weihan.jpg"
     }
   }
 }

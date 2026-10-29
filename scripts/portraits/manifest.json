@@ -1549,6 +1549,60 @@
       "thumbBytes": 132537,
       "fullBytes": 132537,
       "fullResolved": false
+    },
+    "person_shi_jingtang": {
+      "id": "person_shi_jingtang",
+      "name": "石敬瑭",
+      "file": "Shi Jingtang (Jin Gaozu).jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Shi_Jingtang_(Jin_Gaozu).jpg",
+      "thumbBytes": 95095,
+      "fullBytes": 95095,
+      "fullResolved": false
+    },
+    "person_liu_zhiyuan": {
+      "id": "person_liu_zhiyuan",
+      "name": "刘知远",
+      "file": "Liu Zhiyuan (Han Gaozu).jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Liu_Zhiyuan_(Han_Gaozu).jpg",
+      "thumbBytes": 107162,
+      "fullBytes": 107162,
+      "fullResolved": false
+    },
+    "person_guo_wei_fd": {
+      "id": "person_guo_wei_fd",
+      "name": "郭威",
+      "file": "Guo Wei (Zhou Taizu).jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Guo_Wei_(Zhou_Taizu).jpg",
+      "thumbBytes": 101484,
+      "fullBytes": 101484,
+      "fullResolved": false
+    },
+    "person_qian_liu": {
+      "id": "person_qian_liu",
+      "name": "钱镠",
+      "file": "Qian Liu (King Wusu of Wuyue).jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Qian_Liu_(King_Wusu_of_Wuyue).jpg",
+      "thumbBytes": 116398,
+      "fullBytes": 116398,
+      "fullResolved": false
+    },
+    "person_han_xizai": {
+      "id": "person_han_xizai",
+      "name": "韩熙载",
+      "file": "唐名臣像-22-南唐韓熙載.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E5%94%90%E5%90%8D%E8%87%A3%E5%83%8F-22-%E5%8D%97%E5%94%90%E9%9F%93%E7%86%99%E8%BC%89.jpg",
+      "thumbBytes": 87825,
+      "fullBytes": 87825,
+      "fullResolved": false
+    },
+    "person_sang_weihan": {
+      "id": "person_sang_weihan",
+      "name": "桑维翰",
+      "file": "桑維翰.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E6%A1%91%E7%B6%AD%E7%BF%B0.jpg",
+      "thumbBytes": 75019,
+      "fullBytes": 75019,
+      "fullResolved": false
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-29T13:50:09.687Z",
+  "generatedAt": "2026-10-29T14:40:41.409Z",
   "site": {
     "title": "华夏史网",
     "subtitle": "ChronoGraph China · 二十四史人物关系图谱与史料对勘引擎",
@@ -342,7 +342,7 @@
       ],
       "personCount": 92,
       "edgeCount": 154,
-      "byteSize": 321362
+      "byteSize": 322844
     },
     {
       "shardId": "shard_08_xin_mang",

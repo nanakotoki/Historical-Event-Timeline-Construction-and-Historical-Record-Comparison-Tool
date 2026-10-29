@@ -1146,6 +1146,48 @@
       "reason": "幞頭、赭袍、執笏的十國君主半身像，絹本設色，與同冊諸幀同出一套。判 L1。費城藝術博物館藏《Portraits of Famous Men》冊頁（1929-40-213，Simkhovitch 舊藏），絹本設色，十九世紀摹一六〇九年底本。",
       "bookTitle": "（清）佚名《歷代名臣像》冊",
       "tier": "tier1_authentic_painting"
+    },
+    "Shi Jingtang (Jin Gaozu).jpg": {
+      "name": "石敬瑭",
+      "verdict": "keep",
+      "reason": "黄底半身像，黑幞头、大红圆领袍，浓须。与刘知远、郭威三帧同出一版式，系《中国历代名人画像谱》影印清宫殿藏画本，纸本设色手绘，判 L1。",
+      "bookTitle": "（清）佚名《中国历代名人画像谱》影印清宫殿藏画本",
+      "tier": "tier1_authentic_painting"
+    },
+    "Liu Zhiyuan (Han Gaozu).jpg": {
+      "name": "刘知远",
+      "verdict": "keep",
+      "reason": "黄底半身像，黑幞头、红袍胸前有团龙纹，纸本设色。同版式三帧之一，判 L1。",
+      "bookTitle": "（清）佚名《中国历代名人画像谱》影印清宫殿藏画本",
+      "tier": "tier1_authentic_painting"
+    },
+    "Guo Wei (Zhou Taizu).jpg": {
+      "name": "郭威",
+      "verdict": "keep",
+      "reason": "黄底半身像，黑幞头、蓝袍，纸本设色。同版式三帧之一，判 L1。",
+      "bookTitle": "（清）佚名《中国历代名人画像谱》影印清宫殿藏画本",
+      "tier": "tier1_authentic_painting"
+    },
+    "Qian Liu (King Wusu of Wuyue).jpg": {
+      "name": "钱镠",
+      "verdict": "keep",
+      "reason": "展脚幞头、赭黄袍、朱红领缘，绢本设色。Commons 著录为明人摹绘《吴越国王钱氏祖像轴》，浙江省博物馆藏——祖像属家族祠堂一系，非宫廷写像，故为摹本而非同时代写生。判 L1。",
+      "bookTitle": "明人摹绘《吴越国王钱氏祖像》轴（浙江省博物馆藏）",
+      "tier": "tier1_authentic_painting"
+    },
+    "唐名臣像-22-南唐韓熙載.jpg": {
+      "name": "韩熙载",
+      "verdict": "keep",
+      "reason": "纸本设色半身像，黑软裹巾子、浅青灰袍，无版框，线条有毛笔提按。幅右窄栏题「南唐韓熙載」。系《唐名臣像》册第二十二幅，判 L1。",
+      "bookTitle": "（清）佚名《唐名臣像》册",
+      "tier": "tier1_authentic_painting"
+    },
+    "桑維翰.jpg": {
+      "name": "桑维翰",
+      "verdict": "keep",
+      "reason": "刻本像赞一页：幅顶横题「樞密使韓公維翰遺像」，左侧赞文（可辨「屹屹如山」「以公人物，光耀兩間」），线条为刀刻硬边、有版框。Commons 文件页著录「像取自清代修《江苏宜兴梅子境桑氏宗谱》」——宗谱像，判 L2。",
+      "bookTitle": "清修《江苏宜兴梅子境桑氏宗谱》像赞",
+      "tier": "tier2_ancient_woodcut"
     }
   }
 }

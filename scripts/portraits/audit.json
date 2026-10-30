@@ -1188,6 +1188,74 @@
       "reason": "刻本像赞一页：幅顶横题「樞密使韓公維翰遺像」，左侧赞文（可辨「屹屹如山」「以公人物，光耀兩間」），线条为刀刻硬边、有版框。Commons 文件页著录「像取自清代修《江苏宜兴梅子境桑氏宗谱》」——宗谱像，判 L2。",
       "bookTitle": "清修《江苏宜兴梅子境桑氏宗谱》像赞",
       "tier": "tier2_ancient_woodcut"
+    },
+    "王彥章（殘唐五代史演義傳）.jpg": {
+      "name": "王彦章",
+      "verdict": "keep",
+      "reason": "清《殘唐五代史演義傳》繡像一頁：全身立像、手執長槍，幅上端題「王彥章」，墨線為刀刻硬邊、無設色。演義繡像與正史無關，只證「清人想像中此人形貌」，判 L2。",
+      "bookTitle": "（清）《殘唐五代史演義傳》繡像",
+      "tier": "tier2_ancient_woodcut"
+    },
+    "李存孝（殘唐五代史演義傳）.jpg": {
+      "name": "李存孝",
+      "verdict": "keep",
+      "reason": "清《殘唐五代史演義傳》繡像一頁：全身立像、披甲執撾，幅右題「李存孝」，刀刻墨線、無版框，判 L2。",
+      "bookTitle": "（清）《殘唐五代史演義傳》繡像",
+      "tier": "tier2_ancient_woodcut"
+    },
+    "王朴（飛龍全傳）.jpg": {
+      "name": "王朴",
+      "verdict": "keep",
+      "reason": "清《飛龍全傳》繡像一頁：全身立像、執扇，四周有版框，刀刻墨線，判 L2。此為演義小說插圖，非當時寫真。",
+      "bookTitle": "（清）《飛龍全傳》繡像",
+      "tier": "tier2_ancient_woodcut"
+    },
+    "Li Yu scth.jpg": {
+      "name": "李煜",
+      "verdict": "keep",
+      "reason": "明萬曆王圻《三才圖會·人物卷》刻本一頁：半身，幅左上題「李後主像」；線條為刀刻硬邊、紙面有木版壓印痕。與已入庫曹操（Cao Cao scth.jpg）同書同版式，判 L2。",
+      "bookTitle": "（明）王圻《三才圖會·人物卷》",
+      "tier": "tier2_ancient_woodcut"
+    },
+    "錢俶.jpg": {
+      "name": "钱弘俶",
+      "verdict": "keep",
+      "reason": "清光緒修《浙江吳越錢氏清芬志》宗譜像：半身、展脚幞頭，右側為贊文（首行「宋理宗皇帝御題」），四周有版框、線條均勻無設色，屬宗譜刻本，判 L2。像為主祀者後人追摹，非寫生。",
+      "bookTitle": "清光緒修《浙江吳越錢氏清芬志》宗譜像",
+      "tier": "tier2_ancient_woodcut"
+    },
+    "Portraits of Famous Men - Bao Zheng.jpg": {
+      "name": "包拯",
+      "verdict": "keep",
+      "reason": "費城藝術博物館《Portraits of Famous Men》冊頁：半身、朱袍展脚幞頭，絹本設色、有顏料層次與絹絲紋，判 L1。館藏編號與該冊其餘各開一致。",
+      "bookTitle": "（清）佚名《歷代名臣像》冊（費城藝術博物館藏《Portraits of Famous Men》冊頁）",
+      "tier": "tier1_authentic_painting"
+    },
+    "Portraits of Famous Men - King Wen of Zhou.jpg": {
+      "name": "姬昌",
+      "verdict": "keep",
+      "reason": "費城藝術博物館《Portraits of Famous Men》冊頁：半身、冕旒黃袍，絹本設色，判 L1。館方著錄為十九至二十世紀摹繪歷代名臣像冊頁，屬後人追畫。",
+      "bookTitle": "（清）佚名《歷代名臣像》冊（費城藝術博物館藏《Portraits of Famous Men》冊頁）",
+      "tier": "tier1_authentic_painting"
+    },
+    "Portraits of Famous Men - Xiang Wang.jpg": {
+      "name": "项羽",
+      "verdict": "keep",
+      "reason": "費城藝術博物館《Portraits of Famous Men》冊頁「項王」一開：半身、戴冠赭袍，絹本設色，判 L1。此幀替換原先那張殘損壁畫局部（人形幾不可辨），來源由館方著錄可核。",
+      "bookTitle": "（清）佚名《歷代名臣像》冊（費城藝術博物館藏《Portraits of Famous Men》冊頁）",
+      "tier": "tier1_authentic_painting"
+    },
+    "唐明宗.jpg": {
+      "name": "李嗣源",
+      "verdict": "keep",
+      "reason": "刻本繡像一頁：幅左豎題「唐明宗」，右側另題「曹恩」，畫兩人並立；刀刻墨線、四周有版框，版心書名僅殘存「…志傳」二字，具體書名待考。判 L2，並在書名處註明存疑，不臆題。",
+      "bookTitle": "刻本繡像（版心書名殘存「志傳」二字，版本待考）",
+      "tier": "tier2_ancient_woodcut"
+    },
+    "王彥章（新鐫繡像旁批詳註總斷廣百將傳）.jpg": {
+      "name": "王彦章",
+      "verdict": "reject",
+      "reason": "《新鐫繡像旁批詳註總斷廣百將傳》此頁實為敘事插圖——畫面是城門、山石與多人交戰的場景，無題名、無獨立人像，不能作人物畫像用。改取同人《殘唐五代史演義傳》繡像一帧。"
     }
   }
 }

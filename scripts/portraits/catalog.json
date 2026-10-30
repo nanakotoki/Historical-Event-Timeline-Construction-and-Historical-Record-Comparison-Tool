@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-29T14:40:02.555Z",
+  "generatedAt": "2026-10-30T08:42:37.728Z",
   "note": "本目录只登记已实际取回落盘的传世画像。未列入者＝未在公有领域图库中找到可定位的传世图档，前端按 tier3/tier4 呈现「本站复原」，绝不冒充实物。",
   "counts": {
-    "total": 164,
-    "tier1_authentic_painting": 88,
-    "tier2_ancient_woodcut": 76
+    "total": 172,
+    "tier1_authentic_painting": 91,
+    "tier2_ancient_woodcut": 81
   },
   "entries": {
     "person_liu_bang": {
@@ -478,12 +478,12 @@
     "person_xiang_yu": {
       "id": "person_xiang_yu",
       "name": "项羽",
-      "file": "項羽.jpg",
-      "tier": "tier2_ancient_woodcut",
-      "painterOrBook": "（明清）佚名舊像（版本待考）",
-      "sourceAttribution": "明清人物像（或為繪本，或為刻本插圖，本庫未逐件比定其版本與媒材），圖檔經 Wikimedia Commons 轉錄，屬公有領域。出處存疑處一律記為「版本待考」，不臆題書名。",
+      "file": "Portraits of Famous Men - Xiang Wang.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《歷代名臣像》冊（費城藝術博物館藏《Portraits of Famous Men》冊頁）",
+      "sourceAttribution": "費城藝術博物館《Portraits of Famous Men》冊頁「項王」一開：半身、戴冠赭袍，絹本設色，判 L1。此幀替換原先那張殘損壁畫局部（人形幾不可辨），來源由館方著錄可核。",
       "license": "PD-Art（公有領域二維藝術品忠實複製）",
-      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E9%A0%85%E7%BE%BD.jpg",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Xiang_Wang.jpg",
       "thumb": "/data/portraits/person_xiang_yu.jpg",
       "full": "/data/portraits/full_person_xiang_yu.jpg"
     },
@@ -1974,6 +1974,102 @@
       "commonsPage": "https://commons.wikimedia.org/wiki/File:%E6%A1%91%E7%B6%AD%E7%BF%B0.jpg",
       "thumb": "/data/portraits/person_sang_weihan.jpg",
       "full": "/data/portraits/full_person_sang_weihan.jpg"
+    },
+    "person_wang_yanzhang": {
+      "id": "person_wang_yanzhang",
+      "name": "王彦章",
+      "file": "王彥章（殘唐五代史演義傳）.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）《殘唐五代史演義傳》繡像",
+      "sourceAttribution": "清《殘唐五代史演義傳》繡像一頁：全身立像、手執長槍，幅上端題「王彥章」，墨線為刀刻硬邊、無設色。演義繡像與正史無關，只證「清人想像中此人形貌」，判 L2。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E7%8E%8B%E5%BD%A5%E7%AB%A0%EF%BC%88%E6%AE%98%E5%94%90%E4%BA%94%E4%BB%A3%E5%8F%B2%E6%BC%94%E7%BE%A9%E5%82%B3%EF%BC%89.jpg",
+      "thumb": "/data/portraits/person_wang_yanzhang.jpg",
+      "full": "/data/portraits/full_person_wang_yanzhang.jpg"
+    },
+    "person_li_cunxiao": {
+      "id": "person_li_cunxiao",
+      "name": "李存孝",
+      "file": "李存孝（殘唐五代史演義傳）.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）《殘唐五代史演義傳》繡像",
+      "sourceAttribution": "清《殘唐五代史演義傳》繡像一頁：全身立像、披甲執撾，幅右題「李存孝」，刀刻墨線、無版框，判 L2。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E6%9D%8E%E5%AD%98%E5%AD%9D%EF%BC%88%E6%AE%98%E5%94%90%E4%BA%94%E4%BB%A3%E5%8F%B2%E6%BC%94%E7%BE%A9%E5%82%B3%EF%BC%89.jpg",
+      "thumb": "/data/portraits/person_li_cunxiao.jpg",
+      "full": "/data/portraits/full_person_li_cunxiao.jpg"
+    },
+    "person_wang_pu": {
+      "id": "person_wang_pu",
+      "name": "王朴",
+      "file": "王朴（飛龍全傳）.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）《飛龍全傳》繡像",
+      "sourceAttribution": "清《飛龍全傳》繡像一頁：全身立像、執扇，四周有版框，刀刻墨線，判 L2。此為演義小說插圖，非當時寫真。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E7%8E%8B%E6%9C%B4%EF%BC%88%E9%A3%9B%E9%BE%8D%E5%85%A8%E5%82%B3%EF%BC%89.jpg",
+      "thumb": "/data/portraits/person_wang_pu.jpg",
+      "full": "/data/portraits/full_person_wang_pu.jpg"
+    },
+    "person_li_yu_fd": {
+      "id": "person_li_yu_fd",
+      "name": "李煜",
+      "file": "Li Yu scth.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（明）王圻《三才圖會·人物卷》",
+      "sourceAttribution": "明萬曆王圻《三才圖會·人物卷》刻本一頁：半身，幅左上題「李後主像」；線條為刀刻硬邊、紙面有木版壓印痕。與已入庫曹操（Cao Cao scth.jpg）同書同版式，判 L2。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Li_Yu_scth.jpg",
+      "thumb": "/data/portraits/person_li_yu_fd.jpg",
+      "full": "/data/portraits/full_person_li_yu_fd.jpg"
+    },
+    "person_qian_hongchu": {
+      "id": "person_qian_hongchu",
+      "name": "钱弘俶",
+      "file": "錢俶.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "清光緒修《浙江吳越錢氏清芬志》宗譜像",
+      "sourceAttribution": "清光緒修《浙江吳越錢氏清芬志》宗譜像：半身、展脚幞頭，右側為贊文（首行「宋理宗皇帝御題」），四周有版框、線條均勻無設色，屬宗譜刻本，判 L2。像為主祀者後人追摹，非寫生。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E9%8C%A2%E4%BF%B6.jpg",
+      "thumb": "/data/portraits/person_qian_hongchu.jpg",
+      "full": "/data/portraits/full_person_qian_hongchu.jpg"
+    },
+    "person_bao_zheng": {
+      "id": "person_bao_zheng",
+      "name": "包拯",
+      "file": "Portraits of Famous Men - Bao Zheng.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《歷代名臣像》冊（費城藝術博物館藏《Portraits of Famous Men》冊頁）",
+      "sourceAttribution": "費城藝術博物館《Portraits of Famous Men》冊頁：半身、朱袍展脚幞頭，絹本設色、有顏料層次與絹絲紋，判 L1。館藏編號與該冊其餘各開一致。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Bao_Zheng.jpg",
+      "thumb": "/data/portraits/person_bao_zheng.jpg",
+      "full": "/data/portraits/full_person_bao_zheng.jpg"
+    },
+    "person_zhou_wenwang": {
+      "id": "person_zhou_wenwang",
+      "name": "姬昌",
+      "file": "Portraits of Famous Men - King Wen of Zhou.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《歷代名臣像》冊（費城藝術博物館藏《Portraits of Famous Men》冊頁）",
+      "sourceAttribution": "費城藝術博物館《Portraits of Famous Men》冊頁：半身、冕旒黃袍，絹本設色，判 L1。館方著錄為十九至二十世紀摹繪歷代名臣像冊頁，屬後人追畫。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_King_Wen_of_Zhou.jpg",
+      "thumb": "/data/portraits/person_zhou_wenwang.jpg",
+      "full": "/data/portraits/full_person_zhou_wenwang.jpg"
+    },
+    "person_li_siyuan": {
+      "id": "person_li_siyuan",
+      "name": "李嗣源",
+      "file": "唐明宗.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "刻本繡像（版心書名殘存「志傳」二字，版本待考）",
+      "sourceAttribution": "刻本繡像一頁：幅左豎題「唐明宗」，右側另題「曹恩」，畫兩人並立；刀刻墨線、四周有版框，版心書名僅殘存「…志傳」二字，具體書名待考。判 L2，並在書名處註明存疑，不臆題。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E5%94%90%E6%98%8E%E5%AE%97.jpg",
+      "thumb": "/data/portraits/person_li_siyuan.jpg",
+      "full": "/data/portraits/full_person_li_siyuan.jpg"
     }
   }
 }

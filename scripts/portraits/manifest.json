@@ -447,11 +447,11 @@
     "person_xiang_yu": {
       "id": "person_xiang_yu",
       "name": "项羽",
-      "file": "項羽.jpg",
-      "commons": "https://commons.wikimedia.org/wiki/File:%E9%A0%85%E7%BE%BD.jpg",
-      "thumbBytes": 74130,
-      "fullBytes": 323246,
-      "fullResolved": true
+      "file": "Portraits of Famous Men - Xiang Wang.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Xiang_Wang.jpg",
+      "thumbBytes": 120445,
+      "fullBytes": 120445,
+      "fullResolved": false
     },
     "person_qin_shi_huang": {
       "id": "person_qin_shi_huang",
@@ -1602,6 +1602,78 @@
       "commons": "https://commons.wikimedia.org/wiki/File:%E6%A1%91%E7%B6%AD%E7%BF%B0.jpg",
       "thumbBytes": 75019,
       "fullBytes": 75019,
+      "fullResolved": false
+    },
+    "person_wang_yanzhang": {
+      "id": "person_wang_yanzhang",
+      "name": "王彦章",
+      "file": "王彥章（殘唐五代史演義傳）.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E7%8E%8B%E5%BD%A5%E7%AB%A0%EF%BC%88%E6%AE%98%E5%94%90%E4%BA%94%E4%BB%A3%E5%8F%B2%E6%BC%94%E7%BE%A9%E5%82%B3%EF%BC%89.jpg",
+      "thumbBytes": 98598,
+      "fullBytes": 98598,
+      "fullResolved": false
+    },
+    "person_li_cunxiao": {
+      "id": "person_li_cunxiao",
+      "name": "李存孝",
+      "file": "李存孝（殘唐五代史演義傳）.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E6%9D%8E%E5%AD%98%E5%AD%9D%EF%BC%88%E6%AE%98%E5%94%90%E4%BA%94%E4%BB%A3%E5%8F%B2%E6%BC%94%E7%BE%A9%E5%82%B3%EF%BC%89.jpg",
+      "thumbBytes": 90456,
+      "fullBytes": 90456,
+      "fullResolved": false
+    },
+    "person_wang_pu": {
+      "id": "person_wang_pu",
+      "name": "王朴",
+      "file": "王朴（飛龍全傳）.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E7%8E%8B%E6%9C%B4%EF%BC%88%E9%A3%9B%E9%BE%8D%E5%85%A8%E5%82%B3%EF%BC%89.jpg",
+      "thumbBytes": 78530,
+      "fullBytes": 78530,
+      "fullResolved": false
+    },
+    "person_li_yu_fd": {
+      "id": "person_li_yu_fd",
+      "name": "李煜",
+      "file": "Li Yu scth.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Li_Yu_scth.jpg",
+      "thumbBytes": 91906,
+      "fullBytes": 91906,
+      "fullResolved": false
+    },
+    "person_qian_hongchu": {
+      "id": "person_qian_hongchu",
+      "name": "钱弘俶",
+      "file": "錢俶.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E9%8C%A2%E4%BF%B6.jpg",
+      "thumbBytes": 75412,
+      "fullBytes": 75412,
+      "fullResolved": false
+    },
+    "person_bao_zheng": {
+      "id": "person_bao_zheng",
+      "name": "包拯",
+      "file": "Portraits of Famous Men - Bao Zheng.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Bao_Zheng.jpg",
+      "thumbBytes": 121469,
+      "fullBytes": 121469,
+      "fullResolved": false
+    },
+    "person_zhou_wenwang": {
+      "id": "person_zhou_wenwang",
+      "name": "姬昌",
+      "file": "Portraits of Famous Men - King Wen of Zhou.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_King_Wen_of_Zhou.jpg",
+      "thumbBytes": 148677,
+      "fullBytes": 148677,
+      "fullResolved": false
+    },
+    "person_li_siyuan": {
+      "id": "person_li_siyuan",
+      "name": "李嗣源",
+      "file": "唐明宗.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E5%94%90%E6%98%8E%E5%AE%97.jpg",
+      "thumbBytes": 181692,
+      "fullBytes": 181692,
       "fullResolved": false
     }
   }

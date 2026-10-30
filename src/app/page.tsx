@@ -43,6 +43,7 @@ const EMPTY_LAYOUT: LayoutResult = {
   positions: new Map(),
   bounds: { minX: 0, minY: 0, maxX: 0, maxY: 0 },
   lanes: [],
+  blocks: [],
 };
 
 const ALL_CATEGORIES: RelationCategory[] = [

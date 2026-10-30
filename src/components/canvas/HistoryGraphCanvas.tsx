@@ -23,6 +23,7 @@ import type {
 import type { GraphIndex } from '@/lib/graph-algorithms';
 import { edgeCategoryAt, isPersonAliveAt } from '@/lib/graph-algorithms';
 import type { LayoutResult } from '@/lib/graph-layout';
+import { eraOf } from '@/lib/graph-layout';
 import { RELATION_META } from '@/lib/search-engine';
 import { dynastyColor } from '@/data/dynasties';
 import { getPortraitImage, onPortraitLoaded } from '@/lib/portrait-resolver';
@@ -79,29 +80,24 @@ export interface HistoryGraphCanvasProps {
 }
 
 /**
- * 三档 LOD 的最低可视权重：
- *   宏观（scale < 0.7）只看 75 分以上的帝王权臣，隐藏次要关系边；
- *   中观（0.7 ~ 1.6）放开到 40 分；
- *   微观（>= 1.6）不再设门槛——长尾人物此时必须出现，否则「微观交游」名不副实。
+ * 三档 LOD 的最低可视权重。
+ * ------------------------------------------------------------------
+ * 原为 [75, 40, 0]：远景只留帝王权臣。实测下来这条规则做了两件错事——
+ * ① 全景少画了六百多人（界面写着「可见 466/1136」），用户看到的是半张图；
+ * ② 被裁掉的人本该是「哪一片人多、哪一片人少」的唯一线索，裁完各代人看着一样多。
+ *
+ * 裁人的初衷是「别糊成一团」，但糊的根因是布局压成横条（见 graph-layout 的
+ * 时代分块注释），不是人多。布局修好后全景人均约 620 平方像素，画成三五个
+ * 像素的实心细点绰绰有余，没有理由再删人。故三档一律 0 门槛，
+ * 密度交给 draw() 里的「概览细点 / 中观头像」分级去控。
  */
-const LOD_WEIGHT: [number, number, number] = [75, 40, 0];
+const LOD_WEIGHT: [number, number, number] = [0, 0, 0];
 
 /**
- * 权重裁剪只在「大图」下生效，视图人数低于此数就不按权重删人。
- * ------------------------------------------------------------------
- * 75 / 40 / 0 这三档是按九百人全景定的：远景只留曹操、李世民这个量级的人，
- * 其余等凑近再放出来。问题在于它是**绝对阈值**，而权重分布是按分片各自编排的
- * ——一旦当前视图本来就没多少人，裁剪的后果不是「少画几个」，而是**整片空白**：
- *
- *   两晋南北朝（95 人）、五代十国（90 人）两片，最高权重都停在 67，
- *   各自没有一个人跨过 75 这条线。单片加载时力导向人少反而铺得更开
- *   （FR 的 k ∝ √(面积/n)），fitView 的适配缩放掉到 0.7 以下，正好落进 LOD 0，
- *   于是 90 个人一个都过不了门槛，画布墨量归零。
- *
- * 低倍率裁剪的本意是「别让人挤成一团」，前提是图本来就够大。人数少时把成本交给
- * draw() 里的 denseView 头像降级去控即可，不必删人。
+ * 权重裁剪的兜底门槛。
+ * 阈值已归零，保留这个开关是给将来的超大分片（万人级）留的：人数超过
+ * LOD_CULL_MIN_COUNT 才按权重裁剪，低于此数一律全画。
  */
-/** 图例要读这个常量：界面文案必须与这里的裁剪口径一致 */
 export const LOD_CULL_MIN_COUNT = 240;
 
 function lodMinWeight(lod: 0 | 1 | 2, nodeCount: number): number {
@@ -124,23 +120,113 @@ export const ZOOM_MAX = 12;
 /**
  * 节点半径随缩放的生长曲线。
  * ------------------------------------------------------------------
- * 低倍（≤1.35×）按比例压小，避免几百人同屏时糊成一片墨；
- * 高倍不能继续封顶在 1.35——那正是「放大也没变大」的直接原因：
- * 间距按 scale 线性拉开，圆却纹丝不动，越放越像满地芝麻。
+ * 半径由「底半径 × 生长曲线」两段乘起来。底半径按权重铺开（5.2 ~ 14.7px），
+ * 生长曲线是一条平滑的幂函数，两端各自封顶：
  *
- * 这里取次线性 growth = 1.35 · (scale/1.35)^0.62：
- * 线性放大会让高倍下的人像大到吞掉整屏，次线性则「越近长得越慢」，
- * 12× 时约为基半径的 3.2 倍（权重 100 者直径约 140px，一张脸看得清五官），
- * 3.2 倍封顶是防呆——再大就只剩一个圆了。
+ *   0.69×（全库适配）r ≈ 3.7 ~ 10.5px —— 概览档尘点固定 1.9px，地标 ×1.45；
+ *   1.0×             r ≈ 5.2 ~ 14.7px；
+ *   2.0×             r ≈ 9.1 ~ 25.8px —— 头像开始分得出眉眼；
+ *   12×              r ≈ 22 ~ 62px —— 幂函数封顶在 4.2 倍，再大就只剩一个圆。
+ *
+ * 指数从 0.62 提到 0.72、封顶从 3.4 提到 4.2，是因为「放大之后仍认不出人」：
+ * 人物画像多是全身立轴，脸只占圆圈的三分之一，半径不到二十像素时五官就是糊的。
+ * 底半径的极差同时收窄（原来 4.6~13 差 2.8 倍，权重低的几乎是个点），
+ * 免得次要人物在中观层缩成尘点、与概览层分不出来。
  *
  * 判定半径的地方（绘制、命中测试）必须共用这一个函数：
  * 两处各写一份公式，早晚会有一处忘了改，表现为「看着点中了却选不中」。
  */
 export function nodeRadius(weight: number, scale: number): number {
-  const base = 7 + (weight / 100) * 15;
-  const grow =
-    scale <= 1.35 ? Math.max(0.42, scale) : Math.min(3.2, 1.35 * Math.pow(scale / 1.35, 0.62));
+  const base = 5.2 + (weight / 100) * 9.5;
+  const grow = Math.min(4.2, 0.85 * Math.pow(Math.max(0.01, scale), 0.72));
   return base * grow;
+}
+
+/**
+ * 概览层「地标 / 尘点」二级制。
+ * ------------------------------------------------------------------
+ * 一千一百人同屏，人人一个带圆环的圆，得到的只会是一张噪点图：
+ * 环是同心圆，相邻两个叠上半个就分不清边界，眼睛无处落脚。
+ * 星图的解法不是把星星画小，而是分两层——少数亮星带名字，其余只做底噪。
+ *
+ * 地标的取法不能只看权重门槛：权重是按分片各自编排的，五代、新莽两片
+ * 最高只到 67，纯按分数取会整片一个地标都没有。故先取全局前 96 名，
+ * 再给每个朝代补到至少 2 人，保证每块版图上都有可命名的锚。
+ */
+export const DUST_RADIUS = 1.9;
+export const BEACON_SCALE = 1.45;
+/**
+ * 地标数量。九十六个是「贪多」的结果：地标一多，标签彼此挤掉，
+ * 最后整幅图上只剩一堆孤零零的字徽——那比没有字徽更让人无从下手。
+ * 五十四个（全局前五十四 + 每朝代补足一名）才刚好每个都有名字可挂。
+ */
+
+function computeBeaconIds(nodes: HistoricalPersonNode[]): Set<string> {
+  const out = new Set<string>();
+  const sorted = [...nodes].sort((a, b) => b.importanceWeight - a.importanceWeight);
+
+  /**
+   * 地标按**时代配额**取，不按全局权重排名取。
+   * ------------------------------------------------------------------
+   * 权重是各分片自己编排的（两晋 95 人最高 67 分，三国 133 人有一串 90+），
+   * 所以「全局前九十六名」实际上是「三个大分片的名人堂」，其余朝代整块版图
+   * 一个地标都没有——实测魏晋南北朝 131 人里只有「刘」一枚圆牌，
+   * 那片疆域看上去像无人区，而王导、谢安、陶渊明都在里头。
+   *
+   * 改为按块分名额：名额 ∝ √人数（人多的大块多给几个），下限 6、上限 16，
+   * 于是每块版图都有自己的骨架，大小之别从「块的大小」而不是「有没有名字」上读。
+   */
+  const byEra = new Map<string, HistoricalPersonNode[]>();
+  for (const node of sorted) {
+    const era = eraOf(node.dynasty);
+    const bucket = byEra.get(era) ?? [];
+    bucket.push(node);
+    byEra.set(era, bucket);
+  }
+  for (const bucket of byEra.values()) {
+    const quota = Math.max(4, Math.min(10, Math.round(Math.sqrt(bucket.length))));
+    for (let i = 0; i < Math.min(quota, bucket.length); i += 1) out.add(bucket[i].id);
+  }
+
+  // 全局最显赫的十来位无论如何都要有名字——他们是读图的参照
+  for (let i = 0; i < Math.min(12, sorted.length); i += 1) out.add(sorted[i].id);
+  return out;
+}
+
+/**
+ * 画像只在「脸能看清」的尺寸上出现，小于此半径一律改用姓氏字徽。
+ * 十六像素半径的圆里，一张占画面三分之一的古画脸只剩下五像素——
+ * 那还比不上一个字号合适的「曹」字能说明问题，而且极容易被误认成卡通头像。
+ */
+const MIN_FACE_RADIUS = 15.5;
+
+/** 复姓表：三字名的头两字未必是名，单取首字会得到「司」「诸」这种不成词的徽记 */
+const COMPOUND_SURNAMES = new Set([
+  '司马', '欧阳', '诸葛', '上官', '夏侯', '皇甫', '尉迟', '长孙', '宇文', '慕容',
+  '拓跋', '独孤', '贺兰', '完颜', '耶律', '赫连', '呼延', '令狐', '公孙', '闾丘',
+  '端木', '东郭', '西门', '南宫', '第五', '万俟', '太史', '申屠', '仲孙', '钟离',
+]);
+
+/** 圆内字徽：复姓取两字，单姓取一字 */
+function monogramOf(name: string): string {
+  const two = name.slice(0, 2);
+  return COMPOUND_SURNAMES.has(two) ? two : name.slice(0, 1);
+}
+
+/** 深色主题下朝代色要提亮，否则字徽与纸底糊成一块 */
+function tintForInk(hex: string, isDark: boolean): string {
+  if (!isDark) return hex;
+  const m = /^#([0-9a-f]{6})$/i.exec(hex);
+  if (!m) return hex;
+  const n = parseInt(m[1], 16);
+  const mix = (c: number) => Math.round(c + (255 - c) * 0.45);
+  return `rgb(${mix((n >> 16) & 255)},${mix((n >> 8) & 255)},${mix(n & 255)})`;
+}
+
+/** 有传世图档（L1 古画 / L2 版画）的人物：概览档给一圈金边，一眼看出谁有画像 */
+function hasRealPortrait(node: HistoricalPersonNode): boolean {
+  const tier = node.portrait?.tier;
+  return tier === 'tier1_authentic_painting' || tier === 'tier2_ancient_woodcut';
 }
 
 /**
@@ -218,16 +304,23 @@ function portraitSprite(
   g.beginPath();
   g.arc(size / 2, size / 2, radius * dpr, 0, Math.PI * 2);
   g.clip();
+  /**
+   * 提一点反差与暖调。
+   * 传世像多是纸本旧画或刻本白描：纸色发黄、墨线极细，缩到二三十像素后
+   * 只剩一块浅灰的雾，和旁边的剪纸剪影分不出来——「有画像的人看起来也像卡通」
+   * 就是这么来的。提高对比让墨线立住，再加一点暖调，才看得出这是绢纸上的画。
+   */
+  g.filter = 'contrast(1.18) saturate(1.08)';
   // 取「头肩」入圆：传世画像多为全身立轴，整幅塞进小圆后人物只剩拇指大。
-  // 以图宽的方形截取上半部（头顶留 4% 余量），近似历代名臣像的册页取景。
+  // 以图宽七成为方形截取上半部，近似历代名臣像的册页取景。
   if (ratio >= 0.82 && ratio <= 1.24) {
     // 本就是半身/方形构图，直接满幅
     g.drawImage(img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, size, size);
   } else {
-    const side = Math.min(img.naturalWidth, img.naturalHeight * 0.5);
+    const side = Math.min(img.naturalWidth * 0.86, img.naturalHeight * 0.46);
     const sx = Math.max(0, (img.naturalWidth - side) / 2);
-    const sy = img.naturalHeight * 0.045;
-    g.drawImage(img, sx, sy, side, side, 0, 0, size, size);
+    const sy = img.naturalHeight * 0.035;
+    g.drawImage(img, sx, sy, side, Math.min(side, img.naturalHeight - sy), 0, 0, size, size);
   }
   g.restore();
 
@@ -237,9 +330,20 @@ function portraitSprite(
   return canvas;
 }
 
+/**
+ * 三档 LOD。
+ * ------------------------------------------------------------------
+ * 0 概览（< 0.95×）：实心细点 + 主干关系，只标最显赫的一小撮名字；
+ * 1 中观（0.95 ~ 2.2×）：圆形头像 + 姓名 + 头衔；
+ * 2 微观（>= 2.2×）：加上字号生长、双层描边与关系胶囊。
+ *
+ * 门槛原为 0.7 / 1.6——全库适配恰好落在 0.72，于是首屏一进来就是「中观」：
+ * 每个人都被要求画头像和头衔，而那时人均间距只有十二像素，头像缩到十几像素
+ * 就是一团色斑。现把概览档的门槛抬到 0.95，首屏老老实实当概览看。
+ */
 function lodOf(scale: number): 0 | 1 | 2 {
-  if (scale < 0.7) return 0;
-  if (scale < 1.6) return 1;
+  if (scale < 0.95) return 0;
+  if (scale < 2.2) return 1;
   return 2;
 }
 
@@ -293,6 +397,11 @@ export function HistoryGraphCanvas({
    * 改为由绘制自己置位：只要还没画到 intro>=1，循环就一直要求重绘。
    */
   const introDoneRef = useRef(false);
+  /**
+   * 概览层地标集合。命中测试要复用绘制时那一份——两处各算一次，
+   * 早晚会因为遍历顺序或权重并列而差出一个人，表现为「点在地标上却选中了尘点」。
+   */
+  const beaconRef = useRef<Set<string> | null>(null);
   const draggingRef = useRef<{ active: boolean; moved: boolean; x: number; y: number } | null>(null);
   /** 相机补间：聚焦/复位时用缓动代替瞬移，避免一帧之内天地翻覆 */
   const tweenRef = useRef<{
@@ -354,12 +463,21 @@ export function HistoryGraphCanvas({
     // 否则秦汉一簇会整块躲在面板背后。
     const insetLeft = w > 980 ? 196 : 0;
     const insetRight = latest.current.rightInset ?? 0;
+    /**
+     * 底部纪年轴是盖在画布上的一层常驻浮层（约九十像素），顶部还有工具栏。
+     * 只按 w/h 居中，最下面一排时代块就被纪年轴压住——实测「元 / 明 / 清」
+     * 三块的下缘正好埋在时间轴底下，名字都读不到。这里把上下两条浮层
+     * 从可用高度里扣掉，整幅图才是真正「看得见的部分」居中。
+     */
+    const insetTop = 72;
+    const insetBottom = 134;
     const availW = Math.max(240, w - insetLeft - insetRight - 88);
-    const scale = Math.min(Math.max(0.24, availW / spanX), Math.max(0.24, (h - 150) / spanY), 1.25);
+    const availH = Math.max(180, h - insetTop - insetBottom);
+    const scale = Math.min(Math.max(0.24, availW / spanX), Math.max(0.24, availH / spanY), 1.25);
     camera.current = {
       scale,
       tx: insetLeft + (w - insetLeft - insetRight) / 2 - ((bounds.minX + bounds.maxX) / 2) * scale,
-      ty: h / 2 - ((bounds.minY + bounds.maxY) / 2) * scale,
+      ty: insetTop + availH / 2 - ((bounds.minY + bounds.maxY) / 2) * scale,
     };
     dirtyRef.current = true;
   }, []);
@@ -479,6 +597,13 @@ export function HistoryGraphCanvas({
     const minWeight = lodMinWeight(lod, s.nodes.length);
     const intro = Math.min(1, (performance.now() - introRef.current) / 720);
 
+    /**
+     * 概览层分「地标」与「尘点」两级：地标带名字、带头像、带金边，
+     * 尘点只是朝色的一个细点。地标表在绘制时算一次，命中测试复用（beaconRef）。
+     */
+    const beacons = lod === 0 ? computeBeaconIds(s.nodes) : null;
+    beaconRef.current = beacons;
+
     const project = (x: number, y: number): [number, number] => [x * scale + tx, y * scale + ty];
 
     /* 泳道底纹 */
@@ -517,6 +642,49 @@ export function HistoryGraphCanvas({
       }
     }
 
+    const blockTitles: { text: string; x: number; y: number; width: number; bandH: number }[] = [];
+
+    /**
+     * 时代分块底纹（仅力导向 + 概览档）。
+     * 一千一百个点按朝代排成十来块，颜色虽有区分，但十来种土色堆在一起，
+     * 光靠色相认不出「这一片是唐还是宋」。这里在每块后面垫一层几乎看不见的
+     * 暖色圆角矩形，并在左上角写时代名——名字是给人读的，色块只负责划分地界。
+     */
+    if (lod === 0 && s.layoutMode === 'force' && s.layout.blocks.length) {
+      for (const block of s.layout.blocks) {
+        const [bx1, by1] = project(block.x - block.w / 2, block.y - block.h / 2);
+        const [bx2, by2] = project(block.x + block.w / 2, block.y + block.h / 2);
+        const bw = bx2 - bx1;
+        const bh = by2 - by1;
+        if (bw < 24 || bh < 24) continue;
+        const radius = Math.min(22, bw / 5, bh / 5);
+        ctx.beginPath();
+        ctx.moveTo(bx1 + radius, by1);
+        ctx.arcTo(bx2, by1, bx2, by1 + radius, radius);
+        ctx.arcTo(bx2, by2, bx2 - radius, by2, radius);
+        ctx.arcTo(bx1, by2, bx1, by2 - radius, radius);
+        ctx.arcTo(bx1, by1, bx1 + radius, by1, radius);
+        ctx.closePath();
+        ctx.fillStyle = s.isDark ? 'rgba(244,236,216,0.026)' : 'rgba(126,102,64,0.042)';
+        ctx.fill();
+
+        /**
+         * 时代名不在这一趟画：它得压在所有圆牌之上。
+         * 先画标题、后画节点，密密麻麻的圆牌正好盖住「汉末·三国」四个字，
+         * 读图的人只看到一片没有地名的疆域。位置算好存起来，节点画完再落笔。
+         */
+        const band = block.band ?? 0;
+        const bandBottom = band > 0 ? project(block.x, block.y - block.h / 2 + band)[1] : by1;
+        blockTitles.push({
+          text: block.label,
+          x: bx1 + 10,
+          y: by1,
+          width: bw - 20,
+          bandH: Math.max(0, bandBottom - by1),
+        });
+      }
+    }
+
     /* 可见节点集合 */
     const visible = new Map<string, { x: number; y: number; r: number; weight: number }>();
     for (const node of s.nodes) {
@@ -526,16 +694,26 @@ export function HistoryGraphCanvas({
       if (!pos) continue;
       const [sx, sy] = project(pos.x, pos.y);
       if (sx < -140 || sx > w + 140 || sy < -140 || sy > h + 140) continue;
-      const r = nodeRadius(node.importanceWeight, scale);
+      // 概览层：地标放大一号，尘点压成固定细点——半径若仍按权重走，
+      // 尘点之间就会互相压住，整片变成噪点。
+      const r = beacons
+        ? beacons.has(node.id)
+          ? nodeRadius(node.importanceWeight, scale) * BEACON_SCALE
+          : DUST_RADIUS
+        : nodeRadius(node.importanceWeight, scale);
       visible.set(node.id, { x: sx, y: sy, r, weight: node.importanceWeight });
     }
 
     /**
      * 过绘保护：一屏塞进四五百人时，给每个人画头像纯属浪费算力——
-     * 那个密度下五官比米粒还小，画了也认不出。此时只给权重 60 以上者保留头像，
+     * 那个密度下五官比米粒还小，画了也认不出。此时只给权重 70 以上者保留头像，
      * 其余用朝色平涂；并省掉帝王光晕（每帧几十个径向渐变，代价不低）。
+     *
+     * 判据从「人数 > 380」改成「人均屏幕面积」：人数是绝对量，而能不能看清
+     * 取决于每人分到多少像素。4K 屏上八百人也宽裕，13 寸笔记本上三百人就密了。
      */
-    const denseView = visible.size > 380;
+    const pxPerNode = (w * h) / Math.max(1, visible.size);
+    const denseView = pxPerNode < 1100;
 
     /**
      * 标签排布：按历史中心度从高到低逐个占位，每个标签依次试
@@ -550,7 +728,7 @@ export function HistoryGraphCanvas({
      * 用 √(scale/2) 缓慢加成、1.7 倍封顶：既跟上画面，又不会在高倍时占满视野。
      */
     const zoomBoost = Math.min(1.7, Math.max(1, Math.sqrt(scale / 2)));
-    const nameSize = (lod === 0 ? 10.5 : lod === 1 ? 12 : 13.5) * zoomBoost;
+    const nameSize = (lod === 0 ? 11 : lod === 1 ? 12 : 13.5) * zoomBoost;
     const nameFont = `600 ${nameSize.toFixed(1)}px "Noto Serif SC", "Songti SC", serif`;
     const secondSize = 9.5 * Math.min(1.45, zoomBoost);
     const secondFont = `400 ${secondSize.toFixed(1)}px "Noto Sans SC", sans-serif`;
@@ -609,14 +787,34 @@ export function HistoryGraphCanvas({
     const ordered = [...visible.entries()].sort((a, b) => b[1].weight - a[1].weight);
     const nodeById = new Map(s.nodes.map((node) => [node.id, node]));
 
+    /**
+     * 概览档的「锚点」就是地标。地标只有八十来个，全部给名字也不会糊；
+     * 反过来说，名字也只落在地标上——尘点旁挂一行字，读者根本找不到
+     * 那行字指向的是哪一个 1.9px 的点，只剩墨量。
+     */
+    /**
+     * 标名配额按**当前视口人数的排名**算，不按绝对权重门槛。
+     * ------------------------------------------------------------------
+     * 权重是各分片自己编排的量，绝对值不可比：三国片有一串 90+，先秦片
+     * 最高不过五十上下。用「权重 ≥ 55」当门槛，等于把整片先秦、两晋的
+     * 名字全部抹掉——实测中观档放大到先秦一带，一百多枚圆牌只有字徽、
+     * 没有一个人名，读图的人只能靠猜。
+     *
+     * 改成「视口内权重前 N% 标名」：中观档标一半，微观档标九成，
+     * 概览档则完全交给地标集合。排名法对任何分片的量纲都成立。
+     */
+    const labelQuota =
+      lod === 0 ? Number.POSITIVE_INFINITY : Math.round(ordered.length * (lod === 2 ? 0.9 : 0.5));
+
+    let rank = 0;
     for (const [id, geo] of ordered) {
       const node = nodeById.get(id);
       if (!node) continue;
+      rank += 1;
+      if (beacons && !beacons.has(id)) continue;
       /** 悬停与选中者必须有标签，哪怕压住旁人 */
       const force = id === s.hoverId || id === s.selectedId;
-      // 过绘时把标名门槛抬到 55：这个密度下每个人的名字都标出来只会挤成墨迹，
-      // 不如保证权重高的人物清晰可读，其余靠悬停查看。
-      if (!force && denseView && node.importanceWeight < 55) continue;
+      if (!force && rank > labelQuota) continue;
 
       const nameW = measureCached(ctx, node.name, nameFont);
       const second = secondLineOf(node);
@@ -628,9 +826,12 @@ export function HistoryGraphCanvas({
       const blockH = nameSize + (second ? secondSize + 3 : 0) + LABEL_PAD * 2;
 
       /**
-       * 候选位：上下左右各两个距离（贴边 + 外扩），共 8 个。
-       * 中心人物往往被七八个近邻围死，只给四个贴边位的话，
-       * 越是核心人物越容易被挤掉名字——这恰恰是最不能丢的那几个。
+       * 候选位：上下左右四个贴边位。
+       * ------------------------------------------------------------------
+       * 曾另有一档「外扩位」——离圆心再远一倍，专给被近邻围死的中心人物。
+       * 它换来的是更难读的图：名字飘在空白处，与圆牌之间既无线也无框，
+       * 读者根本认不出这行字说的是哪一个圆。实测「孔丘」二字落在自己的
+       * 圆牌上方七十像素处，像一条无主的批注。宁可不标，也不标到看不出归属。
        */
       const buildVariants = (gap: number): { box: Rect; align: CanvasTextAlign }[] => {
         const list: { box: Rect; align: CanvasTextAlign }[] = [
@@ -649,7 +850,7 @@ export function HistoryGraphCanvas({
         return list;
       };
 
-      const variants = [...buildVariants(LABEL_GAP), ...buildVariants(LABEL_GAP + geo.r * 2 + blockH * 0.5)];
+      const variants = buildVariants(LABEL_GAP);
 
       const fits = (box: Rect): boolean => {
         const keys = cellsOf(box);
@@ -677,11 +878,21 @@ export function HistoryGraphCanvas({
         return true;
       };
 
-      let chosen: { box: Rect; align: CanvasTextAlign } | undefined = force
-        ? variants[0]
-        : variants.find((v) => fits(v.box));
-      // 最后的兜底：权重 ≥ 82 的帝王级人物宁可轻微压边，也不能在图上无名
-      if (!chosen && node.importanceWeight >= 82) chosen = variants[0];
+      let chosen: { box: Rect; align: CanvasTextAlign } | undefined;
+      if (force) {
+        chosen = variants[0];
+      } else if (beacons) {
+        /**
+         * 概览层的地标优先「正下方」，排不下再试上方、左右。
+         * 只给正下方会在密集处把大半个地标的名字挤掉（实测五十四个地标只剩
+         * 不到二十个有名），四向兜底虽然偶有歧义，但比「一片字徽没有名字」强。
+         */
+        chosen = [variants[0], variants[1], variants[2], variants[3]].find((v) => fits(v.box));
+      } else {
+        chosen = variants.find((v) => fits(v.box));
+      }
+      // 最后的兜底：中观/微观层里权重 ≥ 82 的帝王级人物宁可轻微压边，也不能无名
+      if (!chosen && !beacons && node.importanceWeight >= 82) chosen = variants[0];
       if (!chosen) continue;
 
       const { box, align } = chosen;
@@ -723,7 +934,16 @@ export function HistoryGraphCanvas({
   }
 
 
-    /* ------------------------------ 关系边 ------------------------------ */
+    /**
+     * 关系边
+     * ------------------------------------------------------------------
+     * 概览档（< 0.95×）只画「同朝代的主干关系」。
+     * 一千一百人同屏时全库一千八百条边里有大量跨代连线——汉与匈奴、唐与吐蕃、
+     * 前后相隔几百年的两条线在屏幕上一样长，一画就是一束横穿全图的线缆，
+     * 把好不容易分出来的时代块又缠成一片。关系是「放大之后才看得清」的信息，
+     * 概览层只留每块内部的骨架，跨代的线一律压到近乎不可见。
+     */
+    const nodeByIdForEdges = new Map(s.nodes.map((node) => [node.id, node]));
     ctx.lineCap = 'round';
     // 虚线与实线状态交替时反复 setLineDash，每次都是一次状态切换；
     // 记下当前值，只在真的变化时才下发——上千条边时这一项是白捡的。
@@ -736,23 +956,46 @@ export function HistoryGraphCanvas({
       const b = visible.get(edge.target);
       if (!a || !b) continue;
 
-      // 宏观层只留主干：弱关系（strength < 5）在缩到 0.7 以下时本就是一团虚影，
-      // 画出来既看不清又拖慢帧率，不如留给中观层展开。
-      if (lod === 0 && edge.strength < 5) continue;
+      /**
+       * 概览层只画「地标 ↔ 地标」的骨架。
+       * 一千八百条边里有大量线连向尘点——在这个密度下既不指向可命名的人，
+       * 又足够长，正好把分好的时代块重新缠成一束线缆。留下地标之间的线，
+       * 图上就有了「谁的网连向谁」这一层可读信息，而不是一层灰雾。
+       */
+      if (lod === 0) {
+        if (!beacons || !beacons.has(edge.source) || !beacons.has(edge.target)) continue;
+        if (edge.strength < 5) continue;
+      }
 
       const category = s.year !== null ? edgeCategoryAt(edge, s.year) : edge.primaryCategory;
       const meta = RELATION_META[category];
       const color = s.isDark ? meta.darkColor : meta.color;
 
-      let alpha = 0.5;
+      /**
+       * 边的浓度按档位分三档。
+       * ------------------------------------------------------------------
+       * 原来中观（0.95~1.6 倍）一律 0.5 的浓度，而中观正是「一屏四五百人」的档位：
+       * 那个密度下每条边都够长，一千八百条七色实线与虚线叠在一起，
+       * 整幅图变成一张彩虹蛛网，人反而被线埋了。关系是「凑近才读」的信息，
+       * 越远越该退成底纹。
+       *
+       * 概览 0.26 / 0.05、中观 0.30 / 0.12（同代 / 跨代）、微观 0.46 且不再分。
+       */
+      let alpha = lod === 2 ? 0.46 : 0.3;
       if (s.egoEdgeIds && !s.egoEdgeIds.has(edge.id)) alpha = 0.05;
       const touching = s.hoverId === edge.source || s.hoverId === edge.target;
       if (touching) alpha = 0.95;
+      else if (lod < 2) {
+        const da = nodeByIdForEdges.get(edge.source)?.dynasty;
+        const db = nodeByIdForEdges.get(edge.target)?.dynasty;
+        const sameEra = da && db ? eraOf(da) === eraOf(db) : da === db;
+        alpha = sameEra ? (lod === 0 ? 0.26 : 0.3) : lod === 0 ? 0.05 : 0.1;
+      }
       if (s.selectedId && (s.selectedId === edge.source || s.selectedId === edge.target)) {
         alpha = Math.max(alpha, 0.82);
       }
 
-      const width = Math.max(0.75, (0.7 + edge.strength * 0.16) * Math.min(1.5, Math.max(0.6, scale)));
+      const width = Math.max(0.6, (lod === 2 ? 0.7 : 0.5) + edge.strength * (lod === 2 ? 0.16 : 0.11)) * Math.min(1.5, Math.max(0.6, scale));
       ctx.globalAlpha = alpha * intro;
 
       const [x1, y1] = [a.x, a.y];
@@ -771,9 +1014,12 @@ export function HistoryGraphCanvas({
 
       ctx.strokeStyle = color;
       ctx.lineWidth = width;
-      if (meta.dashed !== dashOn) {
-        ctx.setLineDash(meta.dashed ? DASH : []);
-        dashOn = meta.dashed;
+      // 概览层一律实线：几百条 5-4 虚线在低倍下会被重采样成断续的灰点，
+      // 既看不出走向又显得脏。虚实是放大之后才分得清的语义。
+      const dashed = lod === 0 ? false : meta.dashed;
+      if (dashed !== dashOn) {
+        ctx.setLineDash(dashed ? DASH : []);
+        dashOn = dashed;
       }
 
       if (meta.double) {
@@ -798,7 +1044,8 @@ export function HistoryGraphCanvas({
         dashOn = false;
       }
 
-      if (edge.directed) {
+      // 箭头只在放大后画：概览层几千个三角头就是一层毛刺
+      if (edge.directed && (lod > 0 || touching)) {
         const head = 5.5 + Math.min(4, scale);
         ctx.fillStyle = color;
         ctx.beginPath();
@@ -882,6 +1129,7 @@ export function HistoryGraphCanvas({
       const isEgoCenter = s.egoNodeIds ? s.egoNodeIds.has(node.id) && !dimmed : false;
       const ringColor = dynastyColor(node.dynasty);
       const r = geo.r;
+      const hasReal = hasRealPortrait(node);
 
       const appearDelay = (node.importanceWeight / 100) * 260;
       const appear = Math.min(1, Math.max(0, ((performance.now() - introRef.current) - appearDelay) / 380));
@@ -889,47 +1137,128 @@ export function HistoryGraphCanvas({
 
       ctx.globalAlpha = alpha * appear;
 
-      /* 朝代光环（过绘时省去） */
-      if (!denseView && node.roles.some((role) => role.includes('皇帝'))) {
-        const glow = ctx.createRadialGradient(geo.x, geo.y, r * 0.6, geo.x, geo.y, r * 2.5);
-        glow.addColorStop(0, `${ringColor}44`);
-        glow.addColorStop(1, `${ringColor}00`);
-        ctx.fillStyle = glow;
+      if (lod === 0) {
+        /**
+         * 概览档的尘点：固定 1.9px 实心，无环、无头像、无光晕。
+         * 它的职责是「密度与分布」，不是「认出是谁」——朝色已经说明了时代，
+         * 再叠圆环只会让相邻两个糊成一片。
+         */
+        if (!beacons || !beacons.has(node.id)) {
+          ctx.beginPath();
+          ctx.arc(geo.x, geo.y, DUST_RADIUS, 0, Math.PI * 2);
+          ctx.fillStyle = ringColor;
+          ctx.globalAlpha = alpha * appear * (dimmed ? 0.1 : 0.62);
+          ctx.fill();
+          ctx.globalAlpha = alpha * appear;
+        } else {
+          /**
+           * 地标：纸色圆牌 + 姓氏字徽 + 朝代色细环（有图档者金环）。
+           *
+           * 原本这里画的是缩到头像大小的人像，实测行不通：半径十四五像素时，
+           * 一张全身立轴里的脸只剩四五像素，得到的是一枚发黄的圆片，
+           * 既认不出人，又容易被当成「卡通头像」。字徽在这个尺寸上可读，
+           * 而且与右边的姓名标签互为印证；真正的脸等到放大到 MIN_FACE_RADIUS
+           * 以上再出现——见下面中观/微观两档。
+           */
+          ctx.save();
+          ctx.shadowColor = s.isDark ? 'rgba(0,0,0,0.55)' : 'rgba(72,56,32,0.24)';
+          ctx.shadowBlur = 7;
+          ctx.shadowOffsetY = 1.5;
+          ctx.beginPath();
+          ctx.arc(geo.x, geo.y, r, 0, Math.PI * 2);
+          ctx.fillStyle = s.isDark ? 'rgba(34,38,46,0.97)' : 'rgba(251,248,241,0.98)';
+          ctx.fill();
+          ctx.restore();
+
+          const mark = monogramOf(node.name);
+          ctx.font = `600 ${(mark.length > 1 ? r * 0.9 : r * 1.15).toFixed(1)}px "Noto Serif SC", "Songti SC", serif`;
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillStyle = tintForInk(ringColor, s.isDark);
+          ctx.fillText(mark, geo.x, geo.y + r * 0.04);
+
+          ctx.beginPath();
+          ctx.arc(geo.x, geo.y, r, 0, Math.PI * 2);
+          ctx.strokeStyle = hasReal
+            ? s.isDark
+              ? 'rgba(226,196,120,0.95)'
+              : 'rgba(158,118,40,0.9)'
+            : s.isDark
+              ? `${ringColor}99`
+              : `${ringColor}aa`;
+          ctx.lineWidth = hasReal ? 1.8 : 1.2;
+          ctx.stroke();
+        }
+        ctx.globalAlpha = alpha * appear;
+      } else {
+        /* 朝代光环（过绘时省去） */
+        if (!denseView && node.roles.some((role) => role.includes('皇帝'))) {
+          const glow = ctx.createRadialGradient(geo.x, geo.y, r * 0.6, geo.x, geo.y, r * 2.5);
+          glow.addColorStop(0, `${ringColor}44`);
+          glow.addColorStop(1, `${ringColor}00`);
+          ctx.fillStyle = glow;
+          ctx.beginPath();
+          ctx.arc(geo.x, geo.y, r * 2.5, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        /* 底色圆 */
         ctx.beginPath();
-        ctx.arc(geo.x, geo.y, r * 2.5, 0, Math.PI * 2);
+        ctx.arc(geo.x, geo.y, r, 0, Math.PI * 2);
+        ctx.fillStyle = s.isDark ? 'rgba(20,23,29,0.96)' : 'rgba(252,251,247,0.98)';
         ctx.fill();
-      }
 
-      /* 底色圆 */
-      ctx.beginPath();
-      ctx.arc(geo.x, geo.y, r, 0, Math.PI * 2);
-      ctx.fillStyle = s.isDark ? 'rgba(20,23,29,0.96)' : 'rgba(252,251,247,0.98)';
-      ctx.fill();
-
-      /* 头像（中倍率以上）：走离屏位图缓存，不做逐帧裁圆 */
-      if (lod >= 1 && (!denseView || node.importanceWeight >= 70)) {
-        const img = getPortraitImage(node);
+        /**
+         * 圆里放什么：**只有 L1/L2 传世图档才放脸，其余一律用姓氏字徽**。
+         * ------------------------------------------------------------------
+         * 原先的逻辑是「有图就画图」，而九百多人身上都挂着一张 L4 冠服剪影
+         * （程序生成的程式化小人）。它在小尺寸上和古画头像混在一起，
+         * 于是整幅图看上去全是卡通头像——用户第一眼就指出「有画像的人
+         * 显示的也是卡通画像」，说的正是这件事：真的脸被剪影稀释掉了。
+         *
+         * 现在把「有真画像」与「无画像」分成两种画法：
+         *   金环 + 人像  —— 传世画像，看得见就是看得见；
+         *   朝色环 + 字徽 —— 无画像者，用字，不臆造形象。
+         * 冠服考据像仍然留在右侧人物详情里（那里有足够的尺寸与文字说明
+         * 「这是复原示意，不是写生」），不进画布。
+         */
+        const img = hasReal && r >= MIN_FACE_RADIUS && (!denseView || node.importanceWeight >= 70)
+          ? getPortraitImage(node)
+          : null;
         if (img && img.complete && img.naturalWidth > 0) {
           const sprite = portraitSprite(node.id, img, r, dpr);
           if (sprite) {
-            ctx.drawImage(sprite, geo.x - r * 0.9, geo.y - r * 0.9, r * 1.8, r * 1.8);
+            ctx.drawImage(sprite, geo.x - r * 0.94, geo.y - r * 0.94, r * 1.88, r * 1.88);
           }
+        } else if (r >= 7) {
+          const mark = monogramOf(node.name);
+          ctx.font = `600 ${(mark.length > 1 ? r * 0.9 : r * 1.15).toFixed(1)}px "Noto Serif SC", "Songti SC", serif`;
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillStyle = tintForInk(ringColor, s.isDark);
+          ctx.globalAlpha = alpha * appear * 0.85;
+          ctx.fillText(mark, geo.x, geo.y + r * 0.04);
+          ctx.globalAlpha = alpha * appear;
         }
-      }
 
-      /* 边框：双层 / 单层 */
-      ctx.beginPath();
-      ctx.arc(geo.x, geo.y, r, 0, Math.PI * 2);
-      ctx.strokeStyle = ringColor;
-      ctx.lineWidth = lod === 2 ? 2 : 1.4;
-      ctx.stroke();
-
-      if (lod === 2) {
+        /* 边框：双层 / 单层。有传世图档者用金线，一眼看出这不是复原像 */
         ctx.beginPath();
-        ctx.arc(geo.x, geo.y, r + 3.2, 0, Math.PI * 2);
-        ctx.strokeStyle = `${ringColor}55`;
-        ctx.lineWidth = 1;
+        ctx.arc(geo.x, geo.y, r, 0, Math.PI * 2);
+        ctx.strokeStyle = hasReal
+          ? s.isDark
+            ? 'rgba(226,196,120,0.92)'
+            : 'rgba(158,118,40,0.85)'
+          : ringColor;
+        ctx.lineWidth = lod === 2 ? 2 : 1.4;
         ctx.stroke();
+
+        if (lod === 2) {
+          ctx.beginPath();
+          ctx.arc(geo.x, geo.y, r + 3.2, 0, Math.PI * 2);
+          ctx.strokeStyle = `${ringColor}55`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
       }
 
       /* 寻路链路：朱砂呼吸环 */
@@ -961,25 +1290,76 @@ export function HistoryGraphCanvas({
       ctx.textAlign = place.align;
       ctx.textBaseline = 'top';
 
-      if (lod >= 1) {
-        ctx.fillStyle = s.isDark ? 'rgba(17,19,24,0.62)' : 'rgba(252,251,247,0.72)';
-        ctx.fillRect(
-          place.box.x1,
-          place.box.y1,
-          place.box.x2 - place.box.x1,
-          place.box.y2 - place.box.y1,
-        );
-      }
+      /**
+       * 标签不用色块底，改成文字描边。
+       * 原先是给每个名字垫一块半透明矩形（1200 个就是 1200 个 fillRect），
+       * 密集处这些方块互相叠压，看着像一墙便签，反而把人物图埋了。
+       * 描边只沿着笔画走，既压得住背景，又不会切出一块硬边。
+       */
+      const halo = s.isDark ? 'rgba(14,16,20,0.88)' : 'rgba(250,247,238,0.92)';
+      ctx.lineJoin = 'round';
+      ctx.miterLimit = 2;
 
       ctx.font = nameFont;
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = halo;
+      ctx.strokeText(node.name, place.nameX, place.nameY);
       ctx.fillStyle = s.isDark ? 'rgba(238,232,218,0.95)' : 'rgba(28,26,22,0.94)';
       ctx.fillText(node.name, place.nameX, place.nameY);
 
       if (place.second) {
         ctx.font = secondFont;
+        ctx.lineWidth = 2.5;
+        ctx.strokeStyle = halo;
+        ctx.strokeText(place.second, place.titleX, place.titleY);
         ctx.fillStyle = s.isDark ? 'rgba(200,193,178,0.62)' : 'rgba(90,80,64,0.64)';
         ctx.fillText(place.second, place.titleX, place.titleY);
       }
+    }
+
+    /**
+     * 时代名最后落笔：它必须压在所有圆牌与姓名之上，否则密集处等于没写。
+     * ------------------------------------------------------------------
+     * 字号与位置都由**横带在屏幕上的实际高度**决定，不写死 15px：
+     * 布局在块顶留了一条 band 厚的空带（节点只铺在带下），把标题摆进带心，
+     * 就再也不会出现「圆牌压住时代名」——实测先秦块的「孟」「孔」两枚圆牌
+     * 正好落在「上古·先秦」四个字上，一块疆域就此没有地名。
+     *
+     * 带高随缩放变化：概览档约 20px，放大到微观档有上百像素，字也跟着长，
+     * 否则凑近看是一块空地中央几个小字。带太矮（缩到底）时干脆不写，
+     * 那时连朝代色块都糊成一片，标题只会变成噪点。
+     */
+    for (const title of blockTitles) {
+      if (title.bandH < 11) continue;
+      const size = Math.max(10, Math.min(22, title.bandH * 0.62));
+      const track = size * 0.22;
+      ctx.font = `700 ${size.toFixed(1)}px "Noto Serif SC", "Songti SC", serif`;
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'middle';
+      ctx.lineJoin = 'round';
+      ctx.lineWidth = Math.max(2.4, size * 0.24);
+      ctx.strokeStyle = s.isDark ? 'rgba(14,16,20,0.92)' : 'rgba(250,247,238,0.95)';
+      const step = (ch: string) => ctx.measureText(ch).width + track;
+      const ty = title.y + title.bandH / 2;
+      let tx = title.x;
+      for (const ch of title.text) {
+        ctx.strokeText(ch, tx, ty);
+        tx += step(ch);
+      }
+      const totalW = tx - title.x - track;
+      ctx.fillStyle = s.isDark ? 'rgba(228,218,196,0.82)' : 'rgba(74,58,36,0.82)';
+      tx = title.x;
+      for (const ch of title.text) {
+        ctx.fillText(ch, tx, ty);
+        tx += step(ch);
+      }
+      // 横带下沿一条细线：与下方的人划清界限，像古籍的界行
+      ctx.beginPath();
+      ctx.moveTo(title.x, title.y + title.bandH - 1);
+      ctx.lineTo(title.x + Math.min(totalW + 6, title.width), title.y + title.bandH - 1);
+      ctx.strokeStyle = s.isDark ? 'rgba(220,206,178,0.18)' : 'rgba(110,88,56,0.2)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
     }
 
     ctx.globalAlpha = 1;
@@ -1046,6 +1426,15 @@ export function HistoryGraphCanvas({
       const s = latest.current;
       const lod = lodOf(scale);
       const minWeight = lodMinWeight(lod, s.nodes.length);
+      const beacons = beaconRef.current;
+      // 概览层的地标被放大了 1.45 倍、尘点缩到 1.9px，命中半径必须跟着走：
+      // 两处各写一份，就会出现「看得见却点不中」和「点空白选中了人」两种毛病。
+      const radiusOf = (weight: number, id: string): number =>
+        beacons
+          ? beacons.has(id)
+            ? nodeRadius(weight, scale) * BEACON_SCALE + 5
+            : DUST_RADIUS + 4
+          : nodeRadius(weight, scale) + 5;
       let best: { id: string; dist: number } | null = null;
       for (const node of s.nodes) {
         if (node.importanceWeight < minWeight) continue;
@@ -1054,7 +1443,7 @@ export function HistoryGraphCanvas({
         if (!pos) continue;
         const x = pos.x * scale + tx;
         const y = pos.y * scale + ty;
-        const r = nodeRadius(node.importanceWeight, scale) + 5;
+        const r = radiusOf(node.importanceWeight, node.id);
         const dist = Math.hypot(x - sx, y - sy);
         if (dist <= r && (!best || dist < best.dist)) best = { id: node.id, dist };
       }
@@ -1068,10 +1457,13 @@ export function HistoryGraphCanvas({
     const s = latest.current;
     const lod = lodOf(scale);
     const minWeight = lodMinWeight(lod, s.nodes.length);
+    const beacons = beaconRef.current;
     let best: { edge: HistoricalRelationEdge; dist: number } | null = null;
 
     for (const edge of s.edges) {
       if (!s.relationFilter.has(edge.primaryCategory)) continue;
+      // 概览层只画了地标之间的线，没画的线当然也不该被点中
+      if (beacons && (!beacons.has(edge.source) || !beacons.has(edge.target))) continue;
       const pa = s.layout.positions.get(edge.source);
       const pb = s.layout.positions.get(edge.target);
       if (!pa || !pb) continue;

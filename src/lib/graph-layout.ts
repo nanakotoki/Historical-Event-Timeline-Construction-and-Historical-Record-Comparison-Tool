@@ -19,12 +19,31 @@ import type { DynastyId, GraphLayoutMode, HistoricalPersonNode, HistoricalRelati
 
 export type PositionedMap = Map<string, { x: number; y: number }>;
 
+/** 时代分块（力导向布局）：概览层用来画极淡的底色与时代名，标出「这一片是哪一代」 */
+export interface LayoutBlock {
+  label: string;
+  /** 块心（世界坐标） */
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  /**
+   * 块顶为时代名留出的横带厚度（世界坐标）。
+   * 画布据此把标题摆在横带正中：横带之外的区域只放人，标题因此永远压不到头上。
+   * 定死一个屏幕像素值不行——缩放从 0.25 到 12 倍，同一个世界厚度在屏幕上
+   * 是七像素到四百像素，只有换算过才知道该给多大的字。
+   */
+  band?: number;
+}
+
 export interface LayoutResult {
   positions: PositionedMap;
   /** 世界坐标包围盒，供相机自适应 */
   bounds: { minX: number; minY: number; maxX: number; maxY: number };
   /** 泳道模式下的分层标签 */
   lanes: { label: string; y: number; height: number }[];
+  /** 力导向模式下的时代分块，其余布局为空 */
+  blocks: LayoutBlock[];
 }
 
 /* ------------------------------- 确定性哈希 ------------------------------ */
@@ -40,7 +59,12 @@ function hashString(input: string): number {
 
 /* --------------------------------- 归一化 -------------------------------- */
 
-function normalize(positions: PositionedMap, targetWidth = 1720): LayoutResult {
+function normalize(
+  positions: PositionedMap,
+  targetWidth = 1720,
+  targetAspect?: number,
+  blocks: LayoutBlock[] = [],
+): LayoutResult {
   let minX = Infinity;
   let minY = Infinity;
   let maxX = -Infinity;
@@ -52,7 +76,7 @@ function normalize(positions: PositionedMap, targetWidth = 1720): LayoutResult {
     if (y > maxY) maxY = y;
   }
   if (!Number.isFinite(minX)) {
-    return { positions, bounds: { minX: 0, minY: 0, maxX: 0, maxY: 0 }, lanes: [] };
+    return { positions, bounds: { minX: 0, minY: 0, maxX: 0, maxY: 0 }, lanes: [], blocks: [] };
   }
   const spanX = Math.max(1, maxX - minX);
   const spanY = Math.max(1, maxY - minY);
@@ -61,18 +85,40 @@ function normalize(positions: PositionedMap, targetWidth = 1720): LayoutResult {
   const cy = (minY + maxY) / 2;
 
   const out: PositionedMap = new Map();
+  /**
+   * 纵横比校正。
+   * ------------------------------------------------------------------
+   * 世界坐标最终会被 fitView 以 min(availW/spanX, availH/spanY) 装进画布：
+   * 内容比例与可用视口不一致时，永远有一个方向留白，而**屏幕占用面积
+   * 正比于 (可用区面积 / 内容面积)** —— 也就是说，一个 10:1 的扁条装进
+   * 16:9 的画布，只剩下一成多的可视面积，节点必然挤成一条墨线。
+   *
+   * 力导向本身不知道画布长什么样，所以由这里把包围盒拉到目标比例。
+   * 节点是屏幕空间绘制的圆，纵向拉伸不会变形；但这里只做缩放不做拉伸
+   * （见下面的 sy），避免拉长后同簇内纵向间距失真。
+   */
+  const ratio = spanX / spanY;
+  const sy = targetAspect && targetAspect > 0 ? scale * (ratio / targetAspect) : scale;
   for (const [id, p] of positions) {
-    out.set(id, { x: (p.x - cx) * scale, y: (p.y - cy) * scale });
+    out.set(id, { x: (p.x - cx) * scale, y: (p.y - cy) * sy });
   }
   return {
     positions: out,
     bounds: {
       minX: -spanX * scale * 0.5,
       maxX: spanX * scale * 0.5,
-      minY: -spanY * scale * 0.5,
-      maxY: spanY * scale * 0.5,
+      minY: -spanY * sy * 0.5,
+      maxY: spanY * sy * 0.5,
     },
     lanes: [],
+    blocks: blocks.map((b) => ({
+      label: b.label,
+      x: (b.x - cx) * scale,
+      y: (b.y - cy) * sy,
+      w: b.w * scale,
+      h: b.h * sy,
+      band: b.band === undefined ? undefined : b.band * sy,
+    })),
   };
 }
 
@@ -101,9 +147,23 @@ const ERA_TABLE: Partial<Record<DynastyId, string>> = {
   qing: 'era_qing',
 };
 
-function eraOf(dynasty: DynastyId): string {
+export function eraOf(dynasty: DynastyId): string {
   return ERA_TABLE[dynasty] ?? dynasty;
 }
+
+/** 时代分块的中文名（概览层画在块角上，告诉读图的人「这一片是哪一代」） */
+const ERA_LABEL: Record<string, string> = {
+  era_high_antiquity: '上古·先秦',
+  era_qin_han: '秦汉',
+  era_three_kingdoms: '汉末·三国',
+  era_wei_jin: '魏晋南北朝',
+  era_sui_tang: '隋唐',
+  era_five_dynasties: '五代十国',
+  era_song: '宋·辽金西夏',
+  era_yuan: '元',
+  era_ming: '明',
+  era_qing: '清',
+};
 
 /**
  * 阵营归并：把五花八门的 factionOrClan（「蜀汉集团（荆州派）」「颍川荀氏」
@@ -296,11 +356,16 @@ export function computeForceLayout(
   options: {
     iterations?: number;
     targetWidth?: number;
+    /** 目标包围盒宽高比（默认 1.8，对齐画布可用区，见文件内 normalise 注释） */
+    aspect?: number;
     clusterPull?: number;
     gravity?: number;
     spread?: number;
     laneGap?: number;
     cellSize?: number;
+    cellGap?: number;
+    /** 块顶为时代名留出的横带厚度（世界单位），节点不会铺进来 */
+    titleBand?: number;
     factionPull?: number;
     /** 四叉树近似阈值，见 lib/barnes-hut.ts；默认 0.85 */
     theta?: number;
@@ -475,10 +540,17 @@ export function computeForceLayout(
     temperature = Math.max(0.5, temperature * 0.9905);
   }
 
-  /* ------------------------ 簇内整形 + 时代分列 ------------------------ */
+  /* ------------------------ 簇内整形 + 时代分块 ------------------------ */
   // 力导向跑完后各簇松紧不一：有的朝代抱成一团，有的被关系拉成长条。
-  // 这里对每簇按其自身包围盒等比缩放，再等距排到「时代列」上——形状不变，
-  // 只统一尺度与站位，整幅图才会像一卷按年编排的星图，而不是一团散墨。
+  // 这里把每个时代收进一块自己的「版图」，十块拼成一幅按纪年编排的图——
+  // 形状不乱动（节点圆是屏幕空间绘制的，坐标缩放不会让脸变形），
+  // 只统一尺度与站位。
+  //
+  // 曾把这十来个时代格排成**一横排**。后果是灾难性的：十块横向铺开 7,560、
+  // 纵向只有 560，包围盒 13.5 : 1；fitView 按宽度装进 1440 的画布后，
+  // 整幅图只剩一条 120px 高的横带，1,136 人挤在 17 万像素里、平均间距 12px，
+  // 而节点半径是 10px —— 于是全部重叠成一团，谁都认不出谁。
+  // 屏幕占用面积只取决于「内容比例与画布比例是否一致」，排成横条就是丢掉七八成面积。
   const members = new Map<string, number[]>();
   order.forEach((_, i) => {
     const era = eraOf(dynastyOfIndex[i]);
@@ -486,10 +558,225 @@ export function computeForceLayout(
     bucket.push(i);
     members.set(era, bucket);
   });
-  const lanes = [...members.keys()];
-  const CELL = options.cellSize ?? 560;
-  lanes.forEach((dynastyId, laneIndex) => {
-    const idxs = members.get(dynastyId)!;
+  /**
+   * 分块必须按**纪年**排，不能按「谁先出现」排。
+   * ------------------------------------------------------------------
+   * `members` 是 Map，键序取决于节点在 `order` 里的首次出现顺序，而这个顺序
+   * 由力导向的初始打散决定。后果是网格按行回读时王朝乱序：实测首屏读到的是
+   * 「上古·先秦 / 秦汉 / 汉末·三国 / 魏晋南北朝」→「隋唐 / 宋 / 元 / 明」
+   * →「清 / 五代十国」，五代十国被排到清代之后。一张按年编排的图，
+   * 读序错了就失去索引价值。排序键取 ERA_LABEL 的声明顺序（该对象本就按年代逐条写），
+   * 未登记的时代排到最后，不会打乱已知序列。
+   */
+  const ERA_ORDER = new Map(Object.keys(ERA_LABEL).map((key, i) => [key, i]));
+  const lanes = [...members.keys()].sort(
+    (a, b) => (ERA_ORDER.get(a) ?? 999) - (ERA_ORDER.get(b) ?? 999),
+  );
+
+  /**
+   * 拼块方案：**面积正比于人数**的书架式排版，按纪年逐块填行。
+   * ------------------------------------------------------------------
+   * 早先每行等高、每块宽按人数开方缩放，于是「元」二十人占着与「宋」六十人
+   * 一样高的格子，整块稀稀拉拉；这种人少的块一多，读图的人会以为「元代没什么人」。
+   * 面积按人数配之后，密度到处一致：块的大小本身就是一条信息——谁的人多，
+   * 谁的版图就大。
+   *
+   * 试过两种切法，都不合用，留此存照：
+   *   ① 「等高行 + 行内按人数分宽」——小朝代被压成竖缝，元朝二十人只占一条
+   *      六十宽的栏，点排成两列，像牢房栏杆；
+   *   ② squarified treemap——块是方了，但它为了凑方会把大块竖着切开，
+   *      读序随之错乱（五代十国被摆到隋唐右侧、清摆到元明之下），
+   *      一张按年编排的图，读序比块形重要。
+   *
+   * 现在的做法是「书架」：按纪年顺序往一行里放方块（边长 ∝ √人数，故面积 ∝ 人数），
+   * 放满一行或下一块会把本行最窄的块压得比 0.62 更瘦就换行；最后整行按宽度
+   * 均摊补齐、整幅按高度均摊补齐，于是既不悬空也不留缝，长宽比全落在 0.62~1.6。
+   */
+  const ASPECT = options.aspect ?? 1.8;
+  const totalW = options.targetWidth ?? 1600;
+  const totalH = totalW / ASPECT;
+  /** 块间距：世界单位。1600 宽 → 0.63 倍屏幕时约 17px，读得出「这是两块」 */
+  const GAP = options.cellGap ?? 28;
+  /** 块顶横带：留给时代名。节点只铺在横带以下，标题永远压不到人 */
+  const BAND = options.titleBand ?? 34;
+
+  const counts = lanes.map((lane) => members.get(lane)!.length);
+  const totalCount = counts.reduce((a, b) => a + b, 0) || 1;
+  const unitArea = (totalW * totalH) / totalCount;
+  const sides = counts.map((c) => Math.sqrt(Math.max(1, c) * unitArea));
+
+  type Cell = { cx: number; cy: number; w: number; h: number; lane: string };
+  const cells: Cell[] = [];
+
+  /** 行内按已排的方块宽度算出最窄那一块会被压到多瘦（1 表示正方的理想值） */
+  const narrowestAspect = (row: number[], extra: number): number => {
+    const span = row.reduce((a, i) => a + sides[i], 0) + (extra >= 0 ? sides[extra] : 0);
+    const rowH = Math.max(...row.map((i) => sides[i]), extra >= 0 ? sides[extra] : 0);
+    const densest = Math.max(...row.map((i) => sides[i]), extra >= 0 ? sides[extra] : 0);
+    const stretch = totalW / Math.max(1e-6, span);
+    return (Math.min(...row.map((i) => sides[i]), extra >= 0 ? sides[extra] : Infinity) * stretch) / rowH === 0
+      ? 0
+      : Math.min(
+          (Math.min(...row.map((i) => sides[i]), extra >= 0 ? sides[extra] : Infinity) * stretch) / rowH,
+          rowH / densest,
+        );
+  };
+
+  const shelf: number[][] = [];
+  let current: number[] = [];
+  let currentSpan = 0;
+  for (let i = 0; i < lanes.length; i += 1) {
+    if (!current.length) {
+      current = [i];
+      currentSpan = sides[i];
+      continue;
+    }
+    const overflow = currentSpan + sides[i] > totalW;
+    const tooThin = narrowestAspect(current, i) < 0.62;
+    if (overflow || tooThin) {
+      shelf.push(current);
+      current = [i];
+      currentSpan = sides[i];
+    } else {
+      current.push(i);
+      currentSpan += sides[i];
+    }
+  }
+  if (current.length) shelf.push(current);
+
+  // 行高先按行内最高块定，最后整体缩放填满高度；行内宽度按比例放大填满整行
+  const rowHeights = shelf.map((row) => Math.max(...row.map((i) => sides[i])));
+  const heightSum = rowHeights.reduce((a, b) => a + b, 0) || 1;
+  const heightScale = (totalH - GAP * (shelf.length - 1)) / heightSum;
+
+  let yTop = -totalH / 2;
+  for (let ri = 0; ri < shelf.length; ri += 1) {
+    const row = shelf[ri];
+    const rowH = rowHeights[ri] * heightScale;
+    const span = row.reduce((a, i) => a + sides[i], 0) || 1;
+    const usableW = totalW - GAP * (row.length - 1);
+    let xLeft = -totalW / 2;
+    for (const i of row) {
+      const w = (sides[i] / span) * usableW;
+      cells.push({
+        cx: xLeft + w / 2,
+        cy: yTop + rowH / 2,
+        w,
+        h: rowH,
+        lane: lanes[i],
+      });
+      xLeft += w + GAP;
+    }
+    yTop += rowH + GAP;
+  }
+
+  /**
+   * 簇内碰撞松弛（去掉重合）。
+   * ------------------------------------------------------------------
+   * 力导向收敛后仍有大量点几乎重合：实测全库 1,136 人，最近邻中位数只有
+   * 4.7 个世界单位，而按人均面积应得三十余 —— 差一个数量级。后果就是打开
+   * 网站看到「所有人都糅合在一起」，无论怎么改包围盒比例都救不回来：
+   * 比例决定的是**整幅图占多少屏幕**，而这里坏的是**簇内分布**。
+   *
+   * 这一道就是 d3-force 的 forceCollide：按「块内人均面积开方」定一个目标
+   * 间距，以均匀网格找邻居，把靠得太近的一对对互相推开，直到不再有明显重叠。
+   * 它只负责「不重叠」，时代分块不动，只在块内把人摊匀。
+   */
+  const relaxCluster = (
+    idxs: number[],
+    gapScale: number,
+    area: { cx: number; cy: number; w: number; h: number },
+  ) => {
+    if (idxs.length < 2) return;
+    const gap = Math.sqrt((area.w * area.h) / Math.max(1, idxs.length)) * gapScale;
+    if (!Number.isFinite(gap) || gap <= 0) return;
+    const push = new Float64Array(n * 2);
+    for (let iter = 0; iter < 120; iter += 1) {
+      const grid = new Map<string, number[]>();
+      for (const i of idxs) {
+        const key = `${Math.floor(xs[i] / gap)},${Math.floor(ys[i] / gap)}`;
+        const bucket = grid.get(key);
+        if (bucket) bucket.push(i);
+        else grid.set(key, [i]);
+      }
+      push.fill(0);
+      let moved = 0;
+      for (const i of idxs) {
+        const gx0 = Math.floor(xs[i] / gap);
+        const gy0 = Math.floor(ys[i] / gap);
+        let ax = 0;
+        let ay = 0;
+        for (let gx = gx0 - 1; gx <= gx0 + 1; gx += 1) {
+          for (let gy = gy0 - 1; gy <= gy0 + 1; gy += 1) {
+            const bucket = grid.get(`${gx},${gy}`);
+            if (!bucket) continue;
+            for (const j of bucket) {
+              if (j === i) continue;
+              let vx = xs[i] - xs[j];
+              let vy = ys[i] - ys[j];
+              let d2 = vx * vx + vy * vy;
+              if (d2 >= gap * gap) continue;
+              if (d2 < 1e-4) {
+                // 完全重合：按索引拆开（不用随机数，同一份数据每次得到同一张图）
+                vx = ((i % 7) - 3) * 0.05 + 0.07;
+                vy = ((i % 5) - 2) * 0.05 + 0.03;
+                d2 = vx * vx + vy * vy;
+              }
+              const d = Math.sqrt(d2);
+              const step = ((gap - d) / d) * 0.5;
+              ax += vx * step;
+              ay += vy * step;
+            }
+          }
+        }
+        if (ax || ay) {
+          const len = Math.hypot(ax, ay);
+          const cap = gap * 0.5;
+          const k2 = len > cap ? cap / len : 1;
+          push[i * 2] = ax * k2;
+          push[i * 2 + 1] = ay * k2;
+          moved += 1;
+        }
+      }
+      if (!moved) break;
+      for (const i of idxs) {
+        xs[i] += push[i * 2];
+        ys[i] += push[i * 2 + 1];
+        /**
+         * 松弛限定在自己的块里。不设边界的话，簇会向外摊到别人的版图上，
+         * 事后再按包围盒缩回来就等于把摊开的间距又压回去（实测最近邻
+         * 19px → 12px，一半人重新重叠）。圈在块内松弛，摊匀与地界同时成立。
+         */
+        const mx0 = area.cx - area.w / 2 + gap * 0.35;
+        const mx1 = area.cx + area.w / 2 - gap * 0.35;
+        const my0 = area.cy - area.h / 2 + gap * 0.35;
+        const my1 = area.cy + area.h / 2 - gap * 0.35;
+        if (xs[i] < mx0) xs[i] = mx0;
+        else if (xs[i] > mx1) xs[i] = mx1;
+        if (ys[i] < my0) ys[i] = my0;
+        else if (ys[i] > my1) ys[i] = my1;
+      }
+    }
+  };
+
+  const blocks: LayoutBlock[] = [];
+  for (const cell of cells) {
+    const idxs = members.get(cell.lane)!;
+    /**
+     * 内容区：块内四边各收 GAP/2（块与块之间的缝由此成形），块顶再让出 BAND。
+     * 让出的横带是给时代名用的——标题画在横带里，永远不会压到人。
+     */
+    const inset = GAP * 0.5;
+    const contentTop = cell.cy - cell.h / 2 + BAND;
+    const contentH = Math.max(BAND + 1, cell.h - BAND - inset);
+    const area = {
+      cx: cell.cx,
+      cy: contentTop + contentH / 2,
+      w: Math.max(1, cell.w - inset * 2),
+      h: contentH,
+    };
+
+    // 先按力导向的原形等比塞进这块内容区（形状保留），再松弛摊匀
     let minX = Infinity;
     let maxX = -Infinity;
     let minY = Infinity;
@@ -500,24 +787,58 @@ export function computeForceLayout(
       if (ys[i] < minY) minY = ys[i];
       if (ys[i] > maxY) maxY = ys[i];
     }
-    const cx = (minX + maxX) / 2;
-    const cy = (minY + maxY) / 2;
-    // 横纵分别归一，让每簇都填满一个方格：力导向常把某朝代压成扁条，
-    // 只按长边等比缩放会留下大片空白。节点圆本身是屏幕空间绘制，不受拉伸影响。
-    const sx = CELL / Math.max(1, maxX - minX);
-    const sy = CELL / Math.max(1, maxY - minY);
-    const laneX = lanes.length <= 1 ? 0 : (laneIndex - (lanes.length - 1) / 2) * CELL * 1.35;
+    const k = Math.min(
+      area.w / Math.max(1e-6, maxX - minX),
+      area.h / Math.max(1e-6, maxY - minY),
+    );
+    const mx = (minX + maxX) / 2;
+    const my = (minY + maxY) / 2;
     for (const i of idxs) {
-      xs[i] = laneX + (xs[i] - cx) * sx;
-      ys[i] = (ys[i] - cy) * sy;
+      xs[i] = area.cx + (xs[i] - mx) * k;
+      ys[i] = area.cy + (ys[i] - my) * k;
     }
-  });
+
+    relaxCluster(idxs, 1.0, area);
+
+    /**
+     * 微抖动：打散「打孔板」。
+     * ------------------------------------------------------------------
+     * 松弛的收敛态是完美点阵——每一行每一列都对齐，放大了看像一块穿孔板，
+     * 不像人画出来的星图。加一点确定性抖动（同一个人每次落点相同，
+     * 不能随机，否则每刷新一次整幅图都在跳），点阵的摩尔纹就散开了。
+     *
+     * 幅度按权重分档：显赫人物几乎不动（他们身上挂着名字与头像），
+     * 长尾人物抖到间距的两成——视觉上「密而不齐」，最近邻仍留有余量。
+     */
+    const gapStep = Math.sqrt((area.w * area.h) / Math.max(1, idxs.length));
+    for (const i of idxs) {
+      const weight = nodes[i]?.importanceWeight ?? 50;
+      const amp = gapStep * (weight >= 70 ? 0.06 : 0.34);
+      const hx = (hashString(order[i]) % 1000) / 1000 - 0.5;
+      const hy = (hashString(order[i] + '#y') % 1000) / 1000 - 0.5;
+      xs[i] += hx * 2 * amp;
+      ys[i] += hy * 2 * amp;
+    }
+
+    blocks.push({
+      label: ERA_LABEL[cell.lane] ?? cell.lane,
+      x: cell.cx,
+      y: cell.cy,
+      w: cell.w,
+      h: cell.h,
+      band: BAND,
+    });
+  }
 
   const positions: PositionedMap = new Map();
   order.forEach((id, i) => positions.set(id, { x: xs[i], y: ys[i] }));
-  // 世界宽度取 1600 而非 1720：画布在 1440 宽屏上自适应后正好落在 0.77 倍，
-  // 恰在「中观」档内；若再宽一点就会掉进宏观档，首屏只剩帝王权臣。
-  return normalize(positions, options.targetWidth ?? 1600);
+  /**
+   * 世界宽度取 1600、比例取 ASPECT。
+   * 这两个数共同决定 fitView 之后的缩放：宽度 1600 落在 1440 宽屏上约 0.7×，
+   * 比例与可用视口一致（1.8 对 1.885）时高度也刚好填满，此时首屏是
+   * 「概览」而非「中观」——那正是该有的档位，详见 canvas 里的 LOD 说明。
+   */
+  return normalize(positions, options.targetWidth ?? 1600, ASPECT, blocks);
 }
 
 /* ------------------------------ 宗法世系树布局 --------------------------- */

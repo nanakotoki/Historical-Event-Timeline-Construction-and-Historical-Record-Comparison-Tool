@@ -8,7 +8,6 @@ import { ChevronDown, GitBranch, Layers, Maximize2, Minus, Network, Plus, Slider
 import type { GraphLayoutMode, RelationCategory } from '@/types/history';
 import { RELATION_META } from '@/lib/search-engine';
 import { useTheme } from '@/components/providers/ThemeProvider';
-import { LOD_CULL_MIN_COUNT } from '@/components/canvas/HistoryGraphCanvas';
 
 const LAYOUTS: { key: GraphLayoutMode; label: string; hint: string; icon: typeof Network }[] = [
   { key: 'force', label: '力导向', hint: '按关系亲疏自然聚集，观察整体结构', icon: Network },
@@ -59,13 +58,14 @@ export function GraphLegendAndControls({
   const { isDark } = useTheme();
   const [legendOpen, setLegendOpen] = useState(true);
 
-  // 阈值与 HistoryGraphCanvas 的 LOD_WEIGHT / LOD_CULL_MIN_COUNT 必须一字不差，
-  // 否则界面会报出与实际渲染不符的分层：单片九十人时画布明明「可见 90/90」，
-  // 标签却还写着「宏观 · 权重≥75」，自相矛盾。
-  const lodLabel =
-    totalNodes < LOD_CULL_MIN_COUNT
-      ? `全量 · ${totalNodes} 人尽出`
-      : ['宏观 · 权重≥75', '中观 · 权重≥40 + 头像', '微观 · 全部 + 关系胶囊'][lod];
+  // 文案与 HistoryGraphCanvas 的 LOD 分级必须一字不差。
+  // 阈值已从「按权重裁人」改为「按倍数换形态」：三档一律不删人，
+  // 差别只在画成细点、头像还是一张大像。
+  const lodLabel = [
+    '概览 · 地标字徽 + 尘点（金环 = 有传世画像）',
+    '中观 · 字徽 + 姓名',
+    '微观 · 大像 + 关系胶囊',
+  ][lod];
 
   return (
     <>

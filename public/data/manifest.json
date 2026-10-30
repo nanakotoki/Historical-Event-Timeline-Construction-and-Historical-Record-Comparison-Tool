@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-29T14:40:41.409Z",
+  "generatedAt": "2026-10-30T15:20:04.542Z",
   "site": {
     "title": "华夏史网",
     "subtitle": "ChronoGraph China · 二十四史人物关系图谱与史料对勘引擎",
@@ -236,7 +236,7 @@
       ],
       "personCount": 131,
       "edgeCount": 179,
-      "byteSize": 457388
+      "byteSize": 457687
     },
     {
       "shardId": "shard_02_chu_han",
@@ -254,7 +254,7 @@
       ],
       "personCount": 151,
       "edgeCount": 297,
-      "byteSize": 780970
+      "byteSize": 781039
     },
     {
       "shardId": "shard_03_three_kingdoms",
@@ -326,7 +326,7 @@
       ],
       "personCount": 218,
       "edgeCount": 316,
-      "byteSize": 757367
+      "byteSize": 757654
     },
     {
       "shardId": "shard_07_five_dynasties",
@@ -342,7 +342,7 @@
       ],
       "personCount": 92,
       "edgeCount": 154,
-      "byteSize": 322844
+      "byteSize": 324341
     },
     {
       "shardId": "shard_08_xin_mang",

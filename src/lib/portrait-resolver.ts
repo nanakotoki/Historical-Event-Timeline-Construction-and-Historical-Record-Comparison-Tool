@@ -262,10 +262,19 @@ export function getPortraitImage(person: HistoricalPersonNode): HTMLImageElement
   return null;
 }
 
-/** 全站预取：空闲时段批量解码，避免画布首次绘制时头像空白 */
+/**
+ * 全站预取：空闲时段批量解码，避免画布首次绘制时头像空白。
+ * ------------------------------------------------------------------
+ * **顺序必须按权重降序**。这是一次性把一百七十多张图塞进浏览器队列，
+ * 而浏览器对同一域名只开六条连接、按入队先后取——乱序入队等于让第一个
+ * 屏幕上的曹操排在第一百五十位。实测弱网（约 60KB/s）下二十秒只完成六张，
+ * 眼睛看到的恰是最该有脸的那几位还在排队。
+ * 按权重排，等于把「先给明显的人装脸」写进加载顺序，与画布的 LOD 同序。
+ */
 export function prefetchPortraits(persons: HistoricalPersonNode[]) {
   if (typeof window === 'undefined') return;
-  const run = () => persons.forEach((p) => getPortraitImage(p));
+  const ordered = [...persons].sort((a, b) => b.importanceWeight - a.importanceWeight);
+  const run = () => ordered.forEach((p) => getPortraitImage(p));
   const idle = (window as unknown as { requestIdleCallback?: (cb: () => void) => void }).requestIdleCallback;
   if (idle) idle(run);
   else window.setTimeout(run, 400);

@@ -38,6 +38,49 @@ interface Rect {
   y2: number;
 }
 
+/**
+ * 时代分块的世界坐标矩形，按布局对象缓存。
+ * ------------------------------------------------------------------
+ * 命名标签要「留在自己这一代的地界里」，就得先知道每个人属于哪一块。
+ * 块表是随布局一起算好的常量，但画布每帧都会重算一遍可见节点——把矩形
+ * 换算放进逐帧循环，一千多人各扫十个块，白烧一百万次比较。
+ * 布局对象换掉（切分片、换布局模式）时才重建，之后只做四次乘法。
+ */
+const BLOCK_RECT_CACHE = new WeakMap<LayoutResult, Rect[]>();
+
+function blockWorldRects(layout: LayoutResult): Rect[] {
+  const cached = BLOCK_RECT_CACHE.get(layout);
+  if (cached) return cached;
+  const rects = layout.blocks.map((b) => ({
+    x1: b.x - b.w / 2,
+    y1: b.y - b.h / 2,
+    x2: b.x + b.w / 2,
+    y2: b.y + b.h / 2,
+  }));
+  BLOCK_RECT_CACHE.set(layout, rects);
+  return rects;
+}
+
+/**
+ * 落字余量：允许标签压出块边两像素。
+ * 一点不让会把贴边的名字整片抹掉，让太多又会出现「唐的名字写在宋的地上」。
+ * 两像素在 1× 下就是一个描边的宽度，肉眼看不出来，却救回不少边缘人物。
+ */
+const LABEL_EDGE_SLACK = 2;
+
+/** 把矩形沿最短位移夹回可用区（用于悬停、选中这类「必须有名字」的兜底） */
+function clampInto(box: Rect, area: Rect): Rect {
+  const w = box.x2 - box.x1;
+  const h = box.y2 - box.y1;
+  let x1 = box.x1;
+  let y1 = box.y1;
+  if (x1 + w > area.x2) x1 = area.x2 - w;
+  if (x1 < area.x1) x1 = area.x1;
+  if (y1 + h > area.y2) y1 = area.y2 - h;
+  if (y1 < area.y1) y1 = area.y1;
+  return { x1, y1, x2: x1 + w, y2: y1 + h };
+}
+
 /** 一个已定好位置的姓名标签 */
 interface Placement {
   box: Rect;
@@ -195,10 +238,17 @@ function computeBeaconIds(nodes: HistoricalPersonNode[]): Set<string> {
 
 /**
  * 画像只在「脸能看清」的尺寸上出现，小于此半径一律改用姓氏字徽。
- * 十六像素半径的圆里，一张占画面三分之一的古画脸只剩下五像素——
- * 那还比不上一个字号合适的「曹」字能说明问题，而且极容易被误认成卡通头像。
+ * ------------------------------------------------------------------
+ * 阈值原是 15.5px：十六像素半径的圆里，一张占画面三分之一的古画脸只剩
+ * 五像素，还比不上一个字号合适的「曹」字。
+ *
+ * 但实测下来 15.5 太高了——中观档放大到一点八倍，多数有权重的人半径刚到
+ * 十二三像素，画面上仍是清一色字徽。读图的人于是以为「有画像的人也没画像」，
+ * 又回到最初那个疑问。现在降到 13.5：这个尺寸上五官还认不全，但「这是一张
+ * 传世的像」已经看得出来——绢底的暖色、墨线的轮廓、头肩的剪影都在。
+ * 再往下（十像素以下）就只剩一块黄斑，那才是真正的倒退，故此为止。
  */
-const MIN_FACE_RADIUS = 15.5;
+const MIN_FACE_RADIUS = 13.5;
 
 /** 复姓表：三字名的头两字未必是名，单取首字会得到「司」「诸」这种不成词的徽记 */
 const COMPOUND_SURNAMES = new Set([
@@ -280,14 +330,67 @@ function measureCached(ctx: CanvasRenderingContext2D, text: string, font: string
 
 const SPRITE_CACHE = new Map<string, HTMLCanvasElement>();
 
+/**
+ * 色调归一：把每张图自己的 4%~96% 分位拉成黑白两端，再按画面明暗取 gamma。
+ * ------------------------------------------------------------------
+ * CSS 的 contrast() 只能绕 0.5 缩放，对「纸白、墨线灰」的旧白描是反效果：
+ * 线在 0.7 这一侧，越加对比它越亮，整张图最后只剩一片纸色。真正需要的是
+ * 逐像素重映射——纸底压到纯白、淡墨压到深灰，而且每张图的「纸」和「墨」
+ * 本来就不是同一个值。crops.json 已经在取景窗口内量好了这两个分位（lo/hi）。
+ *
+ * **必须按亮度归一、再按比例还原三通道**：早先对 R/G/B 各查一次表，纸底的
+ * 那点黄被拉成满饱和的橙，一册汉唐像全成了橘红色——同一张表逐通道套用，
+ * 等价于给每张图单独做了一遍白平衡。按亮度缩放才保得住色相。
+ * 缓存命中时不重算，只有换半径档位才会跑一次。
+ */
+function applyTone(
+  g: CanvasRenderingContext2D,
+  size: number,
+  crop: { lum?: number; lo?: number; hi?: number },
+): void {
+  const lo = crop.lo;
+  const hi = crop.hi;
+  if (lo == null || hi == null || hi - lo < 0.05) return;
+  const lum = crop.lum ?? 180;
+  // 纸白而墨淡的白描要压深（gamma > 1），深地子上的人像要提亮（gamma < 1）
+  const gamma = lum > 200 ? 1.42 : lum < 118 ? 0.8 : 1.1;
+  const lut = new Uint8ClampedArray(256);
+  for (let v = 0; v < 256; v += 1) {
+    const t = Math.min(1, Math.max(0, (v / 255 - lo) / (hi - lo)));
+    lut[v] = Math.round(255 * Math.pow(t, gamma));
+  }
+  const data = g.getImageData(0, 0, size, size);
+  const px = data.data;
+  for (let i = 0; i < px.length; i += 4) {
+    if (px[i + 3] === 0) continue;
+    const r = px[i];
+    const gg = px[i + 1];
+    const b = px[i + 2];
+    const y = 0.299 * r + 0.587 * gg + 0.114 * b;
+    const ny = lut[Math.min(255, Math.max(0, Math.round(y)))];
+    if (y < 2) {
+      px[i] = ny;
+      px[i + 1] = ny;
+      px[i + 2] = ny;
+      continue;
+    }
+    const k = ny / y;
+    px[i] = Math.min(255, Math.round(r * k));
+    px[i + 1] = Math.min(255, Math.round(gg * k));
+    px[i + 2] = Math.min(255, Math.round(b * k));
+  }
+  g.putImageData(data, 0, 0);
+}
+
 function portraitSprite(
   id: string,
   img: HTMLImageElement,
   r: number,
   dpr: number,
+  crop?: { sx: number; sy: number; side: number; lum?: number; lo?: number; hi?: number },
 ): HTMLCanvasElement | null {
   const radius = Math.max(4, Math.round(r * 0.9 * 2) / 2);
-  const key = `${id}|${radius}|${dpr}`;
+  const key = `${id}|${radius}|${dpr}|${crop ? `${crop.sx},${crop.sy},${crop.side}` : 'auto'}`;
   const cached = SPRITE_CACHE.get(key);
   if (cached) return cached;
 
@@ -305,15 +408,24 @@ function portraitSprite(
   g.arc(size / 2, size / 2, radius * dpr, 0, Math.PI * 2);
   g.clip();
   /**
-   * 提一点反差与暖调。
-   * 传世像多是纸本旧画或刻本白描：纸色发黄、墨线极细，缩到二三十像素后
-   * 只剩一块浅灰的雾，和旁边的剪纸剪影分不出来——「有画像的人看起来也像卡通」
-   * 就是这么来的。提高对比让墨线立住，再加一点暖调，才看得出这是绢纸上的画。
+   * 提一点暖调就够了：明暗交给 applyTone 逐像素处理（见下）。
+   * 旧白描的墨线若只靠 contrast()，会越加越亮——那是绕 0.5 缩放的必然结果。
    */
-  g.filter = 'contrast(1.18) saturate(1.08)';
-  // 取「头肩」入圆：传世画像多为全身立轴，整幅塞进小圆后人物只剩拇指大。
-  // 以图宽七成为方形截取上半部，近似历代名臣像的册页取景。
-  if (ratio >= 0.82 && ratio <= 1.24) {
+  g.filter = 'saturate(1.08)';
+  /**
+   * 取「头肩」入圆。
+   * ------------------------------------------------------------------
+   * 优先用数据里的取景窗口（crop）：那是按每张图的实际版式算出来的，
+   * 册页、立轴、满题裱本各有各的落点。没有 crop 的老数据才退回按纵横比猜——
+   * 而这条兜底正是问题所在：3:4 的半身像会被当成全身立轴，只截到帽子。
+   * 兜底保留，是为了「目录未重建也能出图」，不是因为它够准。
+   */
+  if (crop) {
+    const side = Math.max(8, Math.min(crop.side * img.naturalWidth, img.naturalWidth, img.naturalHeight));
+    const sx = Math.max(0, Math.min(crop.sx * img.naturalWidth, img.naturalWidth - side));
+    const sy = Math.max(0, Math.min(crop.sy * img.naturalHeight, img.naturalHeight - side));
+    g.drawImage(img, sx, sy, side, side, 0, 0, size, size);
+  } else if (ratio >= 0.82 && ratio <= 1.24) {
     // 本就是半身/方形构图，直接满幅
     g.drawImage(img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, size, size);
   } else {
@@ -322,6 +434,7 @@ function portraitSprite(
     const sy = img.naturalHeight * 0.035;
     g.drawImage(img, sx, sy, side, Math.min(side, img.naturalHeight - sy), 0, 0, size, size);
   }
+  if (crop) applyTone(g, size, crop);
   g.restore();
 
   // 缩放过程中档位会不断变化，缓存控制在可控范围内
@@ -645,6 +758,26 @@ export function HistoryGraphCanvas({
     const blockTitles: { text: string; x: number; y: number; width: number; bandH: number }[] = [];
 
     /**
+     * 各时代块在屏幕上的「可落字区」：块矩形去掉顶部那条写时代名的横带。
+     * ------------------------------------------------------------------
+     * 底纹与时代名只在概览档画，但地界三档都成立。放大之后相邻两代的人
+     * 仍可能只隔几十像素，一个名字飘进邻代版图，读者就会把它记到别人头上
+     * （耶律楚材的「元」飘进「金」、赵孟頫的名字压在「宋」的下沿，都是这么来的）。
+     *
+     * 横带必须扣掉：那里写着「汉末·三国」。标签挤进横带虽然仍在块内，
+     * 却会与块名叠字——标题是压在所有节点之后画的，最后只剩两层字糊在一起。
+     */
+    const blockWorld = s.layoutMode === 'force' && s.layout.blocks.length ? blockWorldRects(s.layout) : null;
+    const blockAreas: Rect[] = blockWorld
+      ? s.layout.blocks.map((block, i) => {
+          const rect = blockWorld[i];
+          const [x1, y1] = project(rect.x1, block.y - block.h / 2 + (block.band ?? 0));
+          const [x2, y2] = project(rect.x2, rect.y2);
+          return { x1, y1, x2, y2 };
+        })
+      : [];
+
+    /**
      * 时代分块底纹（仅力导向 + 概览档）。
      * 一千一百个点按朝代排成十来块，颜色虽有区分，但十来种土色堆在一起，
      * 光靠色相认不出「这一片是唐还是宋」。这里在每块后面垫一层几乎看不见的
@@ -686,7 +819,7 @@ export function HistoryGraphCanvas({
     }
 
     /* 可见节点集合 */
-    const visible = new Map<string, { x: number; y: number; r: number; weight: number }>();
+    const visible = new Map<string, { x: number; y: number; r: number; weight: number; area?: Rect }>();
     for (const node of s.nodes) {
       if (node.importanceWeight < minWeight) continue;
       if (s.year !== null && !isPersonAliveAt(node, s.year, { softWindow: 0 })) continue;
@@ -701,7 +834,23 @@ export function HistoryGraphCanvas({
           ? nodeRadius(node.importanceWeight, scale) * BEACON_SCALE
           : DUST_RADIUS
         : nodeRadius(node.importanceWeight, scale);
-      visible.set(node.id, { x: sx, y: sy, r, weight: node.importanceWeight });
+      /**
+       * 归属哪个时代块：点落在块的外接矩形里即可。
+       * 块与块之间留了缝、块内松弛时四边又各收 gap*0.35，所以一个人只会
+       * 落进一块，不必处理重叠；真落在缝里的（理论上不存在）宁可不约束，
+       * 也比猜错一块、把名字赶到邻代去强。
+       */
+      let area: Rect | undefined;
+      if (blockWorld) {
+        for (let bi = 0; bi < blockWorld.length; bi += 1) {
+          const rect = blockWorld[bi];
+          if (pos.x >= rect.x1 && pos.x <= rect.x2 && pos.y >= rect.y1 && pos.y <= rect.y2) {
+            area = blockAreas[bi];
+            break;
+          }
+        }
+      }
+      visible.set(node.id, { x: sx, y: sy, r, weight: node.importanceWeight, area });
     }
 
     /**
@@ -853,6 +1002,22 @@ export function HistoryGraphCanvas({
       const variants = buildVariants(LABEL_GAP);
 
       const fits = (box: Rect): boolean => {
+        /**
+         * 地界检查放在最前：越界的候选位连试都不必试。
+         * 从前只判「压不压别人」，于是块边缘那一圈人的名字全被推到块外，
+         * 落在隔壁朝代的地面上——没有线、没有框，读者看不出来那是隔壁的名字。
+         */
+        if (geo.area) {
+          const a = geo.area;
+          if (
+            box.x1 < a.x1 - LABEL_EDGE_SLACK ||
+            box.x2 > a.x2 + LABEL_EDGE_SLACK ||
+            box.y1 < a.y1 - LABEL_EDGE_SLACK ||
+            box.y2 > a.y2 + LABEL_EDGE_SLACK
+          ) {
+            return false;
+          }
+        }
         const keys = cellsOf(box);
         for (const key of keys) {
           const occupied = boxGrid.get(key);
@@ -880,7 +1045,7 @@ export function HistoryGraphCanvas({
 
       let chosen: { box: Rect; align: CanvasTextAlign } | undefined;
       if (force) {
-        chosen = variants[0];
+        chosen = { box: geo.area ? clampInto(variants[0].box, geo.area) : variants[0].box, align: variants[0].align };
       } else if (beacons) {
         /**
          * 概览层的地标优先「正下方」，排不下再试上方、左右。
@@ -891,8 +1056,14 @@ export function HistoryGraphCanvas({
       } else {
         chosen = variants.find((v) => fits(v.box));
       }
-      // 最后的兜底：中观/微观层里权重 ≥ 82 的帝王级人物宁可轻微压边，也不能无名
-      if (!chosen && !beacons && node.importanceWeight >= 82) chosen = variants[0];
+      /**
+       * 最后的兜底：中观/微观层里权重 ≥ 82 的帝王级人物宁可轻微压边，也不能无名。
+       * 压边可以，越界不可以——夹回本代可用区之后，最差是盖住自己的圆牌边缘，
+       * 至少仍站在原地，不会跑到邻代的版图上冒充别人的名字。
+       */
+      if (!chosen && !beacons && node.importanceWeight >= 82) {
+        chosen = { box: geo.area ? clampInto(variants[0].box, geo.area) : variants[0].box, align: variants[0].align };
+      }
       if (!chosen) continue;
 
       const { box, align } = chosen;
@@ -917,7 +1088,6 @@ export function HistoryGraphCanvas({
 
     return placements;
   };
-
   /**
    * 排布结果按「相机 + LOD + 悬停/选中 + 布局」缓存。
    * 定格之后（如寻路流光动画、呼吸环动画）每帧重绘时，这张表完全不变，
@@ -1226,7 +1396,7 @@ export function HistoryGraphCanvas({
           ? getPortraitImage(node)
           : null;
         if (img && img.complete && img.naturalWidth > 0) {
-          const sprite = portraitSprite(node.id, img, r, dpr);
+          const sprite = portraitSprite(node.id, img, r, dpr, node.portrait?.crop);
           if (sprite) {
             ctx.drawImage(sprite, geo.x - r * 0.94, geo.y - r * 0.94, r * 1.88, r * 1.88);
           }

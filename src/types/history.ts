@@ -111,6 +111,13 @@ export interface PortraitInfo {
   thumbnailUrl: string; // 画布节点渲染用的圆形头像 URL
   fullSizeUrl: string; // 点开大图（Lightbox）展示的高清完整立轴/半身像 URL
   tier: PortraitTier; // 画像考据等级
+  /**
+   * 圆里头像的取景窗口，归一化到整幅宽高（side 为相对图宽的边长）。
+   * 由 scripts/portraits/build-crops.mjs 依版式算出、逐件过目后写入；
+   * 缺省时画布按纵横比兜底。**这不是装饰参数**——取景错位会把
+   * 半身像裁成一顶帽子，让「有画像的人」看起来像没有画像。
+   */
+  crop?: { sx: number; sy: number; side: number; lum?: number; lo?: number; hi?: number };
   sourceAttribution: string; // 馆藏或古籍出处，如 "台北故宫博物院藏《南薰殿历代帝王像》绢本设色"
   painterOrBook?: string; // 画师或版画书名，如 "（唐）阎立本" 或 "（明）王圻《三才图会》"
   classicalAppearanceQuote?: {

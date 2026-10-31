@@ -1,0 +1,1383 @@
+{
+ "generatedAt": "2026-10-31T13:27:26.560Z",
+ "note": "画布圆形头像的取景窗口，归一化到整幅宽高（side 为相对图宽的边长）。由 build-crops.mjs 生成，勿手改；个别图档在 crop-overrides.json 里逐件改判。",
+ "count": 172,
+ "entries": {
+  "person_liu_bang": {
+   "sx": 0.22,
+   "sy": 0.2032,
+   "side": 0.28,
+   "lum": 234,
+   "lo": 0.231,
+   "hi": 1
+  },
+  "person_liu_heng": {
+   "sx": 0.3251,
+   "sy": 0.4695,
+   "side": 0.4567,
+   "lum": 191,
+   "lo": 0.565,
+   "hi": 0.875
+  },
+  "person_xiao_he": {
+   "sx": 0.2513,
+   "sy": 0.2937,
+   "side": 0.5487,
+   "lum": 163,
+   "lo": 0.216,
+   "hi": 0.847
+  },
+  "person_lu_jia": {
+   "sx": 0.2272,
+   "sy": 0.2609,
+   "side": 0.6389,
+   "lum": 233,
+   "lo": 0.494,
+   "hi": 0.976
+  },
+  "person_si_ma_qian": {
+   "sx": 0.0838,
+   "sy": 0.4413,
+   "side": 0.2987,
+   "lum": 112,
+   "lo": 0.29,
+   "hi": 0.494
+  },
+  "person_lv_bu": {
+   "sx": 0.1829,
+   "sy": 0.1807,
+   "side": 0.3503,
+   "lum": 190,
+   "lo": 0,
+   "hi": 0.973
+  },
+  "person_cao_cao": {
+   "sx": 0.1203,
+   "sy": 0.2742,
+   "side": 0.8001,
+   "lum": 203,
+   "lo": 0.553,
+   "hi": 0.867
+  },
+  "person_cao_zhi": {
+   "sx": 0,
+   "sy": 0,
+   "side": 0.8094,
+   "lum": 191,
+   "lo": 0.02,
+   "hi": 1
+  },
+  "person_jia_xu": {
+   "sx": 0.4298,
+   "sy": 0.1308,
+   "side": 0.3497,
+   "lum": 226,
+   "lo": 0.408,
+   "hi": 1
+  },
+  "person_zhang_liao": {
+   "sx": 0.04,
+   "sy": 0.1553,
+   "side": 0.3,
+   "lum": 186,
+   "lo": 0.024,
+   "hi": 0.992
+  },
+  "person_xiahou_dun": {
+   "sx": 0.02,
+   "sy": 0.1325,
+   "side": 0.98,
+   "lum": 190,
+   "lo": 0.263,
+   "hi": 0.973
+  },
+  "person_si_ma_yi": {
+   "sx": 0.1652,
+   "sy": 0.5138,
+   "side": 0.355,
+   "lum": 110,
+   "lo": 0.243,
+   "hi": 0.392
+  },
+  "person_si_ma_zhao": {
+   "sx": 0.1096,
+   "sy": 0.305,
+   "side": 0.1969,
+   "lum": 206,
+   "lo": 0.227,
+   "hi": 0.973
+  },
+  "person_liu_bei": {
+   "sx": 0.15,
+   "sy": 0.0172,
+   "side": 0.85,
+   "lum": 161,
+   "lo": 0.086,
+   "hi": 0.937
+  },
+  "person_zhuge_liang": {
+   "sx": 0.1345,
+   "sy": 0.4617,
+   "side": 0.3987,
+   "lum": 113,
+   "lo": 0.251,
+   "hi": 0.451
+  },
+  "person_ma_chao": {
+   "sx": 0.1818,
+   "sy": 0.0159,
+   "side": 0.59,
+   "lum": 226,
+   "lo": 0.467,
+   "hi": 1
+  },
+  "person_jiang_wei": {
+   "sx": 0.02,
+   "sy": 0.0168,
+   "side": 0.98,
+   "lum": 206,
+   "lo": 0.416,
+   "hi": 0.992
+  },
+  "person_sun_jian": {
+   "sx": 0.403,
+   "sy": 0.1149,
+   "side": 0.273,
+   "lum": 238,
+   "lo": 0.333,
+   "hi": 1
+  },
+  "person_sun_quan": {
+   "sx": 0.2919,
+   "sy": 0.4464,
+   "side": 0.6426,
+   "lum": 197,
+   "lo": 0.373,
+   "hi": 0.875
+  },
+  "person_zhou_yu": {
+   "sx": 0.07,
+   "sy": 0.0149,
+   "side": 0.93,
+   "lum": 223,
+   "lo": 0.498,
+   "hi": 0.988
+  },
+  "person_lu_su": {
+   "sx": 0,
+   "sy": 0.0161,
+   "side": 0.98,
+   "lum": 208,
+   "lo": 0.38,
+   "hi": 0.98
+  },
+  "person_lu_xun": {
+   "sx": 0.1592,
+   "sy": 0.0182,
+   "side": 0.66,
+   "lum": 215,
+   "lo": 0.376,
+   "hi": 1
+  },
+  "person_huang_zhong": {
+   "sx": 0.1874,
+   "sy": 0.1288,
+   "side": 0.338,
+   "lum": 180,
+   "lo": 0,
+   "hi": 1
+  },
+  "person_fa_zheng": {
+   "sx": 0.0898,
+   "sy": 0.0358,
+   "side": 0.5046,
+   "lum": 211,
+   "lo": 0.227,
+   "hi": 0.988
+  },
+  "person_li_yuan": {
+   "sx": 0.2299,
+   "sy": 0.0812,
+   "side": 0.4733,
+   "lum": 134,
+   "lo": 0.251,
+   "hi": 0.663
+  },
+  "person_fang_xuanling": {
+   "sx": 0.2034,
+   "sy": 0.4758,
+   "side": 0.6009,
+   "lum": 184,
+   "lo": 0.51,
+   "hi": 0.8
+  },
+  "person_du_ruhui": {
+   "sx": 0.1308,
+   "sy": 0.3047,
+   "side": 0.7589,
+   "lum": 195,
+   "lo": 0.584,
+   "hi": 0.816
+  },
+  "person_li_jing": {
+   "sx": 0.3657,
+   "sy": 0.1918,
+   "side": 0.3135,
+   "lum": 236,
+   "lo": 0.424,
+   "hi": 1
+  },
+  "person_li_ji": {
+   "sx": 0.01,
+   "sy": 0.2696,
+   "side": 0.99,
+   "lum": 123,
+   "lo": 0.176,
+   "hi": 0.667
+  },
+  "person_di_renjie": {
+   "sx": 0.1074,
+   "sy": 0.3954,
+   "side": 0.8155,
+   "lum": 187,
+   "lo": 0.396,
+   "hi": 0.859
+  },
+  "person_li_bai": {
+   "sx": 0,
+   "sy": 0.1268,
+   "side": 0.99,
+   "lum": 180,
+   "lo": 0.086,
+   "hi": 0.941
+  },
+  "person_liu_qi": {
+   "sx": 0.2571,
+   "sy": 0.4267,
+   "side": 0.6467,
+   "lum": 179,
+   "lo": 0.494,
+   "hi": 0.831
+  },
+  "person_zhang_liang": {
+   "sx": 0.3339,
+   "sy": 0.18,
+   "side": 0.3399,
+   "lum": 156,
+   "lo": 0.278,
+   "hi": 0.749
+  },
+  "person_dong_zhuo": {
+   "sx": 0,
+   "sy": 0.0161,
+   "side": 0.98,
+   "lum": 164,
+   "lo": 0.035,
+   "hi": 0.98
+  },
+  "person_yuan_shao": {
+   "sx": 0.2581,
+   "sy": 0.0689,
+   "side": 0.4916,
+   "lum": 173,
+   "lo": 0.012,
+   "hi": 0.953
+  },
+  "person_guo_jia": {
+   "sx": 0.1945,
+   "sy": 0.0357,
+   "side": 0.4628,
+   "lum": 182,
+   "lo": 0,
+   "hi": 1
+  },
+  "person_guan_yu": {
+   "sx": 0.4614,
+   "sy": 0.213,
+   "side": 0.312,
+   "lum": 173,
+   "lo": 0,
+   "hi": 0.957
+  },
+  "person_zhang_fei": {
+   "sx": 0,
+   "sy": 0.0271,
+   "side": 0.98,
+   "lum": 209,
+   "lo": 0.404,
+   "hi": 0.996
+  },
+  "person_sun_ce": {
+   "sx": 0.3663,
+   "sy": 0.0548,
+   "side": 0.3558,
+   "lum": 187,
+   "lo": 0,
+   "hi": 0.973
+  },
+  "person_xiang_yu": {
+   "sx": 0.166,
+   "sy": 0.3294,
+   "side": 0.728,
+   "lum": 182,
+   "lo": 0.545,
+   "hi": 0.78
+  },
+  "person_qin_shi_huang": {
+   "sx": 0.01,
+   "sy": 0.1036,
+   "side": 0.99,
+   "lum": 167,
+   "lo": 0.094,
+   "hi": 0.835
+  },
+  "person_yu_ji": {
+   "sx": 0.151,
+   "sy": 0.105,
+   "side": 0.65,
+   "lum": 179,
+   "lo": 0.549,
+   "hi": 0.757
+  },
+  "person_lv_meng": {
+   "sx": 0.214,
+   "sy": 0.051,
+   "side": 0.3689,
+   "lum": 213,
+   "lo": 0.055,
+   "hi": 1
+  },
+  "person_wei_zheng": {
+   "sx": 0.01,
+   "sy": 0.2488,
+   "side": 0.99,
+   "lum": 150,
+   "lo": 0.208,
+   "hi": 0.82
+  },
+  "person_yuchi_gong": {
+   "sx": 0.1691,
+   "sy": 0.3937,
+   "side": 0.8169,
+   "lum": 180,
+   "lo": 0.4,
+   "hi": 0.82
+  },
+  "person_shangguan_waner": {
+   "sx": 0.2052,
+   "sy": 0.1813,
+   "side": 0.4257,
+   "lum": 189,
+   "lo": 0.447,
+   "hi": 0.792
+  },
+  "person_yang_yuhuan": {
+   "sx": 0.1018,
+   "sy": 0.1501,
+   "side": 0.84,
+   "lum": 229,
+   "lo": 0.584,
+   "hi": 1
+  },
+  "person_guo_ziyi": {
+   "sx": 0.118,
+   "sy": 0.444,
+   "side": 0.7627,
+   "lum": 194,
+   "lo": 0.514,
+   "hi": 0.824
+  },
+  "person_du_fu": {
+   "sx": 0,
+   "sy": 0.2843,
+   "side": 0.99,
+   "lum": 189,
+   "lo": 0.208,
+   "hi": 0.969
+  },
+  "person_han_xin": {
+   "sx": 0.01,
+   "sy": 0.1123,
+   "side": 0.99,
+   "lum": 185,
+   "lo": 0.482,
+   "hi": 0.851
+  },
+  "person_xun_yu": {
+   "sx": 0.1995,
+   "sy": 0.0219,
+   "side": 0.56,
+   "lum": 233,
+   "lo": 0.357,
+   "hi": 1
+  },
+  "person_li_longji": {
+   "sx": 0.1334,
+   "sy": 0.0808,
+   "side": 0.7908,
+   "lum": 137,
+   "lo": 0.353,
+   "hi": 0.643
+  },
+  "person_fan_kuai": {
+   "sx": 0.0629,
+   "sy": 0.1286,
+   "side": 0.8697,
+   "lum": 167,
+   "lo": 0.486,
+   "hi": 0.737
+  },
+  "person_cao_pi": {
+   "sx": 0.2198,
+   "sy": 0.0042,
+   "side": 0.4315,
+   "lum": 186,
+   "lo": 0.259,
+   "hi": 0.922
+  },
+  "person_yang_jian": {
+   "sx": 0.3854,
+   "sy": 0.1551,
+   "side": 0.3416,
+   "lum": 109,
+   "lo": 0.149,
+   "hi": 0.58
+  },
+  "person_li_shimin": {
+   "sx": 0.1838,
+   "sy": 0.0615,
+   "side": 0.6479,
+   "lum": 157,
+   "lo": 0.376,
+   "hi": 0.725
+  },
+  "person_cao_can": {
+   "sx": 0.1236,
+   "sy": 0.2388,
+   "side": 0.772,
+   "lum": 200,
+   "lo": 0.475,
+   "hi": 0.859
+  },
+  "person_xiahou_yuan": {
+   "sx": 0.2876,
+   "sy": 0.1553,
+   "side": 0.2987,
+   "lum": 219,
+   "lo": 0.008,
+   "hi": 1
+  },
+  "person_yang_guang": {
+   "sx": 0.4005,
+   "sy": 0.1646,
+   "side": 0.2877,
+   "lum": 234,
+   "lo": 0.337,
+   "hi": 1
+  },
+  "person_wang_an_shi": {
+   "sx": 0.01,
+   "sy": 0.2612,
+   "side": 0.99,
+   "lum": 173,
+   "lo": 0.49,
+   "hi": 0.839
+  },
+  "person_si_ma_guang": {
+   "sx": 0.3965,
+   "sy": 0.1351,
+   "side": 0.247,
+   "lum": 237,
+   "lo": 0.294,
+   "hi": 1
+  },
+  "person_wen_tianxiang": {
+   "sx": 0.01,
+   "sy": 0.15,
+   "side": 0.99,
+   "lum": 154,
+   "lo": 0.322,
+   "hi": 0.831
+  },
+  "person_hu_bi_lie": {
+   "sx": 0.0117,
+   "sy": 0.2003,
+   "side": 0.9883,
+   "lum": 176,
+   "lo": 0.333,
+   "hi": 0.847
+  },
+  "person_zhao_ji": {
+   "sx": 0.1595,
+   "sy": 0.1389,
+   "side": 0.8169,
+   "lum": 116,
+   "lo": 0.133,
+   "hi": 0.627
+  },
+  "person_wan_yan_aguda": {
+   "sx": 0,
+   "sy": 0.0416,
+   "side": 0.9645,
+   "lum": 129,
+   "lo": 0.059,
+   "hi": 0.925
+  },
+  "person_li_cunxu": {
+   "sx": 0.1578,
+   "sy": 0.2956,
+   "side": 0.7618,
+   "lum": 203,
+   "lo": 0.486,
+   "hi": 0.859
+  },
+  "person_chai_rong": {
+   "sx": 0.01,
+   "sy": 0.0631,
+   "side": 0.99,
+   "lum": 156,
+   "lo": 0.408,
+   "hi": 0.749
+  },
+  "person_ouyang_xiu": {
+   "sx": 0.1676,
+   "sy": 0.009,
+   "side": 0.3486,
+   "lum": 234,
+   "lo": 0.514,
+   "hi": 1
+  },
+  "person_yue_fei": {
+   "sx": 0.2932,
+   "sy": 0.0281,
+   "side": 0.66,
+   "lum": 219,
+   "lo": 0.596,
+   "hi": 1
+  },
+  "person_zhu_xi": {
+   "sx": 0.1329,
+   "sy": 0.3226,
+   "side": 0.7032,
+   "lum": 186,
+   "lo": 0.533,
+   "hi": 0.804
+  },
+  "person_zhu_yuanzhang": {
+   "sx": 0.0345,
+   "sy": 0.1695,
+   "side": 0.9382,
+   "lum": 165,
+   "lo": 0.129,
+   "hi": 0.725
+  },
+  "person_zhao_kuangyin": {
+   "sx": 0.3234,
+   "sy": 0.0137,
+   "side": 0.3503,
+   "lum": 153,
+   "lo": 0.212,
+   "hi": 0.706
+  },
+  "person_su_shi": {
+   "sx": 0.2715,
+   "sy": 0.1012,
+   "side": 0.6029,
+   "lum": 193,
+   "lo": 0.514,
+   "hi": 0.843
+  },
+  "person_fan_zhongyan": {
+   "sx": 0.1772,
+   "sy": 0.1647,
+   "side": 0.7946,
+   "lum": 138,
+   "lo": 0.047,
+   "hi": 0.804
+  },
+  "person_zhu_di": {
+   "sx": 0.3045,
+   "sy": 0.0307,
+   "side": 0.4283,
+   "lum": 160,
+   "lo": 0.024,
+   "hi": 0.733
+  },
+  "person_zhang_juzheng": {
+   "sx": 0.2909,
+   "sy": 0.0208,
+   "side": 0.4588,
+   "lum": 130,
+   "lo": 0.004,
+   "hi": 0.914
+  },
+  "person_hong_li": {
+   "sx": 0.0661,
+   "sy": 0.1946,
+   "side": 0.8427,
+   "lum": 94,
+   "lo": 0.094,
+   "hi": 0.62
+  },
+  "person_li_qingzhao": {
+   "sx": 0,
+   "sy": 0.3481,
+   "side": 0.6342,
+   "lum": 177,
+   "lo": 0.173,
+   "hi": 0.769
+  },
+  "person_zhu_wen": {
+   "sx": 0.1459,
+   "sy": 0.0336,
+   "side": 0.58,
+   "lum": 150,
+   "lo": 0.416,
+   "hi": 0.702
+  },
+  "person_meng_ge": {
+   "sx": 0.247,
+   "sy": 0.0912,
+   "side": 0.4501,
+   "lum": 132,
+   "lo": 0.208,
+   "hi": 0.757
+  },
+  "person_zhang_shi_cheng": {
+   "sx": 0.1644,
+   "sy": 0.186,
+   "side": 0.5846,
+   "lum": 165,
+   "lo": 0.137,
+   "hi": 0.855
+  },
+  "person_zhu_hou_cong": {
+   "sx": 0.3682,
+   "sy": 0.244,
+   "side": 0.2645,
+   "lum": 132,
+   "lo": 0.188,
+   "hi": 0.702
+  },
+  "person_xu_lie_wu": {
+   "sx": 0.02,
+   "sy": 0.0134,
+   "side": 0.98,
+   "lum": 133,
+   "lo": 0.231,
+   "hi": 0.925
+  },
+  "person_hu_zong_xian": {
+   "sx": 0.2817,
+   "sy": 0.0671,
+   "side": 0.4431,
+   "lum": 157,
+   "lo": 0.122,
+   "hi": 0.91
+  },
+  "person_yang_shen": {
+   "sx": 0.2592,
+   "sy": 0.1819,
+   "side": 0.4176,
+   "lum": 144,
+   "lo": 0.29,
+   "hi": 0.671
+  },
+  "person_tang_yin": {
+   "sx": 0.2877,
+   "sy": 0.1467,
+   "side": 0.4338,
+   "lum": 116,
+   "lo": 0.192,
+   "hi": 0.604
+  },
+  "person_xia_yan": {
+   "sx": 0.1804,
+   "sy": 0.036,
+   "side": 0.7148,
+   "lum": 187,
+   "lo": 0.384,
+   "hi": 1
+  },
+  "person_yan_song": {
+   "sx": 0.212,
+   "sy": 0.13,
+   "side": 0.546,
+   "lum": 146,
+   "lo": 0.412,
+   "hi": 0.769
+  },
+  "person_gao_gong": {
+   "sx": 0.2623,
+   "sy": 0.0208,
+   "side": 0.4898,
+   "lum": 114,
+   "lo": 0.055,
+   "hi": 0.769
+  },
+  "person_qin_liang_yu": {
+   "sx": 0.3218,
+   "sy": 0.0934,
+   "side": 0.35,
+   "lum": 208,
+   "lo": 0.471,
+   "hi": 0.902
+  },
+  "person_wen_zheng_ming": {
+   "sx": 0.3039,
+   "sy": 0.3376,
+   "side": 0.3555,
+   "lum": 122,
+   "lo": 0.29,
+   "hi": 0.569
+  },
+  "person_shi_ke_fa": {
+   "sx": 0.0869,
+   "sy": 0.1737,
+   "side": 0.7589,
+   "lum": 161,
+   "lo": 0.051,
+   "hi": 0.992
+  },
+  "person_wang_fu_zhi": {
+   "sx": 0.0764,
+   "sy": 0.1988,
+   "side": 0.8465,
+   "lum": 196,
+   "lo": 0.294,
+   "hi": 0.894
+  },
+  "person_gu_yan_wu": {
+   "sx": 0.3065,
+   "sy": 0.025,
+   "side": 0.3927,
+   "lum": 217,
+   "lo": 0.545,
+   "hi": 0.902
+  },
+  "person_xiao_zhuang": {
+   "sx": 0.3122,
+   "sy": 0.0833,
+   "side": 0.3863,
+   "lum": 128,
+   "lo": 0.208,
+   "hi": 0.651
+  },
+  "person_fu_kang_an": {
+   "sx": 0.3089,
+   "sy": 0.1297,
+   "side": 0.4124,
+   "lum": 155,
+   "lo": 0.004,
+   "hi": 0.89
+  },
+  "person_zhang_ting_yu": {
+   "sx": 0.325,
+   "sy": 0.0526,
+   "side": 0.3494,
+   "lum": 112,
+   "lo": 0.118,
+   "hi": 0.804
+  },
+  "person_fu_heng": {
+   "sx": 0.2925,
+   "sy": 0.0007,
+   "side": 0.3927,
+   "lum": 175,
+   "lo": 0.251,
+   "hi": 0.753
+  },
+  "person_dai_zhen": {
+   "sx": 0.362,
+   "sy": 0.2653,
+   "side": 0.416,
+   "lum": 220,
+   "lo": 0.643,
+   "hi": 0.988
+  },
+  "person_wei_yuan": {
+   "sx": 0.3358,
+   "sy": 0.0593,
+   "side": 0.4153,
+   "lum": 231,
+   "lo": 0.616,
+   "hi": 0.973
+  },
+  "person_na_lan_xing_de": {
+   "sx": 0.3166,
+   "sy": 0.0495,
+   "side": 0.3796,
+   "lum": 204,
+   "lo": 0.682,
+   "hi": 0.89
+  },
+  "person_hong_xiu_quan": {
+   "sx": 0.2045,
+   "sy": 0.1235,
+   "side": 0.7134,
+   "lum": 201,
+   "lo": 0.478,
+   "hi": 0.949
+  },
+  "person_xiong_ting_bi": {
+   "sx": 0.3021,
+   "sy": 0.1371,
+   "side": 0.4562,
+   "lum": 174,
+   "lo": 0.322,
+   "hi": 0.737
+  },
+  "person_chen_qian": {
+   "sx": 0.5813,
+   "sy": 0.2456,
+   "side": 0.2253,
+   "lum": 121,
+   "lo": 0.067,
+   "hi": 0.584
+  },
+  "person_chen_xu": {
+   "sx": 0.3841,
+   "sy": 0.1813,
+   "side": 0.2491,
+   "lum": 118,
+   "lo": 0.153,
+   "hi": 0.635
+  },
+  "person_chen_shubao": {
+   "sx": 0.3149,
+   "sy": 0.1678,
+   "side": 0.281,
+   "lum": 95,
+   "lo": 0.188,
+   "hi": 0.529
+  },
+  "person_yu_wen_yong": {
+   "sx": 0.3579,
+   "sy": 0.1023,
+   "side": 0.3903,
+   "lum": 145,
+   "lo": 0.224,
+   "hi": 0.69
+  },
+  "person_zhu_qizhen": {
+   "sx": 0.366,
+   "sy": 0.1954,
+   "side": 0.272,
+   "lum": 138,
+   "lo": 0.161,
+   "hi": 0.651
+  },
+  "person_xuan_ye": {
+   "sx": 0.2228,
+   "sy": 0.0549,
+   "side": 0.5574,
+   "lum": 77,
+   "lo": 0.153,
+   "hi": 0.78
+  },
+  "person_fu_lin": {
+   "sx": 0.0268,
+   "sy": 0.1158,
+   "side": 0.9558,
+   "lum": 157,
+   "lo": 0.165,
+   "hi": 0.851
+  },
+  "person_zhao_guangyi": {
+   "sx": 0.2885,
+   "sy": 0.0042,
+   "side": 0.4924,
+   "lum": 201,
+   "lo": 0.063,
+   "hi": 0.941
+  },
+  "person_zhao_heng": {
+   "sx": 0.0715,
+   "sy": 0.1109,
+   "side": 0.9222,
+   "lum": 169,
+   "lo": 0.478,
+   "hi": 0.788
+  },
+  "person_zhao_zhen": {
+   "sx": 0.256,
+   "sy": 0.0387,
+   "side": 0.3503,
+   "lum": 125,
+   "lo": 0.149,
+   "hi": 0.663
+  },
+  "person_zhao_gou": {
+   "sx": 0.2694,
+   "sy": 0.1473,
+   "side": 0.3654,
+   "lum": 124,
+   "lo": 0.208,
+   "hi": 0.659
+  },
+  "person_zhu_yunwen": {
+   "sx": 0.092,
+   "sy": 0.2434,
+   "side": 0.8175,
+   "lum": 173,
+   "lo": 0.012,
+   "hi": 0.839
+  },
+  "person_yin_zhen": {
+   "sx": 0.3363,
+   "sy": 0.1041,
+   "side": 0.3373,
+   "lum": 140,
+   "lo": 0.239,
+   "hi": 0.682
+  },
+  "person_zhu_youjian": {
+   "sx": 0.0609,
+   "sy": 0.1285,
+   "side": 0.87,
+   "lum": 149,
+   "lo": 0.314,
+   "hi": 0.698
+  },
+  "person_ti_ying": {
+   "sx": 0.6195,
+   "sy": 0.1582,
+   "side": 0.221,
+   "lum": 196,
+   "lo": 0.675,
+   "hi": 0.831
+  },
+  "person_su_wu": {
+   "sx": 0.112,
+   "sy": 0.1944,
+   "side": 0.156,
+   "lum": 235,
+   "lo": 0.282,
+   "hi": 1
+  },
+  "person_xie_an": {
+   "sx": 0.2589,
+   "sy": 0.0567,
+   "side": 0.464,
+   "lum": 238,
+   "lo": 0.537,
+   "hi": 1
+  },
+  "person_gu_kaizhi": {
+   "sx": 0.1894,
+   "sy": 0.0128,
+   "side": 0.72,
+   "lum": 235,
+   "lo": 0.647,
+   "hi": 1
+  },
+  "person_hui_yuan": {
+   "sx": 0.2778,
+   "sy": 0.019,
+   "side": 0.53,
+   "lum": 239,
+   "lo": 0.624,
+   "hi": 1
+  },
+  "person_zhang_jiuling": {
+   "sx": 0.2228,
+   "sy": 0.0442,
+   "side": 0.57,
+   "lum": 235,
+   "lo": 0.541,
+   "hi": 1
+  },
+  "person_luo_binwang": {
+   "sx": 0.1046,
+   "sy": 0,
+   "side": 0.4875,
+   "lum": 234,
+   "lo": 0.467,
+   "hi": 1
+  },
+  "person_wang_bo": {
+   "sx": 0.3864,
+   "sy": 0.0628,
+   "side": 0.2822,
+   "lum": 240,
+   "lo": 0.51,
+   "hi": 1
+  },
+  "person_zhang_xun": {
+   "sx": 0.02,
+   "sy": 0.1067,
+   "side": 0.98,
+   "lum": 223,
+   "lo": 0.533,
+   "hi": 1
+  },
+  "person_wang_wei": {
+   "sx": 0.4612,
+   "sy": 0.1106,
+   "side": 0.48,
+   "lum": 234,
+   "lo": 0.553,
+   "hi": 1
+  },
+  "person_bai_juyi": {
+   "sx": 0.35,
+   "sy": 0.0148,
+   "side": 0.65,
+   "lum": 232,
+   "lo": 0.541,
+   "hi": 1
+  },
+  "person_liu_zongyuan": {
+   "sx": 0.1498,
+   "sy": 0.0179,
+   "side": 0.46,
+   "lum": 237,
+   "lo": 0.459,
+   "hi": 1
+  },
+  "person_meng_haoran": {
+   "sx": 0.201,
+   "sy": 0.4928,
+   "side": 0.338,
+   "lum": 238,
+   "lo": 0.604,
+   "hi": 1
+  },
+  "person_wen_tingyun": {
+   "sx": 0.2227,
+   "sy": 0.0246,
+   "side": 0.63,
+   "lum": 237,
+   "lo": 0.608,
+   "hi": 1
+  },
+  "person_du_mu": {
+   "sx": 0.2102,
+   "sy": 0.0155,
+   "side": 0.65,
+   "lum": 236,
+   "lo": 0.675,
+   "hi": 1
+  },
+  "person_han_yu": {
+   "sx": 0.2773,
+   "sy": 0.0663,
+   "side": 0.4663,
+   "lum": 230,
+   "lo": 0.431,
+   "hi": 1
+  },
+  "person_zeng_gong": {
+   "sx": 0.2642,
+   "sy": 0.0394,
+   "side": 0.42,
+   "lum": 239,
+   "lo": 0.502,
+   "hi": 1
+  },
+  "person_xu_da": {
+   "sx": 0.1477,
+   "sy": 0.0387,
+   "side": 0.81,
+   "lum": 233,
+   "lo": 0.569,
+   "hi": 1
+  },
+  "person_cheng_yi": {
+   "sx": 0.2008,
+   "sy": 0.0379,
+   "side": 0.5408,
+   "lum": 239,
+   "lo": 0.498,
+   "hi": 1
+  },
+  "person_yan_guang": {
+   "sx": 0.3827,
+   "sy": 0.198,
+   "side": 0.3051,
+   "lum": 240,
+   "lo": 0.431,
+   "hi": 1
+  },
+  "person_su_zhe": {
+   "sx": 0.2168,
+   "sy": 0.0167,
+   "side": 0.7,
+   "lum": 232,
+   "lo": 0.561,
+   "hi": 1
+  },
+  "person_shao_yong": {
+   "sx": 0.0985,
+   "sy": 0.064,
+   "side": 0.73,
+   "lum": 234,
+   "lo": 0.541,
+   "hi": 1
+  },
+  "person_cai_xiang": {
+   "sx": 0.2344,
+   "sy": 0.0355,
+   "side": 0.5075,
+   "lum": 218,
+   "lo": 0.325,
+   "hi": 1
+  },
+  "person_zhang_zai": {
+   "sx": 0.2753,
+   "sy": 0,
+   "side": 0.5165,
+   "lum": 238,
+   "lo": 0.529,
+   "hi": 1
+  },
+  "person_cheng_hao": {
+   "sx": 0.2469,
+   "sy": 0.0433,
+   "side": 0.4794,
+   "lum": 236,
+   "lo": 0.482,
+   "hi": 1
+  },
+  "person_huang_tingjian": {
+   "sx": 0.4556,
+   "sy": 0.0933,
+   "side": 0.4692,
+   "lum": 236,
+   "lo": 0.51,
+   "hi": 1
+  },
+  "person_li_gang": {
+   "sx": 0.1935,
+   "sy": 0.0265,
+   "side": 0.57,
+   "lum": 237,
+   "lo": 0.553,
+   "hi": 1
+  },
+  "person_liu_ji_ming": {
+   "sx": 0.2548,
+   "sy": 0.0169,
+   "side": 0.55,
+   "lum": 235,
+   "lo": 0.561,
+   "hi": 1
+  },
+  "person_chang_yuchun": {
+   "sx": 0.0486,
+   "sy": 0.0352,
+   "side": 0.93,
+   "lum": 229,
+   "lo": 0.565,
+   "hi": 1
+  },
+  "person_yu_qian": {
+   "sx": 0.2369,
+   "sy": 0.0678,
+   "side": 0.4585,
+   "lum": 233,
+   "lo": 0.42,
+   "hi": 1
+  },
+  "person_wang_xizhi": {
+   "sx": 0.2298,
+   "sy": 0.2557,
+   "side": 0.5942,
+   "lum": 189,
+   "lo": 0.157,
+   "hi": 0.961
+  },
+  "person_zhou_wuwang": {
+   "sx": 0.2263,
+   "sy": 0.4496,
+   "side": 0.6786,
+   "lum": 183,
+   "lo": 0.502,
+   "hi": 0.816
+  },
+  "person_liu_xiu": {
+   "sx": 0.2245,
+   "sy": 0.4448,
+   "side": 0.6751,
+   "lum": 181,
+   "lo": 0.408,
+   "hi": 0.824
+  },
+  "person_tao_yuanming": {
+   "sx": 0.2233,
+   "sy": 0.4068,
+   "side": 0.5336,
+   "lum": 194,
+   "lo": 0.545,
+   "hi": 0.831
+  },
+  "person_zhou_dunyi": {
+   "sx": 0.1647,
+   "sy": 0.3769,
+   "side": 0.6873,
+   "lum": 193,
+   "lo": 0.549,
+   "hi": 0.843
+  },
+  "person_yao_chong": {
+   "sx": 0.2157,
+   "sy": 0.4655,
+   "side": 0.5901,
+   "lum": 192,
+   "lo": 0.541,
+   "hi": 0.804
+  },
+  "person_qu_yuan": {
+   "sx": 0.1187,
+   "sy": 0.4194,
+   "side": 0.4417,
+   "lum": 108,
+   "lo": 0.247,
+   "hi": 0.431
+  },
+  "person_lv_zuiqian": {
+   "sx": 0.1727,
+   "sy": 0.3971,
+   "side": 0.7322,
+   "lum": 191,
+   "lo": 0.49,
+   "hi": 0.843
+  },
+  "person_wang_shenzhi": {
+   "sx": 0.114,
+   "sy": 0.3774,
+   "side": 0.7514,
+   "lum": 184,
+   "lo": 0.396,
+   "hi": 0.796
+  },
+  "person_zhang_shi": {
+   "sx": 0.1366,
+   "sy": 0.4756,
+   "side": 0.6803,
+   "lum": 190,
+   "lo": 0.475,
+   "hi": 0.816
+  },
+  "person_zhou_gong_dan": {
+   "sx": 0.0987,
+   "sy": 0.3207,
+   "side": 0.7673,
+   "lum": 190,
+   "lo": 0.463,
+   "hi": 0.831
+  },
+  "person_shi_jingtang": {
+   "sx": 0.2392,
+   "sy": 0.0791,
+   "side": 0.59,
+   "lum": 163,
+   "lo": 0.494,
+   "hi": 0.729
+  },
+  "person_liu_zhiyuan": {
+   "sx": 0.01,
+   "sy": 0.0938,
+   "side": 0.99,
+   "lum": 160,
+   "lo": 0.435,
+   "hi": 0.745
+  },
+  "person_guo_wei_fd": {
+   "sx": 0.01,
+   "sy": 0.0531,
+   "side": 0.99,
+   "lum": 141,
+   "lo": 0.369,
+   "hi": 0.714
+  },
+  "person_qian_liu": {
+   "sx": 0.2068,
+   "sy": 0.1499,
+   "side": 0.7526,
+   "lum": 97,
+   "lo": 0.106,
+   "hi": 0.58
+  },
+  "person_han_xizai": {
+   "sx": 0.01,
+   "sy": 0.1833,
+   "side": 0.99,
+   "lum": 126,
+   "lo": 0.271,
+   "hi": 0.647
+  },
+  "person_sang_weihan": {
+   "sx": 0.35,
+   "sy": 0.1662,
+   "side": 0.52,
+   "lum": 229,
+   "lo": 0.373,
+   "hi": 0.98
+  },
+  "person_wang_yanzhang": {
+   "sx": 0,
+   "sy": 0.2058,
+   "side": 0.5239,
+   "lum": 233,
+   "lo": 0.518,
+   "hi": 1
+  },
+  "person_li_cunxiao": {
+   "sx": 0.357,
+   "sy": 0.2102,
+   "side": 0.286,
+   "lum": 233,
+   "lo": 0.2,
+   "hi": 1
+  },
+  "person_wang_pu": {
+   "sx": 0.266,
+   "sy": 0.2307,
+   "side": 0.468,
+   "lum": 231,
+   "lo": 0.173,
+   "hi": 1
+  },
+  "person_li_yu_fd": {
+   "sx": 0.1554,
+   "sy": 0.2621,
+   "side": 0.7363,
+   "lum": 205,
+   "lo": 0.553,
+   "hi": 0.863
+  },
+  "person_qian_hongchu": {
+   "sx": 0.34,
+   "sy": 0.3531,
+   "side": 0.52,
+   "lum": 238,
+   "lo": 0.847,
+   "hi": 1
+  },
+  "person_bao_zheng": {
+   "sx": 0.1439,
+   "sy": 0.4541,
+   "side": 0.7882,
+   "lum": 176,
+   "lo": 0.431,
+   "hi": 0.792
+  },
+  "person_zhou_wenwang": {
+   "sx": 0.2099,
+   "sy": 0.4062,
+   "side": 0.7166,
+   "lum": 186,
+   "lo": 0.49,
+   "hi": 0.835
+  },
+  "person_li_siyuan": {
+   "sx": 0.375,
+   "sy": 0.1998,
+   "side": 0.39,
+   "lum": 141,
+   "lo": 0.322,
+   "hi": 0.671
+  }
+ }
+}

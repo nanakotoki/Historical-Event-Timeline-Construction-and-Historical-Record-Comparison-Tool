@@ -337,6 +337,18 @@ async function main() {
     : null;
   if (!audit) console.warn('  ⚠ 未找到 audit.json，本次构建将不注入任何传世画像。');
 
+  /**
+   * 取景窗口（crops.json）。
+   * ------------------------------------------------------------------
+   * 圆里头像不是把整幅图塞进圆里就完事：册页、立轴、裱本的构图各不相同，
+   * 固定比例会把半身像裁成「一顶帽子」、把满题裱本裁成「一片暗背景」。
+   * 表由 build-crops.mjs 生成（必须先跑它，再跑本脚本）。缺失时不阻断构建，
+   * 画布会退回按纵横比的兜底规则。
+   */
+  const CROPS_PATH = path.join(__dirname, 'crops.json');
+  const crops = existsSync(CROPS_PATH) ? JSON.parse(await readFile(CROPS_PATH, 'utf8')).entries : {};
+  if (!Object.keys(crops).length) console.warn('  ⚠ 未找到 crops.json，画布头像将按纵横比兜底取景。');
+
   // 三国人物花名册：用于校验「三國演義刊本繡像」这条规则不会误落到别人头上。
   // 花名册来自上一次 seed 产物；缺失时仅跳过校验，不影响出图。
   const threeKingdoms = await (async () => {
@@ -401,6 +413,7 @@ async function main() {
       commonsPage: rec.commons,
       thumb: `/data/portraits/${id}.jpg`,
       full: `/data/portraits/full_${id}.jpg`,
+      crop: crops[id],
     };
   }
 

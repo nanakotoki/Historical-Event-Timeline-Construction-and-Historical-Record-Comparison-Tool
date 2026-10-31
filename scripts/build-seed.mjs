@@ -185,6 +185,8 @@ function normalizePerson(node, index, validIds, promptBuilder) {
         fullSizeUrl: real.full,
         sourceAttribution: real.sourceAttribution,
         painterOrBook: real.painterOrBook,
+        // 圆里头像的取景窗口（归一化）。缺省时画布按纵横比兜底，不阻断。
+        ...(real.crop ? { crop: real.crop } : {}),
         aiReconstructionPrompt: person.portrait.aiReconstructionPrompt || promptBuilder(person),
       };
     } else {

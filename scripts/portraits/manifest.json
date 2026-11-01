@@ -276,11 +276,11 @@
     "person_zhangsun_wuji": {
       "id": "person_zhangsun_wuji",
       "name": "长孙无忌",
-      "file": "長孫無忌.jpg",
-      "commons": "https://commons.wikimedia.org/wiki/File:%E9%95%B7%E5%AD%AB%E7%84%A1%E5%BF%8C.jpg",
-      "thumbBytes": 55383,
-      "fullBytes": 264442,
-      "fullResolved": true
+      "file": "NLC892-002302082-330382_p18.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
     },
     "person_fang_xuanling": {
       "id": "person_fang_xuanling",
@@ -1918,6 +1918,123 @@
       "thumbBytes": 149915,
       "fullBytes": 149915,
       "fullResolved": true
+    },
+    "person_yu_shinan": {
+      "id": "person_yu_shinan",
+      "name": "虞世南",
+      "file": "NLC892-002302082-330382_p06.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_qu_tutong": {
+      "id": "person_qu_tutong",
+      "name": "屈突通",
+      "file": "NLC892-002302082-330382_p07.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_duan_zhixuan": {
+      "id": "person_duan_zhixuan",
+      "name": "段志玄",
+      "file": "NLC892-002302082-330382_p08.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_qin_shubao": {
+      "id": "person_qin_shubao",
+      "name": "秦琼",
+      "file": "NLC892-002302082-330382_p16.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_li_xiaogong": {
+      "id": "person_li_xiaogong",
+      "name": "李孝恭",
+      "file": "NLC892-002302082-330382_p20.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_cheng_yaojin": {
+      "id": "person_cheng_yaojin",
+      "name": "程知节",
+      "file": "NLC892-002302082-330382_p22.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_lu_yu": {
+      "id": "person_lu_yu",
+      "name": "陆羽",
+      "file": "NLC892-002302082-330382_p47.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_song_jing": {
+      "id": "person_song_jing",
+      "name": "宋璟",
+      "file": "NLC892-002302082-330382_p50.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_yan_zhenqing": {
+      "id": "person_yan_zhenqing",
+      "name": "颜真卿",
+      "file": "NLC892-002302082-330382_p55.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_yuan_haowen": {
+      "id": "person_yuan_haowen",
+      "name": "元好问",
+      "file": "NLC892-002302082-330384_p02.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330384_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC9%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_ye_lv_chucai": {
+      "id": "person_ye_lv_chucai",
+      "name": "耶律楚材",
+      "file": "NLC892-002302082-330384_p03.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330384_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC9%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_liu_bing_zhong": {
+      "id": "person_liu_bing_zhong",
+      "name": "刘秉忠",
+      "file": "NLC892-002302082-330384_p04.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330384_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC9%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_zhao_mengfu": {
+      "id": "person_zhao_mengfu",
+      "name": "赵孟頫",
+      "file": "NLC892-002302082-330384_p10.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330384_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC9%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
     }
   }
 }

@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-11-01T02:46:07.027Z",
+ "generatedAt": "2026-11-01T04:21:23.059Z",
  "note": "画布圆形头像的取景窗口，归一化到整幅宽高（side 为相对图宽的边长）。由 build-crops.mjs 生成，勿手改；个别图档在 crop-overrides.json 里逐件改判。",
- "count": 187,
+ "count": 200,
  "entries": {
   "person_liu_bang": {
    "sx": 0.22,
@@ -1498,6 +1498,110 @@
    "lum": 121,
    "lo": 0.02,
    "hi": 0.796
+  },
+  "person_li_wenzhong": {
+   "sx": 0.3227,
+   "sy": 0.1092,
+   "side": 0.3086,
+   "lum": 107,
+   "lo": 0.2,
+   "hi": 0.545
+  },
+  "person_tang_he": {
+   "sx": 0.23,
+   "sy": 0.26,
+   "side": 0.28,
+   "lum": 194,
+   "lo": 0.365,
+   "hi": 0.843
+  },
+  "person_mu_ying": {
+   "sx": 0.2942,
+   "sy": 0.152,
+   "side": 0.3422,
+   "lum": 161,
+   "lo": 0.337,
+   "hi": 0.757
+  },
+  "person_yang_jisheng": {
+   "sx": 0.1334,
+   "sy": 0.2215,
+   "side": 0.7233,
+   "lum": 174,
+   "lo": 0.365,
+   "hi": 0.859
+  },
+  "person_wang_ao": {
+   "sx": 0.3187,
+   "sy": 0.0809,
+   "side": 0.3477,
+   "lum": 170,
+   "lo": 0.129,
+   "hi": 0.918
+  },
+  "person_xu_pu": {
+   "sx": 0.0091,
+   "sy": 0.2314,
+   "side": 0.99,
+   "lum": 213,
+   "lo": 0.349,
+   "hi": 0.965
+  },
+  "person_deng_yu_ming": {
+   "sx": 0.3677,
+   "sy": 0.1612,
+   "side": 0.3196,
+   "lum": 218,
+   "lo": 0.471,
+   "hi": 0.914
+  },
+  "person_li_dongyang": {
+   "sx": 0.289,
+   "sy": 0.0462,
+   "side": 0.3593,
+   "lum": 139,
+   "lo": 0.29,
+   "hi": 0.761
+  },
+  "person_liu_jian": {
+   "sx": 0.2315,
+   "sy": 0.3252,
+   "side": 0.6026,
+   "lum": 162,
+   "lo": 0.129,
+   "hi": 0.761
+  },
+  "person_shen_lian": {
+   "sx": 0,
+   "sy": 0.1859,
+   "side": 0.99,
+   "lum": 164,
+   "lo": 0.302,
+   "hi": 0.812
+  },
+  "person_xie_qian": {
+   "sx": 0.285,
+   "sy": 0.23,
+   "side": 0.38,
+   "lum": 169,
+   "lo": 0.224,
+   "hi": 0.925
+  },
+  "person_qiu_jun": {
+   "sx": 0,
+   "sy": 0.0157,
+   "side": 0.98,
+   "lum": 166,
+   "lo": 0.369,
+   "hi": 0.933
+  },
+  "person_li_shanchang": {
+   "sx": 0.4172,
+   "sy": 0.0487,
+   "side": 0.17,
+   "lum": 192,
+   "lo": 0.329,
+   "hi": 0.878
   }
  }
 }

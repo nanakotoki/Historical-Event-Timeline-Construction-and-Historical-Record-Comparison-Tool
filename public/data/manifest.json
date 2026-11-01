@@ -1,14 +1,14 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-01T02:46:51.957Z",
+  "generatedAt": "2026-11-01T04:22:00.715Z",
   "site": {
     "title": "华夏史网",
     "subtitle": "ChronoGraph China · 二十四史人物关系图谱与史料对勘引擎",
     "edition": "首发种子库 · 楚汉 / 三国 / 隋唐三簇"
   },
   "stats": {
-    "personCount": 1136,
-    "edgeCount": 1843,
+    "personCount": 1150,
+    "edgeCount": 1867,
     "anecdoteCount": 146,
     "citationCount": 605,
     "dynastyCount": 17,
@@ -324,9 +324,9 @@
         860,
         1912
       ],
-      "personCount": 218,
-      "edgeCount": 316,
-      "byteSize": 764076
+      "personCount": 232,
+      "edgeCount": 340,
+      "byteSize": 825237
     },
     {
       "shardId": "shard_07_five_dynasties",
@@ -1241,6 +1241,14 @@
       "name": "李鸿章",
       "aliasText": "渐甫 少荃 文臣",
       "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 64
+    },
+    {
+      "id": "person_li_shanchang",
+      "name": "李善长",
+      "aliasText": "百室 丞相 开国功臣",
+      "dynasty": "ming",
       "shardId": "shard_06_song_ming_qing",
       "importanceWeight": 64
     },
@@ -2389,6 +2397,14 @@
       "importanceWeight": 52
     },
     {
+      "id": "person_li_wenzhong",
+      "name": "李文忠",
+      "aliasText": "思本 将领 开国功臣",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 52
+    },
+    {
       "id": "person_fu_heng",
       "name": "傅恒",
       "aliasText": "春和 大学士 军机大臣 经略",
@@ -2805,6 +2821,14 @@
       "importanceWeight": 49
     },
     {
+      "id": "person_mu_ying",
+      "name": "沐英",
+      "aliasText": "文英 将领 镇守",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 49
+    },
+    {
       "id": "person_gong_zi_zhen",
       "name": "龚自珍",
       "aliasText": "璱人 定庵 羽琌山民 诗人 思想家 礼部主事",
@@ -3176,6 +3200,14 @@
       "id": "person_lu_xiang_sheng",
       "name": "卢象升",
       "aliasText": "建斗 九台 督师 兵部尚书",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 46
+    },
+    {
+      "id": "person_li_dongyang",
+      "name": "李东阳",
+      "aliasText": "宾之 西涯 文正 内阁大学士 诗人",
       "dynasty": "ming",
       "shardId": "shard_06_song_ming_qing",
       "importanceWeight": 46
@@ -3701,6 +3733,22 @@
       "importanceWeight": 44
     },
     {
+      "id": "person_tang_he",
+      "name": "汤和",
+      "aliasText": "鼎臣 将领 开国功臣",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 44
+    },
+    {
+      "id": "person_yang_jisheng",
+      "name": "杨继盛",
+      "aliasText": "仲芳 椒山 忠愍 兵部员外郎 谏臣",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 44
+    },
+    {
       "id": "person_na_lan_xing_de",
       "name": "纳兰性德",
       "aliasText": "容若 楞伽山人 词人 侍卫",
@@ -4049,6 +4097,14 @@
       "name": "种师道",
       "aliasText": "彝叔 老种 泾原路经略使 京畿河北制置使",
       "dynasty": "song",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 41
+    },
+    {
+      "id": "person_liu_jian",
+      "name": "刘健",
+      "aliasText": "希贤 文靖 内阁首辅",
+      "dynasty": "ming",
       "shardId": "shard_06_song_ming_qing",
       "importanceWeight": 41
     },
@@ -4621,6 +4677,22 @@
       "importanceWeight": 38
     },
     {
+      "id": "person_deng_yu_ming",
+      "name": "邓愈",
+      "aliasText": "伯颜 将领 开国功臣",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 38
+    },
+    {
+      "id": "person_xie_qian",
+      "name": "谢迁",
+      "aliasText": "于乔 文正 大学士",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 38
+    },
+    {
       "id": "person_wang_yanzhang",
       "name": "王彦章",
       "aliasText": "贤明 将领",
@@ -5097,6 +5169,22 @@
       "name": "萧挞凛",
       "aliasText": "驼宁 南京统军使 兰陵郡王",
       "dynasty": "liao_jin_xia",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_xu_pu",
+      "name": "徐溥",
+      "aliasText": "时用 文靖 内阁首辅",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 36
+    },
+    {
+      "id": "person_shen_lian",
+      "name": "沈炼",
+      "aliasText": "纯甫 青霞 锦衣卫经历 谏臣",
+      "dynasty": "ming",
       "shardId": "shard_06_song_ming_qing",
       "importanceWeight": 36
     },
@@ -6309,6 +6397,22 @@
       "importanceWeight": 31
     },
     {
+      "id": "person_qiu_jun",
+      "name": "丘濬",
+      "aliasText": "仲深 文庄 大学士 学者",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 31
+    },
+    {
+      "id": "person_wang_ao",
+      "name": "王鏊",
+      "aliasText": "济之 守溪 文恪 内阁大学士 古文家",
+      "dynasty": "ming",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 31
+    },
+    {
       "id": "person_wang_pu",
       "name": "王朴",
       "aliasText": "文伯 谋士 宰相",
@@ -7305,6 +7409,14 @@
       "name": "鳌拜",
       "aliasText": "将领 辅政大臣",
       "dynasty": "qing",
+      "shardId": "shard_06_song_ming_qing",
+      "importanceWeight": 27
+    },
+    {
+      "id": "person_wang_guangyang",
+      "name": "汪广洋",
+      "aliasText": "朝宗 丞相",
+      "dynasty": "ming",
       "shardId": "shard_06_song_ming_qing",
       "importanceWeight": 27
     },
@@ -9456,12 +9568,12 @@
   "highlights": [
     {
       "label": "在册人物",
-      "value": "1136",
+      "value": "1150",
       "note": "全部经正史本传核验"
     },
     {
       "label": "关系边",
-      "value": "1843",
+      "value": "1867",
       "note": "每条均附文言原文为证"
     },
     {

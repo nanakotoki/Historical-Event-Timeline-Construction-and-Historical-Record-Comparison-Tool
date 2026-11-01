@@ -273,6 +273,12 @@ export interface BriefPersonDraft {
   id: string;
   name: string;
   zi?: string;
+  /**
+   * 谥号（如「文正」「忠愍」）。与考据档 `p()` 同口径：读者搜「李东阳 文正」
+   * 或搜「文正公」时应该能命中，谥号在明清文臣里几乎等同于第二个名字。
+   * 单列一栏而不是塞进 `hao`——谥号是朝廷所赐，别号是自署，混作一谈是错的。
+   */
+  shi?: string;
   hao?: string[];
   /**
    * 庙号（如「圣宗」「熙宗」）。简目档同样需要，理由有二：
@@ -318,6 +324,7 @@ export function pb(draft: BriefPersonDraft): HistoricalPersonNode {
   const aliases: HistoricalPersonNode['aliases'] = {};
   if (draft.zi) aliases.courtesyName = draft.zi;
   if (draft.hao?.length) aliases.pseudonyms = draft.hao;
+  if (draft.shi) aliases.posthumousTitle = draft.shi;
   if (draft.miao) aliases.templeName = draft.miao;
   if (draft.nian?.length) aliases.eraNames = draft.nian;
 

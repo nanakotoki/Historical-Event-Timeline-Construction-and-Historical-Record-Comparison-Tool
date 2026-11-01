@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-01T02:46:43.063Z",
+  "generatedAt": "2026-11-01T04:21:23.242Z",
   "note": "本目录只登记已实际取回落盘的传世画像。未列入者＝未在公有领域图库中找到可定位的传世图档，前端按 tier3/tier4 呈现「本站复原」，绝不冒充实物。",
   "counts": {
-    "total": 187,
-    "tier1_authentic_painting": 105,
-    "tier2_ancient_woodcut": 82
+    "total": 199,
+    "tier1_authentic_painting": 112,
+    "tier2_ancient_woodcut": 87
   },
   "entries": {
     "person_liu_bang": {
@@ -3745,6 +3745,246 @@
         "lum": 121,
         "lo": 0.02,
         "hi": 0.796
+      }
+    },
+    "person_li_wenzhong": {
+      "id": "person_li_wenzhong",
+      "name": "李文忠",
+      "file": "Li Wenzhong.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（明）佚名《李文忠像》軸（絹本設色，幅內無題名）",
+      "sourceAttribution": "絹本設色坐像：展腳幞頭、綠袍、朱漆座椅，明代王爵常服像體制；顏料有濃淡層次、絹地纖維可見，判 L1。**幅內無題名、無像贊**，比定依據為 Commons 題名與其岐陽王身份相符之冠服（非帝非侯，用展腳幞頭而不加冕），故著錄為「傳為李文忠像」，不自稱有榜題。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Li_Wenzhong.jpg",
+      "thumb": "/data/portraits/person_li_wenzhong.jpg",
+      "full": "/data/portraits/full_person_li_wenzhong.jpg",
+      "crop": {
+        "sx": 0.3227,
+        "sy": 0.1092,
+        "side": 0.3086,
+        "lum": 107,
+        "lo": 0.2,
+        "hi": 0.545
+      }
+    },
+    "person_tang_he": {
+      "id": "person_tang_he",
+      "name": "汤和",
+      "file": "汤和.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）上官周《晚笑堂竹莊畫傳》（民國十年翻刻本）",
+      "sourceAttribution": "木刻版畫全身像，幅左上題「東甌王湯和」，右側楷書小傳起「三具悉定除御史大夫賜賚有雲麓精騎于洛…」，與《晚笑堂竹莊畫傳·明太祖功臣圖》同幀。純刀刻線條、紙面平涂無顏料濃淡，判 L2。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E6%B1%A4%E5%92%8C.jpg",
+      "thumb": "/data/portraits/person_tang_he.jpg",
+      "full": "/data/portraits/full_person_tang_he.jpg",
+      "crop": {
+        "sx": 0.23,
+        "sy": 0.26,
+        "side": 0.28,
+        "lum": 194,
+        "lo": 0.365,
+        "hi": 0.843
+      }
+    },
+    "person_mu_ying": {
+      "id": "person_mu_ying",
+      "name": "沐英",
+      "file": "Mu Ying.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《明太祖功臣圖》設色本（題「黔寧王沐英」並附小傳，版本待考）",
+      "sourceAttribution": "紙本設色全身立像，持槍佩弓；幅右上題「黔寧王沐英」，其下小傳「英有功十年封西平侯十四年生擒達里麻于曲靖雲南梁王懼先縊其妃自投水死廿二年入朝上宴之奉天殿廿五年卒追封黔寧王」，與《明史》卷一二十六本傳（洪武十四年從傅友德征雲南、梁王把匝剌瓦爾密赴滇池死、二十五年卒）逐條對得上。**有題名有讚，且內容可與正史對勘**，比定成立。設色有濃淡、筆觸可見，判 L1；惟非刻本，與《晚笑堂》非同一本，版本待考。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Mu_Ying.jpg",
+      "thumb": "/data/portraits/person_mu_ying.jpg",
+      "full": "/data/portraits/full_person_mu_ying.jpg",
+      "crop": {
+        "sx": 0.2942,
+        "sy": 0.152,
+        "side": 0.3422,
+        "lum": 161,
+        "lo": 0.337,
+        "hi": 0.757
+      }
+    },
+    "person_yang_jisheng": {
+      "id": "person_yang_jisheng",
+      "name": "杨继盛",
+      "file": "Yang Jisheng.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（明）佚名《楊繼盛像》（絹本設色，幅內無題名）",
+      "sourceAttribution": "絹本設色半身像，戴烏紗帽、紅袍、手持笏狀物；顏料濃淡與絹地明確，判 L1。《晚笑堂竹莊畫傳》正編另有「楊忠愍」一幀（木刻），與本幅非同一本；本幅**無題名**，比定憑 Commons 題名與明代文官冠服，故著錄為「傳為楊繼盛像」。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Yang_Jisheng.jpg",
+      "thumb": "/data/portraits/person_yang_jisheng.jpg",
+      "full": "/data/portraits/full_person_yang_jisheng.jpg",
+      "crop": {
+        "sx": 0.1334,
+        "sy": 0.2215,
+        "side": 0.7233,
+        "lum": 174,
+        "lo": 0.365,
+        "hi": 0.859
+      }
+    },
+    "person_wang_ao": {
+      "id": "person_wang_ao",
+      "name": "王鏊",
+      "file": "王鏊.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（明）佚名《王鏊像》軸（絹本設色，幅內無題名）",
+      "sourceAttribution": "絹本設色坐像：展腳幞頭、大紅袍、胸前補子、玉帶，明代文官常服像體制；筆觸與顏料濃淡明確，判 L1。**幅內無題名**，比定依據為 Commons 題名與冠服相符，故著錄為「傳為王鏊像」。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E7%8E%8B%E9%8F%8A.jpg",
+      "thumb": "/data/portraits/person_wang_ao.jpg",
+      "full": "/data/portraits/full_person_wang_ao.jpg",
+      "crop": {
+        "sx": 0.3187,
+        "sy": 0.0809,
+        "side": 0.3477,
+        "lum": 170,
+        "lo": 0.129,
+        "hi": 0.918
+      }
+    },
+    "person_xu_pu": {
+      "id": "person_xu_pu",
+      "name": "徐溥",
+      "file": "徐溥.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《徐文靖公遺像》（紙本設色，幅頂題「文靖公遺像」）",
+      "sourceAttribution": "紙本設色半身像，幅上正中題「文靖公遺像」——徐溥諡文靖，與《明史》卷一八一本傳「諡文靖」合。設色有濃淡、紙纖維可見，判 L1。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E5%BE%90%E6%BA%A5.jpg",
+      "thumb": "/data/portraits/person_xu_pu.jpg",
+      "full": "/data/portraits/full_person_xu_pu.jpg",
+      "crop": {
+        "sx": 0.0091,
+        "sy": 0.2314,
+        "side": 0.99,
+        "lum": 213,
+        "lo": 0.349,
+        "hi": 0.965
+      }
+    },
+    "person_deng_yu_ming": {
+      "id": "person_deng_yu_ming",
+      "name": "邓愈",
+      "file": "鄧愈.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）上官周《晚笑堂竹莊畫傳》（民國十年翻刻本）",
+      "sourceAttribution": "木刻白描立像，幅右側題「寧河王鄧愈」，並有長篇像贊述其「年十六領軍事」事，與《晚笑堂竹莊畫傳·明太祖功臣圖》「寧河王鄧愈」一幀一致。刀刻線條、無設色，判 L2。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E9%84%A7%E6%84%88.jpg",
+      "thumb": "/data/portraits/person_deng_yu_ming.jpg",
+      "full": "/data/portraits/full_person_deng_yu_ming.jpg",
+      "crop": {
+        "sx": 0.3677,
+        "sy": 0.1612,
+        "side": 0.3196,
+        "lum": 218,
+        "lo": 0.471,
+        "hi": 0.914
+      }
+    },
+    "person_li_dongyang": {
+      "id": "person_li_dongyang",
+      "name": "李东阳",
+      "file": "Li Dongyang.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（明）佚名《李東陽像》軸（絹本設色，幅內無題名）",
+      "sourceAttribution": "絹本設色坐像：展腳幞頭、藍袍、補子、玉帶，明代閣臣常服像體制；顏料有濃淡、絹地可辨，判 L1。**幅內無題名**，比定依據為 Commons 題名與明代文官冠服相符，故著錄為「傳為李東陽像」。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Li_Dongyang.jpg",
+      "thumb": "/data/portraits/person_li_dongyang.jpg",
+      "full": "/data/portraits/full_person_li_dongyang.jpg",
+      "crop": {
+        "sx": 0.289,
+        "sy": 0.0462,
+        "side": 0.3593,
+        "lum": 139,
+        "lo": 0.29,
+        "hi": 0.761
+      }
+    },
+    "person_liu_jian": {
+      "id": "person_liu_jian",
+      "name": "刘健",
+      "file": "劉健.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《劉文靖公像》（絹本設色，幅右題「文靖公像」並鈐朱文印）",
+      "sourceAttribution": "絹本設色半身像，大紅蟒袍、展腳幞頭、玉帶；幅右上墨書題識末三字可讀作「文靖公像」並鈐朱文印——劉健諡文靖，與《明史》本傳合。絹地與顏料層次明確，判 L1。**注意**：Commons 另有 `Liu Jian.jpg` 為現代足球運動員照片，與本人無關，本條只取 `劉健.jpg`（繁體題名）。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E5%8A%89%E5%81%A5.jpg",
+      "thumb": "/data/portraits/person_liu_jian.jpg",
+      "full": "/data/portraits/full_person_liu_jian.jpg",
+      "crop": {
+        "sx": 0.2315,
+        "sy": 0.3252,
+        "side": 0.6026,
+        "lum": 162,
+        "lo": 0.129,
+        "hi": 0.761
+      }
+    },
+    "person_shen_lian": {
+      "id": "person_shen_lian",
+      "name": "沈炼",
+      "file": "沈鍊.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）佚名木刻像（幅內無題名，版本待考）",
+      "sourceAttribution": "黑白木刻（或早期石印）半身像：烏紗展腳幞頭、圓領文官袍、胸前補子，明代文官體制；面部與冠帽有刻線，判 L2。**幅內無任何題名或像贊**，比定僅憑 Commons 題名（作繁體「沈鍊」）與冠服相符，證據強度低於有榜題者，故著錄時明寫「傳為沈煉像」。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E6%B2%88%E9%8D%8A.jpg",
+      "thumb": "/data/portraits/person_shen_lian.jpg",
+      "full": "/data/portraits/full_person_shen_lian.jpg",
+      "crop": {
+        "sx": 0,
+        "sy": 0.1859,
+        "side": 0.99,
+        "lum": 164,
+        "lo": 0.302,
+        "hi": 0.812
+      }
+    },
+    "person_xie_qian": {
+      "id": "person_xie_qian",
+      "name": "谢迁",
+      "file": "Xie Qian.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）石印本《明太傅文正公像》（有版框，版本待考）",
+      "sourceAttribution": "石印本全身坐像，有版框；幅頂自右向左題「明太傅文正公像」——謝遷官至太傅、諡文正，與《明史》本傳「贈太傅，諡文正」逐字相合。有印刷網點、紙面平涂，判 L2；具體刊本待考。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Xie_Qian.jpg",
+      "thumb": "/data/portraits/person_xie_qian.jpg",
+      "full": "/data/portraits/full_person_xie_qian.jpg",
+      "crop": {
+        "sx": 0.285,
+        "sy": 0.23,
+        "side": 0.38,
+        "lum": 169,
+        "lo": 0.224,
+        "hi": 0.925
+      }
+    },
+    "person_qiu_jun": {
+      "id": "person_qiu_jun",
+      "name": "丘濬",
+      "file": "Qiu Jun.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）石印本《邱文莊公遺像》（幅頂題名，左右有像贊，版本待考）",
+      "sourceAttribution": "石印本半身像，幅頂自右向左題「邱文莊公遺像」（丘濬諡文莊，與《明史》本傳合），左右各有長篇像贊，人物執笏、戴展腳幞頭、前置一器。高對比黑白、有印刷網點與石印底紋，判 L2；具體刊本待考。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Qiu_Jun.jpg",
+      "thumb": "/data/portraits/person_qiu_jun.jpg",
+      "full": "/data/portraits/full_person_qiu_jun.jpg",
+      "crop": {
+        "sx": 0,
+        "sy": 0.0157,
+        "side": 0.98,
+        "lum": 166,
+        "lo": 0.369,
+        "hi": 0.933
       }
     }
   }

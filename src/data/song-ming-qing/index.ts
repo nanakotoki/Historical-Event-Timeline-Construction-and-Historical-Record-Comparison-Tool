@@ -17,9 +17,11 @@ import { liaoJinXiaPersons } from './persons-liao-jin-xia';
 import { songWarPersons } from './persons-song-war';
 import { yuanPersons } from './persons-yuan';
 import { mingPersons } from './persons-ming';
+import { mingFounders, mingHongzhi, mingJianchen } from './persons-ming-founders';
 import { qingPersons } from './persons-qing';
 import { songBriefEdges } from './edges-brief';
 import { songWarEdges } from './edges-liao-jin-xia';
+import { mingFoundersEdges } from './edges-ming-founders';
 import { ymqEdges } from './edges-ymq';
 
 export const songMingQingShard: ShardDataset = {
@@ -38,7 +40,10 @@ export const songMingQingShard: ShardDataset = {
     ...songWarPersons,
     ...yuanPersons,
     ...mingPersons,
+    ...mingFounders,
+    ...mingHongzhi,
+    ...mingJianchen,
     ...qingPersons,
   ],
-  edges: [...songBriefEdges, ...songWarEdges, ...ymqEdges],
+  edges: [...songBriefEdges, ...songWarEdges, ...mingFoundersEdges, ...ymqEdges],
 };

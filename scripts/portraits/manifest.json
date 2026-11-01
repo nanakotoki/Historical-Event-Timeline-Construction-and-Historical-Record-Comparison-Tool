@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T02:45:16.028Z",
+  "generatedAt": "2026-11-01T04:07:25.263Z",
   "source": "Wikimedia Commons（经 images.weserv.nl 取回）",
   "note": "本清单只登记确实取回的公有领域/CC 授权图档。未列出的条目＝该人物在 Commons 上无可定位的传世画像，系统按 tier4_attire_silhouette 呈现，绝不伪作真迹。",
   "entries": {
@@ -1800,6 +1800,123 @@
       "commons": "https://commons.wikimedia.org/wiki/File:Qi_Jiguang_Portrait.jpg",
       "thumbBytes": 264058,
       "fullBytes": 264058,
+      "fullResolved": true
+    },
+    "person_li_wenzhong": {
+      "id": "person_li_wenzhong",
+      "name": "李文忠",
+      "file": "Li Wenzhong.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Li_Wenzhong.jpg",
+      "thumbBytes": 117352,
+      "fullBytes": 117352,
+      "fullResolved": true
+    },
+    "person_tang_he": {
+      "id": "person_tang_he",
+      "name": "汤和",
+      "file": "汤和.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E6%B1%A4%E5%92%8C.jpg",
+      "thumbBytes": 88495,
+      "fullBytes": 88495,
+      "fullResolved": true
+    },
+    "person_mu_ying": {
+      "id": "person_mu_ying",
+      "name": "沐英",
+      "file": "Mu Ying.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Mu_Ying.jpg",
+      "thumbBytes": 182458,
+      "fullBytes": 182458,
+      "fullResolved": true
+    },
+    "person_yang_jisheng": {
+      "id": "person_yang_jisheng",
+      "name": "杨继盛",
+      "file": "Yang Jisheng.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Yang_Jisheng.jpg",
+      "thumbBytes": 79031,
+      "fullBytes": 79031,
+      "fullResolved": true
+    },
+    "person_wang_ao": {
+      "id": "person_wang_ao",
+      "name": "王鏊",
+      "file": "王鏊.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E7%8E%8B%E9%8F%8A.jpg",
+      "thumbBytes": 158854,
+      "fullBytes": 158854,
+      "fullResolved": true
+    },
+    "person_xu_pu": {
+      "id": "person_xu_pu",
+      "name": "徐溥",
+      "file": "徐溥.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E5%BE%90%E6%BA%A5.jpg",
+      "thumbBytes": 97494,
+      "fullBytes": 97494,
+      "fullResolved": true
+    },
+    "person_deng_yu_ming": {
+      "id": "person_deng_yu_ming",
+      "name": "邓愈",
+      "file": "鄧愈.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E9%84%A7%E6%84%88.jpg",
+      "thumbBytes": 76196,
+      "fullBytes": 76196,
+      "fullResolved": true
+    },
+    "person_li_dongyang": {
+      "id": "person_li_dongyang",
+      "name": "李东阳",
+      "file": "Li Dongyang.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Li_Dongyang.jpg",
+      "thumbBytes": 98869,
+      "fullBytes": 98869,
+      "fullResolved": true
+    },
+    "person_liu_jian": {
+      "id": "person_liu_jian",
+      "name": "刘健",
+      "file": "劉健.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E5%8A%89%E5%81%A5.jpg",
+      "thumbBytes": 87352,
+      "fullBytes": 87352,
+      "fullResolved": true
+    },
+    "person_shen_lian": {
+      "id": "person_shen_lian",
+      "name": "沈炼",
+      "file": "沈鍊.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E6%B2%88%E9%8D%8A.jpg",
+      "thumbBytes": 98830,
+      "fullBytes": 98830,
+      "fullResolved": true
+    },
+    "person_xie_qian": {
+      "id": "person_xie_qian",
+      "name": "谢迁",
+      "file": "Xie Qian.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Xie_Qian.jpg",
+      "thumbBytes": 169105,
+      "fullBytes": 169105,
+      "fullResolved": true
+    },
+    "person_qiu_jun": {
+      "id": "person_qiu_jun",
+      "name": "丘濬",
+      "file": "Qiu Jun.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Qiu_Jun.jpg",
+      "thumbBytes": 168345,
+      "fullBytes": 168345,
+      "fullResolved": true
+    },
+    "person_li_shanchang": {
+      "id": "person_li_shanchang",
+      "name": "李善长",
+      "file": "李善长.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E6%9D%8E%E5%96%84%E9%95%BF.jpg",
+      "thumbBytes": 149915,
+      "fullBytes": 149915,
       "fullResolved": true
     }
   }

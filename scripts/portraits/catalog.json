@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-01T08:33:38.587Z",
+  "generatedAt": "2026-11-01T11:24:20.279Z",
   "note": "本目录只登记已实际取回落盘的传世画像。未列入者＝未在公有领域图库中找到可定位的传世图档，前端按 tier3/tier4 呈现「本站复原」，绝不冒充实物。",
   "counts": {
-    "total": 213,
+    "total": 224,
     "tier1_authentic_painting": 112,
-    "tier2_ancient_woodcut": 101
+    "tier2_ancient_woodcut": 112
   },
   "entries": {
     "person_liu_bang": {
@@ -1705,6 +1705,26 @@
         "lum": 133,
         "lo": 0.231,
         "hi": 0.925
+      }
+    },
+    "person_yang_shi_qi": {
+      "id": "person_yang_shi_qi",
+      "name": "杨士奇",
+      "file": "NLC892-002302082-330384_p70.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "《古聖賢像傳略》卷十四，第 9 冊第 70 頁（清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 70 頁渲染）。圖上方小篆橫題「楊文貞像」——杨士奇谥文贞，題名與本人相應；本書「一人一圖一傳」，圖在左葉、傳在右葉，前後頁依次為同卷鄰人，編次可互證（如卷七 p52 元魯山、p53 顏忠節、p54 姚文獻、p55 顏文忠連序；卷十四 p60 方正學、p61 徐忠貞連序）。白描木刻半身（或立、坐）像，冠服為本朝形制，五官清晰可辨。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：Commons 只備 500px 檔（PDF 單頁渲染僅此一檔，1024／800／640 均 404），故原圖為整頁 500×431，頭部約 50–70 px；裁作 36–96 px 圓片夠用，更大尺寸則不足，已在 README 中如實說明。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330384_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC9%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_yang_shi_qi.jpg",
+      "full": "/data/portraits/full_person_yang_shi_qi.jpg",
+      "crop": {
+        "sx": 0.245,
+        "sy": 0.422,
+        "side": 0.18,
+        "lum": 108,
+        "lo": 0.502,
+        "hi": 0.596
       }
     },
     "person_hu_zong_xian": {
@@ -4265,6 +4285,206 @@
         "lum": 108,
         "lo": 0.518,
         "hi": 0.6
+      }
+    },
+    "person_chu_suiliang": {
+      "id": "person_chu_suiliang",
+      "name": "褚遂良",
+      "file": "NLC892-002302082-330382_p31.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "《古聖賢像傳略》卷七，第 7 冊第 31 頁（清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 31 頁渲染）。圖上方小篆橫題「褚河南像」——褚遂良封河南郡公，世称褚河南，題名與本人相應；本書「一人一圖一傳」，圖在左葉、傳在右葉，前後頁依次為同卷鄰人，編次可互證（如卷七 p52 元魯山、p53 顏忠節、p54 姚文獻、p55 顏文忠連序；卷十四 p60 方正學、p61 徐忠貞連序）。白描木刻半身（或立、坐）像，冠服為本朝形制，五官清晰可辨。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：Commons 只備 500px 檔（PDF 單頁渲染僅此一檔，1024／800／640 均 404），故原圖為整頁 500×431，頭部約 50–70 px；裁作 36–96 px 圓片夠用，更大尺寸則不足，已在 README 中如實說明。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_chu_suiliang.jpg",
+      "full": "/data/portraits/full_person_chu_suiliang.jpg",
+      "crop": {
+        "sx": 0.245,
+        "sy": 0.434,
+        "side": 0.18,
+        "lum": 105,
+        "lo": 0.482,
+        "hi": 0.596
+      }
+    },
+    "person_yan_gaoqing": {
+      "id": "person_yan_gaoqing",
+      "name": "颜杲卿",
+      "file": "NLC892-002302082-330382_p53.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "《古聖賢像傳略》卷七，第 7 冊第 53 頁（清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 53 頁渲染）。圖上方小篆橫題「顏忠節像」——颜杲卿谥忠节，題名與本人相應；本書「一人一圖一傳」，圖在左葉、傳在右葉，前後頁依次為同卷鄰人，編次可互證（如卷七 p52 元魯山、p53 顏忠節、p54 姚文獻、p55 顏文忠連序；卷十四 p60 方正學、p61 徐忠貞連序）。白描木刻半身（或立、坐）像，冠服為本朝形制，五官清晰可辨。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：Commons 只備 500px 檔（PDF 單頁渲染僅此一檔，1024／800／640 均 404），故原圖為整頁 500×431，頭部約 50–70 px；裁作 36–96 px 圓片夠用，更大尺寸則不足，已在 README 中如實說明。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_yan_gaoqing.jpg",
+      "full": "/data/portraits/full_person_yan_gaoqing.jpg",
+      "crop": {
+        "sx": 0.207,
+        "sy": 0.429,
+        "side": 0.18,
+        "lum": 106,
+        "lo": 0.498,
+        "hi": 0.6
+      }
+    },
+    "person_xu_yuan": {
+      "id": "person_xu_yuan",
+      "name": "许远",
+      "file": "NLC892-002302082-330382_p57.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "《古聖賢像傳略》卷七，第 7 冊第 57 頁（清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 57 頁渲染）。圖上方小篆橫題「許睢陽像」——许远官睢阳太守，与张巡同守睢阳，題名與本人相應；本書「一人一圖一傳」，圖在左葉、傳在右葉，前後頁依次為同卷鄰人，編次可互證（如卷七 p52 元魯山、p53 顏忠節、p54 姚文獻、p55 顏文忠連序；卷十四 p60 方正學、p61 徐忠貞連序）。白描木刻半身（或立、坐）像，冠服為本朝形制，五官清晰可辨。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：Commons 只備 500px 檔（PDF 單頁渲染僅此一檔，1024／800／640 均 404），故原圖為整頁 500×431，頭部約 50–70 px；裁作 36–96 px 圓片夠用，更大尺寸則不足，已在 README 中如實說明。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_xu_yuan.jpg",
+      "full": "/data/portraits/full_person_xu_yuan.jpg",
+      "crop": {
+        "sx": 0.245,
+        "sy": 0.434,
+        "side": 0.18,
+        "lum": 106,
+        "lo": 0.486,
+        "hi": 0.604
+      }
+    },
+    "person_he_zhizhang": {
+      "id": "person_he_zhizhang",
+      "name": "贺知章",
+      "file": "NLC892-002302082-330382_p61.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "《古聖賢像傳略》卷七，第 7 冊第 61 頁（清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 61 頁渲染）。圖上方小篆橫題「賀知監像」——贺知章官秘书监，世称贺监，題名與本人相應；本書「一人一圖一傳」，圖在左葉、傳在右葉，前後頁依次為同卷鄰人，編次可互證（如卷七 p52 元魯山、p53 顏忠節、p54 姚文獻、p55 顏文忠連序；卷十四 p60 方正學、p61 徐忠貞連序）。白描木刻半身（或立、坐）像，冠服為本朝形制，五官清晰可辨。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：Commons 只備 500px 檔（PDF 單頁渲染僅此一檔，1024／800／640 均 404），故原圖為整頁 500×431，頭部約 50–70 px；裁作 36–96 px 圓片夠用，更大尺寸則不足，已在 README 中如實說明。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_he_zhizhang.jpg",
+      "full": "/data/portraits/full_person_he_zhizhang.jpg",
+      "crop": {
+        "sx": 0.245,
+        "sy": 0.434,
+        "side": 0.18,
+        "lum": 106,
+        "lo": 0.506,
+        "hi": 0.608
+      }
+    },
+    "person_yuan_zhen": {
+      "id": "person_yuan_zhen",
+      "name": "元稹",
+      "file": "NLC892-002302082-330382_p71.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "《古聖賢像傳略》卷八，第 7 冊第 71 頁（清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 71 頁渲染）。圖上方小篆橫題「元僕射像」——元稹赠尚书右仆射，題名與本人相應；本書「一人一圖一傳」，圖在左葉、傳在右葉，前後頁依次為同卷鄰人，編次可互證（如卷七 p52 元魯山、p53 顏忠節、p54 姚文獻、p55 顏文忠連序；卷十四 p60 方正學、p61 徐忠貞連序）。白描木刻半身（或立、坐）像，冠服為本朝形制，五官清晰可辨。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：Commons 只備 500px 檔（PDF 單頁渲染僅此一檔，1024／800／640 均 404），故原圖為整頁 500×431，頭部約 50–70 px；裁作 36–96 px 圓片夠用，更大尺寸則不足，已在 README 中如實說明。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_yuan_zhen.jpg",
+      "full": "/data/portraits/full_person_yuan_zhen.jpg",
+      "crop": {
+        "sx": 0.245,
+        "sy": 0.429,
+        "side": 0.18,
+        "lum": 106,
+        "lo": 0.494,
+        "hi": 0.608
+      }
+    },
+    "person_pei_du": {
+      "id": "person_pei_du",
+      "name": "裴度",
+      "file": "NLC892-002302082-330382_p76.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "《古聖賢像傳略》卷八，第 7 冊第 76 頁（清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 76 頁渲染）。圖上方小篆橫題「裴晉公像」——裴度封晋国公，題名與本人相應；本書「一人一圖一傳」，圖在左葉、傳在右葉，前後頁依次為同卷鄰人，編次可互證（如卷七 p52 元魯山、p53 顏忠節、p54 姚文獻、p55 顏文忠連序；卷十四 p60 方正學、p61 徐忠貞連序）。白描木刻半身（或立、坐）像，冠服為本朝形制，五官清晰可辨。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：Commons 只備 500px 檔（PDF 單頁渲染僅此一檔，1024／800／640 均 404），故原圖為整頁 500×431，頭部約 50–70 px；裁作 36–96 px 圓片夠用，更大尺寸則不足，已在 README 中如實說明。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_pei_du.jpg",
+      "full": "/data/portraits/full_person_pei_du.jpg",
+      "crop": {
+        "sx": 0.245,
+        "sy": 0.447,
+        "side": 0.18,
+        "lum": 106,
+        "lo": 0.486,
+        "hi": 0.6
+      }
+    },
+    "person_li_shangyin": {
+      "id": "person_li_shangyin",
+      "name": "李商隐",
+      "file": "NLC892-002302082-330382_p80.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "《古聖賢像傳略》卷八，第 7 冊第 80 頁（清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 80 頁渲染）。圖上方小篆橫題「李義山像」——李商隐字义山，題名與本人相應；本書「一人一圖一傳」，圖在左葉、傳在右葉，前後頁依次為同卷鄰人，編次可互證（如卷七 p52 元魯山、p53 顏忠節、p54 姚文獻、p55 顏文忠連序；卷十四 p60 方正學、p61 徐忠貞連序）。白描木刻半身（或立、坐）像，冠服為本朝形制，五官清晰可辨。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：Commons 只備 500px 檔（PDF 單頁渲染僅此一檔，1024／800／640 均 404），故原圖為整頁 500×431，頭部約 50–70 px；裁作 36–96 px 圓片夠用，更大尺寸則不足，已在 README 中如實說明。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_li_shangyin.jpg",
+      "full": "/data/portraits/full_person_li_shangyin.jpg",
+      "crop": {
+        "sx": 0.295,
+        "sy": 0.417,
+        "side": 0.18,
+        "lum": 106,
+        "lo": 0.49,
+        "hi": 0.6
+      }
+    },
+    "person_fang_xiaoru": {
+      "id": "person_fang_xiaoru",
+      "name": "方孝孺",
+      "file": "NLC892-002302082-330384_p60.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "《古聖賢像傳略》卷十四，第 9 冊第 60 頁（清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 60 頁渲染）。圖上方小篆橫題「方正學像」——方孝孺世称正学先生，題名與本人相應；本書「一人一圖一傳」，圖在左葉、傳在右葉，前後頁依次為同卷鄰人，編次可互證（如卷七 p52 元魯山、p53 顏忠節、p54 姚文獻、p55 顏文忠連序；卷十四 p60 方正學、p61 徐忠貞連序）。白描木刻半身（或立、坐）像，冠服為本朝形制，五官清晰可辨。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：Commons 只備 500px 檔（PDF 單頁渲染僅此一檔，1024／800／640 均 404），故原圖為整頁 500×431，頭部約 50–70 px；裁作 36–96 px 圓片夠用，更大尺寸則不足，已在 README 中如實說明。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330384_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC9%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_fang_xiaoru.jpg",
+      "full": "/data/portraits/full_person_fang_xiaoru.jpg",
+      "crop": {
+        "sx": 0.245,
+        "sy": 0.434,
+        "side": 0.18,
+        "lum": 108,
+        "lo": 0.494,
+        "hi": 0.604
+      }
+    },
+    "person_yang_rong": {
+      "id": "person_yang_rong",
+      "name": "杨荣",
+      "file": "NLC892-002302082-330384_p68.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "《古聖賢像傳略》卷十四，第 9 冊第 68 頁（清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 68 頁渲染）。圖上方小篆橫題「楊文敏像」——杨荣谥文敏，題名與本人相應；本書「一人一圖一傳」，圖在左葉、傳在右葉，前後頁依次為同卷鄰人，編次可互證（如卷七 p52 元魯山、p53 顏忠節、p54 姚文獻、p55 顏文忠連序；卷十四 p60 方正學、p61 徐忠貞連序）。白描木刻半身（或立、坐）像，冠服為本朝形制，五官清晰可辨。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：Commons 只備 500px 檔（PDF 單頁渲染僅此一檔，1024／800／640 均 404），故原圖為整頁 500×431，頭部約 50–70 px；裁作 36–96 px 圓片夠用，更大尺寸則不足，已在 README 中如實說明。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330384_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC9%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_yang_rong.jpg",
+      "full": "/data/portraits/full_person_yang_rong.jpg",
+      "crop": {
+        "sx": 0.245,
+        "sy": 0.432,
+        "side": 0.18,
+        "lum": 108,
+        "lo": 0.486,
+        "hi": 0.608
+      }
+    },
+    "person_yang_pu": {
+      "id": "person_yang_pu",
+      "name": "杨溥",
+      "file": "NLC892-002302082-330384_p69.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "《古聖賢像傳略》卷十四，第 9 冊第 69 頁（清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 69 頁渲染）。圖上方小篆橫題「楊文定像」——杨溥谥文定，題名與本人相應；本書「一人一圖一傳」，圖在左葉、傳在右葉，前後頁依次為同卷鄰人，編次可互證（如卷七 p52 元魯山、p53 顏忠節、p54 姚文獻、p55 顏文忠連序；卷十四 p60 方正學、p61 徐忠貞連序）。白描木刻半身（或立、坐）像，冠服為本朝形制，五官清晰可辨。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：Commons 只備 500px 檔（PDF 單頁渲染僅此一檔，1024／800／640 均 404），故原圖為整頁 500×431，頭部約 50–70 px；裁作 36–96 px 圓片夠用，更大尺寸則不足，已在 README 中如實說明。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330384_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC9%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_yang_pu.jpg",
+      "full": "/data/portraits/full_person_yang_pu.jpg",
+      "crop": {
+        "sx": 0.245,
+        "sy": 0.424,
+        "side": 0.18,
+        "lum": 108,
+        "lo": 0.486,
+        "hi": 0.608
       }
     }
   }

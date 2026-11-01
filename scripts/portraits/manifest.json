@@ -860,10 +860,10 @@
     "person_yang_shi_qi": {
       "id": "person_yang_shi_qi",
       "name": "杨士奇",
-      "file": "Yang Shiqi.jpg",
-      "commons": "https://commons.wikimedia.org/wiki/File:Yang_Shiqi.jpg",
-      "thumbBytes": 64010,
-      "fullBytes": 64010,
+      "file": "NLC892-002302082-330384_p70.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330384_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC9%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
       "fullResolved": false
     },
     "person_hu_zong_xian": {
@@ -2031,6 +2031,96 @@
       "id": "person_zhao_mengfu",
       "name": "赵孟頫",
       "file": "NLC892-002302082-330384_p10.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330384_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC9%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_chu_suiliang": {
+      "id": "person_chu_suiliang",
+      "name": "褚遂良",
+      "file": "NLC892-002302082-330382_p31.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_yan_gaoqing": {
+      "id": "person_yan_gaoqing",
+      "name": "颜杲卿",
+      "file": "NLC892-002302082-330382_p53.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_xu_yuan": {
+      "id": "person_xu_yuan",
+      "name": "许远",
+      "file": "NLC892-002302082-330382_p57.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_he_zhizhang": {
+      "id": "person_he_zhizhang",
+      "name": "贺知章",
+      "file": "NLC892-002302082-330382_p61.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_yuan_zhen": {
+      "id": "person_yuan_zhen",
+      "name": "元稹",
+      "file": "NLC892-002302082-330382_p71.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_pei_du": {
+      "id": "person_pei_du",
+      "name": "裴度",
+      "file": "NLC892-002302082-330382_p76.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_li_shangyin": {
+      "id": "person_li_shangyin",
+      "name": "李商隐",
+      "file": "NLC892-002302082-330382_p80.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_fang_xiaoru": {
+      "id": "person_fang_xiaoru",
+      "name": "方孝孺",
+      "file": "NLC892-002302082-330384_p60.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330384_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC9%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_yang_rong": {
+      "id": "person_yang_rong",
+      "name": "杨荣",
+      "file": "NLC892-002302082-330384_p68.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330384_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC9%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_yang_pu": {
+      "id": "person_yang_pu",
+      "name": "杨溥",
+      "file": "NLC892-002302082-330384_p69.jpg",
       "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330384_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC9%E5%86%8A.pdf",
       "thumbBytes": 0,
       "fullBytes": 0,

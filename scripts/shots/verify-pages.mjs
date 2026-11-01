@@ -12,7 +12,14 @@ const puppeteer = require('puppeteer-core');
 // 构建目录名不固定：NEXT_DIST_DIR 常因 .next/trace 被锁而临时改名（.build/.b4/.b5…），
 // 写死 .build 会去验上一次的旧产物——看着通过，其实验的不是这一版代码。
 const ROOT = process.env.PAGES_ROOT ?? '.build';
-const PREFIX = '/Historical-Event-Timeline-Construction-and-Historical-Record-Comparison-Tool';
+/**
+ * 子路径前缀。默认按 GitHub Pages 项目站的仓库名走；本地做**根路径**构建时
+ * （未设 NEXT_PUBLIC_BASE_PATH）传 `PAGES_PREFIX=` 空串即可复用同一套断言——
+ * 否则服务只在 /<repo>/ 下映射文件，而产物里的资源路径是 /_next/...，全成 404。
+ */
+const PREFIX =
+  process.env.PAGES_PREFIX ??
+  '/Historical-Event-Timeline-Construction-and-Historical-Record-Comparison-Tool';
 const PORT = 4371;
 
 const MIME = {

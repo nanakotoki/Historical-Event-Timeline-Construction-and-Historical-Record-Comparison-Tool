@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T15:00:32.871Z",
+  "generatedAt": "2026-11-01T02:15:40.185Z",
   "source": "Wikimedia Commons（经 images.weserv.nl 取回）",
   "note": "本清单只登记确实取回的公有领域/CC 授权图档。未列出的条目＝该人物在 Commons 上无可定位的传世画像，系统按 tier4_attire_silhouette 呈现，绝不伪作真迹。",
   "entries": {
@@ -330,10 +330,10 @@
     "person_wu_zetian": {
       "id": "person_wu_zetian",
       "name": "武则天",
-      "file": "武則天.png",
-      "commons": "https://commons.wikimedia.org/wiki/File:%E6%AD%A6%E5%89%87%E5%A4%A9.png",
-      "thumbBytes": 92485,
-      "fullBytes": 379147,
+      "file": "則天大聖皇帝像圖.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E5%89%87%E5%A4%A9%E5%A4%A7%E8%81%96%E7%9A%87%E5%B8%9D%E5%83%8F%E5%9C%96.jpg",
+      "thumbBytes": 95533,
+      "fullBytes": 95533,
       "fullResolved": true
     },
     "person_di_renjie": {
@@ -1675,6 +1675,123 @@
       "thumbBytes": 181692,
       "fullBytes": 181692,
       "fullResolved": false
+    },
+    "person_liu_che": {
+      "id": "person_liu_che",
+      "name": "刘彻",
+      "file": "Liu Che (Emperor Wu of Han).png",
+      "commons": "https://commons.wikimedia.org/wiki/File:Liu_Che_(Emperor_Wu_of_Han).png",
+      "thumbBytes": 90223,
+      "fullBytes": 90223,
+      "fullResolved": true
+    },
+    "person_wang_mang": {
+      "id": "person_wang_mang",
+      "name": "王莽",
+      "file": "WUL-he21 01467 新鐫繪像東西漢全傳 01 (王莽).jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:WUL-he21_01467_%E6%96%B0%E9%90%AB%E7%B9%AA%E5%83%8F%E6%9D%B1%E8%A5%BF%E6%BC%A2%E5%85%A8%E5%82%B3_01_(%E7%8E%8B%E8%8E%BD).jpg",
+      "thumbBytes": 102877,
+      "fullBytes": 102877,
+      "fullResolved": true
+    },
+    "person_jiang_shang": {
+      "id": "person_jiang_shang",
+      "name": "吕尚",
+      "file": "歷代聖賢半身像 冊 姜子牙 (Jiang Ziya).png",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E6%AD%B7%E4%BB%A3%E8%81%96%E8%B3%A2%E5%8D%8A%E8%BA%AB%E5%83%8F_%E5%86%8A_%E5%A7%9C%E5%AD%90%E7%89%99_(Jiang_Ziya).png",
+      "thumbBytes": 52919,
+      "fullBytes": 52919,
+      "fullResolved": true
+    },
+    "person_kong_zi": {
+      "id": "person_kong_zi",
+      "name": "孔丘",
+      "file": "歷代聖賢半身像 冊 孔子 (Kongzi).png",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E6%AD%B7%E4%BB%A3%E8%81%96%E8%B3%A2%E5%8D%8A%E8%BA%AB%E5%83%8F_%E5%86%8A_%E5%AD%94%E5%AD%90_(Kongzi).png",
+      "thumbBytes": 61337,
+      "fullBytes": 61337,
+      "fullResolved": true
+    },
+    "person_lao_zi": {
+      "id": "person_lao_zi",
+      "name": "李耳",
+      "file": "歷代聖賢半身像 冊 老子 (Laozi).png",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E6%AD%B7%E4%BB%A3%E8%81%96%E8%B3%A2%E5%8D%8A%E8%BA%AB%E5%83%8F_%E5%86%8A_%E8%80%81%E5%AD%90_(Laozi).png",
+      "thumbBytes": 60370,
+      "fullBytes": 60370,
+      "fullResolved": true
+    },
+    "person_dong_zhongshu": {
+      "id": "person_dong_zhongshu",
+      "name": "董仲舒",
+      "file": "歷代聖賢半身像 冊 董仲舒 (Dong Zhongshu).png",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E6%AD%B7%E4%BB%A3%E8%81%96%E8%B3%A2%E5%8D%8A%E8%BA%AB%E5%83%8F_%E5%86%8A_%E8%91%A3%E4%BB%B2%E8%88%92_(Dong_Zhongshu).png",
+      "thumbBytes": 59036,
+      "fullBytes": 59036,
+      "fullResolved": true
+    },
+    "person_yang_xiong": {
+      "id": "person_yang_xiong",
+      "name": "扬雄",
+      "file": "歷代聖賢半身像 冊 揚雄 (Yang Xiong).png",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E6%AD%B7%E4%BB%A3%E8%81%96%E8%B3%A2%E5%8D%8A%E8%BA%AB%E5%83%8F_%E5%86%8A_%E6%8F%9A%E9%9B%84_(Yang_Xiong).png",
+      "thumbBytes": 51407,
+      "fullBytes": 51407,
+      "fullResolved": true
+    },
+    "person_dongfang_shuo": {
+      "id": "person_dongfang_shuo",
+      "name": "东方朔",
+      "file": "歷代聖賢半身像 冊 東方朔 (Dongfang Shuo).png",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E6%AD%B7%E4%BB%A3%E8%81%96%E8%B3%A2%E5%8D%8A%E8%BA%AB%E5%83%8F_%E5%86%8A_%E6%9D%B1%E6%96%B9%E6%9C%94_(Dongfang_Shuo).png",
+      "thumbBytes": 55933,
+      "fullBytes": 55933,
+      "fullResolved": true
+    },
+    "person_tan_daoji": {
+      "id": "person_tan_daoji",
+      "name": "檀道济",
+      "file": "歷代聖賢半身像 冊 檀道濟 (Tan Daoji).png",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E6%AD%B7%E4%BB%A3%E8%81%96%E8%B3%A2%E5%8D%8A%E8%BA%AB%E5%83%8F_%E5%86%8A_%E6%AA%80%E9%81%93%E6%BF%9F_(Tan_Daoji).png",
+      "thumbBytes": 53269,
+      "fullBytes": 53269,
+      "fullResolved": true
+    },
+    "person_meng_zi": {
+      "id": "person_meng_zi",
+      "name": "孟轲",
+      "file": "Half Portraits of the Great Sage and Virtuous Men of Old - Meng Ke (孟軻).jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Half_Portraits_of_the_Great_Sage_and_Virtuous_Men_of_Old_-_Meng_Ke_(%E5%AD%9F%E8%BB%BB).jpg",
+      "thumbBytes": 96786,
+      "fullBytes": 96786,
+      "fullResolved": true
+    },
+    "person_tie_mu_zhen": {
+      "id": "person_tie_mu_zhen",
+      "name": "铁木真",
+      "file": "YuanEmperorAlbumGenghisPortrait.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg",
+      "thumbBytes": 81829,
+      "fullBytes": 81829,
+      "fullResolved": true
+    },
+    "person_wang_shouren": {
+      "id": "person_wang_shouren",
+      "name": "王守仁",
+      "file": "蔡世新 王阳明肖像轴 (cropped).jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:%E8%94%A1%E4%B8%96%E6%96%B0_%E7%8E%8B%E9%98%B3%E6%98%8E%E8%82%96%E5%83%8F%E8%BD%B4_(cropped).jpg",
+      "thumbBytes": 84238,
+      "fullBytes": 84238,
+      "fullResolved": true
+    },
+    "person_lin_xiangru": {
+      "id": "person_lin_xiangru",
+      "name": "蔺相如",
+      "file": "Lin Xiangru (a general of the State of Zhao).png",
+      "commons": "https://commons.wikimedia.org/wiki/File:Lin_Xiangru_(a_general_of_the_State_of_Zhao).png",
+      "thumbBytes": 90385,
+      "fullBytes": 90385,
+      "fullResolved": true
     }
   }
 }

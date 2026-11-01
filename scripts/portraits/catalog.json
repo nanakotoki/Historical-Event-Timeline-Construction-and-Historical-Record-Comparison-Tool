@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-31T13:27:26.714Z",
+  "generatedAt": "2026-11-01T02:25:31.154Z",
   "note": "本目录只登记已实际取回落盘的传世画像。未列入者＝未在公有领域图库中找到可定位的传世图档，前端按 tier3/tier4 呈现「本站复原」，绝不冒充实物。",
   "counts": {
-    "total": 172,
-    "tier1_authentic_painting": 91,
-    "tier2_ancient_woodcut": 81
+    "total": 186,
+    "tier1_authentic_painting": 104,
+    "tier2_ancient_woodcut": 82
   },
   "entries": {
     "person_liu_bang": {
@@ -585,6 +585,26 @@
         "lum": 123,
         "lo": 0.176,
         "hi": 0.667
+      }
+    },
+    "person_wu_zetian": {
+      "id": "person_wu_zetian",
+      "name": "武则天",
+      "file": "則天大聖皇帝像圖.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（清）佚名《則天大聖皇帝像圖》",
+      "sourceAttribution": "絹本設色半身像，頭戴鳳冠、著圓領袍，面貌豐腴。Commons 原頁著錄為清人繪，並注明影印見中國歷史博物館保管部編《中國歷代名人畫像譜》（海峽文藝出版社，2003）第一冊頁 47。清人追繪，非唐代寫生。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E5%89%87%E5%A4%A9%E5%A4%A7%E8%81%96%E7%9A%87%E5%B8%9D%E5%83%8F%E5%9C%96.jpg",
+      "thumb": "/data/portraits/person_wu_zetian.jpg",
+      "full": "/data/portraits/full_person_wu_zetian.jpg",
+      "crop": {
+        "sx": 0.1538,
+        "sy": 0.1094,
+        "side": 0.7873,
+        "lum": 112,
+        "lo": 0.361,
+        "hi": 0.576
       }
     },
     "person_di_renjie": {
@@ -3445,6 +3465,266 @@
         "lum": 141,
         "lo": 0.322,
         "hi": 0.671
+      }
+    },
+    "person_liu_che": {
+      "id": "person_liu_che",
+      "name": "刘彻",
+      "file": "Liu Che (Emperor Wu of Han).png",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（明）佚名《聖君賢臣全身像冊》",
+      "sourceAttribution": "絹本設色全身立像，幅右上墨書「武帝」二字。與《聖君賢臣全身像冊》所收劉邦、劉啓、劉詢、劉莊諸漢帝同冊同式（立像、淺絳、無背景）；Commons 原頁著錄「聖君賢臣全身像冊　漢武帝」。後人追繪，非漢代寫生。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Liu_Che_(Emperor_Wu_of_Han).png",
+      "thumb": "/data/portraits/person_liu_che.jpg",
+      "full": "/data/portraits/full_person_liu_che.jpg",
+      "crop": {
+        "sx": 0.2966,
+        "sy": 0.0008,
+        "side": 0.4295,
+        "lum": 173,
+        "lo": 0.514,
+        "hi": 0.737
+      }
+    },
+    "person_wang_mang": {
+      "id": "person_wang_mang",
+      "name": "王莽",
+      "file": "WUL-he21 01467 新鐫繪像東西漢全傳 01 (王莽).jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（明）《新鐫繪像東西漢全傳》",
+      "sourceAttribution": "明刻本《新鐫繪像東西漢全傳》人物繡像，木刻版畫。幅上半葉有楷書像贊，左側直書「王莽」二字，書耳鐫「東漢全傳」「圖像」。刀痕與版框可辨，確為刻本而非繪本。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:WUL-he21_01467_%E6%96%B0%E9%90%AB%E7%B9%AA%E5%83%8F%E6%9D%B1%E8%A5%BF%E6%BC%A2%E5%85%A8%E5%82%B3_01_(%E7%8E%8B%E8%8E%BD).jpg",
+      "thumb": "/data/portraits/person_wang_mang.jpg",
+      "full": "/data/portraits/full_person_wang_mang.jpg",
+      "crop": {
+        "sx": 0.335,
+        "sy": 0.25,
+        "side": 0.33,
+        "lum": 154,
+        "lo": 0.318,
+        "hi": 0.675
+      }
+    },
+    "person_jiang_shang": {
+      "id": "person_jiang_shang",
+      "name": "吕尚",
+      "file": "歷代聖賢半身像 冊 姜子牙 (Jiang Ziya).png",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（元）佚名《歷代聖賢半身像》冊",
+      "sourceAttribution": "國立故宮博物院（臺北）藏《歷代聖賢半身像》冊，絹本設色，館藏編號中畫000328；原件半身立像，每幅右上題名、左上題贊。圖檔依故宮 Open Data 釋出（CC BY 4.0 / 低階圖 CC0）。",
+      "license": "CC BY 4.0（國立故宮博物院開放資料）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E6%AD%B7%E4%BB%A3%E8%81%96%E8%B3%A2%E5%8D%8A%E8%BA%AB%E5%83%8F_%E5%86%8A_%E5%A7%9C%E5%AD%90%E7%89%99_(Jiang_Ziya).png",
+      "thumb": "/data/portraits/person_jiang_shang.jpg",
+      "full": "/data/portraits/full_person_jiang_shang.jpg",
+      "crop": {
+        "sx": 0.2,
+        "sy": 0.55,
+        "side": 0.32,
+        "lum": 98,
+        "lo": 0.208,
+        "hi": 0.42
+      }
+    },
+    "person_kong_zi": {
+      "id": "person_kong_zi",
+      "name": "孔丘",
+      "file": "歷代聖賢半身像 冊 孔子 (Kongzi).png",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（元）佚名《歷代聖賢半身像》冊",
+      "sourceAttribution": "國立故宮博物院（臺北）藏《歷代聖賢半身像》冊，絹本設色，館藏編號中畫000328；原件半身立像，每幅右上題名、左上題贊。圖檔依故宮 Open Data 釋出（CC BY 4.0 / 低階圖 CC0）。",
+      "license": "CC BY 4.0（國立故宮博物院開放資料）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E6%AD%B7%E4%BB%A3%E8%81%96%E8%B3%A2%E5%8D%8A%E8%BA%AB%E5%83%8F_%E5%86%8A_%E5%AD%94%E5%AD%90_(Kongzi).png",
+      "thumb": "/data/portraits/person_kong_zi.jpg",
+      "full": "/data/portraits/full_person_kong_zi.jpg",
+      "crop": {
+        "sx": 0.1183,
+        "sy": 0.4047,
+        "side": 0.3695,
+        "lum": 109,
+        "lo": 0.275,
+        "hi": 0.427
+      }
+    },
+    "person_lao_zi": {
+      "id": "person_lao_zi",
+      "name": "李耳",
+      "file": "歷代聖賢半身像 冊 老子 (Laozi).png",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（元）佚名《歷代聖賢半身像》冊",
+      "sourceAttribution": "國立故宮博物院（臺北）藏《歷代聖賢半身像》冊，絹本設色，館藏編號中畫000328；原件半身立像，每幅右上題名、左上題贊。圖檔依故宮 Open Data 釋出（CC BY 4.0 / 低階圖 CC0）。",
+      "license": "CC BY 4.0（國立故宮博物院開放資料）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E6%AD%B7%E4%BB%A3%E8%81%96%E8%B3%A2%E5%8D%8A%E8%BA%AB%E5%83%8F_%E5%86%8A_%E8%80%81%E5%AD%90_(Laozi).png",
+      "thumb": "/data/portraits/person_lao_zi.jpg",
+      "full": "/data/portraits/full_person_lao_zi.jpg",
+      "crop": {
+        "sx": 0.181,
+        "sy": 0.3801,
+        "side": 0.3773,
+        "lum": 117,
+        "lo": 0.294,
+        "hi": 0.525
+      }
+    },
+    "person_dong_zhongshu": {
+      "id": "person_dong_zhongshu",
+      "name": "董仲舒",
+      "file": "歷代聖賢半身像 冊 董仲舒 (Dong Zhongshu).png",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（元）佚名《歷代聖賢半身像》冊",
+      "sourceAttribution": "國立故宮博物院（臺北）藏《歷代聖賢半身像》冊，絹本設色，館藏編號中畫000328；原件半身立像，每幅右上題名、左上題贊。圖檔依故宮 Open Data 釋出（CC BY 4.0 / 低階圖 CC0）。",
+      "license": "CC BY 4.0（國立故宮博物院開放資料）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E6%AD%B7%E4%BB%A3%E8%81%96%E8%B3%A2%E5%8D%8A%E8%BA%AB%E5%83%8F_%E5%86%8A_%E8%91%A3%E4%BB%B2%E8%88%92_(Dong_Zhongshu).png",
+      "thumb": "/data/portraits/person_dong_zhongshu.jpg",
+      "full": "/data/portraits/full_person_dong_zhongshu.jpg",
+      "crop": {
+        "sx": 0.1316,
+        "sy": 0.4552,
+        "side": 0.2972,
+        "lum": 104,
+        "lo": 0.247,
+        "hi": 0.455
+      }
+    },
+    "person_yang_xiong": {
+      "id": "person_yang_xiong",
+      "name": "扬雄",
+      "file": "歷代聖賢半身像 冊 揚雄 (Yang Xiong).png",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（元）佚名《歷代聖賢半身像》冊",
+      "sourceAttribution": "國立故宮博物院（臺北）藏《歷代聖賢半身像》冊，絹本設色，館藏編號中畫000328；原件半身立像，每幅右上題名、左上題贊。圖檔依故宮 Open Data 釋出（CC BY 4.0 / 低階圖 CC0）。",
+      "license": "CC BY 4.0（國立故宮博物院開放資料）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E6%AD%B7%E4%BB%A3%E8%81%96%E8%B3%A2%E5%8D%8A%E8%BA%AB%E5%83%8F_%E5%86%8A_%E6%8F%9A%E9%9B%84_(Yang_Xiong).png",
+      "thumb": "/data/portraits/person_yang_xiong.jpg",
+      "full": "/data/portraits/full_person_yang_xiong.jpg",
+      "crop": {
+        "sx": 0.1124,
+        "sy": 0.4831,
+        "side": 0.3758,
+        "lum": 107,
+        "lo": 0.267,
+        "hi": 0.471
+      }
+    },
+    "person_dongfang_shuo": {
+      "id": "person_dongfang_shuo",
+      "name": "东方朔",
+      "file": "歷代聖賢半身像 冊 東方朔 (Dongfang Shuo).png",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（元）佚名《歷代聖賢半身像》冊",
+      "sourceAttribution": "國立故宮博物院（臺北）藏《歷代聖賢半身像》冊，絹本設色，館藏編號中畫000328；原件半身立像，每幅右上題名、左上題贊。圖檔依故宮 Open Data 釋出（CC BY 4.0 / 低階圖 CC0）。",
+      "license": "CC BY 4.0（國立故宮博物院開放資料）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E6%AD%B7%E4%BB%A3%E8%81%96%E8%B3%A2%E5%8D%8A%E8%BA%AB%E5%83%8F_%E5%86%8A_%E6%9D%B1%E6%96%B9%E6%9C%94_(Dongfang_Shuo).png",
+      "thumb": "/data/portraits/person_dongfang_shuo.jpg",
+      "full": "/data/portraits/full_person_dongfang_shuo.jpg",
+      "crop": {
+        "sx": 0.175,
+        "sy": 0.4757,
+        "side": 0.3709,
+        "lum": 111,
+        "lo": 0.29,
+        "hi": 0.443
+      }
+    },
+    "person_tan_daoji": {
+      "id": "person_tan_daoji",
+      "name": "檀道济",
+      "file": "歷代聖賢半身像 冊 檀道濟 (Tan Daoji).png",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（元）佚名《歷代聖賢半身像》冊",
+      "sourceAttribution": "國立故宮博物院（臺北）藏《歷代聖賢半身像》冊，絹本設色，館藏編號中畫000328；原件半身立像，每幅右上題名、左上題贊。圖檔依故宮 Open Data 釋出（CC BY 4.0 / 低階圖 CC0）。",
+      "license": "CC BY 4.0（國立故宮博物院開放資料）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E6%AD%B7%E4%BB%A3%E8%81%96%E8%B3%A2%E5%8D%8A%E8%BA%AB%E5%83%8F_%E5%86%8A_%E6%AA%80%E9%81%93%E6%BF%9F_(Tan_Daoji).png",
+      "thumb": "/data/portraits/person_tan_daoji.jpg",
+      "full": "/data/portraits/full_person_tan_daoji.jpg",
+      "crop": {
+        "sx": 0.0955,
+        "sy": 0.4215,
+        "side": 0.4327,
+        "lum": 111,
+        "lo": 0.251,
+        "hi": 0.498
+      }
+    },
+    "person_meng_zi": {
+      "id": "person_meng_zi",
+      "name": "孟轲",
+      "file": "Half Portraits of the Great Sage and Virtuous Men of Old - Meng Ke (孟軻).jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（元）佚名《至聖先賢半身像》冊",
+      "sourceAttribution": "國立故宮博物院（臺北）藏《至聖先賢半身像》冊（中-畫-000329）孟軻一開，紙本設色，原件 33.3 × 24.3 公分；幅右題簽「鄒國亞聖公　孟軻」。全冊六十開一百二十人，起春秋迄元。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Half_Portraits_of_the_Great_Sage_and_Virtuous_Men_of_Old_-_Meng_Ke_(%E5%AD%9F%E8%BB%BB).jpg",
+      "thumb": "/data/portraits/person_meng_zi.jpg",
+      "full": "/data/portraits/full_person_meng_zi.jpg",
+      "crop": {
+        "sx": 0.1766,
+        "sy": 0.3102,
+        "side": 0.7908,
+        "lum": 178,
+        "lo": 0.286,
+        "hi": 0.773
+      }
+    },
+    "person_tie_mu_zhen": {
+      "id": "person_tie_mu_zhen",
+      "name": "铁木真",
+      "file": "YuanEmperorAlbumGenghisPortrait.jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "元代帝后半身像册",
+      "sourceAttribution": "國立故宮博物院（臺北）藏《元代帝半身像》冊元太祖皇帝像（中-畫-000324-00001），絹本設色，原件 59.4 × 47 公分。十四世紀宮廷繪，屬南薰殿舊藏系統；白帽白袍、鬚髮皓白，為存世最可信之成吉思汗形象。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg",
+      "thumb": "/data/portraits/person_tie_mu_zhen.jpg",
+      "full": "/data/portraits/full_person_tie_mu_zhen.jpg",
+      "crop": {
+        "sx": 0.01,
+        "sy": 0.1184,
+        "side": 0.99,
+        "lum": 172,
+        "lo": 0.502,
+        "hi": 0.808
+      }
+    },
+    "person_wang_shouren": {
+      "id": "person_wang_shouren",
+      "name": "王守仁",
+      "file": "蔡世新 王阳明肖像轴 (cropped).jpg",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（明）蔡世新《王陽明肖像》軸（裁切本）",
+      "sourceAttribution": "明蔡世新繪《王陽明肖像》軸之裁切本，紙本設色，半身。Commons 原頁題名即作「蔡世新　王阳明肖像轴」。蔡世新為明人寫真名家，舊傳嘗為王守仁寫照；此軸為現存最常見之王陽明真容本。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:%E8%94%A1%E4%B8%96%E6%96%B0_%E7%8E%8B%E9%98%B3%E6%98%8E%E8%82%96%E5%83%8F%E8%BD%B4_(cropped).jpg",
+      "thumb": "/data/portraits/person_wang_shouren.jpg",
+      "full": "/data/portraits/full_person_wang_shouren.jpg",
+      "crop": {
+        "sx": 0.3415,
+        "sy": 0.0227,
+        "side": 0.3729,
+        "lum": 188,
+        "lo": 0.522,
+        "hi": 0.784
+      }
+    },
+    "person_lin_xiangru": {
+      "id": "person_lin_xiangru",
+      "name": "蔺相如",
+      "file": "Lin Xiangru (a general of the State of Zhao).png",
+      "tier": "tier1_authentic_painting",
+      "painterOrBook": "（明）佚名《聖君賢臣全身像冊》",
+      "sourceAttribution": "絹本設色全身立像，幅右上題簽「藺相如」三字可讀。與同冊漢武帝、漢景帝諸開同式：立像、淺絳、右上題名、無背景。後人追繪，非戰國寫生。（Commons 原題名誤記為「趙將」，藺相如為趙上卿，未嘗為將。）",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Lin_Xiangru_(a_general_of_the_State_of_Zhao).png",
+      "thumb": "/data/portraits/person_lin_xiangru.jpg",
+      "full": "/data/portraits/full_person_lin_xiangru.jpg",
+      "crop": {
+        "sx": 0.3538,
+        "sy": 0.1108,
+        "side": 0.37,
+        "lum": 161,
+        "lo": 0.416,
+        "hi": 0.675
       }
     }
   }

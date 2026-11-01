@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-10-31T13:27:26.560Z",
+ "generatedAt": "2026-11-01T02:17:14.556Z",
  "note": "画布圆形头像的取景窗口，归一化到整幅宽高（side 为相对图宽的边长）。由 build-crops.mjs 生成，勿手改；个别图档在 crop-overrides.json 里逐件改判。",
- "count": 172,
+ "count": 186,
  "entries": {
   "person_liu_bang": {
    "sx": 0.22,
@@ -234,6 +234,14 @@
    "lum": 123,
    "lo": 0.176,
    "hi": 0.667
+  },
+  "person_wu_zetian": {
+   "sx": 0.1538,
+   "sy": 0.1094,
+   "side": 0.7873,
+   "lum": 112,
+   "lo": 0.361,
+   "hi": 0.576
   },
   "person_di_renjie": {
    "sx": 0.1074,
@@ -1378,6 +1386,110 @@
    "lum": 141,
    "lo": 0.322,
    "hi": 0.671
+  },
+  "person_liu_che": {
+   "sx": 0.2966,
+   "sy": 0.0008,
+   "side": 0.4295,
+   "lum": 173,
+   "lo": 0.514,
+   "hi": 0.737
+  },
+  "person_wang_mang": {
+   "sx": 0.335,
+   "sy": 0.25,
+   "side": 0.33,
+   "lum": 154,
+   "lo": 0.318,
+   "hi": 0.675
+  },
+  "person_jiang_shang": {
+   "sx": 0.2,
+   "sy": 0.55,
+   "side": 0.32,
+   "lum": 98,
+   "lo": 0.208,
+   "hi": 0.42
+  },
+  "person_kong_zi": {
+   "sx": 0.1183,
+   "sy": 0.4047,
+   "side": 0.3695,
+   "lum": 109,
+   "lo": 0.275,
+   "hi": 0.427
+  },
+  "person_lao_zi": {
+   "sx": 0.181,
+   "sy": 0.3801,
+   "side": 0.3773,
+   "lum": 117,
+   "lo": 0.294,
+   "hi": 0.525
+  },
+  "person_dong_zhongshu": {
+   "sx": 0.1316,
+   "sy": 0.4552,
+   "side": 0.2972,
+   "lum": 104,
+   "lo": 0.247,
+   "hi": 0.455
+  },
+  "person_yang_xiong": {
+   "sx": 0.1124,
+   "sy": 0.4831,
+   "side": 0.3758,
+   "lum": 107,
+   "lo": 0.267,
+   "hi": 0.471
+  },
+  "person_dongfang_shuo": {
+   "sx": 0.175,
+   "sy": 0.4757,
+   "side": 0.3709,
+   "lum": 111,
+   "lo": 0.29,
+   "hi": 0.443
+  },
+  "person_tan_daoji": {
+   "sx": 0.0955,
+   "sy": 0.4215,
+   "side": 0.4327,
+   "lum": 111,
+   "lo": 0.251,
+   "hi": 0.498
+  },
+  "person_meng_zi": {
+   "sx": 0.1766,
+   "sy": 0.3102,
+   "side": 0.7908,
+   "lum": 178,
+   "lo": 0.286,
+   "hi": 0.773
+  },
+  "person_tie_mu_zhen": {
+   "sx": 0.01,
+   "sy": 0.1184,
+   "side": 0.99,
+   "lum": 172,
+   "lo": 0.502,
+   "hi": 0.808
+  },
+  "person_wang_shouren": {
+   "sx": 0.3415,
+   "sy": 0.0227,
+   "side": 0.3729,
+   "lum": 188,
+   "lo": 0.522,
+   "hi": 0.784
+  },
+  "person_lin_xiangru": {
+   "sx": 0.3538,
+   "sy": 0.1108,
+   "side": 0.37,
+   "lum": 161,
+   "lo": 0.416,
+   "hi": 0.675
   }
  }
 }

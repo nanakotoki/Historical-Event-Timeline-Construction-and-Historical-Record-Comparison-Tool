@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T02:15:40.185Z",
+  "generatedAt": "2026-11-01T02:45:16.028Z",
   "source": "Wikimedia Commons（经 images.weserv.nl 取回）",
   "note": "本清单只登记确实取回的公有领域/CC 授权图档。未列出的条目＝该人物在 Commons 上无可定位的传世画像，系统按 tier4_attire_silhouette 呈现，绝不伪作真迹。",
   "entries": {
@@ -1791,6 +1791,15 @@
       "commons": "https://commons.wikimedia.org/wiki/File:Lin_Xiangru_(a_general_of_the_State_of_Zhao).png",
       "thumbBytes": 90385,
       "fullBytes": 90385,
+      "fullResolved": true
+    },
+    "person_qi_jiguang": {
+      "id": "person_qi_jiguang",
+      "name": "戚继光",
+      "file": "Qi Jiguang Portrait.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:Qi_Jiguang_Portrait.jpg",
+      "thumbBytes": 264058,
+      "fullBytes": 264058,
       "fullResolved": true
     }
   }

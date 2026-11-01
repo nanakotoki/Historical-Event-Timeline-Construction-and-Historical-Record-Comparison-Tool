@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-11-01T02:17:14.556Z",
+ "generatedAt": "2026-11-01T02:46:07.027Z",
  "note": "画布圆形头像的取景窗口，归一化到整幅宽高（side 为相对图宽的边长）。由 build-crops.mjs 生成，勿手改；个别图档在 crop-overrides.json 里逐件改判。",
- "count": 186,
+ "count": 187,
  "entries": {
   "person_liu_bang": {
    "sx": 0.22,
@@ -1490,6 +1490,14 @@
    "lum": 161,
    "lo": 0.416,
    "hi": 0.675
+  },
+  "person_qi_jiguang": {
+   "sx": 0.2975,
+   "sy": 0.0033,
+   "side": 0.4942,
+   "lum": 121,
+   "lo": 0.02,
+   "hi": 0.796
   }
  }
 }

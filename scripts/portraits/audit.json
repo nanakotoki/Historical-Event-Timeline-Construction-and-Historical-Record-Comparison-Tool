@@ -486,8 +486,9 @@
     "Qi Jiguang Portrait.jpg": {
       "name": "戚继光",
       "verdict": "keep",
-      "reason": "明代红袍官服像，传统绘画体制；题名虽含 Portrait 但不在三国绣像名单内，落「待考」档",
-      "bookTitle": ""
+      "reason": "絹本設色坐像：烏紗展腳幞頭、大紅蟒袍、玉帶，明代官員常服像體制。幅內無題名、無像贊，比定依據為 Commons 題名與通行本戚繼光像一致（同一幅廣為沿用），故記為「傳為戚繼光像」。層級按媒材判為 L1：筆觸與顏料的濃淡層次明確，非刀刻硬邊。",
+      "bookTitle": "（明）佚名《戚繼光像》軸（絹本設色，幅內無題名）",
+      "tier": "tier1_authentic_painting"
     },
     "Sima Guang.jpg": {
       "name": "司马光",

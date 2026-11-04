@@ -2125,6 +2125,24 @@
       "thumbBytes": 0,
       "fullBytes": 0,
       "fullResolved": false
+    },
+    "person_feng_yi": {
+      "id": "person_feng_yi",
+      "name": "冯异",
+      "file": "NLC892-002302082-330381_p10.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330381_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC6%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_ji_kang": {
+      "id": "person_ji_kang",
+      "name": "嵇康",
+      "file": "NLC892-002302082-330381_p50.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330381_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC6%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
     }
   }
 }

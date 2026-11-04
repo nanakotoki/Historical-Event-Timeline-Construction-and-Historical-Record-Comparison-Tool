@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-01T11:24:51.382Z",
+  "generatedAt": "2026-11-04T09:47:29.991Z",
   "site": {
     "title": "华夏史网",
     "subtitle": "ChronoGraph China · 二十四史人物关系图谱与史料对勘引擎",
@@ -289,7 +289,7 @@
       ],
       "personCount": 131,
       "edgeCount": 226,
-      "byteSize": 468982
+      "byteSize": 469938
     },
     {
       "shardId": "shard_05_sui_tang",
@@ -342,7 +342,7 @@
       ],
       "personCount": 92,
       "edgeCount": 154,
-      "byteSize": 325466
+      "byteSize": 325460
     },
     {
       "shardId": "shard_08_xin_mang",
@@ -360,7 +360,7 @@
       ],
       "personCount": 82,
       "edgeCount": 121,
-      "byteSize": 270806
+      "byteSize": 271716
     }
   ],
   "searchIndex": [

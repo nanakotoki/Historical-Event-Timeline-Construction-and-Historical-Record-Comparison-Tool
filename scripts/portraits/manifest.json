@@ -2143,6 +2143,51 @@
       "thumbBytes": 0,
       "fullBytes": 0,
       "fullResolved": false
+    },
+    "person_zhou_bo": {
+      "id": "person_zhou_bo",
+      "name": "周勃",
+      "file": "NLC892-002302082-330380_p52.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330380_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC5%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_zhou_yafu": {
+      "id": "person_zhou_yafu",
+      "name": "周亚夫",
+      "file": "NLC892-002302082-330380_p54.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330380_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC5%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_jin_midi": {
+      "id": "person_jin_midi",
+      "name": "金日磾",
+      "file": "NLC892-002302082-330380_p64.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330380_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC5%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_li_guangbi": {
+      "id": "person_li_guangbi",
+      "name": "李光弼",
+      "file": "NLC892-002302082-330382_p65.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_zhao_pu": {
+      "id": "person_zhao_pu",
+      "name": "赵普",
+      "file": "NLC892-002302082-330383_p03.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330383_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC8%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
     }
   }
 }

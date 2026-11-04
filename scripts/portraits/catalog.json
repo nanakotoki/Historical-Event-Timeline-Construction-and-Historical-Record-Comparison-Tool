@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-04T09:47:11.818Z",
+  "generatedAt": "2026-11-04T15:01:18.103Z",
   "note": "本目录只登记已实际取回落盘的传世画像。未列入者＝未在公有领域图库中找到可定位的传世图档，前端按 tier3/tier4 呈现「本站复原」，绝不冒充实物。",
   "counts": {
-    "total": 226,
+    "total": 231,
     "tier1_authentic_painting": 112,
-    "tier2_ancient_woodcut": 114
+    "tier2_ancient_woodcut": 119
   },
   "entries": {
     "person_liu_bang": {
@@ -4525,6 +4525,106 @@
         "lum": 104,
         "lo": 0.467,
         "hi": 0.592
+      }
+    },
+    "person_zhou_bo": {
+      "id": "person_zhou_bo",
+      "name": "周勃",
+      "file": "NLC892-002302082-330380_p52.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "圖上方小篆橫題「周絳侯像」——周勃封絳侯，「絳」字糸旁在放大後清楚可辨。本頁版心空白，卷次未能讀出，故只記冊頁不填卷數。 出處：清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 5 冊第 52 頁單頁渲染（僅 500px 一檔）。白描半身像，冠服合當時制度。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：整頁 500×440，頭部約 45–55 px；裁作 36–96 px 圓片夠用，更大尺寸則不足。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330380_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC5%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_zhou_bo.jpg",
+      "full": "/data/portraits/full_person_zhou_bo.jpg",
+      "crop": {
+        "sx": 0.245,
+        "sy": 0.438,
+        "side": 0.17,
+        "lum": 106,
+        "lo": 0.475,
+        "hi": 0.6
+      }
+    },
+    "person_zhou_yafu": {
+      "id": "person_zhou_yafu",
+      "name": "周亚夫",
+      "file": "NLC892-002302082-330380_p54.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "圖上方小篆橫題「周〇侯像」，第三字在 500px 下不可辨（疑「條」，然不敢斷）。判定依據三條：①同葉右傳首列作「公姓周諱…夫」並敘「七國反…太尉」，是周亞夫事；②位次緊接周勃（上一頁），漢初周氏封侯者僅絳侯勃、條侯亞夫父子；③畫作兜鍪甲士，與將兵平定七國者合。**篆題第三字未讀出，此條屬「篆題姓氏＋位次＋傳文」三重推定，非單憑題名。** 出處：清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 5 冊第 54 頁單頁渲染（僅 500px 一檔）。白描半身像，冠服合當時制度。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：整頁 500×440，頭部約 45–55 px；裁作 36–96 px 圓片夠用，更大尺寸則不足。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330380_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC5%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_zhou_yafu.jpg",
+      "full": "/data/portraits/full_person_zhou_yafu.jpg",
+      "crop": {
+        "sx": 0.22,
+        "sy": 0.436,
+        "side": 0.16,
+        "lum": 106,
+        "lo": 0.471,
+        "hi": 0.6
+      }
+    },
+    "person_jin_midi": {
+      "id": "person_jin_midi",
+      "name": "金日磾",
+      "file": "NLC892-002302082-330380_p64.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "圖上方小篆橫題「金秺侯像」——「秺」字左禾右宅，放大後結構可辨；秺侯為金日磾專封。**同葉右傳起首卻是「公姓卜諱式，河南人也，以田畜為業」，是卜式傳。**本書長傳跨葉時圖與傳會錯開一位（參 7:65「李臨淮」而傳文為郭子儀），故此頁以篆題為準。 出處：清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 5 冊第 64 頁單頁渲染（僅 500px 一檔）。白描半身像，冠服合當時制度。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：整頁 500×440，頭部約 45–55 px；裁作 36–96 px 圓片夠用，更大尺寸則不足。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330380_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC5%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_jin_midi.jpg",
+      "full": "/data/portraits/full_person_jin_midi.jpg",
+      "crop": {
+        "sx": 0.232,
+        "sy": 0.44,
+        "side": 0.135,
+        "lum": 107,
+        "lo": 0.459,
+        "hi": 0.612
+      }
+    },
+    "person_li_guangbi": {
+      "id": "person_li_guangbi",
+      "name": "李光弼",
+      "file": "NLC892-002302082-330382_p65.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "圖上方小篆橫題「李臨淮像」——李光弼封臨淮郡王，世稱李臨淮。第二十四批已驗此頁，因同葉傳文起首為「公姓郭諱子儀」而當時按下未取；今確認圖傳錯位為本書通例，篆題方是頁主，故本批補入。 出處：清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 7 冊第 65 頁單頁渲染（僅 500px 一檔）。白描半身像，冠服合當時制度。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：整頁 500×440，頭部約 45–55 px；裁作 36–96 px 圓片夠用，更大尺寸則不足。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330382_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC7%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_li_guangbi.jpg",
+      "full": "/data/portraits/full_person_li_guangbi.jpg",
+      "crop": {
+        "sx": 0.252,
+        "sy": 0.445,
+        "side": 0.175,
+        "lum": 105,
+        "lo": 0.478,
+        "hi": 0.6
+      }
+    },
+    "person_zhao_pu": {
+      "id": "person_zhao_pu",
+      "name": "赵普",
+      "file": "NLC892-002302082-330383_p03.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "圖上方小篆橫題「趙忠獻像」——趙普諡忠獻，宋初名相。同冊第 5 頁為「石徂徠像」（石介），第 7 頁「〇忠惠像」（蔡襄），第 9 頁「王文正像」（王旦），皆以諡號題名，可見本卷體例；此四人均非庫中所有，本批只取趙普。 出處：清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 8 冊第 3 頁單頁渲染（僅 500px 一檔）。白描半身像，冠服合當時制度。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：整頁 500×440，頭部約 45–55 px；裁作 36–96 px 圓片夠用，更大尺寸則不足。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330383_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC8%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_zhao_pu.jpg",
+      "full": "/data/portraits/full_person_zhao_pu.jpg",
+      "crop": {
+        "sx": 0.199,
+        "sy": 0.496,
+        "side": 0.17,
+        "lum": 107,
+        "lo": 0.471,
+        "hi": 0.6
       }
     }
   }

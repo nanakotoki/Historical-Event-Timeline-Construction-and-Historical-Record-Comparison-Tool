@@ -546,11 +546,11 @@
     "person_li_guang": {
       "id": "person_li_guang",
       "name": "李广",
-      "file": "冥山射虎.jpg",
-      "commons": "https://commons.wikimedia.org/wiki/File:%E5%86%A5%E5%B1%B1%E5%B0%84%E8%99%8E.jpg",
-      "thumbBytes": 85223,
-      "fullBytes": 355525,
-      "fullResolved": true
+      "file": "NLC892-002302082-330380_p55.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330380_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC5%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
     },
     "person_xun_yu": {
       "id": "person_xun_yu",
@@ -2185,6 +2185,24 @@
       "name": "赵普",
       "file": "NLC892-002302082-330383_p03.jpg",
       "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330383_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC8%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_huo_guang": {
+      "id": "person_huo_guang",
+      "name": "霍光",
+      "file": "NLC892-002302082-330380_p61.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330380_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC5%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_ji_an": {
+      "id": "person_ji_an",
+      "name": "汲黯",
+      "file": "NLC892-002302082-330380_p62.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330380_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC5%E5%86%8A.pdf",
       "thumbBytes": 0,
       "fullBytes": 0,
       "fullResolved": false

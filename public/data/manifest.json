@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-09T12:04:21.778Z",
+  "generatedAt": "2026-11-09T12:50:14.376Z",
   "site": {
     "title": "华夏史网",
     "subtitle": "ChronoGraph China · 二十四史人物关系图谱与史料对勘引擎",
@@ -272,7 +272,7 @@
       ],
       "personCount": 185,
       "edgeCount": 286,
-      "byteSize": 828299
+      "byteSize": 830635
     },
     {
       "shardId": "shard_04_jin_nanbeichao",
@@ -326,7 +326,7 @@
       ],
       "personCount": 232,
       "edgeCount": 340,
-      "byteSize": 834325
+      "byteSize": 835409
     },
     {
       "shardId": "shard_07_five_dynasties",

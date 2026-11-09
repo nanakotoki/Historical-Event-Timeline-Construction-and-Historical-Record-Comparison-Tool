@@ -2269,6 +2269,24 @@
       "thumbBytes": 0,
       "fullBytes": 0,
       "fullResolved": false
+    },
+    "person_xie_lingyun": {
+      "id": "person_xie_lingyun",
+      "name": "谢灵运",
+      "file": "NLC892-002302082-330381_p67.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330381_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC6%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_lu_jiuyuan": {
+      "id": "person_lu_jiuyuan",
+      "name": "陆九渊",
+      "file": "NLC892-002302082-330381_p70.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330381_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC6%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
     }
   }
 }

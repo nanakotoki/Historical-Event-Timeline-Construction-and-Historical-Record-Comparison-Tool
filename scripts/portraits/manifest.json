@@ -2233,6 +2233,24 @@
       "thumbBytes": 0,
       "fullBytes": 0,
       "fullResolved": false
+    },
+    "person_geng_chun": {
+      "id": "person_geng_chun",
+      "name": "耿纯",
+      "file": "NLC892-002302082-330381_p12.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330381_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC6%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_zhai_zun": {
+      "id": "person_zhai_zun",
+      "name": "祭遵",
+      "file": "NLC892-002302082-330381_p13.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330381_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC6%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
     }
   }
 }

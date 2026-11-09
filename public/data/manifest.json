@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-05T14:47:02.604Z",
+  "generatedAt": "2026-11-09T11:52:07.439Z",
   "site": {
     "title": "华夏史网",
     "subtitle": "ChronoGraph China · 二十四史人物关系图谱与史料对勘引擎",
@@ -360,7 +360,7 @@
       ],
       "personCount": 82,
       "edgeCount": 121,
-      "byteSize": 271716
+      "byteSize": 274491
     }
   ],
   "searchIndex": [

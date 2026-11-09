@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-05T14:46:36.709Z",
+  "generatedAt": "2026-11-09T11:51:42.563Z",
   "note": "本目录只登记已实际取回落盘的传世画像。未列入者＝未在公有领域图库中找到可定位的传世图档，前端按 tier3/tier4 呈现「本站复原」，绝不冒充实物。",
   "counts": {
-    "total": 234,
+    "total": 237,
     "tier1_authentic_painting": 112,
-    "tier2_ancient_woodcut": 122
+    "tier2_ancient_woodcut": 125
   },
   "entries": {
     "person_liu_bang": {
@@ -4685,6 +4685,66 @@
         "lum": 107,
         "lo": 0.475,
         "hi": 0.608
+      }
+    },
+    "person_deng_yu": {
+      "id": "person_deng_yu",
+      "name": "邓禹",
+      "file": "NLC892-002302082-330381_p07.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "圖上方小篆橫題四字，首字从登从邑、是「鄧」，第三字「侯」，末字「像」；第二字結構類「酂」，即其封邑（建武二年封酂侯）。同葉右傳起首作「公姓鄧諱禹字仲華，南陽新野人也」，並敘光武河北、雲臺二十八將事，與篆題互證。畫作文臣拱立、戴進賢冠，合東漢列侯朝服之制。 出處：清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 6 冊第 7 頁單頁渲染（僅 500px 一檔）。白描半身像，冠服合當時制度。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：整頁 500×436，頭部約 45–55 px；裁作 36–96 px 圓片夠用，更大尺寸則不足。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330381_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC6%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_deng_yu.jpg",
+      "full": "/data/portraits/full_person_deng_yu.jpg",
+      "crop": {
+        "sx": 0.224,
+        "sy": 0.435,
+        "side": 0.16,
+        "lum": 104,
+        "lo": 0.416,
+        "hi": 0.592
+      }
+    },
+    "person_geng_yan": {
+      "id": "person_geng_yan",
+      "name": "耿弇",
+      "file": "NLC892-002302082-330381_p08.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "圖上方小篆橫題四字，首字从耳从火、是「耿」，次二字作「伯昭」（其字），末字「像」。同葉右傳起首作「公姓耿諱弇字伯昭，扶風茂陵人也」，並敘上谷突騎、平齊之役，與篆題互證。此葉與 6:9 右傳文全同，知耿弇傳跨兩葉；6:9 左葉另有題名，不與本葉同人，故不並取。 出處：清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 6 冊第 8 頁單頁渲染（僅 500px 一檔）。白描半身像，冠服合當時制度。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：整頁 500×436，頭部約 45–55 px；裁作 36–96 px 圓片夠用，更大尺寸則不足。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330381_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC6%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_geng_yan.jpg",
+      "full": "/data/portraits/full_person_geng_yan.jpg",
+      "crop": {
+        "sx": 0.192,
+        "sy": 0.431,
+        "side": 0.162,
+        "lum": 104,
+        "lo": 0.42,
+        "hi": 0.592
+      }
+    },
+    "person_ma_yuan": {
+      "id": "person_ma_yuan",
+      "name": "马援",
+      "file": "NLC892-002302082-330381_p11.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "圖上方小篆橫題四字，首字从馬、是「馬」，次二字作「伏波」（其將軍號），末字「像」。同葉右傳起首作「公姓馬諱援字子淵，扶風茂陵人也」，並敘交阯、武陵五溪事，與篆題互證。畫作武將按劍而立、冠服合東漢將軍之制，與「伏波」之號相稱。 出處：清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 6 冊第 11 頁單頁渲染（僅 500px 一檔）。白描半身像，冠服合當時制度。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：整頁 500×436，頭部約 45–55 px；裁作 36–96 px 圓片夠用，更大尺寸則不足。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330381_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC6%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_ma_yuan.jpg",
+      "full": "/data/portraits/full_person_ma_yuan.jpg",
+      "crop": {
+        "sx": 0.231,
+        "sy": 0.46,
+        "side": 0.165,
+        "lum": 106,
+        "lo": 0.447,
+        "hi": 0.596
       }
     }
   }

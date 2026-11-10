@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-10T12:29:04.811Z",
+  "generatedAt": "2026-11-10T12:51:01.869Z",
   "site": {
     "title": "华夏史网",
     "subtitle": "ChronoGraph China · 二十四史人物关系图谱与史料对勘引擎",
@@ -272,7 +272,7 @@
       ],
       "personCount": 185,
       "edgeCount": 286,
-      "byteSize": 830635
+      "byteSize": 831905
     },
     {
       "shardId": "shard_04_jin_nanbeichao",
@@ -306,7 +306,7 @@
       ],
       "personCount": 146,
       "edgeCount": 264,
-      "byteSize": 749094
+      "byteSize": 750431
     },
     {
       "shardId": "shard_06_song_ming_qing",

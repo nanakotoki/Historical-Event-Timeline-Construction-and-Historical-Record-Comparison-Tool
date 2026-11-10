@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-10T12:28:18.056Z",
+  "generatedAt": "2026-11-10T12:50:13.987Z",
   "note": "本目录只登记已实际取回落盘的传世画像。未列入者＝未在公有领域图库中找到可定位的传世图档，前端按 tier3/tier4 呈现「本站复原」，绝不冒充实物。",
   "counts": {
-    "total": 246,
+    "total": 248,
     "tier1_authentic_painting": 112,
-    "tier2_ancient_woodcut": 134
+    "tier2_ancient_woodcut": 136
   },
   "entries": {
     "person_liu_bang": {
@@ -4925,6 +4925,46 @@
         "lum": 105,
         "lo": 0.482,
         "hi": 0.592
+      }
+    },
+    "person_zhong_yao": {
+      "id": "person_zhong_yao",
+      "name": "钟繇",
+      "file": "NLC892-002302082-330381_p45.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "圖上方小篆橫題四字，自右徂左讀作「鍾太傅像」：末字「像」，其左「傅」，次「太」，首字从金从重、是「鍾」；太傅者，鍾繇仕魏至太傅，世稱鍾太傅。**本葉右傳不屬此人**，起首為「公姓姜諱維字伯約，天水人也」，乃 6:44 圖像之傳（此段圖與傳相差一葉）。鍾繇之傳在次葉（6:46）右半，起首可辨「公姓鍾諱繇字元常，潁川長社人也」，次列又有「魏相國」「書法」之語，與《三國志·鍾繇傳》合（繇字元常，潁川長社人，魏國初建為相國；本傳裴注引書法之評）。畫作半身拱立、戴小冠、長鬚垂胸、雙手合於袖中。 出處：清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 6 冊第 45 頁單頁渲染（僅 500px 一檔）。白描半身像，冠服合當時制度。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：整頁 500×440，頭部約 55–65 px；裁作 36–96 px 圓片夠用，更大尺寸則不足。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330381_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC6%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_zhong_yao.jpg",
+      "full": "/data/portraits/full_person_zhong_yao.jpg",
+      "crop": {
+        "sx": 0.212,
+        "sy": 0.47,
+        "side": 0.185,
+        "lum": 104,
+        "lo": 0.451,
+        "hi": 0.588
+      }
+    },
+    "person_han_qinhu": {
+      "id": "person_han_qinhu",
+      "name": "韩擒虎",
+      "file": "NLC892-002302082-330381_p76.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "圖上方小篆橫題四字，自右徂左讀作「韓柱國像」：末字「像」，其左从囗从或、是「國」，次字从木从主、是「柱」，首字左半「倝」右半「韋」、是「韓」；柱國者，韓擒虎平陳之功進位上柱國（《隋書》本傳）。**本葉右傳不屬此人**，起首為「公姓程諱文季字少卿」，乃 6:75 圖像之傳。韓擒虎之傳在次葉（6:77），該葉下半已空、僅存右側一列，起首可辨「公姓韓諱擒虎字子通，河南東垣人也」，末又有「進位上柱國」五字，與《隋書·韓擒虎傳》合（擒虎字子通，河南東垣人；以平陳功進位上柱國）。畫作半身、戴武冠（冠側垂貂尾）、虯鬚環頰、雙手交於腰帶之上。 出處：清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 6 冊第 76 頁單頁渲染（僅 500px 一檔）。白描半身像，冠服合當時制度。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：整頁 500×440，頭部約 55–65 px；裁作 36–96 px 圓片夠用，更大尺寸則不足。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330381_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC6%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_han_qinhu.jpg",
+      "full": "/data/portraits/full_person_han_qinhu.jpg",
+      "crop": {
+        "sx": 0.212,
+        "sy": 0.448,
+        "side": 0.185,
+        "lum": 105,
+        "lo": 0.482,
+        "hi": 0.588
       }
     }
   }

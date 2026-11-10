@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-10T12:50:13.987Z",
+  "generatedAt": "2026-11-10T13:50:00.770Z",
   "note": "本目录只登记已实际取回落盘的传世画像。未列入者＝未在公有领域图库中找到可定位的传世图档，前端按 tier3/tier4 呈现「本站复原」，绝不冒充实物。",
   "counts": {
-    "total": 248,
+    "total": 251,
     "tier1_authentic_painting": 112,
-    "tier2_ancient_woodcut": 136
+    "tier2_ancient_woodcut": 139
   },
   "entries": {
     "person_liu_bang": {
@@ -4965,6 +4965,66 @@
         "lum": 105,
         "lo": 0.482,
         "hi": 0.588
+      }
+    },
+    "person_kou_zhun": {
+      "id": "person_kou_zhun",
+      "name": "寇准",
+      "file": "NLC892-002302082-330383_p12.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "圖上方小篆橫題四字，自右徂左讀作「寇忠愍像」：末字「像」；其左「愍」（上民下心之篆）；次「忠」；首字从宀从元从攴，是「寇」。忠愍者，寇準諡（《宋史·寇準傳》：「皇祐元年，詔翰林學士孫抃撰神道碑，帝為篆其首曰『旌忠』……諡曰忠愍」）。畫作半身、戴展腳幞頭（兩腳平直外伸）、長鬚垂胸、雙手捧笏當胸，朱衣在刻本是白描。此書宋人一門一頁，卷九「竇儀趙普党進石守信……高瓊寇準陳堯叟」次序與總目合，本頁上接高武烈（高瓊 8:11）、下接陳文忠（陳堯叟 8:13），位置亦合。 出處：清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 8 冊第 12 頁單頁渲染（僅 500px 一檔）。白描半身像，冠服合當時制度。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：整頁 500×440，頭部約 55–65 px；裁作 36–96 px 圓片夠用，更大尺寸則不足。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330383_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC8%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_kou_zhun.jpg",
+      "full": "/data/portraits/full_person_kou_zhun.jpg",
+      "crop": {
+        "sx": 0.168,
+        "sy": 0.428,
+        "side": 0.215,
+        "lum": 108,
+        "lo": 0.506,
+        "hi": 0.612
+      }
+    },
+    "person_di_qing": {
+      "id": "person_di_qing",
+      "name": "狄青",
+      "file": "NLC892-002302082-330383_p21.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "圖上方小篆橫題四字，自右徂左讀作「狄武襄像」：末字「像」；其左「襄」（从衣之篆，中作二口相疊）；次「武」（从止从戈）；首字从犬从火，是「狄」。武襄者，狄青諡（《宋史·狄青傳》：「贈中書令，諡武襄」）。畫作半身武將：不著冠而裹幅巾，髮披兩肩，身披鎧甲，腰懸劍、手握劍柄，與本傳「臨陣披髮、戴銅面」之狀相應（此本取常服像，未戴銅面）。本頁上接林和靖（林逋 8:20）、下接韓忠獻（韓琦 8:22），與總目卷九「林逋狄青韓億曾公亮韓琦」次序合。 出處：清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 8 冊第 21 頁單頁渲染（僅 500px 一檔）。白描半身像，冠服合當時制度。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：整頁 500×440，頭部約 55–65 px；裁作 36–96 px 圓片夠用，更大尺寸則不足。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330383_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC8%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_di_qing.jpg",
+      "full": "/data/portraits/full_person_di_qing.jpg",
+      "crop": {
+        "sx": 0.176,
+        "sy": 0.407,
+        "side": 0.2,
+        "lum": 108,
+        "lo": 0.471,
+        "hi": 0.608
+      }
+    },
+    "person_fu_bi": {
+      "id": "person_fu_bi",
+      "name": "富弼",
+      "file": "NLC892-002302082-330383_p28.jpg",
+      "tier": "tier2_ancient_woodcut",
+      "painterOrBook": "（清）顧沅輯、孔繼堯繪《古聖賢像傳略》（清道光十年刻本）",
+      "sourceAttribution": "圖上方小篆橫題四字，自右徂左讀作「富文忠像」：末字「像」；其左「忠」（中下加心）；次「文」；首字从宀从一口田，是「富」。文忠者，富弼諡（《宋史·富弼傳》：「贈太師，諡文忠」；蘇軾撰神道碑亦稱「富文忠公」）。畫作半身、戴高冠（冠頂前傾，類進賢冠而高）、長鬚、拱手於胸前。本頁上接文忠烈（文彥博 8:27）、下接蔡忠惠（蔡襄 8:29），與總目卷十「文彥博富弼蔡襄唐介」次序合。 出處：清道光十年顧沅輯、孔繼堯繪刻本，中國國家圖書館藏本 NLC892-002302082，經 Wikimedia Commons 轉錄之 PDF 第 8 冊第 28 頁單頁渲染（僅 500px 一檔）。白描半身像，冠服合當時制度。判 L2：道光十年木刻本，非紙絹本手繪。**分辨率說明**：整頁 500×440，頭部約 55–65 px；裁作 36–96 px 圓片夠用，更大尺寸則不足。",
+      "license": "PD-Art（公有領域二維藝術品忠實複製）",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330383_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC8%E5%86%8A.pdf",
+      "thumb": "/data/portraits/person_fu_bi.jpg",
+      "full": "/data/portraits/full_person_fu_bi.jpg",
+      "crop": {
+        "sx": 0.158,
+        "sy": 0.39,
+        "side": 0.225,
+        "lum": 109,
+        "lo": 0.525,
+        "hi": 0.616
       }
     }
   }

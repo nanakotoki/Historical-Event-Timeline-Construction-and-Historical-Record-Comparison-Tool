@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-10T12:51:01.869Z",
+  "generatedAt": "2026-11-10T13:50:37.826Z",
   "site": {
     "title": "华夏史网",
     "subtitle": "ChronoGraph China · 二十四史人物关系图谱与史料对勘引擎",
@@ -326,7 +326,7 @@
       ],
       "personCount": 232,
       "edgeCount": 340,
-      "byteSize": 836491
+      "byteSize": 840029
     },
     {
       "shardId": "shard_07_five_dynasties",

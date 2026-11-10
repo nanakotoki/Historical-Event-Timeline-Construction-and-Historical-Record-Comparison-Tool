@@ -2323,6 +2323,33 @@
       "thumbBytes": 0,
       "fullBytes": 0,
       "fullResolved": false
+    },
+    "person_kou_zhun": {
+      "id": "person_kou_zhun",
+      "name": "寇准",
+      "file": "NLC892-002302082-330383_p12.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330383_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC8%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_di_qing": {
+      "id": "person_di_qing",
+      "name": "狄青",
+      "file": "NLC892-002302082-330383_p21.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330383_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC8%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
+    },
+    "person_fu_bi": {
+      "id": "person_fu_bi",
+      "name": "富弼",
+      "file": "NLC892-002302082-330383_p28.jpg",
+      "commons": "https://commons.wikimedia.org/wiki/File:NLC892-002302082-330383_%E5%8F%A4%E8%81%96%E8%B3%A2%E5%83%8F%E5%82%B3%E7%95%A5_%E5%8D%81%E5%85%AD%E5%8D%B7_%E7%AC%AC8%E5%86%8A.pdf",
+      "thumbBytes": 0,
+      "fullBytes": 0,
+      "fullResolved": false
     }
   }
 }
